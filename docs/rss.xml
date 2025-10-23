@@ -1,3 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>阮一狐的博客</title><link>https://aidens-fox.github.io</link><description>我的邮箱：rootwang838@gmail.com</description><copyright>阮一狐的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Thu, 23 Oct 2025 15:33:21 +0000</lastBuildDate><managingEditor>阮一狐的博客</managingEditor><ttl>60</ttl><webMaster>阮一狐的博客</webMaster><item><title>我的第一篇博客</title><link>https://aidens-fox.github.io/post/wo-de-di-yi-pian-bo-ke.html</link><description>Hello,我是你们的老狐，这是我开博的第一个博文，在这篇博文中我会说明我的博客内容的类型和我为什么要写博客：
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>阮一狐的博客</title><link>https://aidens-fox.github.io</link><description>我的邮箱：rootwang838@gmail.com</description><copyright>阮一狐的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Thu, 23 Oct 2025 15:53:37 +0000</lastBuildDate><managingEditor>阮一狐的博客</managingEditor><ttl>60</ttl><webMaster>阮一狐的博客</webMaster><item><title>如何使用ffmpeg批量转换视频格式</title><link>https://aidens-fox.github.io/post/ru-he-shi-yong-ffmpeg-pi-liang-zhuan-huan-shi-pin-ge-shi.html</link><description>在前几天，老狐在班上被那群住宿生围住要俺给他们的mp3下视频，整个宿舍也mp3的全给了老狐俺，俺只好接下这个“重任”了，不过这三四个的mp3要下的视频也太多了，而且由于是比较低级的设备，视频格式只支持.amv格式的，还要下很多视频，但是现在视频大多都是.mp4格式的导致俺要想让他们的设备可以播放视频就需要转换格式才行，但这又出现了一个问题，如果一个一个的转换的话也太慢了，所以我就使用批量转换格式的命令来提升效率，那么下面我就以50多集的蜡笔小新来做演示不过在演示之前你可能需要先下载ffmpeg，不过一般下载mpv或vlc都会自动安装，因此不需要安装
+
+那么首先如果只是转换一个视频的话就是以下命令：
+` ffmpeg -i  xx.mp4  -ar 22050  -ac 1  -s 208x160  -r 18  -block_size 1225   xx.amv`
+
+  如果是几个视频还好，如果是好几个视频就一点吃力了，所以我们可以使用批量转换的命令，首先我们先cd到我们要操作的目录，再新建一个文件夹用来存放转换后的文件
+`mkdir ser`
+然后使用使用以下命令来批量转换
+````
+for f in *.mp4; do ffmpeg -i  -ar 22050  -ac 1  -s 208x160  -r 18  -block_size 1225  '$f' 'converted/${f%.mp4}.amv'; done
+````
+这样就可以批量转换格式了
+
+下面我解释一下命令
+
+for f in *.mp4：循环播放所有 .mp4 文件。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/ru-he-shi-yong-ffmpeg-pi-liang-zhuan-huan-shi-pin-ge-shi.html</guid><pubDate>Thu, 23 Oct 2025 15:53:02 +0000</pubDate></item><item><title>我的第一篇博客</title><link>https://aidens-fox.github.io/post/wo-de-di-yi-pian-bo-ke.html</link><description>Hello,我是你们的老狐，这是我开博的第一个博文，在这篇博文中我会说明我的博客内容的类型和我为什么要写博客：
     关于博客的内容，主要是一些关于linux的东西和一些软件的介绍，偶然会穿插一些日常分享，毕竟俺也不是什么专业人士，只不过是一个快中考的苦逼学生罢了，这些东西也只是俺在空闲时间学习的罢了，说句实话我写博客纯粹是因为我想让我知道的东西写在博客上让更多人知道，而且像我这种对linux感兴趣又不打游戏的人，在学校也是没什么人可以交流，索性就写个博客了。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/wo-de-di-yi-pian-bo-ke.html</guid><pubDate>Thu, 23 Oct 2025 15:32:48 +0000</pubDate></item><item><title>测试</title><link>https://aidens-fox.github.io/post/ce-shi.html</link><description>你好。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/ce-shi.html</guid><pubDate>Thu, 23 Oct 2025 15:02:12 +0000</pubDate></item></channel></rss>

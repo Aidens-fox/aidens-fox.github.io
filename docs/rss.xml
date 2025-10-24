@@ -1,5 +1,59 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>阮一狐的博客</title><link>https://aidens-fox.github.io</link><description>我是阮一狐，一个对linux感兴趣的初中生,我的邮箱：rootwang838@gmail.com</description><copyright>阮一狐的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Thu, 23 Oct 2025 15:56:38 +0000</lastBuildDate><managingEditor>阮一狐的博客</managingEditor><ttl>60</ttl><webMaster>阮一狐的博客</webMaster><item><title>如何使用ffmpeg批量转换视频格式</title><link>https://aidens-fox.github.io/post/ru-he-shi-yong-ffmpeg-pi-liang-zhuan-huan-shi-pin-ge-shi.html</link><description>在前几天，老狐在班上被那群住宿生围住要俺给他们的mp3下视频，整个宿舍也mp3的全给了老狐俺，俺只好接下这个“重任”了，不过这三四个的mp3要下的视频也太多了，而且由于是比较低级的设备，视频格式只支持.amv格式的，还要下很多视频，但是现在视频大多都是.mp4格式的导致俺要想让他们的设备可以播放视频就需要转换格式才行，但这又出现了一个问题，如果一个一个的转换的话也太慢了，所以我就使用批量转换格式的命令来提升效率，那么下面我就以50多集的蜡笔小新来做演示不过在演示之前你可能需要先下载ffmpeg，不过一般下载mpv或vlc都会自动安装，因此不需要安装
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>阮一狐的博客</title><link>https://aidens-fox.github.io</link><description>我是阮一狐，一个对linux感兴趣的初中生,我的邮箱：rootwang838@gmail.com</description><copyright>阮一狐的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Fri, 24 Oct 2025 14:36:32 +0000</lastBuildDate><managingEditor>阮一狐的博客</managingEditor><ttl>60</ttl><webMaster>阮一狐的博客</webMaster><item><title>google Plxei3刷机Lineageos</title><link>https://aidens-fox.github.io/post/google%20Plxei3-shua-ji-Lineageos.html</link><description>**Lineageos**
+
+[https://download.lineageos.org/devices/blueline/builds](https://download.lineageos.org/devices/blueline/builds)
+
+**ADB**
+
+[https://developer.android.google.cn/tools/releases/platform-tools?hl=zh-cn](https://developer.android.google.cn/tools/releases/platform-tools?hl=zh-cn)
+
+**谷歌框架**
+
+[https://wiki.lineageos.org/gapps/](https://wiki.lineageos.org/gapps/)
+
+**面具**
+
+[https://github.com/topjohnwu/Magisk/releases/](https://github.com/topjohnwu/Magisk/releases/)
+
+下载好后，把ADB添加到环境变量中
+
+打开手机的开发者模式的USB调试，打开把你的手机用数据线连接到电脑
+
+Win+R输入cmd回车
+
+在cmd输入个命令
+
+adb devices#查看设备是否被识别
+
+adb reboot bootloader # 进入fastboot
+
+fastboot flashing unlock # 解锁
+
+重启后再次进入fastboot
+
+fastboot flash boot boot.img
+
+使用音量加减进入恢复模式
+
+再清除data
+
+再选择第二个使用adb安装系统
+
+adb sideload xxx.zip
+
+注：如果卡在47%是正常的
+
+然后如果你要使用海外应用（google,gmail）请安装谷歌框架
+
+adb sideload 谷歌框架.zip
+
+然后重启到系统
+
+进行一系列初始化
+
+注：如果你安装了谷歌，请不要联网
+
+完成后，如果你网络无法连接是因为自Android 5.0起，谷歌引入了Captive Portal机制， 用于检测WiFi网络认证是否正常。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/google%20Plxei3-shua-ji-Lineageos.html</guid><pubDate>Fri, 24 Oct 2025 14:35:53 +0000</pubDate></item><item><title>如何使用ffmpeg批量转换视频格式</title><link>https://aidens-fox.github.io/post/ru-he-shi-yong-ffmpeg-pi-liang-zhuan-huan-shi-pin-ge-shi.html</link><description>在前几天，老狐在班上被那群住宿生围住要俺给他们的mp3下视频，整个宿舍也mp3的全给了老狐俺，俺只好接下这个“重任”了，不过这三四个的mp3要下的视频也太多了，而且由于是比较低级的设备，视频格式只支持.amv格式的，还要下很多视频，但是现在视频大多都是.mp4格式的导致俺要想让他们的设备可以播放视频就需要转换格式才行，但这又出现了一个问题，如果一个一个的转换的话也太慢了，所以我就使用批量转换格式的命令来提升效率，那么下面我就以50多集的蜡笔小新来做演示不过在演示之前你可能需要先下载ffmpeg，不过一般下载mpv或vlc都会自动安装，因此不需要安装
 
 那么首先如果只是转换一个视频的话就是以下命令：
 ` ffmpeg -i  xx.mp4  -ar 22050  -ac 1  -s 208x160  -r 18  -block_size 1225   xx.amv`

@@ -18,19 +18,15 @@
 
 打开手机的开发者模式的USB调试，打开把你的手机用数据线连接到电脑
 
-Win+R输入cmd回车
+`adb devices`#查看设备是否被识别
 
-在cmd输入个命令
+`adb reboot bootloader `# 进入fastboot
 
-adb devices#查看设备是否被识别
-
-adb reboot bootloader # 进入fastboot
-
-fastboot flashing unlock # 解锁
+`fastboot flashing unlock` # 解锁
 
 重启后再次进入fastboot
 
-fastboot flash boot boot.img
+`fastboot flash boot boot.img`
 
 使用音量加减进入恢复模式
 
@@ -38,13 +34,13 @@ fastboot flash boot boot.img
 
 再选择第二个使用adb安装系统
 
-adb sideload xxx.zip
+`adb sideload xxx.zip`
 
 注：如果卡在47%是正常的
 
 然后如果你要使用海外应用（google,gmail）请安装谷歌框架
 
-adb sideload 谷歌框架.zip
+`adb sideload 谷歌框架.zip`
 
 然后重启到系统
 
@@ -57,17 +53,17 @@ adb sideload 谷歌框架.zip
 所以我们继续连接电脑使用ADB
 
 使用ADB 工具，无需要root权限
-
+````
 adb shell settings delete global captive_portal_https_url
 
 adb shell settings delete global captive_portal_http_url
-
+````
 修改一下服务器的地址：
-
+````
 adb shell settings put global captive_portal_http_url http://captive.v2ex.co/generate_204
 
 adb shell settings put global captive_portal_https_url http://captive.v2ex.co/generate_204
-
+````
 然后切换一下飞行模式5秒， 激活一下就好
 
 最后再安装面具
@@ -76,9 +72,9 @@ adb shell settings put global captive_portal_https_url http://captive.v2ex.co/ge
 
 再次使用ADB
 
-adb reboot bootloader
+`adb reboot bootloader`
 
-fastboot flash boot magisk.img
+`fastboot flash boot magisk.img`
 
 重启后可以了
 

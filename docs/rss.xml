@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>阮一狐的博客</title><link>https://aidens-fox.github.io</link><description>我是阮一狐，一个对linux感兴趣的初中生,我的邮箱：rootwang838@gmail.com</description><copyright>阮一狐的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Fri, 24 Oct 2025 14:36:32 +0000</lastBuildDate><managingEditor>阮一狐的博客</managingEditor><ttl>60</ttl><webMaster>阮一狐的博客</webMaster><item><title>google Plxei3刷机Lineageos</title><link>https://aidens-fox.github.io/post/google%20Plxei3-shua-ji-Lineageos.html</link><description>**Lineageos**
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>阮一狐的博客</title><link>https://aidens-fox.github.io</link><description>我是阮一狐，一个对linux感兴趣的初中生,我的邮箱：rootwang838@gmail.com</description><copyright>阮一狐的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Fri, 24 Oct 2025 14:47:18 +0000</lastBuildDate><managingEditor>阮一狐的博客</managingEditor><ttl>60</ttl><webMaster>阮一狐的博客</webMaster><item><title>google Plxei3刷机Lineageos</title><link>https://aidens-fox.github.io/post/google%20Plxei3-shua-ji-Lineageos.html</link><description>**Lineageos**
 
 [https://download.lineageos.org/devices/blueline/builds](https://download.lineageos.org/devices/blueline/builds)
 
@@ -19,19 +19,15 @@
 
 打开手机的开发者模式的USB调试，打开把你的手机用数据线连接到电脑
 
-Win+R输入cmd回车
+`adb devices`#查看设备是否被识别
 
-在cmd输入个命令
+`adb reboot bootloader `# 进入fastboot
 
-adb devices#查看设备是否被识别
-
-adb reboot bootloader # 进入fastboot
-
-fastboot flashing unlock # 解锁
+`fastboot flashing unlock` # 解锁
 
 重启后再次进入fastboot
 
-fastboot flash boot boot.img
+`fastboot flash boot boot.img`
 
 使用音量加减进入恢复模式
 
@@ -39,13 +35,13 @@ fastboot flash boot boot.img
 
 再选择第二个使用adb安装系统
 
-adb sideload xxx.zip
+`adb sideload xxx.zip`
 
 注：如果卡在47%是正常的
 
 然后如果你要使用海外应用（google,gmail）请安装谷歌框架
 
-adb sideload 谷歌框架.zip
+`adb sideload 谷歌框架.zip`
 
 然后重启到系统
 

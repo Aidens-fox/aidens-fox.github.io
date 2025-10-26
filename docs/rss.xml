@@ -1,5 +1,243 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>阮一狐的博客</title><link>https://aidens-fox.github.io</link><description>我是阮一狐，一个对linux感兴趣的初中生,我的邮箱：rootwang838@gmail.com</description><copyright>阮一狐的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Fri, 24 Oct 2025 14:55:28 +0000</lastBuildDate><managingEditor>阮一狐的博客</managingEditor><ttl>60</ttl><webMaster>阮一狐的博客</webMaster><item><title>qbittorrent的配置和使用</title><link>https://aidens-fox.github.io/post/qbittorrent-de-pei-zhi-he-shi-yong.html</link><description> **前言**
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>阮一狐的博客</title><link>https://aidens-fox.github.io</link><description>我是阮一狐，一个对linux感兴趣的初中生,我的邮箱：rootwang838@gmail.com</description><copyright>阮一狐的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Sun, 26 Oct 2025 05:31:10 +0000</lastBuildDate><managingEditor>阮一狐的博客</managingEditor><ttl>60</ttl><webMaster>阮一狐的博客</webMaster><item><title>我是怎么配置waybar的，waybar配置讲解</title><link>https://aidens-fox.github.io/post/wo-shi-zen-me-pei-zhi-waybar-de-%EF%BC%8Cwaybar-pei-zhi-jiang-jie.html</link><description>首先看一下俺配置好后的效果
+&lt;img width='1920' height='1080' alt='Image' src='https://github.com/user-attachments/assets/223c07bf-b3d3-4c84-9119-ff5c3e6fda00' /&gt;
+那么我们要配置waybar就要先得到它的配置文件，它的默认配置文件在/etc/xdg/waybar/下，我们需要把它复制到.config/waybar下，如果没有就使用mkdir创建一个,然后再复制
+`cp /etc/xdg/waybar/* .config/waybar`
+我们使用ls命令会发现有两个文件：config.jsonc和style.css，这两个一个是设置模块和其他，一个是设置样式的
+如果你不想配置，那么你可以克隆我的配置：https://github.com/Aidens-fox/archlinuxinstall-swaywmConfiguration
+我们打开config.jsonc
+````
+// -*- mode: jsonc -*-
+{
+    // 'layer': 'top', // Waybar at top layer
+     'position': 'bottom', // 显示位置
+    'height': 25, // 显示大小
+    // 'width': 1280, // 导航栏宽度
+    'spacing': 4, // 模块间距
+    // 选择模块顺序
+    'modules-left': [
+	'idle_inhibitor',
+	'disk',
+        'sway/workspaces',
+        'sway/mode',
+        'sway/scratchpad',
+        'custom/media'
+    ],
+    'modules-right': [
+        'pulseaudio',
+        'network',
+        'power-profiles-daemon',
+        'cpu',
+        'memory',
+        'temperature',
+        'backlight',
+        'keyboard-state',
+        'battery',
+        'battery#bat2',
+        'clock',
+        'tray',
+    ],
+    // 模块配置
+//     'sway/workspaces': {
+  //       'disable-scroll': true,
+    //     'all-outputs': true,
+      //   'warp-on-scroll': false,
+        // 'format': '{name}: {icon}',
+  //       'format-icons': {
+    //         '1': '',
+      //       '2': '',
+        //     '3': '',
+      //       '4': '',
+        //     '5': '',
+	  //   '6': '󱂬',
+	//     '7': '󰹑',
+           //  'urgent': '',
+        //     'focused': '',
+      //       'default': ''
+    //     }
+  //   },
+
+
+       'disk':{
+			'format': '󰋊  {percentage_free}%',
+	},
+
+    'keyboard-state': {
+        'numlock': true,
+        'capslock': true,
+        'format': '{name} {icon}',
+        'format-icons': {
+            'locked': '',
+            'unlocked': ''
+        }
+    },
+    'sway/mode': {
+        'format': '&lt;span style=\'italic\'&gt;{}&lt;/span&gt;'
+    },
+    'sway/scratchpad': {
+        'format': '{icon} {count}',
+        'show-empty': false,
+        'format-icons': ['', ''],
+        'tooltip': true,
+        'tooltip-format': '{app}: {title}'
+    },
+    'mpd': {
+        'format': '{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ',
+        'format-disconnected': 'Disconnected ',
+        'format-stopped': '{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ',
+        'unknown-tag': 'N/A',
+        'interval': 5,
+        'consume-icons': {
+            'on': ' '
+        },
+        'random-icons': {
+            'off': '&lt;span color=\'#f53c3c\'&gt;&lt;/span&gt; ',
+            'on': ' '
+        },
+        'repeat-icons': {
+            'on': ' '
+        },
+        'single-icons': {
+            'on': '1 '
+        },
+        'state-icons': {
+            'paused': '',
+            'playing': ''
+        },
+        'tooltip-format': 'MPD (connected)',
+        'tooltip-format-disconnected': 'MPD (disconnected)'
+    },
+    'idle_inhibitor': {
+        'format': '{icon}',
+        'format-icons': {
+            'activated': '',
+            'deactivated': ''
+        }
+    },
+    'tray': {
+        // 'icon-size': 21,
+        'spacing': 10,
+        // 'icons': {
+        //   'blueman': 'bluetooth',
+        //   'TelegramDesktop': '$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png'
+        // }
+    },
+    'clock': {
+        // 'timezone': 'America/New_York',
+        'tooltip-format': '&lt;big&gt;{:%Y %B}&lt;/big&gt;\n&lt;tt&gt;&lt;small&gt;{calendar}&lt;/small&gt;&lt;/tt&gt;',
+        'format-alt': '{:%Y-%m-%d}'
+    },
+    'cpu': {
+	 'format': '{usage}% ',
+        'tooltip': false
+    },
+    'memory': {
+        'format': '{}% '
+    },
+    'temperature': {
+        // 'thermal-zone': 2,
+        // 'hwmon-path': '/sys/class/hwmon/hwmon2/temp1_input',
+        'critical-threshold': 80,
+        // 'format-critical': '{temperatureC}°C {icon}',
+        'format': '{temperatureC}°C {icon}',
+        'format-icons': ['']
+    },
+    'backlight': {
+        // 'device': 'acpi_video1',
+        'format': '{percent}% {icon}',
+        'format-icons': ['', '', '', '', '', '', '', '', '']
+    },
+    'battery': {
+        'states': {
+            // 'good': 95,
+            'warning': 30,
+            'critical': 15
+        },
+        'format': '{capacity}% {icon}',
+        'format-full': '{capacity}% {icon} ',
+        'format-charging': '{capacity}% ',
+        'format-plugged': '{capacity}% ',
+        'format-alt': '{time} {icon}',
+        // 'format-good': '', // An empty format will hide the module
+        // 'format-full': '',
+        'format-icons': ['', '', '', '', '']
+    },
+    'battery#bat2': {
+        'bat': 'BAT2'
+    },
+    'power-profiles-daemon': {
+      'format': '{icon}',
+      'tooltip-format': 'Power profile: {profile}\nDriver: {driver}',
+      'tooltip': true,
+      'format-icons': {
+        'default': ' ',
+        'performance': ' ',
+        'balanced': ' ',
+        'power-saver': ' '
+      }
+    },
+    'network': {
+        // 'interface': 'wlp2*', // (Optional) To force the use of this interface
+        'format-wifi': '{essid} ({signalStrength}%) ',
+        'format-ethernet': '{ipaddr}/{cidr} ',
+        'tooltip-format': '{ifname} via {gwaddr} ',
+        'format-linked': '{ifname} (No IP) ',
+        'format-disconnected': 'Disconnected ⚠',
+        'format-alt': '{ifname}: {ipaddr}/{cidr}'
+    },
+    'pulseaudio': {
+        // 'scroll-step': 1, // %, can be a float
+        'format': '{volume}% {icon} {format_source}',
+        'format-bluetooth': '{volume}% {icon} {format_source}',
+        'format-bluetooth-muted': ' {icon} {format_source}',
+        'format-muted': ' {format_source}',
+        'format-source': '{volume}% ',
+        'format-source-muted': '',
+        'format-icons': {
+            'headphone': '',
+            'hands-free': '',
+            'headset': '',
+            'phone': '',
+            'portable': '',
+            'car': '',
+            'default': ['', '', '']
+        },
+        'on-click': 'pavucontrol'
+    },
+    'custom/media': {
+        'format': '{icon} {text}',
+        'return-type': 'json',
+        'max-length': 40,
+        'format-icons': {
+            'spotify': '',
+            'default': '🎜'
+        },
+        'escape': true,
+        'exec': '$HOME/.config/waybar/mediaplayer.py 2&gt; /dev/null' // Script in resources folder
+        // 'exec': '$HOME/.config/waybar/mediaplayer.py --player spotify 2&gt; /dev/null' // Filter player based on name
+    },
+    'custom/power': {
+        'format' : '⏻ ',
+		'tooltip': false,
+		'menu': 'on-click',
+		'menu-file': '$HOME/.config/waybar/power_menu.xml', // Menu file in resources folder
+		'menu-actions': {
+			'shutdown': 'shutdown',
+			'reboot': 'reboot',
+			'suspend': 'systemctl suspend',
+			'hibernate': 'systemctl hibernate'
+		}
+    }
+}
+
+````
+
+     
+
+      如果你不想配置，那么你可以克隆我的配置：https://github.com/Aidens-fox/archlinuxinstall-swaywmConfiguration
+我们再讲讲style.css，这个主要是把颜色给统一了
+
+(-:。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/wo-shi-zen-me-pei-zhi-waybar-de-%EF%BC%8Cwaybar-pei-zhi-jiang-jie.html</guid><pubDate>Sun, 26 Oct 2025 01:56:04 +0000</pubDate></item><item><title>qbittorrent的配置和使用</title><link>https://aidens-fox.github.io/post/qbittorrent-de-pei-zhi-he-shi-yong.html</link><description> **前言**
  qbittorrent是一个BT种子下载器，用于下载文件，常用于大型文件如：赛博朋克2077，或一些电子书等，因为qbittorrent是借助P2P的去中心化，所以用户越多，下载速度就越快，所以选择下载时尽量选择比较火爆的种子，这可以大大提高下载速度
  **准备**
 qBittorrent 增强版

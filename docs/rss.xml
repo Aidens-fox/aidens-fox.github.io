@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>阮一狐的博客</title><link>https://aidens-fox.github.io</link><description>我是阮一狐，一个对linux感兴趣的初中生</description><copyright>阮一狐的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Sat, 24 Jan 2026 08:23:59 +0000</lastBuildDate><managingEditor>阮一狐的博客</managingEditor><ttl>60</ttl><webMaster>阮一狐的博客</webMaster><item><title>从零开始配置river</title><link>https://aidens-fox.github.io/post/cong-ling-kai-shi-pei-zhi-river.html</link><description>1.轻量级状态栏：dam
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>阮一狐的博客</title><link>https://aidens-fox.github.io</link><description>我是阮一狐，一个对linux感兴趣的初中生</description><copyright>阮一狐的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Sat, 24 Jan 2026 08:27:37 +0000</lastBuildDate><managingEditor>阮一狐的博客</managingEditor><ttl>60</ttl><webMaster>阮一狐的博客</webMaster><item><title>从零开始配置river</title><link>https://aidens-fox.github.io/post/cong-ling-kai-shi-pei-zhi-river.html</link><description>**我的配置**：https://github.com/Aidens-fox/river
+**1.轻量级状态栏：dam**
 项目链接：codeberg.org/sewn/dam
 `git clone 'https://codeberg.org/sewn/dam.git'`
 `sudo pacman -S wayland  wayland-protocols fcft pixman pkg-config tllist`
@@ -7,10 +8,10 @@
 `git clone 'https://codeberg.org/sewn/drwl.git'`
 克隆完成后把文件移动到c库
 `i3status | dam`
-2.字体安装：
+**2.字体安装**：
 `sudo pacman -S   ttf-maplemono-nf-cn-unhinted`
 
-3.配置dam
+**3.配置dam**
 打开nano config.h
 ````
 #修改位置
@@ -35,7 +36,7 @@ static uint32_t colors[][3]  = {
 ````
 最后sudo make install
 
-4.配置river
+**4.配置river**
 把默认配置复制到.config/river/
 `mkdir .config/river`
 `cp /usr/share/river/example/init .config/river/init`

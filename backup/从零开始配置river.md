@@ -1,4 +1,5 @@
-1.轻量级状态栏：dam
+**我的配置**：https://github.com/Aidens-fox/river
+**1.轻量级状态栏：dam**
 项目链接：codeberg.org/sewn/dam
 `git clone "https://codeberg.org/sewn/dam.git"`
 `sudo pacman -S wayland  wayland-protocols fcft pixman pkg-config tllist`
@@ -6,10 +7,10 @@
 `git clone "https://codeberg.org/sewn/drwl.git"`
 克隆完成后把文件移动到c库
 `i3status | dam`
-2.字体安装：
+**2.字体安装**：
 `sudo pacman -S   ttf-maplemono-nf-cn-unhinted`
 
-3.配置dam
+**3.配置dam**
 打开nano config.h
 ````
 #修改位置
@@ -34,7 +35,7 @@ static uint32_t colors[][3]  = {
 ````
 最后sudo make install
 
-4.配置river
+**4.配置river**
 把默认配置复制到.config/river/
 `mkdir .config/river`
 `cp /usr/share/river/example/init .config/river/init`

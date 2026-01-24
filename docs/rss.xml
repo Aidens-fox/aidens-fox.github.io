@@ -1,5 +1,55 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>阮一狐的博客</title><link>https://aidens-fox.github.io</link><description>我是阮一狐，一个对linux感兴趣的初中生</description><copyright>阮一狐的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Sat, 06 Dec 2025 14:22:14 +0000</lastBuildDate><managingEditor>阮一狐的博客</managingEditor><ttl>60</ttl><webMaster>阮一狐的博客</webMaster><item><title>从零开始dwm安装配置</title><link>https://aidens-fox.github.io/post/cong-ling-kai-shi-dwm-an-zhuang-pei-zhi.html</link><description>  dwm是一个十分轻量的窗口管理器，所以就对一些老旧的设备更加友好，不过这也对使用者的的能力提出了新要求，在本篇博文中我将会从零开始教你安装配置dwm的补丁，状态栏等
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>阮一狐的博客</title><link>https://aidens-fox.github.io</link><description>我是阮一狐，一个对linux感兴趣的初中生</description><copyright>阮一狐的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Sat, 24 Jan 2026 08:23:59 +0000</lastBuildDate><managingEditor>阮一狐的博客</managingEditor><ttl>60</ttl><webMaster>阮一狐的博客</webMaster><item><title>从零开始配置river</title><link>https://aidens-fox.github.io/post/cong-ling-kai-shi-pei-zhi-river.html</link><description>1.轻量级状态栏：dam
+项目链接：codeberg.org/sewn/dam
+`git clone 'https://codeberg.org/sewn/dam.git'`
+`sudo pacman -S wayland  wayland-protocols fcft pixman pkg-config tllist`
+项目依赖文件：https://codeberg.org/sewn/drwl
+`git clone 'https://codeberg.org/sewn/drwl.git'`
+克隆完成后把文件移动到c库
+`i3status | dam`
+2.字体安装：
+`sudo pacman -S   ttf-maplemono-nf-cn-unhinted`
+
+3.配置dam
+打开nano config.h
+````
+#修改位置
+static int topbar            = 0; /* 0 means bottom bar */
+#修改字体
+static const char *fonts[]   = { 'Maple Mono NF CN:size=12' };
+#修改颜色
+static uint32_t colors[][3]  = {
+        /*               fg          bg         */
+        [SchemeNorm] = { 0xd3c6aaff, 0x2d353baa      },
+        [SchemeSel]  = { 0xd3c6aaff, 0x4b533aff },
+};
+````
+保存后再打开dam.c
+#设置状态栏间距,第238行
+````   
+     if (bar == selbar) { /* status is only drawn on selected monitor */
+                drwl_setscheme(bar-&gt;drw, colors[SchemeNorm]);
+                tw = TEXTW(bar, stext);
+                drwl_text(bar-&gt;drw, bar-&gt;width - tw,0, tw, bar-&gt;height, bar-&gt;lrpad = 15 , stext, 0);
+        }
+````
+最后sudo make install
+
+4.配置river
+把默认配置复制到.config/river/
+`mkdir .config/river`
+`cp /usr/share/river/example/init .config/river/init`
+打开init文件
+````
+#修改配色
+riverctl border-color-focused '0x6e8343'
+riverctl border-color-unfocused '0x585b70'
+riverctl border-color-urgent 0xdc322f
+#解决音量快捷键问题
+    riverctl map $mode None XF86AudioRaiseVolume  spawn 'pactl set-sink-volume @DEFAULT_SINK@ +10%'
+    riverctl map $mode None XF86AudioLowerVolume  spawn 'pactl set-sink-volume @DEFAULT_SINK@ -10%'
+    riverctl map $mode None XF86AudioMute         spawn 'pamixer --toggle-mute'
+````。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/cong-ling-kai-shi-pei-zhi-river.html</guid><pubDate>Sat, 24 Jan 2026 08:23:33 +0000</pubDate></item><item><title>从零开始dwm安装配置</title><link>https://aidens-fox.github.io/post/cong-ling-kai-shi-dwm-an-zhuang-pei-zhi.html</link><description>  dwm是一个十分轻量的窗口管理器，所以就对一些老旧的设备更加友好，不过这也对使用者的的能力提出了新要求，在本篇博文中我将会从零开始教你安装配置dwm的补丁，状态栏等
    那么我们首先先克隆下配置
 dwm（本体）
 `git clone https://git.suckless.org/dwm`

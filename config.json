@@ -5,7 +5,7 @@
     "avatarUrl":"https://avatars.githubusercontent.com/u/219532526?v=4&size=64",    
     "GMEEK_VERSION":"last",
     "style": "<style> :root { --color-canvas-default: #282828 !important; --color-canvas-subtle: #3c3836 !important; --color-fg-default: #ebdbb2 !important; --color-fg-muted: #a89984 !important; --color-accent-fg: #fabd2f !important; --color-border-default: #504945 !important; --color-btn-bg: #32302f !important; } body { background-color: var(--color-canvas-default); color: var(--color-fg-default); } a { color: var(--color-accent-fg) !important; } .postTitle, .title-left { font-family: 'Courier New', Courier, monospace; } </style>",
-    "indexScript": "<script>console.log('首页主题已加载');</script>"，
+    "indexStyle": "<style> :root { --color-canvas-default: #282828 !important; } .SideNav-item { color: #fabd2f !important; border-bottom: 1px solid #504945 !important; } #header { border-bottom: 2px solid #fabd2f; } </style>"，
     "onePageListNum":24
     
 }

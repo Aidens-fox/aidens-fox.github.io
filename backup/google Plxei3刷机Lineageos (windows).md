@@ -1,5 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>aidens的博客</title><link>https://aidens-fox.github.io</link><description>我是aidens，一个对linux感兴趣的狐狸</description><copyright>aidens的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/219532526?v=4&amp;size=64</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Tue, 03 Feb 2026 05:45:48 +0000</lastBuildDate><managingEditor>aidens的博客</managingEditor><ttl>60</ttl><webMaster>aidens的博客</webMaster><item><title>google Plxei3刷机Lineageos (windows)</title><link>https://aidens-fox.github.io/post/google%20Plxei3-shua-ji-Lineageos%20%28windows%29.html</link><description>- **准备**
+- **准备**
 1. **Lineageos**
 [https://download.lineageos.org/devices/blueline/builds](https://download.lineageos.org/devices/blueline/builds)
 2. **ADB**
@@ -32,4 +31,32 @@ https://developer.android.com/studio/run/win-usb?hl=zh-cn
 进行一系列初始化
 注：如果你安装了谷歌，请不要联网
 - **解决网络无法连接**
-完成后，如果你网络无法连接是因为自Android 5.0起，谷歌引入了Captive Portal机制， 用于检测WiFi网络认证是否正常。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/google%20Plxei3-shua-ji-Lineageos%20%28windows%29.html</guid><pubDate>Tue, 03 Feb 2026 05:43:32 +0000</pubDate></item></channel></rss>
+完成后，如果你网络无法连接是因为自Android 5.0起，谷歌引入了Captive Portal机制， 用于检测WiFi网络认证是否正常。 该机制默认检测访问的是谷歌服务器，需要科学才能正常访问谷歌服务器
+所以我们继续连接电脑使用ADB
+使用ADB 工具，无需要root权限
+````
+adb shell settings delete global captive_portal_https_url
+
+adb shell settings delete global captive_portal_http_url
+````
+修改一下服务器的地址：
+````
+adb shell settings put global captive_portal_http_url http://captive.v2ex.co/generate_204
+
+adb shell settings put global captive_portal_https_url http://captive.v2ex.co/generate_204
+````
+然后切换一下飞行模式5秒， 激活一下就好
+- **安装面具**
+把boot.img复制到手机使用面具修补再传回电脑
+再次使用ADB
+`adb reboot bootloader`
+`fastboot flash boot magisk.img`
+重启后可以了
+- **其他补充**
+高版本尤其是动态分区版本早就不能用twrp了
+所以刷写完系统后请不要装twrp
+
+
+
+
+

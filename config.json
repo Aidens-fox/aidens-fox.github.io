@@ -3,8 +3,8 @@
     "subTitle":"我是aidens，一个对linux感兴趣的狐狸",
     "avatarUrl":"https://avatars.githubusercontent.com/u/219532526?v=4&size=64",
     "GMEEK_VERSION":"last",
-    "lightTheme": "gruvbox-dark",
-    "darkTheme": "gruvbox-dark",
-    "style": ".id-mode-toggle, .rss { display: none !important; }",
+    "themeMode": "fix",
+    "dayTheme": "dark",
+    "nightTheme": "gruvbox-dark",
     "onePageListNum":24    
 }

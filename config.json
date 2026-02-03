@@ -5,11 +5,5 @@
     "GMEEK_VERSION":"last",
     "style": "<style>:root {--color-canvas-default:#282828 !important;--color-canvas-subtle:#3c3836 !important;--color-fg-default:#ebdbb2 !important;--color-fg-muted:#a89984 !important;--color-accent-fg:#fabd2f !important;--color-border-default:#504945 !important;} body{background-color:var(--color-canvas-default);color:var(--color-fg-default);} a{color:var(--color-accent-fg) !important;} .Box-row{background-color:#282828 !important; border-color:#504945 !important;} .markdown-body{background-color:transparent !important; color:#ebdbb2 !important;}</style>",
     "indexStyle": "<style>:root{--color-canvas-default:#282828 !important;--color-canvas-subtle:#3c3836 !important;--color-fg-default:#ebdbb2 !important;--color-fg-muted:#a89984 !important;--color-accent-fg:#fabd2f !important;--color-border-default:#504945 !important;--color-btn-bg:#32302f !important;}body{background-color:#282828;color:#ebdbb2;}.Box{background-color:#282828 !important;border:1px solid #504945 !important;}.Box-row{background-color:#282828 !important;border-top:1px solid #504945 !important;}.subnav-search-input{background-color:#3c3836 !important;color:#ebdbb2 !important;border:1px solid #504945 !important;}.btn-primary{background-color:#d79921 !important;border:none !important;}.SideNav-item{color:#ebdbb2 !important;}.SideNav-item:hover{background-color:#3c3836 !important;}</style>",
-    "onePageListNum":24,
-     "themeMode": "fix",
-    "dayTheme": "dark",
-    "nightTheme": "gruvbox-dark",
-     "style": ".id-mode-toggle, .rss { display: none !important; } :root {--color-canvas-default:#282828 !important; --color-canvas-subtle:#3c3836 !important; --color-fg-default:#ebdbb2 !important; --color-border-default:#504945 !important; } body { background-color: #282828 !important; }",
-    "indexStyle": ".id-mode-toggle, .rss { display: none !important; } :root {--color-canvas-default:#282828 !important; --color-canvas-subtle:#3c3836 !important; --color-fg-default:#ebdbb2 !important; --color-border-default:#504945 !important; } body { background-color: #282828 !important; }",
-    "utterancesTheme": "gruvbox-dark"   
+    "onePageListNum":24   
 }

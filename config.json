@@ -6,5 +6,6 @@
     "themeMode": "fix",
     "dayTheme": "dark",
     "nightTheme": "gruvbox-dark",
+    "style": ".id-mode-toggle, .rss { display: none !important; }",
     "onePageListNum":24    
 }

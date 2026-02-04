@@ -1,5 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>aidens的博客</title><link>https://aidens-fox.github.io</link><description>我是aidens，一个对linux感兴趣的狐狸</description><copyright>aidens的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/219532526?v=4&amp;size=64</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Tue, 03 Feb 2026 10:43:35 +0000</lastBuildDate><managingEditor>aidens的博客</managingEditor><ttl>60</ttl><webMaster>aidens的博客</webMaster><item><title>从零开始dwm安装配置</title><link>https://aidens-fox.github.io/post/cong-ling-kai-shi-dwm-an-zhuang-pei-zhi.html</link><description>- **dwm是什么？**
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>aidens的博客</title><link>https://aidens-fox.github.io</link><description>我是aidens，一个对linux感兴趣的狐狸</description><copyright>aidens的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/219532526?v=4&amp;size=64</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Wed, 04 Feb 2026 00:38:10 +0000</lastBuildDate><managingEditor>aidens的博客</managingEditor><ttl>60</ttl><webMaster>aidens的博客</webMaster><item><title>qbittorrent配置和使用</title><link>https://aidens-fox.github.io/post/qbittorrent-pei-zhi-he-shi-yong.html</link><description>- **前言**
+ qbittorrent是一个BT种子下载器，用于下载文件，常用于大型文件如：游戏或一些电子书等，因为qbittorrent是借助P2P的去中心化，所以用户越多，下载速度就越快，所以选择下载时尽量选择比较火爆的种子，这可以大大提高下载速度
+-  **准备**
+qBittorrent
+`sudo pacman -S qbittorrent`
+公共tracker服务器
+https://github.com/XIU2/TrackersListCollection
+公共tracker服务器2
+https://trackerslist.com/#/zh?id=qbittorrent-enhanced-edition-%E5%A2%9E%E5%BC%BA%E7%89%88
+主题
+https://github.com/jagannatharjun/qbt-theme
+- **配置**
+在使用之前我们需要进行配置，首先打开设置，在qBitTorrent添加tracker链接，来发现更多人，以此提高下载速度，然后在高级中的上传连接策略选择反吸血，打开总是向同级tracker汇报
+(可选)更改自定义主题：首先我们下载主题后解压，在行为中选择自定义主题，并输入主题连接，点击应用，然后重启应用就可以生效
+- **BT下载网站推荐**
+海盗湾
+https://thepiratebay.org/index.html
+。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/qbittorrent-pei-zhi-he-shi-yong.html</guid><pubDate>Wed, 04 Feb 2026 00:37:47 +0000</pubDate></item><item><title>从零开始dwm安装配置</title><link>https://aidens-fox.github.io/post/cong-ling-kai-shi-dwm-an-zhuang-pei-zhi.html</link><description>- **dwm是什么？**
   dwm是一个十分轻量的窗口管理器，所以就对一些老旧的设备更加友好，不过这也对使用者的的能力提出了新要求，在本篇博文中我将会从零开始教你安装配置dwm的补丁，状态栏等
 -   **下载**
 dwm（本体）

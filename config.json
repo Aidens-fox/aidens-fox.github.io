@@ -8,7 +8,8 @@
     "themeMode":"fix",
     "dayTheme":"dark",
     "nightTheme":"gruvbox-dark",
-    "style": ".side-index, .header, .footer, .postTitle, .sr-only { max-width: 100% !important; padding-left: 20px; padding-right: 20px; } #content { max-width: 100% !important; padding: 20px; }",
+    "script": "<link rel='stylesheet' href='https://npm.elemecdn.com' />",
+     "style": "body, .markdown-body { font-family: 'LXGW WenKai Screen', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif !important; font-size: 18px; line-height: 1.8; } .postTitle { font-family: 'LXGW WenKai Screen', sans-serif !important; font-weight: bold; }",
      "exlink": {
         "github": "https://github.com/Aidens-fox?tab=repositories",
         "bilibili": "https://space.bilibili.com/3546936537778663?spm_id_from=333.1007.0.0"

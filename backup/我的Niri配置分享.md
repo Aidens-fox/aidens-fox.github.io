@@ -3,7 +3,7 @@
 https://github.com/Aidens-fox/NiriConfiguration
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0e5b3fdc-e805-4041-b0f1-f62c2d163553" />
-### 本配置采用Gruvbox配色方案，色调柔和 
+本配置采用Gruvbox配色方案，色调柔和 
 
 - 鼠标主题：Moga Neon
 

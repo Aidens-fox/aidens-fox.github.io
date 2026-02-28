@@ -1,18 +1,18 @@
-**什么是crDroid？**
+#### **什么是crDroid？**
 crDroid 是一个基于 AOSP（Android Open Source Project） 的开源 Android 定制系统，旨在提供一个 稳定、流畅且功能丰富的用户体验。
 **它有什么优点**
 高度可定制化,小窗和分屏功能
-**下载刷机包**
+#### **下载刷机包**
  crDroid: https://sourceforge.net/projects/crdroid/files/
  Google Pixel3 : https://sourceforge.net/projects/crdroid/files/blueline/11.x/
  注:在下载刷机包之前请参考设备代号，如Google Pixel3代号blueline（蓝鳍鱼），然后在sourceforge里使用Ctrl+f来搜索，**然后不要忘记下载boot和dtbo文件** 
-**linux要准备的**
+#### **linux要准备的**
 adb
 `sudo pacman -S android-tools  android-udev payload-dumper-go`
-**手机设置**
+#### **手机设置**
 打开手机的开发者模式的USB调试，打开把你的手机用数据线连接到电脑
 手机弹出提示是否允许电脑调试点永远允许
-**开始刷机**
+#### **开始刷机**
 打开终端
 `adb devices`#查看设备是否被识别
 `adb reboot bootloader `#进入fastboot
@@ -27,7 +27,7 @@ adb
 注：如果卡在47%是正常的
 然后重启到系统
 进行一系列初始化
-解决网络无法连接
+#### 解决网络无法连接
 完成后，如果您网络无法连接是因为自Android 5.0起，谷歌引入了Captive Portal机制，用于检测WiFi网络认证是否正常。该机制默认检测访问的是谷歌服务器，需要科学才能正常访问谷歌服务器
 所以我们可以继续使用ADB连接电脑
 使用ADB工具，无需root权限

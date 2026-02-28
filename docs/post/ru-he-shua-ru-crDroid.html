@@ -7,10 +7,10 @@
     <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
     
     <link rel="icon" href="https://avatars.githubusercontent.com/u/219532526?v=4&size=64">
-<meta name="description" content="**什么是crDroid？**
+<meta name="description" content="#### **什么是crDroid？**
 crDroid 是一个基于 AOSP（Android Open Source Project） 的开源 Android 定制系统，旨在提供一个 稳定、流畅且功能丰富的用户体验。">
 <meta property="og:title" content="如何刷入crDroid">
-<meta property="og:description" content="**什么是crDroid？**
+<meta property="og:description" content="#### **什么是crDroid？**
 crDroid 是一个基于 AOSP（Android Open Source Project） 的开源 Android 定制系统，旨在提供一个 稳定、流畅且功能丰富的用户体验。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://aidens-fox.github.io/post/ru-he-shua-ru-crDroid.html">
@@ -82,22 +82,22 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p><strong>什么是crDroid？</strong><br>
-crDroid 是一个基于 AOSP（Android Open Source Project） 的开源 Android 定制系统，旨在提供一个 稳定、流畅且功能丰富的用户体验。<br>
+<div class="markdown-body" id="postBody"><h4><strong>什么是crDroid？</strong></h4>
+<p>crDroid 是一个基于 AOSP（Android Open Source Project） 的开源 Android 定制系统，旨在提供一个 稳定、流畅且功能丰富的用户体验。<br>
 <strong>它有什么优点</strong><br>
-高度可定制化,小窗和分屏功能<br>
-<strong>下载刷机包</strong><br>
-crDroid: <a href="https://sourceforge.net/projects/crdroid/files/" rel="nofollow">https://sourceforge.net/projects/crdroid/files/</a><br>
+高度可定制化,小窗和分屏功能</p>
+<h4><strong>下载刷机包</strong></h4>
+<p>crDroid: <a href="https://sourceforge.net/projects/crdroid/files/" rel="nofollow">https://sourceforge.net/projects/crdroid/files/</a><br>
 Google Pixel3 : <a href="https://sourceforge.net/projects/crdroid/files/blueline/11.x/" rel="nofollow">https://sourceforge.net/projects/crdroid/files/blueline/11.x/</a><br>
-注:在下载刷机包之前请参考设备代号，如Google Pixel3代号blueline（蓝鳍鱼），然后在sourceforge里使用Ctrl+f来搜索，<strong>然后不要忘记下载boot和dtbo文件</strong><br>
-<strong>linux要准备的</strong><br>
-adb<br>
-<code class="notranslate">sudo pacman -S android-tools  android-udev payload-dumper-go</code><br>
-<strong>手机设置</strong><br>
-打开手机的开发者模式的USB调试，打开把你的手机用数据线连接到电脑<br>
-手机弹出提示是否允许电脑调试点永远允许<br>
-<strong>开始刷机</strong><br>
-打开终端<br>
+注:在下载刷机包之前请参考设备代号，如Google Pixel3代号blueline（蓝鳍鱼），然后在sourceforge里使用Ctrl+f来搜索，<strong>然后不要忘记下载boot和dtbo文件</strong></p>
+<h4><strong>linux要准备的</strong></h4>
+<p>adb<br>
+<code class="notranslate">sudo pacman -S android-tools  android-udev payload-dumper-go</code></p>
+<h4><strong>手机设置</strong></h4>
+<p>打开手机的开发者模式的USB调试，打开把你的手机用数据线连接到电脑<br>
+手机弹出提示是否允许电脑调试点永远允许</p>
+<h4><strong>开始刷机</strong></h4>
+<p>打开终端<br>
 <code class="notranslate">adb devices</code>#查看设备是否被识别<br>
 <code class="notranslate">adb reboot bootloader </code>#进入fastboot<br>
 <code class="notranslate">fastboot flashing unlock</code>#解锁<br>
@@ -110,9 +110,9 @@ adb<br>
 <code class="notranslate">adb sideload xxx.zip</code><br>
 注：如果卡在47%是正常的<br>
 然后重启到系统<br>
-进行一系列初始化<br>
-解决网络无法连接<br>
-完成后，如果您网络无法连接是因为自Android 5.0起，谷歌引入了Captive Portal机制，用于检测WiFi网络认证是否正常。该机制默认检测访问的是谷歌服务器，需要科学才能正常访问谷歌服务器<br>
+进行一系列初始化</p>
+<h4>解决网络无法连接</h4>
+<p>完成后，如果您网络无法连接是因为自Android 5.0起，谷歌引入了Captive Portal机制，用于检测WiFi网络认证是否正常。该机制默认检测访问的是谷歌服务器，需要科学才能正常访问谷歌服务器<br>
 所以我们可以继续使用ADB连接电脑<br>
 使用ADB工具，无需root权限</p>
 <pre class="notranslate"><code class="notranslate">adb shell settings delete global captive_portal_https_url

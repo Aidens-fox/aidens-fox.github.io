@@ -1,4 +1,4 @@
-我的Niri配置：
+#### 我的Niri配置：
 
 https://github.com/Aidens-fox/NiriConfiguration
 
@@ -31,7 +31,7 @@ waybar也是采用Gruvbox配色方案，基于b站up主:夜未央-天将亮
 
 `yay -S fcitx5-gruvbox-dark-theme-git`
 
-- 你需要安装的软件
+#### 你需要安装的软件
 `sudo pacman -S  wlsunset foot brightnessctl swaybg  waybar`
 
 wlsunset:护眼模式需要
@@ -44,7 +44,7 @@ swaybg:设置壁纸需要
 
 waybar：状态栏
 
-- 主要添加的快捷键
+#### 主要添加的快捷键
 
 Mod+Return(回车键) : 打开终端
 

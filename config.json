@@ -24,7 +24,7 @@
     border-radius: 8px;
     padding: 15px !important;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
+},
 
 /* 目录标题 */
 #articletoc .toc-title {
@@ -32,27 +32,27 @@
     border-bottom: 1px solid #665c54 !important; /* 分割线颜色 */
     padding-bottom: 8px;
     font-weight: bold;
-}
+},
 
 /* 目录链接列表 */
 #articletoc ul li a {
     color: #fabd2f !important; /* 链接颜色: Gruvbox Yellow */
     text-decoration: none;
     transition: color 0.2s ease;
-}
+},
 
 /* 悬停效果 */
 #articletoc ul li a:hover {
     color: #fe8019 !important; /* 悬停颜色: Gruvbox Orange */
     background-color: #3c3836 !important; /* 悬停背景: Gruvbox Dark1 */
     border-radius: 4px;
-}
+},
 
 /* 当前激活的目录项 (如果有) */
 #articletoc ul li .active {
     color: #b8bb26 !important; /* 激活颜色: Gruvbox Green */
     font-weight: bold;
-}
+},
     
     "onePageListNum":24   
 }

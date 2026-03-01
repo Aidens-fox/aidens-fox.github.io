@@ -276,6 +276,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 </script>
-<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>
+<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script><script>function applyGruvboxTOC(){const toc=document.getElementById('articletoc');if(toc){toc.style.cssText='background-color:#282828 !important; border:1px solid #ebdbb2 !important; border-radius:8px !important; padding:15px !important; color:#ebdbb2 !important;';const title=toc.querySelector('.toc-title');if(title){title.style.cssText='color:#ebdbb2 !important; border-bottom:1px solid #ebdbb2 !important; font-weight:bold !important;';}}}const observer=new MutationObserver((mutations)=>{if(document.getElementById('articletoc')){applyGruvboxTOC();observer.disconnect();}});observer.observe(document.body,{childList:true,subtree:true});window.onload=applyGruvboxTOC;</script>
 
 </html>

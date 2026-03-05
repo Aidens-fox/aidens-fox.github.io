@@ -1,7 +1,7 @@
 {
     "title":"aidens的博客",
     "subtitle":"我是aidens，我的邮箱:openuxtk@outlook.com",
-    "avatarUrl":"https://avatars.githubusercontent.com",
+    "avatarUrl":"https://avatars.githubusercontent.com/u/219532526?v=4&size=64",
     "GMEEK_VERSION":"last",
     "style":"<style>:root{--color-canvas-default:#282828 !important;--color-canvas-subtle:#3c3836 !important;--color-fg-default:#ebdbb2 !important;--color-fg-muted:#a89984 !important;}</style>",
     "indexStyle":"<style>:root{--color-canvas-default:#282828 !important;--color-canvas-subtle:#3c3836 !important;--color-fg-default:#ebdbb2 !important;--color-fg-muted:#a89984 !important;} @media (min-width: 768px) { #header { display: grid; grid-template-columns: 280px 1fr; gap: 40px; align-items: start; max-width: 1100px !important; } .avatar { width: 120px !important; height: 120px !important; } .blogTitle { text-align: left !important; margin-top: 20px; } .SideNav { grid-column: 2; margin-top: -120px !important; border: 1px solid #3c3836 !important; border-radius: 12px; overflow: hidden; } .SideNav-item { padding: 15px 20px !important; border-bottom: 1px solid #3c3836 !important; transition: all 0.3s; } .SideNav-item:hover { background-color: #32302f !important; padding-left: 30px !important; } }</style>",

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="gruvbox-dark" data-light-theme="dark" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/219532526?v=4&size=64">
+<meta name="description" content="### 前言
+
+对于一些不想折腾root或没有解锁路径又不敢强解（处理器漏洞解锁）的用户，在手机用了五六年后就变得卡顿，除了系统方面（新系统往往都是已新设备为参考，所以在更新系统，尤其是跨版本更新后往往会卡顿，所以建议把自动更新关闭，系统尽量保持出厂预装系统来减少系统层的卡顿），还有软件方面，这就要提到著名的安迪比尔定律，硬件性能的提升很快会被软件消耗掉，从而推动用户更新硬件。">
+<meta property="og:title" content="旧手机优化——软件篇">
+<meta property="og:description" content="### 前言
+
+对于一些不想折腾root或没有解锁路径又不敢强解（处理器漏洞解锁）的用户，在手机用了五六年后就变得卡顿，除了系统方面（新系统往往都是已新设备为参考，所以在更新系统，尤其是跨版本更新后往往会卡顿，所以建议把自动更新关闭，系统尽量保持出厂预装系统来减少系统层的卡顿），还有软件方面，这就要提到著名的安迪比尔定律，硬件性能的提升很快会被软件消耗掉，从而推动用户更新硬件。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://aidens-fox.github.io/post/jiu-shou-ji-you-hua-%E2%80%94%E2%80%94-ruan-jian-pian.html">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/219532526?v=4&size=64">
+<title>旧手机优化——软件篇</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+<style>:root {--color-canvas-default:#282828 !important;--color-canvas-subtle:#3c3836 !important;--color-fg-default:#ebdbb2 !important;--color-fg-muted:#a89984 !important;--color-accent-fg:#fabd2f !important;--color-border-default:#504945 !important;} body{background-color:var(--color-canvas-default);color:var(--color-fg-default);} a{color:var(--color-accent-fg) !important;} .Box-row{background-color:#282828 !important; border-color:#504945 !important;} .markdown-body{background-color:transparent !important; color:#ebdbb2 !important;} #articletoc {background-color: #282828 !important; border: 1px solid #ebdbb2 !important; border-radius: 8px !important; padding: 15px !important; box-shadow: 0 4px 10px rgba(0,0,0,0.3) !important;} #articletoc .toc-title {color: #ebdbb2 !important; border-bottom: 1px solid #ebdbb2 !important; padding-bottom: 8px !important; font-weight: bold !important; margin-bottom: 10px !important;} #articletoc ul {list-style: none !important; padding-left: 0 !important;} #articletoc ul li {border-bottom: 1px solid #504945 !important;} #articletoc ul li a {color: #fabd2f !important; text-decoration: none !important; display: block !important; padding: 4px 8px !important;} #articletoc ul li a:hover {color: #fe8019 !important; background-color: #3c3836 !important; border-radius: 4px !important;}</style>
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">旧手机优化——软件篇</h1>
+<div class="title-right">
+    <a href="https://aidens-fox.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/Aidens-fox/aidens-fox.github.io/issues/16" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题"style="display:none;">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h3>前言</h3>
+<p>对于一些不想折腾root或没有解锁路径又不敢强解（处理器漏洞解锁）的用户，在手机用了五六年后就变得卡顿，除了系统方面（新系统往往都是已新设备为参考，所以在更新系统，尤其是跨版本更新后往往会卡顿，所以建议把自动更新关闭，系统尽量保持出厂预装系统来减少系统层的卡顿），还有软件方面，这就要提到著名的安迪比尔定律，硬件性能的提升很快会被软件消耗掉，从而推动用户更新硬件。所以使用旧版本的应用通常会更流畅，这也就是所谓的“养老软件”，本篇博文会介绍旧版软件，软件平替，第三方客户端推荐，但事先声明：旧版软件自然没有新版软件功能丰富，请以自己的需求来考虑</p>
+<h3>旧版软件（养老软件）推荐</h3>
+<h4>微信</h4>
+<p>微信分普通版和play版,play版相对于普通版会减少性能消耗，体积也会更小，所以一般推荐play版，这里引用<a href="https://www.bilibili.com/video/BV1r94y1T7Xa/?spm_id_from=333.337.search-card.all.click&amp;vd_source=a687de7b17cc81bba496c76223230a94" rel="nofollow">晨钟酱Official的视频</a>推荐的8.0.33<br>
+下载链接引用<a href="https://www.firepx.com/app/wechat-google-play/" rel="nofollow">火哥分享</a><br>
+微信 Google Play 版下载</p>
+<p>8.0系全量包下载：</p>
+<p>链接1：<a href="https://pan.baidu.com/s/18IRia4QJ2fXN70GnsSr3Rw?pwd=4eac" rel="nofollow">https://pan.baidu.com/s/18IRia4QJ2fXN70GnsSr3Rw?pwd=4eac</a> 提取码: 4eac</p>
+<p>链接2：<a href="https://www.123684.com/s/tAr8Vv-cClCh?pwd=6kFj" rel="nofollow">https://www.123684.com/s/tAr8Vv-cClCh?pwd=6kFj</a> 提取码：6kFj</p>
+<p>7.0系下载：</p>
+<p>外链:<a href="https://firepx.lanzoul.com/b00vymgsh" rel="nofollow">https://firepx.lanzoul.com/b00vymgsh</a> 密码:egys</p>
+<h4>其他养老软件可以访问<a href="https://jamcz.com/" rel="nofollow">晨钟软件库</a></h4>
+<p>网盘链接：</p>
+<p><a href="https://cz-jam.lanzoub.com/b0bxmm1vg" rel="nofollow">https://cz-jam.lanzoub.com/b0bxmm1vg</a></p>
+<p>密码：关注投币</p>
+<h3>软件平替推荐</h3>
+<h4>QQ=TIM</h4>
+<p>QQ功能太多还过于臃肿，很多功能根本用不上几次，所以相较于qq旧版本更推荐TIM,占用更少，没有虚幻引擎</p>
+<p>软件官网：</p>
+<p><a href="https://tim.qq.com/download.html" rel="nofollow">https://tim.qq.com/download.html</a></p>
+<h4>浏览器=via</h4>
+<p>浏览器可以说是鱼龙混杂，有什么百度，UC，360浏览器等，里面基本全是广告，而且占用还大，不如换成via,体积小，界面干净</p>
+<p>软件官网：</p>
+<p><a href="https://viayoo.com/zh-cn/" rel="nofollow">https://viayoo.com/zh-cn/</a></p>
+<h4>应用商店=Aurora Store</h4>
+<p>手机默认的应用商店一般都有广告，而且一些软件还无法搜索到，而Aurora Store免费开源，简洁无广告，里面大部分应用都有，而且可以不用登录谷歌账号，匿名来下载应用</p>
+<p>软件官网：</p>
+<p><a href="https://store.auroraoss.com/" rel="nofollow">https://store.auroraoss.com/</a></p>
+<p>下载目录：</p>
+<p><a href="https://auroraoss.com/files" rel="nofollow">https://auroraoss.com/files</a></p>
+<h4>输入法=Fcitx5</h4>
+<p>国内手机默认输入法都是搜狗输入法或其他，这些输入法都过于大，而且有很多不需要的功能，相比之下我更推荐fcitx5，开源免费占用小</p>
+<p>仓库地址：</p>
+<p><a href="https://github.com/fcitx5-android/fcitx5-android">https://github.com/fcitx5-android/fcitx5-android</a></p>
+<h4>视频下载器=Seal</h4>
+<p>我们在观看视频平台的视频时可能出于某种原因而需要下载视频离线观看，但是大部分视频平台无法下载视频，所以我们要借助一些工具，也就是Seal</p>
+<p>仓库地址：</p>
+<p><a href="https://github.com/JunkFood02/Seal">https://github.com/JunkFood02/Seal</a></p>
+<h4>音乐软件=MusicFree</h4>
+<p>我们在听歌时遇到需要vip和开屏广告等，所以我们可以使用开源方案——MusicFree，一款插件化、定制化、无广告的免费音乐播放器</p>
+<p>仓库地址：</p>
+<p><a href="https://github.com/maotoumao/MusicFree">https://github.com/maotoumao/MusicFree</a></p>
+<p>MusicFree插件地址/音源配置接口，这里引用<a href="https://www.tongzx.cn/index.php/archives/402/" rel="nofollow">TikW的网站</a></p>
+<p>官方链接（作者：猫头猫）</p>
+<p>总链接</p>
+<p><a href="https://gitee.com/maotoumao/MusicFreePlugins/raw/master/plugins.json" rel="nofollow">https://gitee.com/maotoumao/MusicFreePlugins/raw/master/plugins.json</a></p>
+<p>QQ音乐</p>
+<p><a href="http://adad23u.appinstall.life/dist/qq/index.js" rel="nofollow">http://adad23u.appinstall.life/dist/qq/index.js</a></p>
+<p>网易云音乐</p>
+<p><a href="https://gitee.com/raycn120/musicfree/raw/master/netease.js" rel="nofollow">https://gitee.com/raycn120/musicfree/raw/master/netease.js</a></p>
+<p>Bilibili</p>
+<p><a href="http://adad23u.appinstall.life/dist/bilibili/index.js" rel="nofollow">http://adad23u.appinstall.life/dist/bilibili/index.js</a></p>
+<p>酷我音乐</p>
+<p><a href="http://adad23u.appinstall.life/dist/kuwo/index.js" rel="nofollow">http://adad23u.appinstall.life/dist/kuwo/index.js</a></p>
+<p>咪咕音乐</p>
+<p><a href="http://adad23u.appinstall.life/dist/migu/index.js" rel="nofollow">http://adad23u.appinstall.life/dist/migu/index.js</a></p>
+<p>第三方链接（作者：Huibq）</p>
+<p>小蜗音乐（酷我）</p>
+<p><a href="https://raw.niuma666bet.buzz/Huibq/keep-alive/master/Music_Free/xiaowo.js" rel="nofollow">https://raw.niuma666bet.buzz/Huibq/keep-alive/master/Music_Free/xiaowo.js</a></p>
+<p>小蜜音乐（咪咕）</p>
+<p><a href="https://raw.niuma666bet.buzz/Huibq/keep-alive/master/Music_Free/xiaomi.js" rel="nofollow">https://raw.niuma666bet.buzz/Huibq/keep-alive/master/Music_Free/xiaomi.js</a></p>
+<p>小芸音乐（网易云）</p>
+<p><a href="https://raw.niuma666bet.buzz/Huibq/keep-alive/master/Music_Free/xiaoyun.js" rel="nofollow">https://raw.niuma666bet.buzz/Huibq/keep-alive/master/Music_Free/xiaoyun.js</a></p>
+<p>小枸音乐（酷狗）</p>
+<p><a href="https://raw.niuma666bet.buzz/Huibq/keep-alive/master/Music_Free/xiaogou.js" rel="nofollow">https://raw.niuma666bet.buzz/Huibq/keep-alive/master/Music_Free/xiaogou.js</a></p>
+<h3>第三方客户端推荐</h3>
+<h4>1.Newpipe</h4>
+<p>你喜欢在 YouTube上看视频，但想要一款直观易用、功能丰富且注重隐私的应用程序吗？NewPipe的创建目的是为了让您在智能手机上获得原汁原味的YouTube体验，而无需烦人的广告和可疑的权限。</p>
+<p>仓库地址：</p>
+<p><a href="https://github.com/TeamNewPipe/Newpipe">https://github.com/TeamNewPipe/Newpipe</a></p>
+<h4>2.PiliPlus</h4>
+<p>使用Flutter开发的BiliBili第三方客户端</p>
+<p>仓库地址:</p>
+<p><a href="https://github.com/bggRGjQaUbCoE/PiliPlus">https://github.com/bggRGjQaUbCoE/PiliPlus</a></p>
+<h4>3.F-Droid</h4>
+<p>F-Droid 是 Android 平台上 FOSS（Free and Open Source Software，自由开源软件）应用的分发生态系统，将用户自由放在桌子上</p>
+<p>下载链接：</p>
+<p><a href="https://f-droid.org/zh_Hans/" rel="nofollow">https://f-droid.org/zh_Hans/</a></p>
+<p>镜像站（清华）：</p>
+<p><a href="https://mirrors.tuna.tsinghua.edu.cn/help/fdroid/" rel="nofollow">https://mirrors.tuna.tsinghua.edu.cn/help/fdroid/</a></p>
+<h3>结尾</h3>
+<p>其实本篇博文也是出于帮助对一些没有什么基础的用户而且手机也比较老旧的用户，让使用软件的体验更好一些，不再那么卡顿</p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://aidens-fox.github.io">aidens的博客</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.disabled=true;
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","Aidens-fox/aidens-fox.github.io");
+    script.setAttribute("issue-term","title");
+    
+    script.setAttribute("theme","gruvbox-dark");
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>

@@ -1,5 +1,53 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>aidens的博客</title><link>https://aidens-fox.github.io</link><description>我的邮箱:openuxtk@outlook.com</description><copyright>aidens的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/219532526?v=4&amp;size=64</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Thu, 26 Mar 2026 15:18:45 +0000</lastBuildDate><managingEditor>aidens的博客</managingEditor><ttl>60</ttl><webMaster>aidens的博客</webMaster><item><title>旧手机优化——软件篇</title><link>https://aidens-fox.github.io/post/jiu-shou-ji-you-hua-%E2%80%94%E2%80%94-ruan-jian-pian.html</link><description>### 前言
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>aidens的博客</title><link>https://aidens-fox.github.io</link><description>我的邮箱:openuxtk@outlook.com</description><copyright>aidens的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/219532526?v=4&amp;size=64</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Sun, 29 Mar 2026 15:30:18 +0000</lastBuildDate><managingEditor>aidens的博客</managingEditor><ttl>60</ttl><webMaster>aidens的博客</webMaster><item><title>dwm补丁推荐</title><link>https://aidens-fox.github.io/post/dwm-bu-ding-tui-jian.html</link><description>### 前言
+
+当你使用git克隆下dwm源代码后进行简单配置修改然后编译安装，在.xinitrc添加exec dwm后启动dwm,你可能会发现这dwm也太干净了，输入确实可以使用，但是可能有一些地方不太喜欢，所以我们可以使用补丁来增强或改善dwm的功能体验,本篇博文将会推荐7个dwm补丁来改善你的dwm体验，你也可以看看我的dwm配置:
+
+https://github.com/Aidens-fox/dwm
+
+### 补丁介绍
+
+#### 1.[pertag](https://dwm.suckless.org/patches/pertag/)
+
+当你打开2个以上的tag时，如果你在其中一个tag使用mod+j等来调整布局，那么在切换到下一个tag时你会发现这个tag的布局和上一个的tag一样，这样的话，如果下一个tag打开浏览器然后一个终端，本来是默认相同宽度的，但因为上一个tag调整了布局，让这个tag失去了刚才的布局，这就有点一些体验了，而pertag可以让tag相互独立，而不是同步更改，由此来提升使用体验
+
+#### 2.[restartsig](https://dwm.suckless.org/patches/restartsig/)
+
+当你修改完配置编译完成之后，你需要退出重新进入，如果只是偶然修改一些还好，但是如果是需要多次修改就有的麻烦了，退出进入要花时间，而且之前打开的窗口也没用了，也要重新打开，这就和麻烦了，而restartsig可以让你在不退出进入的情况下刷新配置，不过在编译安装之前需要指定快捷键不然可能会报错，像我就是绑定mod+ctrl+q
+
+`{ MODKEY|ControlMask, XK_q, quit, {1} },`
+
+#### 3.[attachaside](https://dwm.suckless.org/patches/attachaside/)
+
+我们在打开新窗口时，它会自动抢占“主窗口（Master）”的位置，而原来的主窗口会被挤到右侧的“堆栈区（Stack），如果我们是使用浏览器，然后在打开终端后又打开几个窗口，主窗口早就不在浏览器了，这就很影响使用了，而attachaside可以让新窗口自动到堆栈区，保持当前主窗口不变,如果需要改变主窗口只需要mod+enter就可以切换了
+
+默认:新窗口（N）抢占左侧，原窗口（P）被挤到右侧
+
+``` text
++-----------------+-------+
+|                 |       |
+|                 |   P   |
+|        N        +-------+
+|                 |       |
+|                 |       |
++-----------------+-------+
+``` 
+
+使用补丁:主窗口（P）不动，新窗口（N）出现在右侧堆栈区的顶部
+
+``` text
++-----------------+-------+
+|                 |   N   |
+|                 |       |
+|        P        +-------+
+|                 |       |
+|                 |       |
++-----------------+-------+
+```
+
+#### 4.[actualfullscreen](https://dwm.suckless.org/patches/actualfullscreen/)
+
+dwm 默认的全屏模式（例如某些浏览器触发的全屏）有时会保留状态栏，或者只是简单地平铺充满。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/dwm-bu-ding-tui-jian.html</guid><pubDate>Sun, 29 Mar 2026 15:29:49 +0000</pubDate></item><item><title>旧手机优化——软件篇</title><link>https://aidens-fox.github.io/post/jiu-shou-ji-you-hua-%E2%80%94%E2%80%94-ruan-jian-pian.html</link><description>### 前言
 
 对于一些不想折腾root或没有解锁路径又不敢强解（处理器漏洞解锁）的用户，在手机用了五六年后就变得卡顿，除了系统方面（新系统往往都是已新设备为参考，所以在更新系统，尤其是跨版本更新后往往会卡顿，所以建议把自动更新关闭，系统尽量保持出厂预装系统来减少系统层的卡顿），还有软件方面，这就要提到著名的安迪比尔定律，硬件性能的提升很快会被软件消耗掉，从而推动用户更新硬件。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/jiu-shou-ji-you-hua-%E2%80%94%E2%80%94-ruan-jian-pian.html</guid><pubDate>Thu, 26 Mar 2026 15:18:12 +0000</pubDate></item><item><title>谈谈我为什么要给手机root</title><link>https://aidens-fox.github.io/post/tan-tan-wo-wei-shen-me-yao-gei-shou-ji-root.html</link><description>### 前言
 

@@ -1,5 +1,110 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>aidens的博客</title><link>https://aidens-fox.github.io</link><description>我的邮箱:openuxtk@outlook.com</description><copyright>aidens的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/219532526?v=4&amp;size=64</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Sun, 29 Mar 2026 15:30:18 +0000</lastBuildDate><managingEditor>aidens的博客</managingEditor><ttl>60</ttl><webMaster>aidens的博客</webMaster><item><title>dwm补丁推荐</title><link>https://aidens-fox.github.io/post/dwm-bu-ding-tui-jian.html</link><description>### 前言
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>aidens的博客</title><link>https://aidens-fox.github.io</link><description>我的邮箱:openuxtk@outlook.com</description><copyright>aidens的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/219532526?v=4&amp;size=64</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Sat, 04 Apr 2026 03:16:14 +0000</lastBuildDate><managingEditor>aidens的博客</managingEditor><ttl>60</ttl><webMaster>aidens的博客</webMaster><item><title>我写了一个后安装脚本（post-install script)</title><link>https://aidens-fox.github.io/post/wo-xie-le-yi-ge-hou-an-zhuang-jiao-ben-%EF%BC%88post-install%20script%29.html</link><description>### 前言
+
+在这几天，我写了一个后安装脚本，因为我使用的archlinux不像nixos可以依靠一个配置文件来快速配置系统，这样在新系统上就需要手动的配置和安装软件什么的，需要耗费些时间，这显然不是我可以接受的，所以我写了一个脚本来自动化配置我的系统,来减少在新系统的配置时间
+如果你需要这个脚本(appinstall.sh)，你可以在我的仓库里下载使用：
+
+https://github.com/Aidens-fox/dwm
+
+#### 注:appinstall脚本只针对基本系统，如果已经不是基本系统请不要运行!
+
+### 我都写了什么
+
+脚本主要内容：
+- 换软件源（清华）
+- 添加第三方源(CN源)
+- 安装必要软件
+- 更换终端解释器（zsh）
+- 编译安装dwm和dmenu
+- 简体中文本地化
+
+&lt;details&gt;
+  &lt;summary&gt;点击查看脚本&lt;/summary&gt;
+
+  ```
+#!/bin/bash
+#作者：Aidens-fox
+#2026-04-03
+#版本:1.1
+echo 'set Software mirror site(tuna)'
+sudo bash  -c 'echo 'Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/\$repo/os/\$arch' &gt; /etc/pacman.d/mirrorlist'
+echo 'set archCN'
+sudo bash -c 'echo -e '\n[archlinuxcn]\nServer = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/\$arch' &gt;&gt; /etc/pacman.conf'
+sudo pacman -Syyu
+echo 'install yay,archlinuxcn-keyring'
+sudo pacman -S archlinuxcn-keyring
+sudo pacman -S  yay base-devel git
+echo 'install xorg'
+sudo pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot xorg-xset xsel xorg-xkill libx11 libxft libxinerama
+echo 'install Font'
+sudo pacman -S ttf-sarasa-gothic ttf-jetbrains-mono-nerd noto-fonts-emoji noto-fonts-cjk 
+echo 'install Terminal nvim'
+sudo pacman -S alacritty neovim mpv yazi ueberzugpp  
+echo 'install zsh'
+sudo pacman -S zsh-completions zsh
+chsh -s /usr/bin/zsh
+echo 'cp dwm'
+mkdir  -p  $HOME/.config
+cp  -r dwm $HOME/.config/
+echo 'install dwm'
+cd $HOME/.config/dwm
+sudo make clean install
+echo 'cp dmenu'
+cd $HOME/dwm
+cp -r dmenu $HOME/.config/
+cd $HOME/.config/dmenu
+sudo make clean install
+echo 'cp alacritty '
+cd $HOME/dwm
+cp -r alacritty $HOME/.config/
+echo 'cp nvim '
+cd $HOME/dwm
+cp -r nvim $HOME/.config/
+echo 'cp .xinitrc'
+cp -r .xinitrc $HOME/
+chmod +x $HOME/.xinitrc
+echo 'cp .zshrc'
+cp -r .zshrc $HOME/
+echo 'install fcitx5'
+yay -S fcitx5-im fcitx5-input-support fcitx5-chinese-addons fcitx5-pinyin-zhwiki
+sudo bash  -c 'echo 'GTK_IM_MODULE=fcitx' &gt;&gt; /etc/environment'
+sudo bash  -c 'echo 'QT_IM_MODULE=fcitx' &gt;&gt; /etc/environment'
+sudo bash  -c 'echo 'XMODIFIERS=@im=fcitx' &gt;&gt; /etc/environment'
+sudo bash  -c 'echo 'SDL_IM_MODULE=fcitx' &gt;&gt; /etc/environment'
+sudo bash  -c 'echo 'GLFW_IM_MODULE=ibus' &gt;&gt; /etc/environment'
+echo 'set zh_CN'
+sudo bash -c 'echo 'en_US.UTF-8 UTF-8' &gt;&gt; /etc/locale.gen'
+sudo bash -c 'echo 'zh_CN.UTF-8 UTF-8' &gt;&gt; /etc/locale.gen'
+sudo locale-gen
+ ```
+ 
+ &lt;/details&gt;
+
+### 使用脚本
+
+#### 在使用脚本需要注意的是：appinstall脚本只针对基本系统，如果已经不是基本系统请不要运行!
+
+我们要使用肯定是需要下载，我们只需要使用git clone就可以了，如果你网络环境不好请在其他设备上下载并拷贝到u盘上
+
+`git clone https://github.com/Aidens-fox/dwm.git`
+
+然后我们需要给他赋权限
+
+`cd dwm`
+
+`chmod +777 appinstall.sh`
+
+最后执行脚本
+
+`./appinstall.sh`
+
+等待脚本执行完成后需要手动重启（更换终端解释器需要）
+
+`reboot`
+
+重新进入tty后输入命令进入dwm
+
+`startx`。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/wo-xie-le-yi-ge-hou-an-zhuang-jiao-ben-%EF%BC%88post-install%20script%29.html</guid><pubDate>Sat, 04 Apr 2026 03:15:49 +0000</pubDate></item><item><title>dwm补丁推荐</title><link>https://aidens-fox.github.io/post/dwm-bu-ding-tui-jian.html</link><description>### 前言
 
 当你使用git克隆下dwm源代码后进行简单配置修改然后编译安装，在.xinitrc添加exec dwm后启动dwm,你可能会发现这dwm也太干净了，输入确实可以使用，但是可能有一些地方不太喜欢，所以我们可以使用补丁来增强或改善dwm的功能体验,本篇博文将会推荐7个dwm补丁来改善你的dwm体验，你也可以看看我的dwm配置:
 

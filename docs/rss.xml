@@ -1,5 +1,147 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>aidens的博客</title><link>https://aidens-fox.github.io</link><description>我的邮箱:openuxtk@outlook.com</description><copyright>aidens的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/219532526?v=4&amp;size=64</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Sat, 04 Apr 2026 03:16:14 +0000</lastBuildDate><managingEditor>aidens的博客</managingEditor><ttl>60</ttl><webMaster>aidens的博客</webMaster><item><title>我写了一个后安装脚本（post-install script)</title><link>https://aidens-fox.github.io/post/wo-xie-le-yi-ge-hou-an-zhuang-jiao-ben-%EF%BC%88post-install%20script%29.html</link><description>### 前言
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>aidens的博客</title><link>https://aidens-fox.github.io</link><description>我的邮箱:openuxtk@outlook.com</description><copyright>aidens的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/219532526?v=4&amp;size=64</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Mon, 06 Apr 2026 05:23:15 +0000</lastBuildDate><managingEditor>aidens的博客</managingEditor><ttl>60</ttl><webMaster>aidens的博客</webMaster><item><title>软件Gruvbox配色文件合集</title><link>https://aidens-fox.github.io/post/ruan-jian-Gruvbox-pei-se-wen-jian-he-ji.html</link><description>### 前言
+
+Gruvbox是我最喜欢的一个主题，所以我肯定是希望我打开的大部分软件都是Gruvbox配色的，但是很多软件在默认的配色方案是没有Gruvbox这个配色方案的，所以就要借助一些配置文件来实现Gruvbox配色方案
+
+#### 1.alacritty
+
+由于alacritty默认是没有主题文件的，所以需要借助一些仓库：
+
+https://github.com/alacritty/alacritty-theme
+
+克隆仓库,或下载您选择的主题:
+
+```
+mkdir -p ~/.config/alacritty/themes
+git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
+
+```
+
+添加一个导入alacritty.toml替换{theme}与你的理想色度处理:
+
+```
+[general]
+import = [
+    '~/.config/alacritty/themes/themes/{theme}.toml'
+
+]
+
+```
+
+或者你也可以在配置文件中添加：
+
+&lt;details&gt;
+  &lt;summary&gt;点击查看脚本&lt;/summary&gt;
+
+```
+# Colors (Gruvbox dark)
+
+# Default colors
+[colors.primary]
+# hard contrast background = = '#1d2021'
+background = '#282828'
+# soft contrast background = = '#32302f'
+foreground = '#ebdbb2'
+
+# Normal colors
+[colors.normal]
+black   = '#282828'
+red     = '#cc241d'
+green   = '#98971a'
+yellow  = '#d79921'
+blue    = '#458588'
+magenta = '#b16286'
+cyan    = '#689d6a'
+white   = '#a89984'
+
+# Bright colors
+[colors.bright]
+black   = '#928374'
+red     = '#fb4934'
+green   = '#b8bb26'
+yellow  = '#fabd2f'
+blue    = '#83a598'
+magenta = '#d3869b'
+cyan    = '#8ec07c'
+white   = '#ebdbb2'
+```
+
+ &lt;/details&gt;
+ 
+#### 2.GTK主题
+
+我们可以使用nwg-look来切换主题
+
+`sudo pacman -S nwg-look`
+
+仓库链接：
+
+https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme
+
+如果你是archlinux，你也可以使用aur仓库
+
+`yay -S gruvbox-gtk-theme-git`
+
+#### 3.Telegram
+
+Telegram默认是没有gruvbox的配色方案的，所以我们可以使用配色文件来添加gruvbox配色
+
+仓库地址：
+
+https://github.com/y0av/telegram-gruvbox
+
+#### 4.qbittorrent 
+
+在默认的qbittorrent 是只有白色的，在晚上就十分刺眼，我们可以使用配色文件来效果
+
+仓库地址：
+
+https://github.com/MahdiMirzadeh/qbittorrent
+
+#### 5.图标主题
+
+在默认的软件图标是软件的默认图标，十分不统一，所以可以借助图标主题来增加美观性
+
+仓库地址：
+
+https://github.com/SylEleuth/gruvbox-plus-icon-pack
+
+#### 6.鼠标主题
+
+仓库地址：
+
+https://www.gnome-look.org/p/2302110
+
+7.fcitx5主题
+
+仓库地址：
+
+https://github.com/pu-007/fcitx5-gruvbox-dark-theme
+
+或者使用aur
+
+`yay -S fcitx5-gruvbox-dark-theme-git`
+
+#### 7.nvim主题
+
+仓库地址：
+
+https://github.com/ellisonleao/gruvbox.nvim
+
+如果你是packer，在packer配置文件中添加
+
+` use { 'ellisonleao/gruvbox.nvim' }`
+
+然后在nvim配置文件中启用
+
+`vim.cmd([[colorscheme gruvbox]])`
+
+#### 8.emacs
+
+仓库地址：
+
+https://github.com/Greduan/emacs-theme-gruvbox
+。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/ruan-jian-Gruvbox-pei-se-wen-jian-he-ji.html</guid><pubDate>Mon, 06 Apr 2026 05:22:48 +0000</pubDate></item><item><title>我写了一个后安装脚本（post-install script)</title><link>https://aidens-fox.github.io/post/wo-xie-le-yi-ge-hou-an-zhuang-jiao-ben-%EF%BC%88post-install%20script%29.html</link><description>### 前言
 
 在这几天，我写了一个后安装脚本，因为我使用的archlinux不像nixos可以依靠一个配置文件来快速配置系统，这样在新系统上就需要手动的配置和安装软件什么的，需要耗费些时间，这显然不是我可以接受的，所以我写了一个脚本来自动化配置我的系统,来减少在新系统的配置时间
 如果你需要这个脚本(appinstall.sh)，你可以在我的仓库里下载使用：

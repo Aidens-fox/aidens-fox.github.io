@@ -1,2 +1,779 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>aidens的博客</title><link>https://aidens-fox.github.io</link><description>我的邮箱:openuxtk@outlook.com</description><copyright>aidens的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/219532526?v=4&amp;size=64</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Mon, 27 Apr 2026 17:23:04 +0000</lastBuildDate><managingEditor>aidens的博客</managingEditor><ttl>60</ttl><webMaster>aidens的博客</webMaster></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>aidens的博客</title><link>https://aidens-fox.github.io</link><description>我的邮箱:openuxtk@outlook.com</description><copyright>aidens的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/219532526?v=4&amp;size=64</url><title>avatar</title><link>https://aidens-fox.github.io</link></image><lastBuildDate>Tue, 28 Apr 2026 17:47:37 +0000</lastBuildDate><managingEditor>aidens的博客</managingEditor><ttl>60</ttl><webMaster>aidens的博客</webMaster><item><title>手机安装配置fcitx5输入法和雾凇拼音</title><link>https://aidens-fox.github.io/post/shou-ji-an-zhuang-pei-zhi-fcitx5-shu-ru-fa-he-wu-song-pin-yin.html</link><description>### 前言
+
+在手机上，输入法是我们经常使用的东西，所以一个好用的输入法就非常重要了，像比较主流的输入法有：搜狗输入法，讯飞输入法，百度输入法等，这些输入法在应用市场评分都还可以，但是我是不太可能使用这些输入法的，因为我对隐私还有大小是有要求的，而上面说的输入法普遍有数据收集问题，对数据安全十分不利，这些输入法的大小也较大，很多功能也根本不需要，所以我放弃了使用这些输入法的想法，而是使用了一个开源方案-[fcitx5](https://github.com/fcitx5-android/fcitx5-android)
+
+本博文部分内容参考[晨鹤部落格](https://chenhe.me/zh/posts/rime-android/)
+
+### 安装fcitx5
+
+我们在fcitx5的仓库里下载安装
+
+仓库地址:
+
+https://github.com/fcitx5-android/fcitx5-android
+
+安装后根据软件提示进行更换输入法，完成后就可以使用了，不过默认的拼音方案可能会有点不太好用，所以我们可以使用另一个方案-雾凇拼音，在使用雾凇拼音之前我们需要先安装一个插件-rime:我们在fcitx5的[发布页面](https://github.com/fcitx5-android/fcitx5-android/releases),可以看到表格中有Download那一栏，选择下载plugin.rime那一列，一般都是arm64-v8a,如果无法运行安装请下载armeabi-v7a(fcitx5也同理)
+
+&lt;img width='1117' height='850' alt='Image' src='https://github.com/user-attachments/assets/29f9a888-889c-468b-a506-2256433fa1a9' /&gt;
+
+发布页面:
+
+https://github.com/fcitx5-android/fcitx5-android/releases
+
+下载安装好插件后我们还需要下载雾凇拼音，雾凇拼音有长期维护词库，支持简体 | 全拼 | 双拼，是一个十分成熟的方案，在github上有16多过star,所以相对于之前的拼音有更好的体验
+
+仓库地址:
+
+https://github.com/iDvel/rime-ice
+
+我们在发布页面选择full.zip文件下载，full.zip包含以下所有文件，可以一次性安装好所以功能，其他比如all_dicts.zip这些就不太建议下载了
+
+&lt;img width='1089' height='745' alt='Image' src='https://github.com/user-attachments/assets/dfe8db2c-65d2-43a5-82cb-cbb2cf596865' /&gt;
+
+### 配置雾凇拼音
+
+下载好雾凇拼音的zip文件后，我们需要把它解压，这里推荐一个十分好用的文件管理器-MT管理器
+
+软件官网：
+
+https://mt2.cn/
+
+解压完成后把所以文件移动到Android\data\org.fcitx.fcitx5.android\files\data\rime里就可以了
+
+移动完成后，随便打开一个可以唤出输入法的软件，点击候选词栏的更多按钮（三个点），点击重载配置，过程会持续一段时间，请耐心等待，完成后你应该可以看到空格键变成'中州韵(雾)'了
+
+![Image](https://github.com/user-attachments/assets/a5f65e03-fb17-4f25-91f0-62c2e29310ed)
+
+
+。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/shou-ji-an-zhuang-pei-zhi-fcitx5-shu-ru-fa-he-wu-song-pin-yin.html</guid><pubDate>Sun, 12 Apr 2026 03:54:49 +0000</pubDate></item><item><title>软件Gruvbox配色文件合集</title><link>https://aidens-fox.github.io/post/ruan-jian-Gruvbox-pei-se-wen-jian-he-ji.html</link><description>### 前言
+
+Gruvbox是我最喜欢的一个主题，所以我肯定是希望我打开的大部分软件都是Gruvbox配色的，但是很多软件在默认的配色方案是没有Gruvbox这个配色方案的，所以就要借助一些配置文件来实现Gruvbox配色方案
+
+#### 1.alacritty
+
+由于alacritty默认是没有主题文件的，所以需要借助一些仓库：
+
+https://github.com/alacritty/alacritty-theme
+
+克隆仓库,或下载您选择的主题:
+
+```
+mkdir -p ~/.config/alacritty/themes
+git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
+
+```
+
+添加一个导入alacritty.toml替换{theme}与你的理想色度处理:
+
+```
+[general]
+import = [
+    '~/.config/alacritty/themes/themes/{theme}.toml'
+
+]
+
+```
+
+或者你也可以在配置文件中添加：
+
+&lt;details&gt;
+  &lt;summary&gt;点击查看脚本&lt;/summary&gt;
+
+```
+# Colors (Gruvbox dark)
+
+# Default colors
+[colors.primary]
+# hard contrast background = = '#1d2021'
+background = '#282828'
+# soft contrast background = = '#32302f'
+foreground = '#ebdbb2'
+
+# Normal colors
+[colors.normal]
+black   = '#282828'
+red     = '#cc241d'
+green   = '#98971a'
+yellow  = '#d79921'
+blue    = '#458588'
+magenta = '#b16286'
+cyan    = '#689d6a'
+white   = '#a89984'
+
+# Bright colors
+[colors.bright]
+black   = '#928374'
+red     = '#fb4934'
+green   = '#b8bb26'
+yellow  = '#fabd2f'
+blue    = '#83a598'
+magenta = '#d3869b'
+cyan    = '#8ec07c'
+white   = '#ebdbb2'
+```
+
+ &lt;/details&gt;
+ 
+#### 2.GTK主题
+
+我们可以使用nwg-look来切换主题
+
+`sudo pacman -S nwg-look`
+
+仓库链接：
+
+https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme
+
+如果你是archlinux，你也可以使用aur仓库
+
+`yay -S gruvbox-gtk-theme-git`
+
+#### 3.Telegram
+
+Telegram默认是没有gruvbox的配色方案的，所以我们可以使用配色文件来添加gruvbox配色
+
+仓库地址：
+
+https://github.com/y0av/telegram-gruvbox
+
+#### 4.qbittorrent 
+
+在默认的qbittorrent 是只有白色的，在晚上就十分刺眼，我们可以使用配色文件来效果
+
+仓库地址：
+
+https://github.com/MahdiMirzadeh/qbittorrent
+
+#### 5.图标主题
+
+在默认的软件图标是软件的默认图标，十分不统一，所以可以借助图标主题来增加美观性
+
+仓库地址：
+
+https://github.com/SylEleuth/gruvbox-plus-icon-pack
+
+#### 6.鼠标主题
+
+仓库地址：
+
+https://www.gnome-look.org/p/2302110
+
+7.fcitx5主题
+
+仓库地址：
+
+https://github.com/pu-007/fcitx5-gruvbox-dark-theme
+
+或者使用aur
+
+`yay -S fcitx5-gruvbox-dark-theme-git`
+
+#### 7.nvim主题
+
+仓库地址：
+
+https://github.com/ellisonleao/gruvbox.nvim
+
+如果你是packer，在packer配置文件中添加
+
+` use { 'ellisonleao/gruvbox.nvim' }`
+
+然后在nvim配置文件中启用
+
+`vim.cmd([[colorscheme gruvbox]])`
+
+#### 8.emacs
+
+仓库地址：
+
+https://github.com/Greduan/emacs-theme-gruvbox
+。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/ruan-jian-Gruvbox-pei-se-wen-jian-he-ji.html</guid><pubDate>Mon, 06 Apr 2026 05:22:48 +0000</pubDate></item><item><title>我写了一个后安装脚本（post-install script)</title><link>https://aidens-fox.github.io/post/wo-xie-le-yi-ge-hou-an-zhuang-jiao-ben-%EF%BC%88post-install%20script%29.html</link><description>### 前言
+
+在这几天，我写了一个后安装脚本，因为我使用的archlinux不像nixos可以依靠一个配置文件来快速配置系统，这样在新系统上就需要手动的配置和安装软件什么的，需要耗费些时间，这显然不是我可以接受的，所以我写了一个脚本来自动化配置我的系统,来减少在新系统的配置时间
+如果你需要这个脚本(appinstall.sh)，你可以在我的仓库里下载使用：
+
+https://github.com/Aidens-fox/dwm
+
+#### 注:appinstall脚本只针对基本系统，如果已经不是基本系统请不要运行!
+
+### 我都写了什么
+
+脚本主要内容：
+- 换软件源（清华）
+- 添加第三方源(CN源)
+- 安装必要软件
+- 更换终端解释器（zsh）
+- 编译安装dwm和dmenu
+- 简体中文本地化
+
+&lt;details&gt;
+  &lt;summary&gt;点击查看脚本&lt;/summary&gt;
+
+  ```
+#!/bin/bash
+#作者：Aidens-fox
+#2026-04-03
+#版本:1.1
+echo 'set Software mirror site(tuna)'
+sudo bash  -c 'echo 'Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/\$repo/os/\$arch' &gt; /etc/pacman.d/mirrorlist'
+echo 'set archCN'
+sudo bash -c 'echo -e '\n[archlinuxcn]\nServer = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/\$arch' &gt;&gt; /etc/pacman.conf'
+sudo pacman -Syyu
+echo 'install yay,archlinuxcn-keyring'
+sudo pacman -S archlinuxcn-keyring
+sudo pacman -S  yay base-devel git
+echo 'install xorg'
+sudo pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot xorg-xset xsel xorg-xkill libx11 libxft libxinerama
+echo 'install Font'
+sudo pacman -S ttf-sarasa-gothic ttf-jetbrains-mono-nerd noto-fonts-emoji noto-fonts-cjk 
+echo 'install Terminal nvim'
+sudo pacman -S alacritty neovim mpv yazi ueberzugpp  
+echo 'install zsh'
+sudo pacman -S zsh-completions zsh
+chsh -s /usr/bin/zsh
+echo 'cp dwm'
+mkdir  -p  $HOME/.config
+cp  -r dwm $HOME/.config/
+echo 'install dwm'
+cd $HOME/.config/dwm
+sudo make clean install
+echo 'cp dmenu'
+cd $HOME/dwm
+cp -r dmenu $HOME/.config/
+cd $HOME/.config/dmenu
+sudo make clean install
+echo 'cp alacritty '
+cd $HOME/dwm
+cp -r alacritty $HOME/.config/
+echo 'cp nvim '
+cd $HOME/dwm
+cp -r nvim $HOME/.config/
+echo 'cp .xinitrc'
+cp -r .xinitrc $HOME/
+chmod +x $HOME/.xinitrc
+echo 'cp .zshrc'
+cp -r .zshrc $HOME/
+echo 'install fcitx5'
+yay -S fcitx5-im fcitx5-input-support fcitx5-chinese-addons fcitx5-pinyin-zhwiki
+sudo bash  -c 'echo 'GTK_IM_MODULE=fcitx' &gt;&gt; /etc/environment'
+sudo bash  -c 'echo 'QT_IM_MODULE=fcitx' &gt;&gt; /etc/environment'
+sudo bash  -c 'echo 'XMODIFIERS=@im=fcitx' &gt;&gt; /etc/environment'
+sudo bash  -c 'echo 'SDL_IM_MODULE=fcitx' &gt;&gt; /etc/environment'
+sudo bash  -c 'echo 'GLFW_IM_MODULE=ibus' &gt;&gt; /etc/environment'
+echo 'set zh_CN'
+sudo bash -c 'echo 'en_US.UTF-8 UTF-8' &gt;&gt; /etc/locale.gen'
+sudo bash -c 'echo 'zh_CN.UTF-8 UTF-8' &gt;&gt; /etc/locale.gen'
+sudo locale-gen
+ ```
+ 
+ &lt;/details&gt;
+
+### 使用脚本
+
+#### 在使用脚本需要注意的是：appinstall脚本只针对基本系统，如果已经不是基本系统请不要运行!
+
+我们要使用肯定是需要下载，我们只需要使用git clone就可以了，如果你网络环境不好请在其他设备上下载并拷贝到u盘上
+
+`git clone https://github.com/Aidens-fox/dwm.git`
+
+然后我们需要给他赋权限
+
+`cd dwm`
+
+`chmod +777 appinstall.sh`
+
+最后执行脚本
+
+`./appinstall.sh`
+
+等待脚本执行完成后需要手动重启（更换终端解释器需要）
+
+`reboot`
+
+重新进入tty后输入命令进入dwm
+
+`startx`。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/wo-xie-le-yi-ge-hou-an-zhuang-jiao-ben-%EF%BC%88post-install%20script%29.html</guid><pubDate>Sat, 04 Apr 2026 03:15:49 +0000</pubDate></item><item><title>dwm补丁推荐</title><link>https://aidens-fox.github.io/post/dwm-bu-ding-tui-jian.html</link><description>### 前言
+
+当你使用git克隆下dwm源代码后进行简单配置修改然后编译安装，在.xinitrc添加exec dwm后启动dwm,你可能会发现这dwm也太干净了，输入确实可以使用，但是可能有一些地方不太喜欢，所以我们可以使用补丁来增强或改善dwm的功能体验,本篇博文将会推荐7个dwm补丁来改善你的dwm体验，你也可以看看我的dwm配置:
+
+https://github.com/Aidens-fox/dwm
+
+### 补丁介绍
+
+#### 1.[pertag](https://dwm.suckless.org/patches/pertag/)
+
+当你打开2个以上的tag时，如果你在其中一个tag使用mod+j等来调整布局，那么在切换到下一个tag时你会发现这个tag的布局和上一个的tag一样，这样的话，如果下一个tag打开浏览器然后一个终端，本来是默认相同宽度的，但因为上一个tag调整了布局，让这个tag失去了刚才的布局，这就有点一些体验了，而pertag可以让tag相互独立，而不是同步更改，由此来提升使用体验
+
+#### 2.[restartsig](https://dwm.suckless.org/patches/restartsig/)
+
+当你修改完配置编译完成之后，你需要退出重新进入，如果只是偶然修改一些还好，但是如果是需要多次修改就有的麻烦了，退出进入要花时间，而且之前打开的窗口也没用了，也要重新打开，这就和麻烦了，而restartsig可以让你在不退出进入的情况下刷新配置，不过在编译安装之前需要指定快捷键不然可能会报错，像我就是绑定mod+ctrl+q
+
+`{ MODKEY|ControlMask, XK_q, quit, {1} },`
+
+#### 3.[attachaside](https://dwm.suckless.org/patches/attachaside/)
+
+我们在打开新窗口时，它会自动抢占“主窗口（Master）”的位置，而原来的主窗口会被挤到右侧的“堆栈区（Stack），如果我们是使用浏览器，然后在打开终端后又打开几个窗口，主窗口早就不在浏览器了，这就很影响使用了，而attachaside可以让新窗口自动到堆栈区，保持当前主窗口不变,如果需要改变主窗口只需要mod+enter就可以切换了
+
+默认:新窗口（N）抢占左侧，原窗口（P）被挤到右侧
+
+``` text
++-----------------+-------+
+|                 |       |
+|                 |   P   |
+|        N        +-------+
+|                 |       |
+|                 |       |
++-----------------+-------+
+``` 
+
+使用补丁:主窗口（P）不动，新窗口（N）出现在右侧堆栈区的顶部
+
+``` text
++-----------------+-------+
+|                 |   N   |
+|                 |       |
+|        P        +-------+
+|                 |       |
+|                 |       |
++-----------------+-------+
+```
+
+#### 4.[actualfullscreen](https://dwm.suckless.org/patches/actualfullscreen/)
+
+dwm 默认的全屏模式（例如某些浏览器触发的全屏）有时会保留状态栏，或者只是简单地平铺充满。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/dwm-bu-ding-tui-jian.html</guid><pubDate>Sun, 29 Mar 2026 15:29:49 +0000</pubDate></item><item><title>旧手机优化——软件篇</title><link>https://aidens-fox.github.io/post/jiu-shou-ji-you-hua-%E2%80%94%E2%80%94-ruan-jian-pian.html</link><description>### 前言
+
+对于一些不想折腾root或没有解锁路径又不敢强解（处理器漏洞解锁）的用户，在手机用了五六年后就变得卡顿，除了系统方面（新系统往往都是已新设备为参考，所以在更新系统，尤其是跨版本更新后往往会卡顿，所以建议把自动更新关闭，系统尽量保持出厂预装系统来减少系统层的卡顿），还有软件方面，这就要提到著名的安迪比尔定律，硬件性能的提升很快会被软件消耗掉，从而推动用户更新硬件。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/jiu-shou-ji-you-hua-%E2%80%94%E2%80%94-ruan-jian-pian.html</guid><pubDate>Thu, 26 Mar 2026 15:18:12 +0000</pubDate></item><item><title>谈谈我为什么要给手机root</title><link>https://aidens-fox.github.io/post/tan-tan-wo-wei-shen-me-yao-gei-shou-ji-root.html</link><description>### 前言
+
+你有多久没有听到root这个词了，给手机root听起来好像是极客发烧友的的专属词，普通用户似乎不大可能和这个词有关联，而在近些年，这个行为似乎在变得边缘，让人们逐渐忘记了这个概念，也让一些想真正掌握自己手机的用户失去了更好的选择，所以本篇博文我就来谈谈我为什么要给手机root,但事先声明的是：**如果你是为了在多人游戏开挂，把自己的快乐建立在他人的痛苦之上的，我认为你不应该root，而是应该思考这个行为对其他普通玩家的伤害！**
+
+### 更好的定制属于自己的rice（外观）
+
+我们在正常情况下，使用系统自定义设置，那可自定义的东西可是太少了，换个壁纸，改个深色模式就叫自定义?字体和图标，还有配色方案呢，你可能会反驳：“ 痟的，你不要乌白讲，你打开手机的主题商店不就可以吗？”没错，但是打开主题商店，字体有的要付费，主题，小部件，图标有的也要，更气人的是有的主题github明明开源免费，到了这里就要付费，靠北，林北付钱买一个免费开源的东西？还有一些主题和图标，也是大部分要付费，而且很多也难看，所以为了更好的定制自己的rice，我就直接把手机root了，给手机使用我喜欢的字体-Sarasa（更纱黑体），还有一些其他设置我使用lconify和LSPosed框架来调整系统图标，进度条，状态栏等，让这台手机更加个性化
+
+### 选择系统(rom)使用的自由
+
+很多人可能认为手机上的系统只能使用厂商预装的系统，却不知道还有很多优秀的第三方rom，比如Lineageos,crDroid等,如果使用预装系统，这里指国内定制安卓，系统过于臃肿，预装软件过多，很多软件卸载不掉，比如系统自带的浏览器等，里面可以说是广告的温床，而我们却不能卸载它，所以我手机有一个多余的广告软件不能卸载，这是我不能接受的，如果强行使用adb卸载一些软件还可能会卡开机，喵的，林北花1000多买的设备，连软件都不能自己决定，而除了这个还有残体的google服务，装个谷歌商店就算有google服务？google助理无法使用，被自家的语音助手屏蔽，还有这ui也太丑了（个人感觉，不代表所有人），不知道的还以为是盗版ios系统，什么灵动岛，莫名其妙的模糊，动效，好看吗？我不认为好看，所以我才会给手机root，不过由于国内手机的bl政策，所以我使用了pixel来root，刷上第三方rom，流程无比，代码开源，可以随时审查，自己决定安装完整的Gapps（google服务）
+
+### 优化软件使用体验
+
+我们在使用一些软件或浏览网页的时候，就会有一些广告，十分恶心，如果是没有root的设备可能只能默默忍受，而有了root权限就不一样了，装上LSPosed框架，在github上下载一些去广告模块，配合LSPosed来达到去广告，改布局，隐藏一些不需要的模块等，让使用体验变得愉快，而网页广告我使用AdAway来实现去广告，但我还是要说的是，如果你root是为了在多人游戏中作弊，我认为你一个反省一下这个行为对普通玩家的伤害
+
+### 真正的掌控自己的设备
+
+如果你花钱买来的设备不能按照自己的喜好定制，那你的钱花的值吗，只有这个设备的使用权，凭什么卖这么贵，我买了后连系统选择的自由都没有，卸载软件还要你管？不仅如此现在还有什么改设备名要联网验证，不是这不是我买的吗？我想什么设备名不应该是我的自由吗？面对这些，如果是普通用户只能忍受，而root后就不一样来，最高权限了还惯你？直接换系统
+
+### 结尾
+
+那是我们本应拥有的权利，我们没有理由不要，安卓是开源的，是全人类的，不是厂商以来牟利的工具，我写这篇博文，只是为了让那些想root又在犹豫的人一个理由，一个更好的选择，一个机会。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/tan-tan-wo-wei-shen-me-yao-gei-shou-ji-root.html</guid><pubDate>Sun, 22 Mar 2026 01:32:04 +0000</pubDate></item><item><title>Linux屏蔽广告方案-hblock</title><link>https://aidens-fox.github.io/post/Linux-ping-bi-guang-gao-fang-an--hblock.html</link><description>### 前言
+我们在使用浏览器浏览一些网站时，网站就会跳出一些广告，一些还包含恶意链接，对我们的数据安全十分不利，所以就要借助一些工具来尽可能的避免悲剧的方式，也就是我们的hblock
+
+### hblock是什么
+hblock是通过屏蔽广告、跟踪和恶意软件域名来提升您的安全性和隐私性的软件，让你的设备保持安全
+
+### 它是怎么实现这个功能的
+hblock通过修改添加hosts文件来阻止您的系统通过与它们建立联系，简单粗暴
+
+##### 注意：因为是直接修改hosts文件，所以一定要在使用之前备份文件
+
+安装软件
+
+`sudo pacman -S hblock`
+
+### 配置软件
+我们使用文本编辑器打开配置文件
+`sudo -E nvim /etc/hblock.conf`
+我们在文件中添加：
+
+````
+SOURCES=(
+ https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
+ https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts 
+ https://raw.githubusercontent.com/Goooler/1024_hosts/master/hosts 
+ https://raw.githubusercontent.com/yous/YousList/master/hosts.txt 
+ https://raw.githubusercontent.com/Discover999/Host-Ban-Tik-Tok/master/TikTokHost.txt
+
+)
+
+````
+配置文件中SOURCES是规则链接，个人建议是至少有一个全能规则，不然可能效果不佳
+规则链接:
+1.yhosts:
+
+https://raw.githubusercontent.com/vokins/yhosts/master/hosts （国内维护者屏蔽国内网站广告）
+
+2.大圣净化：
+
+https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts （主要针对国内视频网站）
+
+3.1024_hosts：
+
+https://raw.githubusercontent.com/Goooler/1024_hosts/master/hosts （1024网站和澳门皇家赌场）
+
+4.YousList: 
+
+https://raw.githubusercontent.com/yous/YousList/master/hosts.txt （主要屏蔽韩国人使用的网站广告）
+
+5.秋风广告规则
+
+https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
+
+或
+
+https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/AWAvenue-Ads-Rule.txt
+
+### 更新规则
+我们在配置好文件后执行
+
+`hblock`
+
+等待命令执行完成
+
+### 测试是否屏蔽广告
+我们使用去广告效果检测网站
+
+1.https://checkadblock.ru/
+
+2.https://blockads.fivefilters.org/
+
+3.https://canyoublockit.com/extreme-test/ 
+。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/Linux-ping-bi-guang-gao-fang-an--hblock.html</guid><pubDate>Thu, 19 Mar 2026 14:35:49 +0000</pubDate></item><item><title>root后软件推荐</title><link>https://aidens-fox.github.io/post/root-hou-ruan-jian-tui-jian.html</link><description>### 前言
+当你把手机root(超级用户)后，你也许会迷茫，root之后呢？这是小白入门的常见问题，不知道有什么好用的工具，所以本篇博文我将会介绍一些root后的好用软件
+
+#### 1.VPN HotSpot
+
+项目链接： https://github.com/Mygod/VPNHotspot
+如果使用一些海外的一些设备，或者在刷入第三方rom时忘记退出google锁从而触发谷歌锁，在激活时可能会因为网络问题而无法激活，但这些设备在现阶段或根本无法安装网络软件，所以就要借助一些手段了，而VPN HotSpot就很好的解决了这个问题，这个软件通过共享霍格沃兹环境来解决网络问题，除了网络热点的方式还有usb网络共享和蓝牙共享等，基本满足大部分需求
+
+#### 2.App Manager
+
+项目链接： https://github.com/MuntashirAkon/AppManager
+本软件可以说是原版软件管理器的升级版，主要功能有
+- 在主页上尽可能多地显示信息
+
+- 列出应用程序的活动、广播接收器、服务、提供者、应用操作、权限、签名、共享库等
+
+- 启动活动和服务
+
+- 创建活动的快捷方式
+
+- [拦截活动](https://muntashirakon.github.io/AppManager/#sec:interceptor-page)
+
+- 扫描应用程序中的跟踪器和库，并列出（全部或仅列出）跟踪类（及其代码转储）
+
+- 查看/保存应用程序的清单文件
+
+- 显示应用程序使用情况、数据使用情况（移动数据和 Wi-Fi）以及应用程序存储信息（需要“使用情况访问权限”）
+
+- 安装/卸载 APK 文件（包括 APKS、APKM 和带有 OBB 文件的 XAPK）
+
+- 分享 APK 文件
+
+- 备份/恢复 APK 文件
+其中的软件安装器相对于原版也有更多功能
+3.MT管理器（非开源软件）
+软件官网： https://mt2.cn/
+虽然不是开源软件，但是评分还是不错的，所以还是十分推荐这款软件，双窗口操作模式大幅度提升操作效率，还有很多实用的功能
+
+#### 4.AdAway
+
+项目链接： https://github.com/AdAway/AdAway
+在一些网站上可能会有很多广告，十分恶心，使用这款软件就可以拦截广告，下面是一些规则参考[FasNote个人笔记](https://fasnote.com/%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0/adaway%E8%A7%84%E5%88%99)
+
+1.yhosts:  https://raw.githubusercontent.com/vokins/yhosts/master/hosts   （国内维护者屏蔽国内网站广告）
+
+2.大圣净化： https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts   （主要针对国内视频网站）
+
+3.1024_hosts： https://raw.githubusercontent.com/Goooler/1024_hosts/master/hosts  （1024网站和澳门皇家赌场）
+
+4.neoHosts:  https://hosts.nfz.moe/full/hosts   （国内屏蔽挖矿统计JS&amp;360&amp;百度&amp;法l功等）
+
+5.Hblock： https://hblock.molinero.xyz/hosts   （综合多种源集合体屏蔽广告跟踪和恶意软件）
+
+6.Mvps： http://winhelp2002.mvps.org/hosts.txt   （屏蔽美欧地区英文网站相关的广告）
+
+7.YousList:  https://raw.githubusercontent.com/yous/YousList/master/hosts.txt   （主要屏蔽韩国人使用的网站广告）
+
+8.StevenBlack:  https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts  (国外维护者屏蔽国外网站广告)
+
+9.Google hosts： https://raw.githubusercontent.com/googlehosts/hosts/master/hosts-files/hosts  （提高Google网站访问速度）
+
+10.屏蔽抖音 https://raw.githubusercontent.com/Discover999/Host-Ban-Tik-Tok/master/TikTokHost.txt （屏蔽国内的抖音，可安装在路由器上，阻止家人刷抖音）
+。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/root-hou-ruan-jian-tui-jian.html</guid><pubDate>Sat, 14 Mar 2026 09:09:59 +0000</pubDate></item><item><title>如何刷入Evolution X</title><link>https://aidens-fox.github.io/post/ru-he-shua-ru-Evolution%20X.html</link><description>### 什么是Evolution X？
+
+Evolution X是一款基于LineageOS的Android自定义ROM，旨在提供类似Google Pixel的用户体验，并增加了多种个性化功能。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/ru-he-shua-ru-Evolution%20X.html</guid><pubDate>Sat, 07 Mar 2026 07:10:31 +0000</pubDate></item><item><title>linux字幕识别方案-whisper</title><link>https://aidens-fox.github.io/post/linux-zi-mu-shi-bie-fang-an--whisper.html</link><description>#### 前言
+字幕可以增加视频的可读性，也可以给一些特殊人群一些照顾，在windows上有卡卡字幕助手，而在linux上也有一个软件，也就是whisper
+#### 特点
+whisper没有图形化界面，所以可以减少不必要的性能开销，而且whisper可以自由选择语言模型，可以说对老旧设备十分友好
+#### 下载
+在archlinux上我们可以使用aur仓库里的软件包来安装
+`yay -S whisper.cpp-git`
+除了下载软件本体还需要下载语言模型
+https://huggingface.co/ggerganov/whisper.cpp/tree/main
+在下载模型的时候选择适合的模型，经过本人测试small模型准确率相对较高，而且时间也可以接受，本人使用笔记本，性能教差，所以只能使用较低级的模型，如果追求高质量，请下载更高级的模型
+#### 使用
+我们需要先使用ffmpeg提取视频音频
+`ffmpeg -i xxx.mp4 xxx.mp3`
+如何使用whisper制作字幕文件
+`whisper.cpp -m ggml-tiny-q5_1.bin -f ss.mp3 -l zh -osrt`
+完成后会在当前目录创建.srt文件，我们可以先使用emacs,nvim等编辑器窗口有没有文字错误
+在检查完成后就可以导入到kdenlive里使用
+。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/linux-zi-mu-shi-bie-fang-an--whisper.html</guid><pubDate>Sat, 28 Feb 2026 17:21:47 +0000</pubDate></item><item><title>我的Niri配置分享</title><link>https://aidens-fox.github.io/post/wo-de-Niri-pei-zhi-fen-xiang.html</link><description>#### 我的Niri配置：
+
+https://github.com/Aidens-fox/NiriConfiguration
+
+&lt;img width='1920' height='1080' alt='image' src='https://github.com/user-attachments/assets/0e5b3fdc-e805-4041-b0f1-f62c2d163553' /&gt;
+本配置采用Gruvbox配色方案，色调柔和 
+
+- 鼠标主题：Moga Neon
+
+https://www.gnome-look.org/p/2302110
+
+- gtk主题：arc-gruvbox-theme
+
+`yay -S gtk-theme-arc-gruvbox-git`
+
+- nvim主题:gruvbox.nvim
+
+https://github.com/ellisonleao/gruvbox.nvim
+
+- 图标主题：Gruvbox Plus
+
+https://github.com/SylEleuth/gruvbox-plus-icon-pack
+
+waybar也是采用Gruvbox配色方案，基于b站up主:夜未央-天将亮
+
+字体采用更纱黑体和noto系列,图标字体是JetBrainsMono Nerd Font
+
+`sudo pacman -S ttf-sarasa-gothic noto-fonts-emoji noto-fonts noto-fonts-cjk  ttf-jetbrains-mono-nerd`
+
+- 输入法主题: fcitx5-gruvbox-dark-theme
+
+`yay -S fcitx5-gruvbox-dark-theme-git`
+
+#### 你需要安装的软件
+`sudo pacman -S  wlsunset foot brightnessctl swaybg  waybar`
+
+wlsunset:护眼模式需要
+
+foot:配置默认终端
+
+brightnessctl:亮度调节
+
+swaybg:设置壁纸需要
+
+waybar：状态栏
+
+#### 主要添加的快捷键
+
+Mod+Return(回车键) : 打开终端
+
+Mod+B : 隐藏显示waybar
+
+Mod+M : 开关机模块
+
+Mod+Z : 打开护眼模式
+
+Mod+A : 关闭护眼模式
+
+Mod+Shift+C : 刷新waybar
+
+
+
+
+
+
+
+
+
+。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/wo-de-Niri-pei-zhi-fen-xiang.html</guid><pubDate>Wed, 25 Feb 2026 08:56:08 +0000</pubDate></item><item><title>如何刷入crDroid</title><link>https://aidens-fox.github.io/post/ru-he-shua-ru-crDroid.html</link><description>#### **什么是crDroid？**
+crDroid 是一个基于 AOSP（Android Open Source Project） 的开源 Android 定制系统，旨在提供一个 稳定、流畅且功能丰富的用户体验。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/ru-he-shua-ru-crDroid.html</guid><pubDate>Sun, 22 Feb 2026 06:22:08 +0000</pubDate></item><item><title>如何刷入arrowos</title><link>https://aidens-fox.github.io/post/ru-he-shua-ru-arrowos.html</link><description>#### **什么是ArrowOS？**
+Arrow OS 最初于 2017 年推出，作为Android 设备的开源定制 ROM。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/ru-he-shua-ru-arrowos.html</guid><pubDate>Fri, 20 Feb 2026 01:51:29 +0000</pubDate></item><item><title>qbittorrent配置和使用</title><link>https://aidens-fox.github.io/post/qbittorrent-pei-zhi-he-shi-yong.html</link><description>- **前言**
+ qbittorrent是一个BT种子下载器，用于下载文件，常用于大型文件如：游戏或一些电子书等，因为qbittorrent是借助P2P的去中心化，所以用户越多，下载速度就越快，所以选择下载时尽量选择比较火爆的种子，这可以大大提高下载速度
+-  **准备**
+qBittorrent
+`sudo pacman -S qbittorrent`
+公共tracker服务器
+https://github.com/XIU2/TrackersListCollection
+公共tracker服务器2
+https://trackerslist.com/#/zh?id=qbittorrent-enhanced-edition-%E5%A2%9E%E5%BC%BA%E7%89%88
+主题
+https://github.com/jagannatharjun/qbt-theme
+- **配置**
+在使用之前我们需要进行配置，首先打开设置，在qBitTorrent添加tracker链接，来发现更多人，以此提高下载速度，然后在高级中的上传连接策略选择反吸血，打开总是向同级tracker汇报
+(可选)更改自定义主题：首先我们下载主题后解压，在行为中选择自定义主题，并输入主题连接，点击应用，然后重启应用就可以生效
+- **BT下载网站推荐**
+海盗湾
+https://thepiratebay.org/index.html
+。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/qbittorrent-pei-zhi-he-shi-yong.html</guid><pubDate>Wed, 04 Feb 2026 00:37:47 +0000</pubDate></item><item><title>从零开始dwm安装配置</title><link>https://aidens-fox.github.io/post/cong-ling-kai-shi-dwm-an-zhuang-pei-zhi.html</link><description>- **dwm是什么？**
+  dwm是一个十分轻量的窗口管理器，所以就对一些老旧的设备更加友好，不过这也对使用者的的能力提出了新要求，在本篇博文中我将会从零开始教你安装配置dwm的补丁，状态栏等
+-   **下载**
+dwm（本体）
+`git clone https://git.suckless.org/dwm`
+dmenu（应用启动器）
+`git clone https://git.suckless.org/dmenu`
+你也可以克隆我的配置
+` git  clone https://github.com/Aidens-fox/dwm.git`
+你也可以使用aur的dwm包，相较于官方的文件，多了如desktop文件，让显示管理器（登录管理器）可以识别来提供启动dwm的选项，不过对于我来说，我还是个偏向于使用官方的，所以克隆完成后就cd到此文件下
+`cd dwm`
+   我们ls可以看到有很多文件，不过我们可以先编译安装一下(其他软件同理)
+`sudo make clean install`
+然后打开config.h文件，这是dwm中的配置文件、
+下面我们开始配置dwm
+- **怎么启动dwm?**
+启动dwm的方式有很多，不过主流的是再.xinitrc添加
+`exec dwm`
+保存后只需要用在tty输入`startx`就可以启动
+**1.亮度音量调节**
+在config.h中添加下面内容，启用多媒体按键
+`#include &lt;X11/XF86keysym.h&gt;`
+**调节音量**
+```
+static const char *up_vol[]   = { 'pactl', 'set-sink-volume', '@DEFAULT_SINK@', '+10%',   NULL };
+static const char *down_vol[] = { 'pactl', 'set-sink-volume', '@DEFAULT_SINK@', '-10%',   NULL };
+static const char *mute_vol[] = { 'pactl', 'set-sink-mute',   '@DEFAULT_SINK@', 'toggle', NULL };
+...
+
+static const Key keys[] = {
+       ...
+
+       { 0, XF86XK_AudioMute,        spawn, {.v = mute_vol } },
+       { 0, XF86XK_AudioLowerVolume, spawn, {.v = down_vol } },
+       { 0, XF86XK_AudioRaiseVolume, spawn, {.v = up_vol } },
+
+       ...
+};
+```
+**调节亮度**
+```
+static const char *brighter[] = { 'brightnessctl', 'set', '10%+', NULL };
+static const char *dimmer[]   = { 'brightnessctl', 'set', '10%-', NULL };
+...
+
+static const Key keys[] = {
+       ...
+
+       { 0, XF86XK_MonBrightnessDown, spawn, {.v = dimmer } },
+       { 0, XF86XK_MonBrightnessUp,   spawn, {.v = brighter } },
+
+       ...
+};
+```
+**2.修改mod键**
+在dwm中默认是alt为mod键，我本人不太习惯，所以我把它更改为win键
+`#define MODKEY Mod4Mask`
+**3.窗口标签配置**
+`static const char *tags[] = { '壹', '貳', '叁', '肆', '伍', '陸', '柒', '捌', '玖' };`
+**4.更改默认终端**
+dwm默认的st我用不太惯，所以我换成了alacritty
+`static const char *termcmd[]  = { 'alacritty', NULL };`
+**5.配置状态栏内容**
+状态栏我使用的是i3status
+在.xinitrc中添加
+````
+i3status | while :
+do
+    read line
+    xsetroot -name '$line'
+done &amp;
+````
+**6.自启动软件**
+我们编辑.xinitrc文件
+在里面添加
+```
+exec  fcitx5 &amp; 
+```
+**7.打补丁**
+补丁是dwm的一大特色，我们可以到https://dwm.suckless.org/patches/去找补丁，然后在dwm目录下新建一个叫patches的文件夹
+`mkdir patches`
+把你想要的补丁下载下来，如attachaside，再安装补丁
+`patch -F3 -i patches/dwm-xxxxxxx.diff`
+卸载补丁
+`patch -R &lt; patches/dwm-xxxxxxxxx.diff`。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/cong-ling-kai-shi-dwm-an-zhuang-pei-zhi.html</guid><pubDate>Tue, 03 Feb 2026 10:43:12 +0000</pubDate></item><item><title>linux安装使用字体</title><link>https://aidens-fox.github.io/post/linux-an-zhuang-shi-yong-zi-ti.html</link><description>- **1.下载字体**
+这里以小赖字体为演示：
+`https://github.com/lxgw/kose-font`
+（注：如果官方仓库有推荐使用包管理器安装）
+下载时注意文件名，Mono是等宽字体，Serif 是指有衬线，Sans(-serif) 是指无衬线,推荐下载等宽字体
+- **2.添加字体**
+下载完成后，可以新建文件夹
+        `mkdir Xiaolai`
+再把字体移动到文件夹里方便管理，然后把文件夹移动到/usr/share/fonts/下
+        `sudo cp -r  XiaoLai /usr/share/fonts/`
+然后更新字体缓存
+        `sudo fc-cache -f -v`
+更新完成后查看字体是否安装
+        `fc-list | grep 'Xiaolai'`
+- **3.使用字体**
+我们利用ifc-list | grep 'XiaoLai'参考字体信息
+````
+/usr/share/fonts/Xiaolai/XiaolaiMono-Regular.ttf: 小赖字体等宽,Xiaolai Mono,小賴字體等寬,シャオライ等幅:style=Regular
+/usr/share/fonts/Xiaolai/Xiaolai-Regular.ttf: 小赖字体,Xiaolai,小賴字體,シャオライ:style=Regular
+````
+我们复制.ttf:后面部分的英文：XiaoLai Mono，再把它粘贴到要使用的软件的配置文件中
+如果要全局使用，请打开nwg-look在字体选择中选择字体。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/linux-an-zhuang-shi-yong-zi-ti.html</guid><pubDate>Tue, 03 Feb 2026 10:23:54 +0000</pubDate></item><item><title>我最喜欢的主题:Gruvbox</title><link>https://aidens-fox.github.io/post/wo-zui-xi-huan-de-zhu-ti--Gruvbox.html</link><description>- **前言**
+    你印象中的终端是什么样子？黑底白字，对比度高，十分刺眼丑陋，那本篇博文可能要打破你的刻板印象了，在本篇博文中我会向你推荐我喜欢的终端主题(github上评分也挺高的):Gruvbox
+- **特点**
+    gruvbox受badwolf, jellybeans和solarized的启发,采用柔和的“复古”颜色,Gruvbox的主要重点是保持色彩清晰易辨、对比度适中，同时兼顾视觉舒适度。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/wo-zui-xi-huan-de-zhu-ti--Gruvbox.html</guid><pubDate>Tue, 03 Feb 2026 10:18:18 +0000</pubDate></item><item><title>google Plxei3刷机Lineageos (linux)</title><link>https://aidens-fox.github.io/post/google%20Plxei3-shua-ji-Lineageos%20%28linux%29.html</link><description> **准备**
+Lineageos
+https://download.lineageos.org/devices/blueline/builds
+adb
+`sudo pacman -S android-tools  android-udev`
+谷歌框架 
+https://wiki.lineageos.org/gapps/
+面具
+https://github.com/topjohnwu/Magisk
+**手机设置**
+打开手机的开发者模式的USB调试，打开把你的手机用数据线连接到电脑
+手机弹出提示是否允许电脑调试点永远允许
+**开始刷机**
+打开终端
+`adb devices`#查看设备是否被识别
+`adb reboot bootloader `#进入fastboot
+`fastboot flashing unlock`#解锁
+重启后再次进入fastboot
+`fastboot flash boot boot.img`#刷入boot文件
+使用音量加减进入恢复模式（恢复模式）
+在恢复模式下选择第三个恢复出厂设置数据
+完成后返回主页选择第二个应用更新，选择用adb刷入
+`adb sideload xxx.zip`
+注：如果卡在47%是正常的
+然后如果你要使用海外应用（google,gmail）请安装谷歌框架
+`adb sideload 谷歌框架.zip`
+然后重启到系统
+进行一系列初始化
+注：如果你安装了谷歌，请不要联网
+解决网络无法连接
+完成后，如果您网络无法连接是因为自Android 5.0起，谷歌引入了Captive Portal机制，用于检测WiFi网络认证是否正常。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/google%20Plxei3-shua-ji-Lineageos%20%28linux%29.html</guid><pubDate>Tue, 03 Feb 2026 06:55:36 +0000</pubDate></item><item><title>google Plxei3刷机Lineageos (windows)</title><link>https://aidens-fox.github.io/post/google%20Plxei3-shua-ji-Lineageos%20%28windows%29.html</link><description>- **准备**
+1. **Lineageos**
+[https://download.lineageos.org/devices/blueline/builds](https://download.lineageos.org/devices/blueline/builds)
+2. **ADB**
+[https://developer.android.google.cn/tools/releases/platform-tools?hl=zh-cn](https://developer.android.google.cn/tools/releases/platform-tools?hl=zh-cn)
+3. **谷歌框架**
+https://wiki.lineageos.org/gapps/
+4. **面具**
+https://github.com/topjohnwu/Magisk
+5. **Google USB 驱动程序** 
+https://developer.android.com/studio/run/win-usb?hl=zh-cn
+下载好后，把ADB添加到环境变量中
+- **手机设置**
+打开手机的开发者模式的USB调试，打开把你的手机用数据线连接到电脑
+手机弹出提示是否允许电脑调试点**永远允许**
+- **开始刷机**
+打开cmd
+`adb devices`#查看设备是否被识别
+`adb reboot bootloader `# 进入fastboot
+`fastboot flashing unlock` # 解锁
+重启后再次进入fastboot
+`fastboot flash boot boot.img`#刷入boot文件
+使用音量加减进入恢复模式（recovery mode）
+在恢复模式下选择第三个factory reset格式化data
+完成后返回主页选择第二个apply update，选择用adb刷入
+`adb sideload xxx.zip`
+注：如果卡在47%是正常的
+然后如果你要使用海外应用（google,gmail）请安装谷歌框架
+`adb sideload 谷歌框架.zip`
+然后重启到系统
+进行一系列初始化
+注：如果你安装了谷歌，请不要联网
+- **解决网络无法连接**
+完成后，如果你网络无法连接是因为自Android 5.0起，谷歌引入了Captive Portal机制， 用于检测WiFi网络认证是否正常。</description><guid isPermaLink="true">https://aidens-fox.github.io/post/google%20Plxei3-shua-ji-Lineageos%20%28windows%29.html</guid><pubDate>Tue, 03 Feb 2026 05:43:32 +0000</pubDate></item></channel></rss>

@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>解决github 2FA认证问题</title>
+      <link href="/posts/3f2347ff.html"/>
+      <url>/posts/3f2347ff.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在几个星期前我的邮箱收到github的通知要我添加2FA认证，不然无法在登录，一开始我也没有在意，直到早上我要登录github的时候才发现真的登录不了，要2FA认证才可以，关于这个2FA认证有几个官方的解决方法，专门下载一个软件比如Microsoft Authenticator来添加认证或使用手机号接收验证码，不过手机号没有中国+86的，而我也不可能专门下一个软件来搞认证的，这样做就点太繁琐了，就和国内的某些软件或网页端一样，登录还要使用手机软件扫码，十分恶心，不过我倒是找到了解决方案<br><img src="/a.png"></p><h3 id="浏览器插件解决认证"><a href="#浏览器插件解决认证" class="headerlink" title="浏览器插件解决认证"></a>浏览器插件解决认证</h3><p>authenticator是一个浏览器插件，是一次性密码 (OTP) 客户端，可以扫描二维码添加账户这一点即可解决github 2FA认证问题<br><img src="/b.png"><br>项目链接:<a href="https://github.com/Authenticator-Extension/Authenticator">https://github.com/Authenticator-Extension/Authenticator</a><br>相关网站:<a href="https://authenticator.cc/">https://authenticator.cc/</a></p><h3 id="使用Authenticator"><a href="#使用Authenticator" class="headerlink" title="使用Authenticator"></a>使用Authenticator</h3><p>首先你要在浏览器添加这个插件<br>chrome:<br><a href="https://chrome.google.com/webstore/detail/authenticator/bhghoamapcdpbohphigoooaddinpkbai">https://chrome.google.com/webstore/detail/authenticator/bhghoamapcdpbohphigoooaddinpkbai</a><br>firfox:<br><a href="https://addons.mozilla.org/en-US/firefox/addon/auth-helper?src=external-website">https://addons.mozilla.org/en-US/firefox/addon/auth-helper?src=external-website</a><br>edge:<br><a href="https://microsoftedge.microsoft.com/addons/detail/ocglkepbibnalbgmbachknglpdipeoio">https://microsoftedge.microsoft.com/addons/detail/ocglkepbibnalbgmbachknglpdipeoio</a><br>添加完成后把插件打开，选择扫描QR码，这时候就会在当前页面出现一个框选，框选那个码就可以收到验证码，把验证码填入就可以进入了<br><img src="/c.png"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>dwm补丁推荐</title>
       <link href="/posts/3b989ea6.html"/>
       <url>/posts/3b989ea6.html</url>
@@ -14,9 +33,9 @@
       
         <tags>
             
-            <tag> dwm </tag>
-            
             <tag> linux </tag>
+            
+            <tag> dwm </tag>
             
         </tags>
       
@@ -35,9 +54,9 @@
       
         <tags>
             
-            <tag> dwm </tag>
-            
             <tag> linux </tag>
+            
+            <tag> dwm </tag>
             
         </tags>
       

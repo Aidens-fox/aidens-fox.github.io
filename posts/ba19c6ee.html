@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="准备Lineageoshttps:&#x2F;&#x2F;download.lineageos.org&#x2F;devices&#x2F;blueline&#x2F;builds ADBsudo pacman -S android-tools android-udev 谷歌框架https:&#x2F;&#x2F;wiki.lineageos.org&#x2F;gapps&#x2F; 手机设置打开手机的关于手机，连续点击版本号，打开开发者模式的USB调试，打开把你的手机用数据线连接到电">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Plxei3刷机Lineageos(linux)">
+<meta property="og:url" content="https://aidens-fox.codeberg.page/posts/ba19c6ee.html">
+<meta property="og:site_name" content="Aidens的博客">
+<meta property="og:description" content="准备Lineageoshttps:&#x2F;&#x2F;download.lineageos.org&#x2F;devices&#x2F;blueline&#x2F;builds ADBsudo pacman -S android-tools android-udev 谷歌框架https:&#x2F;&#x2F;wiki.lineageos.org&#x2F;gapps&#x2F; 手机设置打开手机的关于手机，连续点击版本号，打开开发者模式的USB调试，打开把你的手机用数据线连接到电">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-06-27T06:35:09.000Z">
+<meta property="article:modified_time" content="2026-06-27T06:37:33.979Z">
+<meta property="article:author" content="Aidens-fox">
+<meta property="article:tag" content="玩机">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/logo.png">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/logo.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+        
+      
+    
+    <!-- title -->
+    <title>Plxei3刷机Lineageos(linux)</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="Aidens的博客" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/resource/">资源</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/posts/537ab706.html"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/posts/623e5c8b.html"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://aidens-fox.codeberg.page/posts/ba19c6ee.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://aidens-fox.codeberg.page/posts/ba19c6ee.html&text=Plxei3刷机Lineageos(linux)"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://aidens-fox.codeberg.page/posts/ba19c6ee.html&title=Plxei3刷机Lineageos(linux)"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://aidens-fox.codeberg.page/posts/ba19c6ee.html&is_video=false&description=Plxei3刷机Lineageos(linux)"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Plxei3刷机Lineageos(linux)&body=Check out this article: https://aidens-fox.codeberg.page/posts/ba19c6ee.html"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://aidens-fox.codeberg.page/posts/ba19c6ee.html&title=Plxei3刷机Lineageos(linux)"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://aidens-fox.codeberg.page/posts/ba19c6ee.html&title=Plxei3刷机Lineageos(linux)"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://aidens-fox.codeberg.page/posts/ba19c6ee.html&title=Plxei3刷机Lineageos(linux)"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://aidens-fox.codeberg.page/posts/ba19c6ee.html&title=Plxei3刷机Lineageos(linux)"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://aidens-fox.codeberg.page/posts/ba19c6ee.html&name=Plxei3刷机Lineageos(linux)&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://aidens-fox.codeberg.page/posts/ba19c6ee.html&t=Plxei3刷机Lineageos(linux)"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-number">1.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E6%9C%BA%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">手机设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E5%88%B7%E6%9C%BA"><span class="toc-number">3.</span> <span class="toc-text">开始刷机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E7%BD%91%E7%BB%9C%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5"><span class="toc-number">4.</span> <span class="toc-text">解决网络无法连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E9%9D%A2%E5%85%B7"><span class="toc-number">5.</span> <span class="toc-text">安装面具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">6.</span> <span class="toc-text">其他</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Plxei3刷机Lineageos(linux)
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Aidens-fox</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2026-06-27T06:35:09.000Z" class="dt-published" itemprop="datePublished">2026-06-27</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/%E7%8E%A9%E6%9C%BA/" rel="tag">玩机</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>Lineageos<br><a target="_blank" rel="noopener" href="https://download.lineageos.org/devices/blueline/builds">https://download.lineageos.org/devices/blueline/builds</a></p>
+<p>ADB<br><code>sudo pacman -S android-tools android-udev</code></p>
+<p>谷歌框架<br><a target="_blank" rel="noopener" href="https://wiki.lineageos.org/gapps/">https://wiki.lineageos.org/gapps/</a></p>
+<h3 id="手机设置"><a href="#手机设置" class="headerlink" title="手机设置"></a>手机设置</h3><p>打开手机的关于手机，连续点击版本号，打开开发者模式的USB调试，打开把你的手机用数据线连接到电脑，手机弹出提示是否允许电脑调试点<strong>永远允许</strong>（注：如果手机有重要数据一定要备份！否则后果自负！）</p>
+<h3 id="开始刷机"><a href="#开始刷机" class="headerlink" title="开始刷机"></a>开始刷机</h3><p>手机使用数据线连接电脑(请务必检查数据线是否完好，然后要有数据传输功能，只有充电功能的无法刷机)<br>打开cmd(在当前文件夹使用shift加左键选择打开命令行窗口或win+r输入cmd回车打开)<br>1 查看设备是否被识别<br>&#96;adb devices</p>
+<p>2 进入fastboot<br>&#96;adb reboot bootloader</p>
+<p>3 解锁（不然后面没法刷机）<br><code>fastboot flashing unlock 然后回到手机使用音量键选择洋文&quot;unlock the bootloader&quot;后再按电源键确认就可以了，手机会自动重启，重启后继续使用</code>adb reboot bootloader&#96;命令让手机处于fastboot模式下</p>
+<p>4 刷入boot文件（后面要进入救援模式需要）<br><code>fastboot flash boot boot.img</code><br>刷入完成后回到手机使用音量加减进入恢复模式（recovery mode）后使用电源键确认，在恢复模式下选择第三个factory reset格式化data，完成后返回主页选择第二个apply update，选择用adb刷入</p>
+<p>5 刷入刷机包<br><code>adb sideload xxx.zip</code><br>(注：如果卡在47%是正常的，一般卡个4,5分钟，在刷机过程中请不要拔数据线！)</p>
+<p>6 (可选)刷入Gapps(谷歌框架)<br>在刷入完刷机包后不要重启，继续返回主页选择第二个apply update，选择用adb刷入<br>&#96;adb sideload 谷歌框架.zip</p>
+<p>然后重启到系统<br>进行一系初始化设置(注：如果你安装了谷歌，请不要联网)</p>
+<h3 id="解决网络无法连接"><a href="#解决网络无法连接" class="headerlink" title="解决网络无法连接"></a>解决网络无法连接</h3><p>完成后，如果你网络无法连接是因为自Android 5.0起，谷歌引入了Captive Portal机制， 用于检测WiFi网络认证是否正常。 该机制默认检测访问的是谷歌服务器，需要科学才能正常访问谷歌服务器<br>所以我们继续连接电脑使用ADB<br>使用ADB 工具，无需要root权限</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">adb shell settings delete global captive_portal_https_url  </span><br><span class="line">  </span><br><span class="line">adb shell settings delete global captive_portal_http_url</span><br></pre></td></tr></table></figure>
+
+<p>修改一下服务器的地址：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">adb shell settings put global captive_portal_http_url http://captive.v2ex.co/generate_204  </span><br><span class="line">  </span><br><span class="line">adb shell settings put global captive_portal_https_url http://captive.v2ex.co/generate_204</span><br></pre></td></tr></table></figure>
+
+<p>然后切换一下飞行模式5秒， 激活一下就好</p>
+<h3 id="安装面具"><a href="#安装面具" class="headerlink" title="安装面具"></a>安装面具</h3><p>把boot.img复制到手机使用面具修补再传回电脑<br>再次使用ADB<br>进入fastboot<br><code>adb reboot bootloader</code> </p>
+<p>刷入修补文件<br><code>fastboot flash boot magisk.img</code></p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>高版本尤其是动态分区版本早就不能用twrp了<br>所以刷写完系统后请不要装twrp</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/resource/">资源</a></li>
+        
+          <li><a href="/atom.xml">RSS</a></li>
+        
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-number">1.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E6%9C%BA%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">手机设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E5%88%B7%E6%9C%BA"><span class="toc-number">3.</span> <span class="toc-text">开始刷机</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E7%BD%91%E7%BB%9C%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5"><span class="toc-number">4.</span> <span class="toc-text">解决网络无法连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E9%9D%A2%E5%85%B7"><span class="toc-number">5.</span> <span class="toc-text">安装面具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">6.</span> <span class="toc-text">其他</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://aidens-fox.codeberg.page/posts/ba19c6ee.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://aidens-fox.codeberg.page/posts/ba19c6ee.html&text=Plxei3刷机Lineageos(linux)"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://aidens-fox.codeberg.page/posts/ba19c6ee.html&title=Plxei3刷机Lineageos(linux)"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://aidens-fox.codeberg.page/posts/ba19c6ee.html&is_video=false&description=Plxei3刷机Lineageos(linux)"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Plxei3刷机Lineageos(linux)&body=Check out this article: https://aidens-fox.codeberg.page/posts/ba19c6ee.html"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://aidens-fox.codeberg.page/posts/ba19c6ee.html&title=Plxei3刷机Lineageos(linux)"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://aidens-fox.codeberg.page/posts/ba19c6ee.html&title=Plxei3刷机Lineageos(linux)"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://aidens-fox.codeberg.page/posts/ba19c6ee.html&title=Plxei3刷机Lineageos(linux)"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://aidens-fox.codeberg.page/posts/ba19c6ee.html&title=Plxei3刷机Lineageos(linux)"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://aidens-fox.codeberg.page/posts/ba19c6ee.html&name=Plxei3刷机Lineageos(linux)&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://aidens-fox.codeberg.page/posts/ba19c6ee.html&t=Plxei3刷机Lineageos(linux)"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2026
+    Aidens-fox
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/resource/">资源</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

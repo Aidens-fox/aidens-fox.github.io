@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="前言如果你使用dwm这个窗口管理器，那你肯定知道st，一个短小精悍的终端，也是dwm的默认终端，是suckless社区开发的终端，整体十分轻便快捷，但是默认的st十分简单，简单到连历史翻页都没有，不过这些都是可以通过打补丁的方式来扩展和自定义你的st，所以本篇博文我会教你从零开始配置一个短小精悍的终端-st 下载首先我们肯定有先把他下载下来，我们使用git工具把他克隆到本地:git clone h">
+<meta property="og:type" content="article">
+<meta property="og:title" content="短小精悍的终端-st">
+<meta property="og:url" content="https://aidens-fox.codeberg.page/posts/ff43cd43.html">
+<meta property="og:site_name" content="Aidens的博客">
+<meta property="og:description" content="前言如果你使用dwm这个窗口管理器，那你肯定知道st，一个短小精悍的终端，也是dwm的默认终端，是suckless社区开发的终端，整体十分轻便快捷，但是默认的st十分简单，简单到连历史翻页都没有，不过这些都是可以通过打补丁的方式来扩展和自定义你的st，所以本篇博文我会教你从零开始配置一个短小精悍的终端-st 下载首先我们肯定有先把他下载下来，我们使用git工具把他克隆到本地:git clone h">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-06-30T13:48:46.000Z">
+<meta property="article:modified_time" content="2026-06-30T15:12:41.065Z">
+<meta property="article:author" content="Aidens-fox">
+<meta property="article:tag" content="dwm">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="软件">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/logo.png">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/logo.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+        
+      
+    
+    <!-- title -->
+    <title>短小精悍的终端-st</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="Aidens的博客" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/resource/">资源</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/posts/425e5bf4.html"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://aidens-fox.codeberg.page/posts/ff43cd43.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://aidens-fox.codeberg.page/posts/ff43cd43.html&text=短小精悍的终端-st"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://aidens-fox.codeberg.page/posts/ff43cd43.html&title=短小精悍的终端-st"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://aidens-fox.codeberg.page/posts/ff43cd43.html&is_video=false&description=短小精悍的终端-st"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=短小精悍的终端-st&body=Check out this article: https://aidens-fox.codeberg.page/posts/ff43cd43.html"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://aidens-fox.codeberg.page/posts/ff43cd43.html&title=短小精悍的终端-st"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://aidens-fox.codeberg.page/posts/ff43cd43.html&title=短小精悍的终端-st"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://aidens-fox.codeberg.page/posts/ff43cd43.html&title=短小精悍的终端-st"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://aidens-fox.codeberg.page/posts/ff43cd43.html&title=短小精悍的终端-st"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://aidens-fox.codeberg.page/posts/ff43cd43.html&name=短小精悍的终端-st&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://aidens-fox.codeberg.page/posts/ff43cd43.html&t=短小精悍的终端-st"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD"><span class="toc-number">2.</span> <span class="toc-text">下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E8%A1%A5%E4%B8%81-%E8%A1%A5%E4%B8%81%E6%8E%A8%E8%8D%90"><span class="toc-number">3.</span> <span class="toc-text">打补丁&amp;补丁推荐</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        短小精悍的终端-st
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Aidens-fox</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2026-06-30T13:48:46.000Z" class="dt-published" itemprop="datePublished">2026-06-30</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/dwm/" rel="tag">dwm</a>, <a class="p-category" href="/tags/linux/" rel="tag">linux</a>, <a class="p-category" href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag">软件</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>如果你使用dwm这个窗口管理器，那你肯定知道st，一个短小精悍的终端，也是dwm的默认终端，是<a target="_blank" rel="noopener" href="https://suckless.org/">suckless</a>社区开发的终端，整体十分轻便快捷，但是默认的st十分简单，简单到连历史翻页都没有，不过这些都是可以通过打补丁的方式来扩展和自定义你的st，所以本篇博文我会教你从零开始配置一个短小精悍的终端-st</p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>首先我们肯定有先把他下载下来，我们使用git工具把他克隆到本地:<br><code>git clone https://git.suckless.org/st</code></p>
+<p>克隆完成进入该目录，可以看到很多文件，我们主要修改的是config.def.h文件，虽然在第一次编译安装后产生的config.h也可以配置st，但是很多补丁在添加快捷键和变量时都是修改config.def.h文件的，如果修改config.h来配置，那每次打好补丁都要自己手动添加快捷键什么的也太麻烦了，相比之下直接修改config.def.h文件就比较方便了，但是需要注意的是，st在应用配置时是使用config.h的，所以在修改好config.def.h后记得执行<code>rm -rf config.h</code>把之前的配置删除，比如编译安装后还是之前的配置，那我们先不着急修改配置，我们先下载补丁，因为没有补丁的st能修改的也就几个</p>
+<h3 id="打补丁-补丁推荐"><a href="#打补丁-补丁推荐" class="headerlink" title="打补丁&amp;补丁推荐"></a>打补丁&amp;补丁推荐</h3><p>那么我们先在该st目录下新建一个叫patches的文件夹，方便以后的补丁管理，不然你总不能把补丁直接下载到目录下面吧，那得有多乱，我们使用命令新建文件夹:<br><code>mkdir patches</code></p>
+<p>文件夹创建好后我们就要下载补丁了，不过在此之前你也可以试试我的st配置(st配置在文件st里):<br><a target="_blank" rel="noopener" href="https://github.com/Aidens-fox/dwm">https://github.com/Aidens-fox/dwm</a></p>
+<ol>
+<li>st-font2<br>一个可以添加备用字体的补丁，因为我英文文喜欢JetBrainsMono字体，中文布局喜欢Sarasa Mono SC(更纱黑体)，但是默认st只支持一个字体这个插件很好的解决了这个问题<br>下载链接: <a target="_blank" rel="noopener" href="https://st.suckless.org/patches/font2/">https://st.suckless.org/patches/font2/</a><br>因为补丁是会更新版本的，所以我就直接贴出下载页面了，我们只需要选择新版本然后鼠标右键选择从链接另存为文件，选择刚才创建的patches文件夹，下载完成后直接使用patch命令来打补丁：<br><code>patch &lt; patches/st-font2-0.8.5.diff</code><br>打好后看看有没有产生config.def.h.rej，如果有就说明要手动添加或删除一些代码，我们打开config.def.h配置font2:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 默认字体</span><br><span class="line">static char *font = &quot;JetBrainsMono Nerd Font:pixelsize=30:antialias=true:autohint=true&quot;;</span><br><span class="line">// 备用字体</span><br><span class="line">static char *font2[] = &#123;</span><br><span class="line">	&quot;Sarasa Mono SC:pixelsize=30:antialias=true:autohint=true&quot;, </span><br><span class="line">	&quot;Noto Color Emoji:pixelsize=30:antialias=true:autohint=true&quot;, </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>修改完成后在编译安装(如果你在打补丁之前编译安装了，记得把config.h删除了,然后建议每个补丁安装配置完成后都编译安装看看有没有什么问题)<br><code>sudo make clean install</code></p>
+<ol start="2">
+<li>st-colorschemes<br>这个补丁添加了多种配色方案，只需要使用默认的alt+1~8即可切换配色方案，在原版的st只有一个很刺眼的配色(个人)，没有Gruvbox那种柔和的感觉<br>下载链接:<a target="_blank" rel="noopener" href="https://st.suckless.org/patches/colorschemes/">https://st.suckless.org/patches/colorschemes/</a><br>选择完成后还是使用patch命令来打补丁<br><code>patch &lt; patches/st-colorschemes-0.8.5.diff</code><br>打好后看看有没有产生config.def.h.rej，如果有就说明要手动添加或删除一些代码，我们打开config.def.h配置colorschemes，主要是配置默认的配色方案</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">static const ColorScheme schemes[] = &#123;</span><br><span class="line"></span><br><span class="line">	// Gruvbox dark (默认配色方案)</span><br><span class="line">	&#123;&#123;&quot;#282828&quot;, &quot;#cc241d&quot;, &quot;#98971a&quot;, &quot;#d79921&quot;,</span><br><span class="line">	  &quot;#458588&quot;, &quot;#b16286&quot;, &quot;#689d6a&quot;, &quot;#a89984&quot;,</span><br><span class="line">	  &quot;#928374&quot;, &quot;#fb4934&quot;, &quot;#b8bb26&quot;, &quot;#fabd2f&quot;,</span><br><span class="line">	  &quot;#83a598&quot;, &quot;#d3869b&quot;, &quot;#8ec07c&quot;, &quot;#ebdbb2&quot;,</span><br><span class="line">	  [256]=&quot;#ebdbb2&quot;, &quot;#555555&quot;&#125;, 15, 0, 256, 257&#125;,</span><br><span class="line"></span><br><span class="line">	// Alacritty (dark)</span><br><span class="line">	&#123;&#123;&quot;#1d1f21&quot;, &quot;#cc6666&quot;, &quot;#b5bd68&quot;, &quot;#f0c674&quot;,</span><br><span class="line">	  &quot;#81a2be&quot;, &quot;#b294bb&quot;, &quot;#8abeb7&quot;, &quot;#c5c8c6&quot;,</span><br><span class="line">	  &quot;#666666&quot;, &quot;#d54e53&quot;, &quot;#b9ca4a&quot;, &quot;#e7c547&quot;,</span><br><span class="line">	  &quot;#7aa6da&quot;, &quot;#c397d8&quot;, &quot;#70c0b1&quot;, &quot;#eaeaea&quot;,</span><br><span class="line">	  [256]=&quot;#cccccc&quot;, &quot;#555555&quot;&#125;, 7, 0, 256, 257&#125;,</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>修改完成后在删除config.h文件来编译安装看看有没有问题:<br><code>sudo make clean install</code></p>
+<ol start="3">
+<li><p>scrollback-reflow-standalone<br>这个补丁集成了集成历史的 st 的独立滚动回滚和回流实现存储、鼠标滚动、选择处理和调整回流大小统一<br>下载链接:<a target="_blank" rel="noopener" href="https://st.suckless.org/patches/scrollback-reflow-standalone/">https://st.suckless.org/patches/scrollback-reflow-standalone/</a><br>使用patch命令来打补丁：<br><code>patch &lt; patches/st-scrollback-reflow-standalone-extended-0.9.3.diff</code><br>打好后看看有没有产生config.def.h.rej，如果有就说明要手动添加或删除一些代码,修改完成后在删除config.h文件来编译安装看看有没有问题:<br><code>sudo make clean install</code></p>
+</li>
+<li><p>copyurl<br>这个补丁用于复制URL,默认快捷键alt+l,有多个版本可下载，根据自己需求下载<br>下载链接: <a target="_blank" rel="noopener" href="https://st.suckless.org/patches/copyurl/">https://st.suckless.org/patches/copyurl/</a><br>使用patch命令来打补丁：<br><code>patch &lt; patches/st-copyurl-20190202-0.8.1.diff</code><br>打好后看看有没有产生config.def.h.rej，如果有就说明要手动添加或删除一些代码,修改完成后在删除config.h文件来编译安装看看有没有问题:<br><code>sudo make clean install</code></p>
+</li>
+<li><p>clipboard<br>这个插件为st添加了更现代的复制粘贴快捷键，也就是ctrl+c和ctrl+v<br>下载链接:<a target="_blank" rel="noopener" href="https://st.suckless.org/patches/clipboard/">https://st.suckless.org/patches/clipboard/</a><br>使用patch命令来打补丁：<br><code>patch &lt; patches/st-clipboard-0.8.3.diff</code><br>打好后看看有没有产生config.def.h.rej，如果有就说明要手动添加或删除一些代码,修改完成后在删除config.h文件来编译安装看看有没有问题:<br><code>sudo make clean install</code></p>
+</li>
+</ol>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/resource/">资源</a></li>
+        
+          <li><a href="/atom.xml">RSS</a></li>
+        
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD"><span class="toc-number">2.</span> <span class="toc-text">下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E8%A1%A5%E4%B8%81-%E8%A1%A5%E4%B8%81%E6%8E%A8%E8%8D%90"><span class="toc-number">3.</span> <span class="toc-text">打补丁&amp;补丁推荐</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://aidens-fox.codeberg.page/posts/ff43cd43.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://aidens-fox.codeberg.page/posts/ff43cd43.html&text=短小精悍的终端-st"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://aidens-fox.codeberg.page/posts/ff43cd43.html&title=短小精悍的终端-st"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://aidens-fox.codeberg.page/posts/ff43cd43.html&is_video=false&description=短小精悍的终端-st"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=短小精悍的终端-st&body=Check out this article: https://aidens-fox.codeberg.page/posts/ff43cd43.html"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://aidens-fox.codeberg.page/posts/ff43cd43.html&title=短小精悍的终端-st"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://aidens-fox.codeberg.page/posts/ff43cd43.html&title=短小精悍的终端-st"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://aidens-fox.codeberg.page/posts/ff43cd43.html&title=短小精悍的终端-st"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://aidens-fox.codeberg.page/posts/ff43cd43.html&title=短小精悍的终端-st"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://aidens-fox.codeberg.page/posts/ff43cd43.html&name=短小精悍的终端-st&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://aidens-fox.codeberg.page/posts/ff43cd43.html&t=短小精悍的终端-st"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2026
+    Aidens-fox
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/resource/">资源</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

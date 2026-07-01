@@ -1662,3 +1662,10 @@ code {
 #header-post #actions {
   direction: ltr !important;
 }
+#header #nav ul li {
+  color: #666 !important;
+  font-weight: 500;
+}
+#header #nav ul li a {
+  font-weight: 700 !important;
+}

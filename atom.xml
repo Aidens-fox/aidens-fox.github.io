@@ -10,7 +10,24 @@
   <rights>All rights reserved 2026, Aidens-fox</rights>
   <subtitle>linux折腾记录</subtitle>
   <title>Aidens的博客</title>
-  <updated>2026-06-30T15:12:41.065Z</updated>
+  <updated>2026-07-01T11:07:42.664Z</updated>
+  <entry>
+    <author>
+      <name>Aidens-fox</name>
+    </author>
+    <category term="资源" scheme="https://aidens-fox.codeberg.page/tags/%E8%B5%84%E6%BA%90/"/>
+    <content>
+      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>提到linux玩游戏，你可能会想到用steam的Proton来下载游玩游戏，这也是主流的官方的方法，但是steam很多优秀的游戏都是要钱的，虽然这些开发者的付出的确值得拥有这些钱，但是对于一个口袋比脸都干净的人来说就是心有力而力不足了，所以只能下载破解游戏，也就是学习版和盗版，不过大部分盗版游戏平台都是只有windows端的，一些游戏是有原生linux版的，但是下载网站没有只能用wine来套个兼容层来运行，这样性能就下降了，对于一些配置低电脑就不友好了，所以我这篇博文就分享linux破解游戏的下载网站，随便分享一些游戏推荐</p><h3 id="下载网站-rutracker"><a href="#下载网站-rutracker" class="headerlink" title="下载网站-rutracker"></a>下载网站-rutracker</h3><p>Rutracker.org（原Torrents.ru）是俄罗斯最大的BT服务器，也是全球知名的盗版资源下载网站，里面的盗版资源十分丰富，其中就包含linux破解游戏,不过这些资源很多都是出自另一个游戏平台-GOG.com,其中里面就有很多对Linux支持游戏，而且还可以直接下载到本地，没有Steam那种恶心的验证文件,游戏运行时不会联网读取验证，也不会在后台检查你的账户，就这一点就吊打使用游戏平台，不用像steam一样要把那个臃肿的客户端挂在后台才可以进入游戏，所以如果有条件可以在GOG平台来购买下载游戏，让我们把DRM-Free（无数字版权管理）延续下去，好了扯远了回归正题，下面是linux破解游戏相关主题链接:<br><a href="https://rutracker.org/forum/viewforum.php?f=1992">https://rutracker.org/forum/viewforum.php?f=1992</a></p><p>然后因为这个网站是bt下载网站，所以需要使用bt下载器来下载，比如# qbittorrent，配置和使用参考之前的博文:<br><a href="https://aidens-fox.codeberg.page/posts/82f2ef74.html">https://aidens-fox.codeberg.page/posts/82f2ef74.html</a></p><h3 id="安装游戏"><a href="#安装游戏" class="headerlink" title="安装游戏"></a>安装游戏</h3><p>因为大部分游戏都是gog平台的，安装方法基本一样，把下载好后的文件解压，在那个目录下会有一个sh脚本，具体名称看下载是的简介什么，然后给那个脚本提权<br><code>sudo chmod +x 脚本.sh</code></p><p>然后<code>./脚本.sh</code><br>就会弹出一个安装界面(图形化)，只需要选择好安装的地方就好了，安装完成cd到那个目录下，给一个叫start.sh的脚本提权<br><code>sudo chmod +x start.sh</code></p><p>然后<code>./start.sh</code><br>就可以游玩游戏了</p><h3 id="推荐游戏"><a href="#推荐游戏" class="headerlink" title="推荐游戏"></a>推荐游戏</h3><ol><li><p>Project Zomboid(僵尸毁灭工程)<br>一个2.5d的僵尸末日模拟游戏，游戏十分硬核，你要四处搜寻食物、搜刮物资、建造防御工事，并竭尽全力地生存下去，僵尸无处不在，如果你被你的角色压力很大，可以在外面按Q使用解毒剂(-:<br>下载链接:<br><a href="https://rutracker.org/forum/viewtopic.php?t=5231547">https://rutracker.org/forum/viewtopic.php?t=5231547</a></p></li><li><p>Don’t Starve(饥荒)<br>一个2.5d的哥特风生存游戏，你最好在天黑之前拥有火，不然晚上你会被那些小可爱照顾的很好<br>下载链接:<br><a href="https://rutracker.org/forum/viewtopic.php?t=5200124">https://rutracker.org/forum/viewtopic.php?t=5200124</a></p></li></ol><h3 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h3><p>最后还是有说一句，如果可以一定要支持那些游戏作者，盗版游戏给了俺们体验的机会，这里引用马库斯·佩尔松(Minecraft创始人)说的”去玩盗版吧。如果以后你手头宽裕了，并且依然喜欢它，再买也不迟”</p>]]>
+    </content>
+    <id>https://aidens-fox.codeberg.page/posts/29742e47.html</id>
+    <link href="https://aidens-fox.codeberg.page/posts/29742e47.html"/>
+    <published>2026-07-01T09:55:05.000Z</published>
+    <summary>
+      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>提到linux玩游戏，你可能会想到用steam的Proton来下载游玩游戏，这也是主流的官方的方法，但是steam很多优秀的游戏都是要钱的，]]>
+    </summary>
+    <title>linux下载破解游戏(原生非wine兼容层)</title>
+    <updated>2026-07-01T11:07:42.664Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Aidens-fox</name>
@@ -34,8 +51,8 @@
     <author>
       <name>Aidens-fox</name>
     </author>
-    <category term="软件" scheme="https://aidens-fox.codeberg.page/tags/%E8%BD%AF%E4%BB%B6/"/>
     <category term="资源" scheme="https://aidens-fox.codeberg.page/tags/%E8%B5%84%E6%BA%90/"/>
+    <category term="软件" scheme="https://aidens-fox.codeberg.page/tags/%E8%BD%AF%E4%BB%B6/"/>
     <content>
       <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>yt-dlp是一个视频下载器，可以下载很多网站的视频，比如youtube,BiliBili等等，详细可下载网站请查看<a href="https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md">仓库说明</a>，不过直接用<code>yt-dlp &#39;URL&#39;</code>大概率是下载不了的,会提示需要登录验证,因为youtube近年来不断加强反爬机制，运气好换一个干净一点ip就可以下载，但是很多情况下还是要登录验证，但是下载器怎么登录？所以就需要导入cookies</p><h3 id="cookies是什么"><a href="#cookies是什么" class="headerlink" title="cookies是什么?"></a>cookies是什么?</h3><p>cookies是你在浏览网站时的时候由网站服务器存在你的计算机文件，用来记录一些偏好设定和跟踪什么的，而这其中就包含一些登录信息，而这些正好可以解决yt-dlp下载youtube视频要求登录验证问题，我们只需要把将cookie传递给yt-dlp就可以下载了</p><h3 id="怎么将cookie传递给yt-dlp"><a href="#怎么将cookie传递给yt-dlp" class="headerlink" title="怎么将cookie传递给yt-dlp"></a>怎么将cookie传递给yt-dlp</h3><p>传入方法有两个，第一个就是直接从浏览器提取cookie，只需要输入:<br><code>yt-dlp --cookies-from-browser chrome &#39;URL&#39;</code><br><code>chrome</code>部分根据自己使用的浏览器名称修改</p><p>第二个就是手动传递cookie，因为第一个方法对于我来说不太适用，所以使用手动导入就解决了我的问题，不过在下载之前我们需要在浏览器扩展商店下载一个插件来下载网站的cookie，也就是# Get cookies.txt LOCALLY<br>下载链接</p><p>chrome: <a href="https://chrome.google.com/webstore/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc">https://chrome.google.com/webstore/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc</a></p><p>firefox: <a href="https://addons.mozilla.org/zh-CN/firefox/addon/get-cookies-txt-locally/">https://addons.mozilla.org/zh-CN/firefox/addon/get-cookies-txt-locally/</a></p><p>项目地址: <a href="https://github.com/kairi003/Get-cookies.txt-LOCALLY">https://github.com/kairi003/Get-cookies.txt-LOCALLY</a></p><p>安装好插件后在你要下载的视频网页打开插件，选择”Export AII Cookies”下载到本地<br><img src="https://raw.githubusercontent.com/kairi003/Get-cookies.txt-LOCALLY/master/ss.png"></p><p>然后执行命令:<br><code>yt-dlp --cookies /path/to/cookies/file.txt &#39;URL&#39;</code></p><p>这样就可以把视频下载到本地了，其他问题请参考官方文档:<br><a href="https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp">https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp</a></p>]]>
     </content>
@@ -158,8 +175,8 @@
     <author>
       <name>Aidens-fox</name>
     </author>
-    <category term="软件" scheme="https://aidens-fox.codeberg.page/tags/%E8%BD%AF%E4%BB%B6/"/>
     <category term="资源" scheme="https://aidens-fox.codeberg.page/tags/%E8%B5%84%E6%BA%90/"/>
+    <category term="软件" scheme="https://aidens-fox.codeberg.page/tags/%E8%BD%AF%E4%BB%B6/"/>
     <content>
       <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><a href="https://zh.wikipedia.org/wiki/QBittorrent">qbittorrent</a>是一个BT种子下载器(<a href="https://zh.wikipedia.org/wiki/BitTorrent_(%E5%8D%8F%E8%AE%AE)">BitTorrent</a>客户端)，用于下载文件，常用于大型文件如：游戏或一些电子书等，因为qbittorrent是借助P2P的去中心化，所以用户越多，下载速度就越快，所以选择下载时尽量选择比较火爆的种子，这可以大大提高下载速度</p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>如果你是使用linux那么就只需要使用包管理器安装就可以了，因为qbittorrent这个软件基本所以发行版仓库都有的，这里以arch为例<br><code>sudo pacman -S qbittorrent</code></p><p>windows的话就只能到软件官网或github发布页面下对应的安装包(exe结尾)了<br>原版：<br><a href="https://github.com/qbittorrent/qBittorrent/releases">https://github.com/qbittorrent/qBittorrent/releases</a><br>增强版：<br><a href="https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/">https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/</a></p><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="添加tracker"><a href="#添加tracker" class="headerlink" title="添加tracker"></a>添加tracker</h4><p>tracker(BT服务器)是帮助BitTorrent协议在节点与节点之间做连接的服务器,来提供更多的节点由此提高下载速度<br>公共tracker服务器:<br><a href="https://trackerslist.com/#/zh?id=qbittorrent-enhanced-edition-%E5%A2%9E%E5%BC%BA%E7%89%88">https://trackerslist.com/#/zh?id=qbittorrent-enhanced-edition-%E5%A2%9E%E5%BC%BA%E7%89%88</a></p><p>你可以按需求选择需要的列表:<br>精选列表：（74个）<br><a href="https://cf.trackerslist.com/best.txt">https://cf.trackerslist.com/best.txt</a><br>完整列表： (155个)<br><a href="https://cf.trackerslist.com/all.txt">https://cf.trackerslist.com/all.txt</a><br>HTTP(S)列表： (79个)<br><a href="https://cf.trackerslist.com/http.txt">https://cf.trackerslist.com/http.txt</a><br>无 HTTP 列表： (75 个)<br><a href="https://cf.trackerslist.com/nohttp.txt">https://cf.trackerslist.com/nohttp.txt</a></p><p>复制好链接后，需要打开打开上方的工具，然后选择设置，选择BitTorrent后下划到自动附加URL的tracker到新下载后点击开启后把链接粘贴到网址那一列，最后点击应用和确定，这里引用trackerslist.com的图片<br><img src="https://bitbucket.org/xiu2/trackerslistcollection/raw/master/img/zh-15.png"></p><h4 id="可选-添加主题"><a href="#可选-添加主题" class="headerlink" title="(可选)添加主题"></a>(可选)添加主题</h4><p>常规暗色主题：<br><a href="https://github.com/jagannatharjun/qbt-theme">https://github.com/jagannatharjun/qbt-theme</a><br>gruvbox主题：<br><a href="https://github.com/MahdiMirzadeh/qbittorrent">https://github.com/MahdiMirzadeh/qbittorrent</a></p><p>首先我们下载主题后解压，在行为中选择自定义主题，并输入主题连接，点击应用，然后重启应用就可以生效</p><h3 id="BT下载网站推荐"><a href="#BT下载网站推荐" class="headerlink" title="BT下载网站推荐"></a>BT下载网站推荐</h3><p><a href="https://zh.wikipedia.org/wiki/%E6%B5%B7%E7%9B%9C%E7%81%A3">海盗湾</a>:<br><a href="https://thepiratebay.org/index.html">https://thepiratebay.org/index.html</a><br><a href="https://zh.wikipedia.org/wiki/Rutracker.org">Rutracker</a>:<br><a href="https://rutracker.org/">https://rutracker.org/</a></p>]]>
     </content>

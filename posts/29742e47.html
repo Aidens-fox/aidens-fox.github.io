@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="前言提到linux玩游戏，你可能会想到用steam的Proton来下载游玩游戏，这也是主流的官方的方法，但是steam很多优秀的游戏都是要钱的，虽然这些开发者的付出的确值得拥有这些钱，但是对于一个口袋比脸都干净的人来说就是心有力而力不足了，所以只能下载破解游戏，也就是学习版和盗版，不过大部分盗版游戏平台都是只有windows端的，一些游戏是有原生linux版的，但是下载网站没有只能用wine来套个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux下载破解游戏(原生非wine兼容层)">
+<meta property="og:url" content="https://aidens-fox.codeberg.page/posts/29742e47.html">
+<meta property="og:site_name" content="Aidens的博客">
+<meta property="og:description" content="前言提到linux玩游戏，你可能会想到用steam的Proton来下载游玩游戏，这也是主流的官方的方法，但是steam很多优秀的游戏都是要钱的，虽然这些开发者的付出的确值得拥有这些钱，但是对于一个口袋比脸都干净的人来说就是心有力而力不足了，所以只能下载破解游戏，也就是学习版和盗版，不过大部分盗版游戏平台都是只有windows端的，一些游戏是有原生linux版的，但是下载网站没有只能用wine来套个">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-07-01T09:55:05.000Z">
+<meta property="article:modified_time" content="2026-07-01T11:07:42.664Z">
+<meta property="article:author" content="Aidens-fox">
+<meta property="article:tag" content="资源">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/logo.png">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/logo.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+        
+      
+    
+    <!-- title -->
+    <title>linux下载破解游戏(原生非wine兼容层)</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="Aidens的博客" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/resource/">资源</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/posts/ff43cd43.html"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://aidens-fox.codeberg.page/posts/29742e47.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://aidens-fox.codeberg.page/posts/29742e47.html&text=linux下载破解游戏(原生非wine兼容层)"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://aidens-fox.codeberg.page/posts/29742e47.html&title=linux下载破解游戏(原生非wine兼容层)"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://aidens-fox.codeberg.page/posts/29742e47.html&is_video=false&description=linux下载破解游戏(原生非wine兼容层)"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=linux下载破解游戏(原生非wine兼容层)&body=Check out this article: https://aidens-fox.codeberg.page/posts/29742e47.html"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://aidens-fox.codeberg.page/posts/29742e47.html&title=linux下载破解游戏(原生非wine兼容层)"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://aidens-fox.codeberg.page/posts/29742e47.html&title=linux下载破解游戏(原生非wine兼容层)"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://aidens-fox.codeberg.page/posts/29742e47.html&title=linux下载破解游戏(原生非wine兼容层)"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://aidens-fox.codeberg.page/posts/29742e47.html&title=linux下载破解游戏(原生非wine兼容层)"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://aidens-fox.codeberg.page/posts/29742e47.html&name=linux下载破解游戏(原生非wine兼容层)&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://aidens-fox.codeberg.page/posts/29742e47.html&t=linux下载破解游戏(原生非wine兼容层)"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99-rutracker"><span class="toc-number">2.</span> <span class="toc-text">下载网站-rutracker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%B8%B8%E6%88%8F"><span class="toc-number">3.</span> <span class="toc-text">安装游戏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E6%B8%B8%E6%88%8F"><span class="toc-number">4.</span> <span class="toc-text">推荐游戏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E5%B0%BE"><span class="toc-number">5.</span> <span class="toc-text">结尾</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        linux下载破解游戏(原生非wine兼容层)
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Aidens-fox</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2026-07-01T09:55:05.000Z" class="dt-published" itemprop="datePublished">2026-07-01</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/%E8%B5%84%E6%BA%90/" rel="tag">资源</a>
+    </div>
+
+
+    </div>
+
+<div class="index-copyright" style="margin-top: 50px; padding: 15px 0 0; border-top: 1px dashed var(--color-meta, #666); font-size: 0.8rem; opacity: 0.7; line-height: 1.6;">
+
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>提到linux玩游戏，你可能会想到用steam的Proton来下载游玩游戏，这也是主流的官方的方法，但是steam很多优秀的游戏都是要钱的，虽然这些开发者的付出的确值得拥有这些钱，但是对于一个口袋比脸都干净的人来说就是心有力而力不足了，所以只能下载破解游戏，也就是学习版和盗版，不过大部分盗版游戏平台都是只有windows端的，一些游戏是有原生linux版的，但是下载网站没有只能用wine来套个兼容层来运行，这样性能就下降了，对于一些配置低电脑就不友好了，所以我这篇博文就分享linux破解游戏的下载网站，随便分享一些游戏推荐</p>
+<h3 id="下载网站-rutracker"><a href="#下载网站-rutracker" class="headerlink" title="下载网站-rutracker"></a>下载网站-rutracker</h3><p>Rutracker.org（原Torrents.ru）是俄罗斯最大的BT服务器，也是全球知名的盗版资源下载网站，里面的盗版资源十分丰富，其中就包含linux破解游戏,不过这些资源很多都是出自另一个游戏平台-GOG.com,其中里面就有很多对Linux支持游戏，而且还可以直接下载到本地，没有Steam那种恶心的验证文件,游戏运行时不会联网读取验证，也不会在后台检查你的账户，就这一点就吊打使用游戏平台，不用像steam一样要把那个臃肿的客户端挂在后台才可以进入游戏，所以如果有条件可以在GOG平台来购买下载游戏，让我们把DRM-Free（无数字版权管理）延续下去，好了扯远了回归正题，下面是linux破解游戏相关主题链接:<br><a target="_blank" rel="noopener" href="https://rutracker.org/forum/viewforum.php?f=1992">https://rutracker.org/forum/viewforum.php?f=1992</a></p>
+<p>然后因为这个网站是bt下载网站，所以需要使用bt下载器来下载，比如# qbittorrent，配置和使用参考之前的博文:<br><a href="https://aidens-fox.codeberg.page/posts/82f2ef74.html">https://aidens-fox.codeberg.page/posts/82f2ef74.html</a></p>
+<h3 id="安装游戏"><a href="#安装游戏" class="headerlink" title="安装游戏"></a>安装游戏</h3><p>因为大部分游戏都是gog平台的，安装方法基本一样，把下载好后的文件解压，在那个目录下会有一个sh脚本，具体名称看下载是的简介什么，然后给那个脚本提权<br><code>sudo chmod +x 脚本.sh</code></p>
+<p>然后<code>./脚本.sh</code><br>就会弹出一个安装界面(图形化)，只需要选择好安装的地方就好了，安装完成cd到那个目录下，给一个叫start.sh的脚本提权<br><code>sudo chmod +x start.sh</code></p>
+<p>然后<code>./start.sh</code><br>就可以游玩游戏了</p>
+<h3 id="推荐游戏"><a href="#推荐游戏" class="headerlink" title="推荐游戏"></a>推荐游戏</h3><ol>
+<li><p>Project Zomboid(僵尸毁灭工程)<br>一个2.5d的僵尸末日模拟游戏，游戏十分硬核，你要四处搜寻食物、搜刮物资、建造防御工事，并竭尽全力地生存下去，僵尸无处不在，如果你被你的角色压力很大，可以在外面按Q使用解毒剂(-:<br>下载链接:<br><a target="_blank" rel="noopener" href="https://rutracker.org/forum/viewtopic.php?t=5231547">https://rutracker.org/forum/viewtopic.php?t=5231547</a></p>
+</li>
+<li><p>Don’t Starve(饥荒)<br>一个2.5d的哥特风生存游戏，你最好在天黑之前拥有火，不然晚上你会被那些小可爱照顾的很好<br>下载链接:<br><a target="_blank" rel="noopener" href="https://rutracker.org/forum/viewtopic.php?t=5200124">https://rutracker.org/forum/viewtopic.php?t=5200124</a></p>
+</li>
+</ol>
+<h3 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h3><p>最后还是有说一句，如果可以一定要支持那些游戏作者，盗版游戏给了俺们体验的机会，这里引用马库斯·佩尔松(Minecraft创始人)说的”去玩盗版吧。如果以后你手头宽裕了，并且依然喜欢它，再买也不迟”</p>
+
+  </div>
+
+  <!-- 版权声明 -->
+<div class="index-copyright" style="margin-top: 50px; padding: 15px 0 0; border-top: 1px dashed var(--color-meta, #666); font-size: 0.8rem; opacity: 0.7; line-height: 1.6;">
+    <span style="display:block;"><strong>作者：</strong>Aidens-fox</span>
+    <span style="display:block;"><strong>链接：</strong><a href="https://aidens-fox.codeberg.page/posts/29742e47.html" style="word-break: break-all;">https://aidens-fox.codeberg.page/posts/29742e47.html</a></span>
+    <span style="display:block;"><strong>声明：</strong>本站文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans" target="_blank" rel="noopener" style="text-decoration: underline;">CC BY-NC-ND 4.0</a> 许可协议。转载请注明出处。</span>
+  </div>
+</article>
+
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/resource/">资源</a></li>
+        
+          <li><a href="/atom.xml">RSS</a></li>
+        
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%AB%99-rutracker"><span class="toc-number">2.</span> <span class="toc-text">下载网站-rutracker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%B8%B8%E6%88%8F"><span class="toc-number">3.</span> <span class="toc-text">安装游戏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E6%B8%B8%E6%88%8F"><span class="toc-number">4.</span> <span class="toc-text">推荐游戏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E5%B0%BE"><span class="toc-number">5.</span> <span class="toc-text">结尾</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://aidens-fox.codeberg.page/posts/29742e47.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://aidens-fox.codeberg.page/posts/29742e47.html&text=linux下载破解游戏(原生非wine兼容层)"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://aidens-fox.codeberg.page/posts/29742e47.html&title=linux下载破解游戏(原生非wine兼容层)"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://aidens-fox.codeberg.page/posts/29742e47.html&is_video=false&description=linux下载破解游戏(原生非wine兼容层)"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=linux下载破解游戏(原生非wine兼容层)&body=Check out this article: https://aidens-fox.codeberg.page/posts/29742e47.html"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://aidens-fox.codeberg.page/posts/29742e47.html&title=linux下载破解游戏(原生非wine兼容层)"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://aidens-fox.codeberg.page/posts/29742e47.html&title=linux下载破解游戏(原生非wine兼容层)"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://aidens-fox.codeberg.page/posts/29742e47.html&title=linux下载破解游戏(原生非wine兼容层)"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://aidens-fox.codeberg.page/posts/29742e47.html&title=linux下载破解游戏(原生非wine兼容层)"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://aidens-fox.codeberg.page/posts/29742e47.html&name=linux下载破解游戏(原生非wine兼容层)&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://aidens-fox.codeberg.page/posts/29742e47.html&t=linux下载破解游戏(原生非wine兼容层)"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2026
+    Aidens-fox
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/resource/">资源</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

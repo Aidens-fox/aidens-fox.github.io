@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://aidens-fox.codeberg.page/posts/29742e47.html</loc>
+    
+    <lastmod>2026-07-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://aidens-fox.codeberg.page/posts/ff43cd43.html</loc>
     
     <lastmod>2026-06-30</lastmod>
@@ -149,14 +158,14 @@
   </url>
   
   <url>
-    <loc>https://aidens-fox.codeberg.page/tags/%E8%BD%AF%E4%BB%B6/</loc>
+    <loc>https://aidens-fox.codeberg.page/tags/%E8%B5%84%E6%BA%90/</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://aidens-fox.codeberg.page/tags/%E8%B5%84%E6%BA%90/</loc>
+    <loc>https://aidens-fox.codeberg.page/tags/%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>linux下载破解游戏(原生非wine兼容层)</title>
+      <link href="/posts/29742e47.html"/>
+      <url>/posts/29742e47.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>提到linux玩游戏，你可能会想到用steam的Proton来下载游玩游戏，这也是主流的官方的方法，但是steam很多优秀的游戏都是要钱的，虽然这些开发者的付出的确值得拥有这些钱，但是对于一个口袋比脸都干净的人来说就是心有力而力不足了，所以只能下载破解游戏，也就是学习版和盗版，不过大部分盗版游戏平台都是只有windows端的，一些游戏是有原生linux版的，但是下载网站没有只能用wine来套个兼容层来运行，这样性能就下降了，对于一些配置低电脑就不友好了，所以我这篇博文就分享linux破解游戏的下载网站，随便分享一些游戏推荐</p><h3 id="下载网站-rutracker"><a href="#下载网站-rutracker" class="headerlink" title="下载网站-rutracker"></a>下载网站-rutracker</h3><p>Rutracker.org（原Torrents.ru）是俄罗斯最大的BT服务器，也是全球知名的盗版资源下载网站，里面的盗版资源十分丰富，其中就包含linux破解游戏,不过这些资源很多都是出自另一个游戏平台-GOG.com,其中里面就有很多对Linux支持游戏，而且还可以直接下载到本地，没有Steam那种恶心的验证文件,游戏运行时不会联网读取验证，也不会在后台检查你的账户，就这一点就吊打使用游戏平台，不用像steam一样要把那个臃肿的客户端挂在后台才可以进入游戏，所以如果有条件可以在GOG平台来购买下载游戏，让我们把DRM-Free（无数字版权管理）延续下去，好了扯远了回归正题，下面是linux破解游戏相关主题链接:<br><a href="https://rutracker.org/forum/viewforum.php?f=1992">https://rutracker.org/forum/viewforum.php?f=1992</a></p><p>然后因为这个网站是bt下载网站，所以需要使用bt下载器来下载，比如# qbittorrent，配置和使用参考之前的博文:<br><a href="https://aidens-fox.codeberg.page/posts/82f2ef74.html">https://aidens-fox.codeberg.page/posts/82f2ef74.html</a></p><h3 id="安装游戏"><a href="#安装游戏" class="headerlink" title="安装游戏"></a>安装游戏</h3><p>因为大部分游戏都是gog平台的，安装方法基本一样，把下载好后的文件解压，在那个目录下会有一个sh脚本，具体名称看下载是的简介什么，然后给那个脚本提权<br><code>sudo chmod +x 脚本.sh</code></p><p>然后<code>./脚本.sh</code><br>就会弹出一个安装界面(图形化)，只需要选择好安装的地方就好了，安装完成cd到那个目录下，给一个叫start.sh的脚本提权<br><code>sudo chmod +x start.sh</code></p><p>然后<code>./start.sh</code><br>就可以游玩游戏了</p><h3 id="推荐游戏"><a href="#推荐游戏" class="headerlink" title="推荐游戏"></a>推荐游戏</h3><ol><li><p>Project Zomboid(僵尸毁灭工程)<br>一个2.5d的僵尸末日模拟游戏，游戏十分硬核，你要四处搜寻食物、搜刮物资、建造防御工事，并竭尽全力地生存下去，僵尸无处不在，如果你被你的角色压力很大，可以在外面按Q使用解毒剂(-:<br>下载链接:<br><a href="https://rutracker.org/forum/viewtopic.php?t=5231547">https://rutracker.org/forum/viewtopic.php?t=5231547</a></p></li><li><p>Don’t Starve(饥荒)<br>一个2.5d的哥特风生存游戏，你最好在天黑之前拥有火，不然晚上你会被那些小可爱照顾的很好<br>下载链接:<br><a href="https://rutracker.org/forum/viewtopic.php?t=5200124">https://rutracker.org/forum/viewtopic.php?t=5200124</a></p></li></ol><h3 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h3><p>最后还是有说一句，如果可以一定要支持那些游戏作者，盗版游戏给了俺们体验的机会，这里引用马库斯·佩尔松(Minecraft创始人)说的”去玩盗版吧。如果以后你手头宽裕了，并且依然喜欢它，再买也不迟”</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 资源 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>短小精悍的终端-st</title>
       <link href="/posts/ff43cd43.html"/>
       <url>/posts/ff43cd43.html</url>
@@ -37,9 +56,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> 资源 </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       
@@ -178,9 +197,9 @@
       
         <tags>
             
-            <tag> 软件 </tag>
-            
             <tag> 资源 </tag>
+            
+            <tag> 软件 </tag>
             
         </tags>
       

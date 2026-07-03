@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="前言微信，一个在国内十分重要的聊天软件，可以说在国内没有微信是寸步难行了，而微信有一个缺点就是不能在两个设备长期登录，对于一些有备用机的人就很不友好，因为备用机竟然连微信信息都看不了，在一些场景下就很不方便了,不过如果你的备用机是root过的，那么事情就好办了，只需要利用一个lsp模块就可以实现微信手机双登，不过在博文开始之前我还是有必要说明一下: 本博文仅提供教程，在实际操作之前请仔细考虑，如果">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用lsp模块实现微信手机双登">
+<meta property="og:url" content="https://aidens-fox.codeberg.page/posts/93b3677b.html">
+<meta property="og:site_name" content="Aidens的博客">
+<meta property="og:description" content="前言微信，一个在国内十分重要的聊天软件，可以说在国内没有微信是寸步难行了，而微信有一个缺点就是不能在两个设备长期登录，对于一些有备用机的人就很不友好，因为备用机竟然连微信信息都看不了，在一些场景下就很不方便了,不过如果你的备用机是root过的，那么事情就好办了，只需要利用一个lsp模块就可以实现微信手机双登，不过在博文开始之前我还是有必要说明一下: 本博文仅提供教程，在实际操作之前请仔细考虑，如果">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-07-03T10:51:25.000Z">
+<meta property="article:modified_time" content="2026-07-03T13:29:30.244Z">
+<meta property="article:author" content="Aidens-fox">
+<meta property="article:tag" content="玩机">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/logo.png">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/logo.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+        
+      
+    
+    <!-- title -->
+    <title>用lsp模块实现微信手机双登</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="Aidens的博客" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/resource/">资源</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/posts/29742e47.html"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://aidens-fox.codeberg.page/posts/93b3677b.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://aidens-fox.codeberg.page/posts/93b3677b.html&text=用lsp模块实现微信手机双登"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://aidens-fox.codeberg.page/posts/93b3677b.html&title=用lsp模块实现微信手机双登"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://aidens-fox.codeberg.page/posts/93b3677b.html&is_video=false&description=用lsp模块实现微信手机双登"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=用lsp模块实现微信手机双登&body=Check out this article: https://aidens-fox.codeberg.page/posts/93b3677b.html"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://aidens-fox.codeberg.page/posts/93b3677b.html&title=用lsp模块实现微信手机双登"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://aidens-fox.codeberg.page/posts/93b3677b.html&title=用lsp模块实现微信手机双登"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://aidens-fox.codeberg.page/posts/93b3677b.html&title=用lsp模块实现微信手机双登"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://aidens-fox.codeberg.page/posts/93b3677b.html&title=用lsp模块实现微信手机双登"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://aidens-fox.codeberg.page/posts/93b3677b.html&name=用lsp模块实现微信手机双登&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://aidens-fox.codeberg.page/posts/93b3677b.html&t=用lsp模块实现微信手机双登"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD"><span class="toc-number">2.</span> <span class="toc-text">下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">配置</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        用lsp模块实现微信手机双登
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Aidens-fox</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2026-07-03T10:51:25.000Z" class="dt-published" itemprop="datePublished">2026-07-03</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/%E7%8E%A9%E6%9C%BA/" rel="tag">玩机</a>
+    </div>
+
+
+    </div>
+
+<div class="index-copyright" style="margin-top: 50px; padding: 15px 0 0; border-top: 1px dashed var(--color-meta, #666); font-size: 0.8rem; opacity: 0.7; line-height: 1.6;">
+
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>微信，一个在国内十分重要的聊天软件，可以说在国内没有微信是寸步难行了，而微信有一个缺点就是不能在两个设备长期登录，对于一些有备用机的人就很不友好，因为备用机竟然连微信信息都看不了，在一些场景下就很不方便了,不过如果你的备用机是root过的，那么事情就好办了，只需要利用一个lsp模块就可以实现微信手机双登，不过在博文开始之前我还是有必要说明一下:</p>
+<p><strong>本博文仅提供教程，在实际操作之前请仔细考虑，如果账号被封请自负!</strong></p>
+<p><strong>在实际操作之前一定要仔细考虑清楚，否则后果自负!</strong></p>
+<p><strong>重要的话讲三遍,在实际操作之前一定要仔细考虑清楚，否则后果自负!</strong></p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>LSPosed框架(注:原版的lsp已经停止更新，最高安卓支持版本为安卓14,如果高于安卓14则需要下载第三方版本)<br>原版<br><a target="_blank" rel="noopener" href="https://github.com/LSPosed/LSPosed">https://github.com/LSPosed/LSPosed</a><br>JingMatrix版(现改名叫Vector不叫LSPosed)<br><a target="_blank" rel="noopener" href="https://github.com/JingMatrix/Vector">https://github.com/JingMatrix/Vector</a></p>
+<p>NeoZygisk(JingMatrix版需要，原版可以使用面具自带的zygisk)<br><a target="_blank" rel="noopener" href="https://github.com/JingMatrix/NeoZygisk">https://github.com/JingMatrix/NeoZygisk</a></p>
+<p>隐藏应用列表(防微信监测)<br><a target="_blank" rel="noopener" href="https://github.com/Dr-TSNG/Hide-My-Applist">https://github.com/Dr-TSNG/Hide-My-Applist</a></p>
+<p>WeChatTablet(微信双开模块，支持8.0.40以上)<br><a target="_blank" rel="noopener" href="https://github.com/Xposed-Modules-Repo/top.hookvip.wxtablet">https://github.com/Xposed-Modules-Repo/top.hookvip.wxtablet</a></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ol>
+<li><p>面具设置<br>打开面具主页的设置，点击配置排除列表，选择微信让它被排除</p>
+</li>
+<li><p>LSPosed配置<br>打开面具，在模块页面安装LSPosed，如果是新版还要安装NeoZygisk，原版直接安装LSPosed再在主页点击设置开启zygisk然后重启</p>
+</li>
+<li><p>隐藏应用列表配置<br>模块和应用的安装好后，打开LSPosed框架，在模块页中点击隐藏应用列表，点击启用模块，勾选系统框架(必须)然后是微信，勾选完成后重启让模块生效，重启后打开隐藏应用列表，选择模版管理，点击创建黑名单(白名单是勾选允许访问的应用，黑名单是勾选不让访问的应用，推荐使用黑名单)，编辑那些应用不可见，也就是一些像面具，lsp,模块应用的东西，勾选完成编辑应用于那些应用，选择微信后给模板设置一个名字保存，在到主界面看看模块有没有激活就可以了</p>
+</li>
+<li><p>WeChatTablet配置<br>打开LSPosed的模块页面，点击WeChatTablet，点击启用模块，勾选微信(大于8.0.40)，在把微信强行停止重进，不出意外的话你的微信在登录页面和要一个手机和平板同时登录的选择，点击这个选项即可双登微信了</p>
+</li>
+</ol>
+
+  </div>
+
+  <!-- 版权声明 -->
+<div class="index-copyright" style="margin-top: 50px; padding: 15px 0 0; border-top: 1px dashed var(--color-meta, #666); font-size: 0.8rem; opacity: 0.7; line-height: 1.6;">
+    <span style="display:block;"><strong>作者：</strong>Aidens-fox</span>
+    <span style="display:block;"><strong>链接：</strong><a href="https://aidens-fox.codeberg.page/posts/93b3677b.html" style="word-break: break-all;">https://aidens-fox.codeberg.page/posts/93b3677b.html</a></span>
+    <span style="display:block;"><strong>声明：</strong>本站文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans" target="_blank" rel="noopener" style="text-decoration: underline;">CC BY-NC-ND 4.0</a> 许可协议。转载请注明出处。</span>
+  </div>
+</article>
+
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/resource/">资源</a></li>
+        
+          <li><a href="/atom.xml">RSS</a></li>
+        
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD"><span class="toc-number">2.</span> <span class="toc-text">下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">配置</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://aidens-fox.codeberg.page/posts/93b3677b.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://aidens-fox.codeberg.page/posts/93b3677b.html&text=用lsp模块实现微信手机双登"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://aidens-fox.codeberg.page/posts/93b3677b.html&title=用lsp模块实现微信手机双登"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://aidens-fox.codeberg.page/posts/93b3677b.html&is_video=false&description=用lsp模块实现微信手机双登"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=用lsp模块实现微信手机双登&body=Check out this article: https://aidens-fox.codeberg.page/posts/93b3677b.html"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://aidens-fox.codeberg.page/posts/93b3677b.html&title=用lsp模块实现微信手机双登"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://aidens-fox.codeberg.page/posts/93b3677b.html&title=用lsp模块实现微信手机双登"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://aidens-fox.codeberg.page/posts/93b3677b.html&title=用lsp模块实现微信手机双登"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://aidens-fox.codeberg.page/posts/93b3677b.html&title=用lsp模块实现微信手机双登"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://aidens-fox.codeberg.page/posts/93b3677b.html&name=用lsp模块实现微信手机双登&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://aidens-fox.codeberg.page/posts/93b3677b.html&t=用lsp模块实现微信手机双登"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2026
+    Aidens-fox
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/resource/">资源</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'Aidens-fox/aidens-fox.github.io';
+      var utterances_issue_term = 'pathname';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'gruvbox-dark';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+</body>
+</html>

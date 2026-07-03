@@ -10,7 +10,24 @@
   <rights>All rights reserved 2026, Aidens-fox</rights>
   <subtitle>linux折腾记录</subtitle>
   <title>Aidens的博客</title>
-  <updated>2026-07-01T11:07:42.664Z</updated>
+  <updated>2026-07-03T13:29:30.244Z</updated>
+  <entry>
+    <author>
+      <name>Aidens-fox</name>
+    </author>
+    <category term="玩机" scheme="https://aidens-fox.codeberg.page/tags/%E7%8E%A9%E6%9C%BA/"/>
+    <content>
+      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>微信，一个在国内十分重要的聊天软件，可以说在国内没有微信是寸步难行了，而微信有一个缺点就是不能在两个设备长期登录，对于一些有备用机的人就很不友好，因为备用机竟然连微信信息都看不了，在一些场景下就很不方便了,不过如果你的备用机是root过的，那么事情就好办了，只需要利用一个lsp模块就可以实现微信手机双登，不过在博文开始之前我还是有必要说明一下:</p><p><strong>本博文仅提供教程，在实际操作之前请仔细考虑，如果账号被封请自负!</strong></p><p><strong>在实际操作之前一定要仔细考虑清楚，否则后果自负!</strong></p><p><strong>重要的话讲三遍,在实际操作之前一定要仔细考虑清楚，否则后果自负!</strong></p><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>LSPosed框架(注:原版的lsp已经停止更新，最高安卓支持版本为安卓14,如果高于安卓14则需要下载第三方版本)<br>原版<br><a href="https://github.com/LSPosed/LSPosed">https://github.com/LSPosed/LSPosed</a><br>JingMatrix版(现改名叫Vector不叫LSPosed)<br><a href="https://github.com/JingMatrix/Vector">https://github.com/JingMatrix/Vector</a></p><p>NeoZygisk(JingMatrix版需要，原版可以使用面具自带的zygisk)<br><a href="https://github.com/JingMatrix/NeoZygisk">https://github.com/JingMatrix/NeoZygisk</a></p><p>隐藏应用列表(防微信监测)<br><a href="https://github.com/Dr-TSNG/Hide-My-Applist">https://github.com/Dr-TSNG/Hide-My-Applist</a></p><p>WeChatTablet(微信双开模块，支持8.0.40以上)<br><a href="https://github.com/Xposed-Modules-Repo/top.hookvip.wxtablet">https://github.com/Xposed-Modules-Repo/top.hookvip.wxtablet</a></p><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ol><li><p>面具设置<br>打开面具主页的设置，点击配置排除列表，选择微信让它被排除</p></li><li><p>LSPosed配置<br>打开面具，在模块页面安装LSPosed，如果是新版还要安装NeoZygisk，原版直接安装LSPosed再在主页点击设置开启zygisk然后重启</p></li><li><p>隐藏应用列表配置<br>模块和应用的安装好后，打开LSPosed框架，在模块页中点击隐藏应用列表，点击启用模块，勾选系统框架(必须)然后是微信，勾选完成后重启让模块生效，重启后打开隐藏应用列表，选择模版管理，点击创建黑名单(白名单是勾选允许访问的应用，黑名单是勾选不让访问的应用，推荐使用黑名单)，编辑那些应用不可见，也就是一些像面具，lsp,模块应用的东西，勾选完成编辑应用于那些应用，选择微信后给模板设置一个名字保存，在到主界面看看模块有没有激活就可以了</p></li><li><p>WeChatTablet配置<br>打开LSPosed的模块页面，点击WeChatTablet，点击启用模块，勾选微信(大于8.0.40)，在把微信强行停止重进，不出意外的话你的微信在登录页面和要一个手机和平板同时登录的选择，点击这个选项即可双登微信了</p></li></ol>]]>
+    </content>
+    <id>https://aidens-fox.codeberg.page/posts/93b3677b.html</id>
+    <link href="https://aidens-fox.codeberg.page/posts/93b3677b.html"/>
+    <published>2026-07-03T10:51:25.000Z</published>
+    <summary>
+      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>微信，一个在国内十分重要的聊天软件，可以说在国内没有微信是寸步难行了，而微信有一个缺点就是不能在两个设备长期登录，对于一些有备用机的人就很不]]>
+    </summary>
+    <title>用lsp模块实现微信手机双登</title>
+    <updated>2026-07-03T13:29:30.244Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Aidens-fox</name>

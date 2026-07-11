@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="前言 如果你是台式电脑或者电脑的麦克风很烂，一说话就炸麦，这些硬件层面的问题降噪软件是无法解决的，要想解决就要从硬件层面莱解决，但是为了这个买个麦克风就有一点太那什么的了，如果可以使用已有的东西来利用那就很好了，这几天我在github就看到了一个项目-micyou:可以把你的手机麦克风变成你的电脑麦克风的软件,通过 Wi-Fi 或 USB (ADB&#x2F;AOA) 连接 安装micyou多端适">
+<meta property="og:type" content="article">
+<meta property="og:title" content="让你的手机变成麦克风-micyou">
+<meta property="og:url" content="https://aidens-fox.codeberg.page/posts/de7481a.html">
+<meta property="og:site_name" content="Aidens的博客">
+<meta property="og:description" content="前言 如果你是台式电脑或者电脑的麦克风很烂，一说话就炸麦，这些硬件层面的问题降噪软件是无法解决的，要想解决就要从硬件层面莱解决，但是为了这个买个麦克风就有一点太那什么的了，如果可以使用已有的东西来利用那就很好了，这几天我在github就看到了一个项目-micyou:可以把你的手机麦克风变成你的电脑麦克风的软件,通过 Wi-Fi 或 USB (ADB&#x2F;AOA) 连接 安装micyou多端适">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-07-10T14:08:10.000Z">
+<meta property="article:modified_time" content="2026-07-11T13:32:22.220Z">
+<meta property="article:author" content="Aidens-fox">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="软件">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/logo.png">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/logo.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+        
+      
+    
+    <!-- title -->
+    <title>让你的手机变成麦克风-micyou</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="Aidens的博客" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/resource/">资源</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/posts/71e823f0.html"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://aidens-fox.codeberg.page/posts/de7481a.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://aidens-fox.codeberg.page/posts/de7481a.html&text=让你的手机变成麦克风-micyou"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://aidens-fox.codeberg.page/posts/de7481a.html&title=让你的手机变成麦克风-micyou"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://aidens-fox.codeberg.page/posts/de7481a.html&is_video=false&description=让你的手机变成麦克风-micyou"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=让你的手机变成麦克风-micyou&body=Check out this article: https://aidens-fox.codeberg.page/posts/de7481a.html"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://aidens-fox.codeberg.page/posts/de7481a.html&title=让你的手机变成麦克风-micyou"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://aidens-fox.codeberg.page/posts/de7481a.html&title=让你的手机变成麦克风-micyou"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://aidens-fox.codeberg.page/posts/de7481a.html&title=让你的手机变成麦克风-micyou"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://aidens-fox.codeberg.page/posts/de7481a.html&title=让你的手机变成麦克风-micyou"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://aidens-fox.codeberg.page/posts/de7481a.html&name=让你的手机变成麦克风-micyou&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://aidens-fox.codeberg.page/posts/de7481a.html&t=让你的手机变成麦克风-micyou"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">使用</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        让你的手机变成麦克风-micyou
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Aidens-fox</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2026-07-10T14:08:10.000Z" class="dt-published" itemprop="datePublished">2026-07-10</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/linux/" rel="tag">linux</a>, <a class="p-category" href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag">软件</a>
+    </div>
+
+
+    </div>
+
+<div class="index-copyright" style="margin-top: 50px; padding: 15px 0 0; border-top: 1px dashed var(--color-meta, #666); font-size: 0.8rem; opacity: 0.7; line-height: 1.6;">
+
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p> 如果你是台式电脑或者电脑的麦克风很烂，一说话就炸麦，这些硬件层面的问题降噪软件是无法解决的，要想解决就要从硬件层面莱解决，但是为了这个买个麦克风就有一点太那什么的了，如果可以使用已有的东西来利用那就很好了，这几天我在github就看到了一个项目-micyou:可以把你的手机麦克风变成你的电脑麦克风的软件,通过 Wi-Fi 或 USB (ADB&#x2F;AOA) 连接</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>micyou多端适配，支持linux和windows等等，如果你是arch你可以直接使用aur仓库来安装(需要yay或paru):<br><code>yay -S micyou-bin</code></p>
+<p>如果是其他就请在发布页面下载:<br><a target="_blank" rel="noopener" href="https://github.com/LanRhyme/MicYou/releases">https://github.com/LanRhyme/MicYou/releases</a></p>
+<p>除了安装本体还需要安装adb才可以使用,adb也就是安卓调试桥，是一种功能多样的命令行工具，可与设备进行通信，详细介绍查看:<br><a target="_blank" rel="noopener" href="https://developer.android.com/tools/adb?hl=zh-cn">https://developer.android.com/tools/adb?hl=zh-cn</a></p>
+<p>如果你使用的是linux,那主流的发行版仓库都是有adb的包的，这里已arch为例:<br><code>sudo pacman -S android-tools</code></p>
+<p>其他细节查看micyou官方文档:<br><a target="_blank" rel="noopener" href="https://micyou.top/docs/quick-start">https://micyou.top/docs/quick-start</a></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>安装好软件后打开，因为是图形化界面，所以也没有什么难操作的，只需要点几下就可以连接了，只需要确保端口一样和在同一个网络环境就可以了，这里以usb连接为例，把数据线(不是充电线)插上电脑和手机，在手机弹出是否允许电脑usb调试时点击永远同意，然后在电脑端点击连接后在点击手机端的连接就可以连接上了，然后就可以在比如obs或其他需要麦克风的软件来使用了，这里以obs为例，打开obs，在混音器模块选择麦克风右键选择设置，在设备一栏选择mic开头的，然后确定就可以使用手机麦克风来录音了，这里也十分感谢作者，让我可以在不用花钱的情况下提升麦克风声音质量，其他问题查看官方文档：<br><a target="_blank" rel="noopener" href="https://micyou.top/docs/faq">https://micyou.top/docs/faq</a></p>
+
+  </div>
+
+  <!-- 版权声明 -->
+<div class="index-copyright" style="margin-top: 50px; padding: 15px 0 0; border-top: 1px dashed var(--color-meta, #666); font-size: 0.8rem; opacity: 0.7; line-height: 1.6;">
+    <span style="display:block;"><strong>作者：</strong>Aidens-fox</span>
+    <span style="display:block;"><strong>链接：</strong><a href="https://aidens-fox.codeberg.page/posts/de7481a.html" style="word-break: break-all;">https://aidens-fox.codeberg.page/posts/de7481a.html</a></span>
+    <span style="display:block;"><strong>声明：</strong>本站文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans" target="_blank" rel="noopener" style="text-decoration: underline;">CC BY-NC-ND 4.0</a> 许可协议。转载请注明出处。</span>
+  </div>
+</article>
+
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/resource/">资源</a></li>
+        
+          <li><a href="/atom.xml">RSS</a></li>
+        
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">使用</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://aidens-fox.codeberg.page/posts/de7481a.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://aidens-fox.codeberg.page/posts/de7481a.html&text=让你的手机变成麦克风-micyou"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://aidens-fox.codeberg.page/posts/de7481a.html&title=让你的手机变成麦克风-micyou"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://aidens-fox.codeberg.page/posts/de7481a.html&is_video=false&description=让你的手机变成麦克风-micyou"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=让你的手机变成麦克风-micyou&body=Check out this article: https://aidens-fox.codeberg.page/posts/de7481a.html"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://aidens-fox.codeberg.page/posts/de7481a.html&title=让你的手机变成麦克风-micyou"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://aidens-fox.codeberg.page/posts/de7481a.html&title=让你的手机变成麦克风-micyou"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://aidens-fox.codeberg.page/posts/de7481a.html&title=让你的手机变成麦克风-micyou"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://aidens-fox.codeberg.page/posts/de7481a.html&title=让你的手机变成麦克风-micyou"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://aidens-fox.codeberg.page/posts/de7481a.html&name=让你的手机变成麦克风-micyou&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://aidens-fox.codeberg.page/posts/de7481a.html&t=让你的手机变成麦克风-micyou"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2026
+    Aidens-fox
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/resource/">资源</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'Aidens-fox/aidens-fox.github.io';
+      var utterances_issue_term = 'pathname';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'gruvbox-dark';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+</body>
+</html>

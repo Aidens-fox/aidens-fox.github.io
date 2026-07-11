@@ -10,7 +10,25 @@
   <rights>All rights reserved 2026, Aidens-fox</rights>
   <subtitle>linux折腾记录</subtitle>
   <title>Aidens的博客</title>
-  <updated>2026-07-07T02:51:16.291Z</updated>
+  <updated>2026-07-11T13:32:22.220Z</updated>
+  <entry>
+    <author>
+      <name>Aidens-fox</name>
+    </author>
+    <category term="linux" scheme="https://aidens-fox.codeberg.page/tags/linux/"/>
+    <category term="软件" scheme="https://aidens-fox.codeberg.page/tags/%E8%BD%AF%E4%BB%B6/"/>
+    <content>
+      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p> 如果你是台式电脑或者电脑的麦克风很烂，一说话就炸麦，这些硬件层面的问题降噪软件是无法解决的，要想解决就要从硬件层面莱解决，但是为了这个买个麦克风就有一点太那什么的了，如果可以使用已有的东西来利用那就很好了，这几天我在github就看到了一个项目-micyou:可以把你的手机麦克风变成你的电脑麦克风的软件,通过 Wi-Fi 或 USB (ADB&#x2F;AOA) 连接</p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>micyou多端适配，支持linux和windows等等，如果你是arch你可以直接使用aur仓库来安装(需要yay或paru):<br><code>yay -S micyou-bin</code></p><p>如果是其他就请在发布页面下载:<br><a href="https://github.com/LanRhyme/MicYou/releases">https://github.com/LanRhyme/MicYou/releases</a></p><p>除了安装本体还需要安装adb才可以使用,adb也就是安卓调试桥，是一种功能多样的命令行工具，可与设备进行通信，详细介绍查看:<br><a href="https://developer.android.com/tools/adb?hl=zh-cn">https://developer.android.com/tools/adb?hl=zh-cn</a></p><p>如果你使用的是linux,那主流的发行版仓库都是有adb的包的，这里已arch为例:<br><code>sudo pacman -S android-tools</code></p><p>其他细节查看micyou官方文档:<br><a href="https://micyou.top/docs/quick-start">https://micyou.top/docs/quick-start</a></p><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>安装好软件后打开，因为是图形化界面，所以也没有什么难操作的，只需要点几下就可以连接了，只需要确保端口一样和在同一个网络环境就可以了，这里以usb连接为例，把数据线(不是充电线)插上电脑和手机，在手机弹出是否允许电脑usb调试时点击永远同意，然后在电脑端点击连接后在点击手机端的连接就可以连接上了，然后就可以在比如obs或其他需要麦克风的软件来使用了，这里以obs为例，打开obs，在混音器模块选择麦克风右键选择设置，在设备一栏选择mic开头的，然后确定就可以使用手机麦克风来录音了，这里也十分感谢作者，让我可以在不用花钱的情况下提升麦克风声音质量，其他问题查看官方文档：<br><a href="https://micyou.top/docs/faq">https://micyou.top/docs/faq</a></p>]]>
+    </content>
+    <id>https://aidens-fox.codeberg.page/posts/de7481a.html</id>
+    <link href="https://aidens-fox.codeberg.page/posts/de7481a.html"/>
+    <published>2026-07-10T14:08:10.000Z</published>
+    <summary>
+      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p> 如果你是台式电脑或者电脑的麦克风很烂，一说话就炸麦，这些硬件层面的问题降噪软件是无法解决的，要想解决就要从硬件层面莱解决，但是为了这个买个]]>
+    </summary>
+    <title>让你的手机变成麦克风-micyou</title>
+    <updated>2026-07-11T13:32:22.220Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Aidens-fox</name>

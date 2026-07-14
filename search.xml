@@ -8,7 +8,7 @@
       <link href="/posts/5808e95.html"/>
       <url>/posts/5808e95.html</url>
       
-        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>steam,一个PC游戏分发平台，也是最大的PC游戏分发平台，里面除了游戏还有一个创意工坊，允许玩家制作和发布游戏mod(模组)来提升游戏趣味性，很多游戏的mod都在steam的创意工坊里，但这是建立在有steam客户端和steam下载游戏的条件下，如果你没有steam客户端或者你的游戏不是steam下载的破解版，那么常规的方式就无法下载创意工坊的东西了,因为不管是网页端还是客户端打开创意工坊都是没有下载的按钮，只有订阅的按钮，没有办法下载到本地，这样就没有办法给破解的游戏下载mod来增加游戏趣味性了，本篇博文我将教你如何使用SteamCMD来下载创意工坊的mod</p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>SteamCMD是Steam 客户端的命令行版本,它的主要用途是通过命令行界面 安装和更新Steam上提供的各种资源，SteamCMD在三大发行版都是有对应的软件包的，这里已arch为例，在aur仓库可以找到安装包(需要使用yay或paru来安装)，其他安装查看<a href="https://developer.valvesoftware.com/wiki/SteamCMD#_Linux">官方文档</a><br><code>yay -S steamcmd</code></p><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>安装完成在命令行输入<code>steamcmd</code>进入,SteamCMD支持匿名登录,不需要注册账号就可以下载大部分东西，使用以下命令来匿名登录:<br><code>login anonymous</code></p><p>steamcmd默认的下载目录是在家目录的.steam文件下，我们可以使用以下命令来更改下载目录(目录必须是绝对路径):<br><code>force_install_dir 路径</code></p><h3 id="下载mod-使用"><a href="#下载mod-使用" class="headerlink" title="下载mod&amp;使用"></a>下载mod&amp;使用</h3><p>我们在浏览器打开steam创意工坊的网页:<br><a href="https://steamcommunity.com/workshop/">https://steamcommunity.com/workshop/</a></p><p>在里面的搜索栏搜索你需要的游戏，这里已僵尸毁灭工程的真实车辆中控和仪表盘mod为例，打开mod的详情页面，复制当前网址，然后打开 <a href="https://steamworkshopdownloader.io/">https://steamworkshopdownloader.io/</a> 把刚才的网址粘贴到网站上，网站会自动解析，然后会问你”你知道SteamCMD是什么吗？你登录过SteamCMD吗？”,选择yes,这样就会显示下载命令复制它然后在之前的打开steamcmd的终端输入，等待下载完成就可以了，然后就可以把mod导入到游戏里了，像僵尸毁灭工程linux版本会在家目录新建一个Zomboid文件夹，里面的mods文件夹就是mod存放的地方，不过你需要把下载好的mod解压才可以，不然游戏无法识别，添加后就可以打开游戏，在开始界面点击模组来启用它们了，随便说一下我的僵尸毁灭工程是在rutracker上下载的，相关下载页面:<br><a href="https://rutracker.org/forum/viewtopic.php?t=5231547">https://rutracker.org/forum/viewtopic.php?t=5231547</a></p><p>下载需要bt下载器，可以查看我之前的博文:qbittorrent配置和使用<br><a href="https://aidens-fox.codeberg.page/posts/82f2ef74.html">https://aidens-fox.codeberg.page/posts/82f2ef74.html</a></p>]]></content>
+        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>steam,一个PC游戏分发平台，也是最大的PC游戏分发平台，里面除了游戏还有一个创意工坊，允许玩家制作和发布游戏mod(模组)来提升游戏趣味性，很多游戏的mod都在steam的创意工坊里，但这是建立在有steam客户端和steam下载游戏的条件下，如果你没有steam客户端或者你的游戏不是steam下载的破解版，那么常规的方式就无法下载创意工坊的东西了,因为不管是网页端还是客户端打开创意工坊都是没有下载的按钮，只有订阅的按钮，没有办法下载到本地，这样就没有办法给破解的游戏下载mod来增加游戏趣味性了，本篇博文我将教你如何使用SteamCMD来下载创意工坊的mod</p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>SteamCMD是Steam 客户端的命令行版本,它的主要用途是通过命令行界面 安装和更新Steam上提供的各种资源，SteamCMD在三大发行版都是有对应的软件包的，这里已arch为例，在aur仓库可以找到安装包(需要使用yay或paru来安装)，其他安装查看<a href="https://developer.valvesoftware.com/wiki/SteamCMD#_Linux">官方文档</a><br><code>yay -S steamcmd</code></p><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>安装完成在命令行输入<code>steamcmd</code>进入,SteamCMD支持匿名登录,不需要注册账号就可以下载大部分东西，使用以下命令来匿名登录:<br><code>login anonymous</code></p><p>steamcmd默认的下载目录是在家目录的.steam文件下，我们可以使用以下命令来更改下载目录(目录必须是绝对路径):<br><code>force_install_dir 路径</code></p><h3 id="下载mod-使用"><a href="#下载mod-使用" class="headerlink" title="下载mod&amp;使用"></a>下载mod&amp;使用</h3><p>我们在浏览器打开steam创意工坊的网页:<br><a href="https://steamcommunity.com/workshop/">https://steamcommunity.com/workshop/</a></p><p>在里面的搜索栏搜索你需要的游戏，这里已僵尸毁灭工程的真实车辆中控和仪表盘mod为例，打开mod的详情页面，复制当前网址，然后打开 <a href="https://steamworkshopdownloader.io/">https://steamworkshopdownloader.io/</a> 把刚才的网址粘贴到网站上，网站会自动解析，然后会问你”你知道SteamCMD是什么吗？你登录过SteamCMD吗？”,选择yes,这样就会显示下载命令<br><code>workshop_download_item 108600 3635591071</code></p><p>命令格式为<code>workshop_download_item 游戏ID 模组ID </code> 复制它然后在之前的打开steamcmd的终端输入，等待下载完成就可以了，然后就可以把mod导入到游戏里了，像僵尸毁灭工程linux版本会在家目录新建一个Zomboid文件夹，里面的mods文件夹就是mod存放的地方，不过你需要把下载好的mod解压才可以，不然游戏无法识别，添加后就可以打开游戏，在开始界面点击模组来启用它们了，随便说一下我的僵尸毁灭工程是在rutracker上下载的，相关下载页面:<br><a href="https://rutracker.org/forum/viewtopic.php?t=5231547">https://rutracker.org/forum/viewtopic.php?t=5231547</a></p><p>下载需要bt下载器，可以查看我之前的博文:qbittorrent配置和使用<br><a href="https://aidens-fox.codeberg.page/posts/82f2ef74.html">https://aidens-fox.codeberg.page/posts/82f2ef74.html</a></p>]]></content>
       
       
       
@@ -16,9 +16,9 @@
             
             <tag> linux </tag>
             
-            <tag> 资源 </tag>
-            
             <tag> 软件 </tag>
+            
+            <tag> 资源 </tag>
             
         </tags>
       
@@ -117,11 +117,11 @@
       
         <tags>
             
-            <tag> dwm </tag>
-            
             <tag> linux </tag>
             
             <tag> 软件 </tag>
+            
+            <tag> dwm </tag>
             
         </tags>
       
@@ -140,9 +140,9 @@
       
         <tags>
             
-            <tag> 资源 </tag>
-            
             <tag> 软件 </tag>
+            
+            <tag> 资源 </tag>
             
         </tags>
       
@@ -180,9 +180,9 @@
       
         <tags>
             
-            <tag> dwm </tag>
-            
             <tag> linux </tag>
+            
+            <tag> dwm </tag>
             
         </tags>
       
@@ -201,9 +201,9 @@
       
         <tags>
             
-            <tag> dwm </tag>
-            
             <tag> linux </tag>
+            
+            <tag> dwm </tag>
             
         </tags>
       
@@ -281,9 +281,9 @@
       
         <tags>
             
-            <tag> 资源 </tag>
-            
             <tag> 软件 </tag>
+            
+            <tag> 资源 </tag>
             
         </tags>
       

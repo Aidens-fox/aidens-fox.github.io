@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="前言Gruvbox是一个柔和复古的暖色调主题，对比度也很高，长时间盯着也不会刺眼难受，这也是我最喜欢的配色主题，所以我的整个linux基本都是gruvbox的配色主题，包括终端st,窗口管理器dwm和其他软件，所以本篇博文我会分享我linux的gruvbox的配色主题文件，你也可以看看gruvbox的色调(暗): 配置主题如果你要自定义图标或主题，那么使用一个gtk编辑器来自由切换主题就十分方便，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gruvbox配色主题补完计划">
+<meta property="og:url" content="https://aidens-fox.codeberg.page/posts/3d425d4d.html">
+<meta property="og:site_name" content="Aidens的博客">
+<meta property="og:description" content="前言Gruvbox是一个柔和复古的暖色调主题，对比度也很高，长时间盯着也不会刺眼难受，这也是我最喜欢的配色主题，所以我的整个linux基本都是gruvbox的配色主题，包括终端st,窗口管理器dwm和其他软件，所以本篇博文我会分享我linux的gruvbox的配色主题文件，你也可以看看gruvbox的色调(暗): 配置主题如果你要自定义图标或主题，那么使用一个gtk编辑器来自由切换主题就十分方便，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://aidens-fox.codeberg.page/img/ss.png">
+<meta property="article:published_time" content="2026-07-16T15:32:27.000Z">
+<meta property="article:modified_time" content="2026-07-20T06:40:13.382Z">
+<meta property="article:author" content="Aidens-fox">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="资源">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://aidens-fox.codeberg.page/img/ss.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/logo.png">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/logo.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+        
+      
+    
+    <!-- title -->
+    <title>Gruvbox配色主题补完计划</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="Aidens的博客" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/resource/">资源</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/posts/5808e95.html"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://aidens-fox.codeberg.page/posts/3d425d4d.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://aidens-fox.codeberg.page/posts/3d425d4d.html&text=Gruvbox配色主题补完计划"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://aidens-fox.codeberg.page/posts/3d425d4d.html&title=Gruvbox配色主题补完计划"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://aidens-fox.codeberg.page/posts/3d425d4d.html&is_video=false&description=Gruvbox配色主题补完计划"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Gruvbox配色主题补完计划&body=Check out this article: https://aidens-fox.codeberg.page/posts/3d425d4d.html"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://aidens-fox.codeberg.page/posts/3d425d4d.html&title=Gruvbox配色主题补完计划"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://aidens-fox.codeberg.page/posts/3d425d4d.html&title=Gruvbox配色主题补完计划"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://aidens-fox.codeberg.page/posts/3d425d4d.html&title=Gruvbox配色主题补完计划"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://aidens-fox.codeberg.page/posts/3d425d4d.html&title=Gruvbox配色主题补完计划"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://aidens-fox.codeberg.page/posts/3d425d4d.html&name=Gruvbox配色主题补完计划&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://aidens-fox.codeberg.page/posts/3d425d4d.html&t=Gruvbox配色主题补完计划"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">配置主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-gtk%E4%B8%BB%E9%A2%98"><span class="toc-number">3.</span> <span class="toc-text">1. gtk主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%9B%BE%E6%A0%87%E4%B8%BB%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">2. 图标主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%BC%A0%E6%A0%87%E4%B8%BB%E9%A2%98"><span class="toc-number">5.</span> <span class="toc-text">3. 鼠标主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-dwm%E7%8A%B6%E6%80%81%E6%A0%8F%E9%85%8D%E8%89%B2"><span class="toc-number">6.</span> <span class="toc-text">4. dwm状态栏配色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Fcitx5%E4%B8%BB%E9%A2%98"><span class="toc-number">7.</span> <span class="toc-text">5. Fcitx5主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-st-%E7%BB%88%E7%AB%AF%E6%A8%A1%E6%8B%9F%E5%99%A8"><span class="toc-number">8.</span> <span class="toc-text">6. st(终端模拟器)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-Telegram"><span class="toc-number">9.</span> <span class="toc-text">7. Telegram</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-qbittorrent"><span class="toc-number">10.</span> <span class="toc-text">8. qbittorrent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-nvim"><span class="toc-number">11.</span> <span class="toc-text">9. nvim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-yazi"><span class="toc-number">12.</span> <span class="toc-text">10. yazi</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Gruvbox配色主题补完计划
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Aidens-fox</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2026-07-16T15:32:27.000Z" class="dt-published" itemprop="datePublished">2026-07-16</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/linux/" rel="tag">linux</a>, <a class="p-category" href="/tags/%E8%B5%84%E6%BA%90/" rel="tag">资源</a>
+    </div>
+
+
+    </div>
+
+<div class="index-copyright" style="margin-top: 50px; padding: 15px 0 0; border-top: 1px dashed var(--color-meta, #666); font-size: 0.8rem; opacity: 0.7; line-height: 1.6;">
+
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Gruvbox是一个柔和复古的暖色调主题，对比度也很高，长时间盯着也不会刺眼难受，这也是我最喜欢的配色主题，所以我的整个linux基本都是gruvbox的配色主题，包括终端st,窗口管理器dwm和其他软件，所以本篇博文我会分享我linux的gruvbox的配色主题文件，你也可以看看gruvbox的色调(暗):<br><img src="/img/ss.png"></p>
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>如果你要自定义图标或主题，那么使用一个gtk编辑器来自由切换主题就十分方便，我们可以使用<a target="_blank" rel="noopener" href="https://github.com/nwg-piotr/nwg-look">nwg-look</a>来管理我们的图标和主题了,这个软件可以使用包管理来安装使用，我已arch为例:<br><code>sudo pacman -S nwg-look</code></p>
+<p>随便提一句nwg-look是<a target="_blank" rel="noopener" href="https://nwg-piotr.github.io/nwg-shell/">nwg-shell</a>的一部分，<a target="_blank" rel="noopener" href="https://github.com/swaywm/sway">nwg-shell 项目旨在为sway</a> Wayland 合成器创建一个基于 GTK3 的统一用户界面。为了给用户提供尽可能多的选择,安装好nwg-look后就可以开始下载主题文件那些来</p>
+<h3 id="1-gtk主题"><a href="#1-gtk主题" class="headerlink" title="1. gtk主题"></a>1. gtk主题</h3><p><a target="_blank" rel="noopener" href="https://wiki.archlinuxcn.org/wiki/GTK">gtk</a>是一个gui框架，很多应用都是使用gtk框架，所以所以gtk主题就可以让许多软件变成gruvbox配色，我们可以在<a target="_blank" rel="noopener" href="https://www.opendesktop.org/p/1681313/">opendesktop</a>里下载压缩包或者如果你使用的是arch就可以使用aur仓库里的包来安装了:<br><code>yay -S gruvbox-gtk-theme-git</code></p>
+<p> 如果你是手动下载那你需要在家目录下手动创建一个.themes的文件夹<br> <code>mkdir .themes</code></p>
+<p>然后在把下载好的压缩包解压放入到里面，如果要所有用户生效移动至全局目录&#x2F;usr&#x2F;share&#x2F;themes下然后打开nwg-look就可以看到添加的主题了，相比之下我更推荐使用aur的方案</p>
+<h3 id="2-图标主题"><a href="#2-图标主题" class="headerlink" title="2. 图标主题"></a>2. 图标主题</h3><p>在默认的软件图标是软件的默认图标，可能会和gruvbox主题格格不入,所以可以借助图标主题来增加美观性，如果你是arch你可以使用aur仓库的包:<br><code>yay -S gruvbox-plus-icon-theme-git</code></p>
+<p>也可以在项目<a target="_blank" rel="noopener" href="https://github.com/SylEleuth/gruvbox-plus-icon-pack/releases">发布页面</a>下载.zip压缩包后解压放在家目录的.icons文件夹,如果要所有用户生效移动至全局目录&#x2F;usr&#x2F;share&#x2F;icons下然后打开nwg-look就可以看到添加的主题了，相比之下我更推荐使用aur的方案</p>
+<h3 id="3-鼠标主题"><a href="#3-鼠标主题" class="headerlink" title="3. 鼠标主题"></a>3. 鼠标主题</h3><p>默认的鼠标主题可能会和gruvbox主题格格不入,所以可以借助鼠标主题来增加美观性,这里使用Moga Neon鼠标主题,在<a target="_blank" rel="noopener" href="https://www.gnome-look.org/p/2302110">下载网站</a>下载文件名有sandy的zip压缩包解压到家目录的.icons文件夹,如果要所有用户生效移动至全局目录&#x2F;usr&#x2F;share&#x2F;icons下然后打开nwg-look就可以看到添加的主题了,不过在nwg-look下选择应用是没有办法应用的，我们还需要其他配置,这里已dwm(x11)为例,在家目录新建.Xresources文件,在文件添加</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Xcursor.theme: Moga-Neon-Sandy</span><br><span class="line">Xcursor.size:  24</span><br></pre></td></tr></table></figure>
+
+<p>上面分别是鼠标主题名称和鼠标大小,然后我们还要在.xinitrc加载,在.xinitrc添加:<br><code>xrdb -merge ~/.Xresources</code></p>
+<p>其他细节查看: <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/Cursor_themes">https://wiki.archlinux.org/title/Cursor_themes</a></p>
+<h3 id="4-dwm状态栏配色"><a href="#4-dwm状态栏配色" class="headerlink" title="4. dwm状态栏配色"></a>4. dwm状态栏配色</h3><p>打开config.h配置文件:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/* 状态栏配色(Gruvbox) */</span><br><span class="line">static const char col_gray1[]       = &quot;#32302f&quot;; /* 背景色 */</span><br><span class="line">static const char col_gray2[]       = &quot;#1d2021&quot;; /* 非激活窗口 */</span><br><span class="line">static const char col_gray3[]       = &quot;#ebdbb2&quot;; /* 文字颜色 */</span><br><span class="line">static const char col_gray4[]       = &quot;#ebdbb2&quot;; /* 激活窗口边框/文字 */</span><br><span class="line">static const char col_cyan[]        = &quot;#5b623e&quot;; /* 主题色 */</span><br><span class="line">static const char *colors[][3]      = &#123;</span><br><span class="line">	/*               fg         bg         border   */</span><br><span class="line">	[SchemeNorm] = &#123; col_gray3, col_gray1, col_gray2 &#125;,</span><br><span class="line">	[SchemeSel]  = &#123; col_gray4, col_cyan,  col_cyan  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>不过相对于修改config.h文件，我还是推荐修改config.def.h在删除config.h文件:<br><code>rm -rf config.h</code></p>
+<p>因为如果不删除config.h文件，编译安装后就还是之前的配置，所以需要删除后在编译安装:<br><code>sudo make clean install</code></p>
+<h3 id="5-Fcitx5主题"><a href="#5-Fcitx5主题" class="headerlink" title="5. Fcitx5主题"></a>5. Fcitx5主题</h3><p>默认的fcitx5主题是白色的，十分刺眼，所以使用主题就可以来增加美观性,主题使用fcitx5-gruvbox-dark-theme，如果你是arch可以使用aur的包:<br><code>yay -S fcitx5-gruvbox-dark-theme-git</code></p>
+<p>或者也可以手动安装,首先使用git克隆仓库:<br><code>git clone https://github.com/zpyg/fcitx5-gruvbox-dark-theme ~/.local/share/fcitx5/themes/gruvbox-dark --depth=1</code></p>
+<ol start="2">
+<li>设置主题颜色（可选，默认为aqua）</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.local/share/fcitx5/themes/gruvbox-dark</span><br><span class="line">ln -sf ./theme-&#x27;颜色&#x27;.conf theme.conf</span><br></pre></td></tr></table></figure>
+
+<p>(注:如果说aur安装的不需要这一部)</p>
+<p>然后在.config&#x2F;fcitx5&#x2F;conf&#x2F;classicui.conf文件下设置主题:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># 垂直候选列表</span><br><span class="line">Vertical Candidate List=False</span><br><span class="line"></span><br><span class="line"># 按屏幕 DPI 使用</span><br><span class="line">PerScreenDPI=True</span><br><span class="line"></span><br><span class="line"># Font (设置成你喜欢的字体)</span><br><span class="line">Font=&quot;思源黑体 CN Medium 13&quot;</span><br><span class="line"></span><br><span class="line"># 主题</span><br><span class="line">Theme=gruvbox-dark-green</span><br></pre></td></tr></table></figure>
+
+<p>然后在重新启动就可以了</p>
+<h3 id="6-st-终端模拟器"><a href="#6-st-终端模拟器" class="headerlink" title="6. st(终端模拟器)"></a>6. st(终端模拟器)</h3><p>打开config.h配置文件:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">/* Terminal colors (16 first used in escape sequence) */</span><br><span class="line">static const char *colorname[] = &#123;</span><br><span class="line">	/* 8 normal colors */</span><br><span class="line">	&quot;#282828&quot;, /* black   */</span><br><span class="line">	&quot;#cc241d&quot;, /* red     */</span><br><span class="line">	&quot;#98971a&quot;, /* green   */</span><br><span class="line">	&quot;#d79921&quot;, /* yellow  */</span><br><span class="line">	&quot;#458588&quot;, /* blue    */</span><br><span class="line">	&quot;#b16286&quot;, /* magenta */</span><br><span class="line">	&quot;#689d6a&quot;, /* cyan    */</span><br><span class="line">	&quot;#a89984&quot;, /* white   */</span><br><span class="line"></span><br><span class="line">	/* 8 bright colors */</span><br><span class="line">	&quot;#928374&quot;, /* black   */</span><br><span class="line">	&quot;#fb4934&quot;, /* red     */</span><br><span class="line">	&quot;#b8bb26&quot;, /* green   */</span><br><span class="line">	&quot;#fabd2f&quot;, /* yellow  */</span><br><span class="line">	&quot;#83a598&quot;, /* blue    */</span><br><span class="line">	&quot;#d3869b&quot;, /* magenta */</span><br><span class="line">	&quot;#8ec07c&quot;, /* cyan    */</span><br><span class="line">	&quot;#ebdbb2&quot;, /* white   */</span><br><span class="line"></span><br><span class="line">	[255] = 0,</span><br><span class="line"></span><br><span class="line">	/* more colors can be added after 255 to use with DefaultXX */</span><br><span class="line">	&quot;#add8e6&quot;, /* 256: cursor */</span><br><span class="line">	&quot;#555555&quot;, /* 257: rev cursor*/</span><br><span class="line">	&quot;#282828&quot;, /* 258: background */</span><br><span class="line">	&quot;#ebdbb2&quot;, /* 259: foreground */</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line"> * Default colors (colorname index)</span><br><span class="line"> * foreground, background, cursor, reverse cursor</span><br><span class="line"> */</span><br><span class="line">unsigned int defaultfg = 259;</span><br><span class="line">unsigned int defaultbg = 258;</span><br><span class="line">unsigned int defaultcs = 256;</span><br><span class="line">static unsigned int defaultrcs = 257;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>不过相对于修改config.h文件，我还是推荐修改config.def.h在删除config.h文件:<br><code>rm -rf config.h</code></p>
+<p>因为如果不删除config.h文件，编译安装后就还是之前的配置，所以需要删除后在编译安装:<br><code>sudo make clean install</code></p>
+<h3 id="7-Telegram"><a href="#7-Telegram" class="headerlink" title="7. Telegram"></a>7. Telegram</h3><p>gruvbox 风格的 Telegram 主题<br>使用方法很简单，只需打开：<br><a target="_blank" rel="noopener" href="https://t.me/addtheme/gruvboxTelegram">https://t.me/addtheme/gruvboxTelegram</a></p>
+<p>跳转到应用后点击应用就可以了</p>
+<h3 id="8-qbittorrent"><a href="#8-qbittorrent" class="headerlink" title="8. qbittorrent"></a>8. qbittorrent</h3><p>在默认的qbittorrent 是只有白色的，在晚上就十分刺眼，我们可以使用配色文件来效果<br>仓库地址：<br><a target="_blank" rel="noopener" href="https://github.com/MahdiMirzadeh/qbittorrent">https://github.com/MahdiMirzadeh/qbittorrent</a></p>
+<ol>
+<li>在 qBittorrent 中：<ul>
+<li>转到“工具”→“选项”→“行为”→“界面”</li>
+<li>在“界面主题”下，点击“…”并选择下载的<code>.qbtheme</code>文件</li>
+<li>点击确定并重启 qBittorrent</li>
+</ul>
+</li>
+</ol>
+<h3 id="9-nvim"><a href="#9-nvim" class="headerlink" title="9. nvim"></a>9. nvim</h3><p>仓库地址：<br><a target="_blank" rel="noopener" href="https://github.com/ellisonleao/gruvbox.nvim">https://github.com/ellisonleao/gruvbox.nvim</a></p>
+<p>如果你的nvim插件管理器是packer<br><code>use { &quot;ellisonleao/gruvbox.nvim&quot; }</code></p>
+<p>如果是lazy<br><code>{ &quot;ellisonleao/gruvbox.nvim&quot; },</code></p>
+<p>然后在init.lua添加:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">--外观</span><br><span class="line">opt.termguicolors = true</span><br><span class="line">vim.o.background = &quot;dark&quot; -- or &quot;light&quot; for light mode</span><br><span class="line">vim.cmd([[colorscheme gruvbox]])</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-yazi"><a href="#10-yazi" class="headerlink" title="10. yazi"></a>10. yazi</h3><p>仓库地址:<br><a target="_blank" rel="noopener" href="https://github.com/bennyyip/gruvbox-dark.yazi">https://github.com/bennyyip/gruvbox-dark.yazi</a></p>
+<p>使用插件管理器安装:<br><code>ya pkg add bennyyip/gruvbox-dark</code></p>
+<p>在theme.toml文件添加</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[flavor]</span><br><span class="line">dark = &quot;gruvbox-dark&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+  </div>
+
+  <!-- 版权声明 -->
+<div class="index-copyright" style="margin-top: 50px; padding: 15px 0 0; border-top: 1px dashed var(--color-meta, #666); font-size: 1.0rem; opacity: 0.7; line-height: 1.6;">
+    <span style="display:block;"><strong>作者：</strong>Aidens-fox</span>
+    <span style="display:block;"><strong>链接：</strong><a href="https://aidens-fox.codeberg.page/posts/3d425d4d.html" style="word-break: break-all;">https://aidens-fox.codeberg.page/posts/3d425d4d.html</a></span>
+    <span style="display:block;"><strong>声明：</strong>本站文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans" target="_blank" rel="noopener" style="text-decoration: underline;">CC BY-NC-ND 4.0</a> 许可协议。转载请注明出处。</span>
+  </div>
+</article>
+
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/resource/">资源</a></li>
+        
+          <li><a href="/atom.xml">RSS</a></li>
+        
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">配置主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-gtk%E4%B8%BB%E9%A2%98"><span class="toc-number">3.</span> <span class="toc-text">1. gtk主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%9B%BE%E6%A0%87%E4%B8%BB%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">2. 图标主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%BC%A0%E6%A0%87%E4%B8%BB%E9%A2%98"><span class="toc-number">5.</span> <span class="toc-text">3. 鼠标主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-dwm%E7%8A%B6%E6%80%81%E6%A0%8F%E9%85%8D%E8%89%B2"><span class="toc-number">6.</span> <span class="toc-text">4. dwm状态栏配色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Fcitx5%E4%B8%BB%E9%A2%98"><span class="toc-number">7.</span> <span class="toc-text">5. Fcitx5主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-st-%E7%BB%88%E7%AB%AF%E6%A8%A1%E6%8B%9F%E5%99%A8"><span class="toc-number">8.</span> <span class="toc-text">6. st(终端模拟器)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-Telegram"><span class="toc-number">9.</span> <span class="toc-text">7. Telegram</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-qbittorrent"><span class="toc-number">10.</span> <span class="toc-text">8. qbittorrent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-nvim"><span class="toc-number">11.</span> <span class="toc-text">9. nvim</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-yazi"><span class="toc-number">12.</span> <span class="toc-text">10. yazi</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://aidens-fox.codeberg.page/posts/3d425d4d.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://aidens-fox.codeberg.page/posts/3d425d4d.html&text=Gruvbox配色主题补完计划"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://aidens-fox.codeberg.page/posts/3d425d4d.html&title=Gruvbox配色主题补完计划"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://aidens-fox.codeberg.page/posts/3d425d4d.html&is_video=false&description=Gruvbox配色主题补完计划"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Gruvbox配色主题补完计划&body=Check out this article: https://aidens-fox.codeberg.page/posts/3d425d4d.html"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://aidens-fox.codeberg.page/posts/3d425d4d.html&title=Gruvbox配色主题补完计划"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://aidens-fox.codeberg.page/posts/3d425d4d.html&title=Gruvbox配色主题补完计划"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://aidens-fox.codeberg.page/posts/3d425d4d.html&title=Gruvbox配色主题补完计划"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://aidens-fox.codeberg.page/posts/3d425d4d.html&title=Gruvbox配色主题补完计划"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://aidens-fox.codeberg.page/posts/3d425d4d.html&name=Gruvbox配色主题补完计划&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://aidens-fox.codeberg.page/posts/3d425d4d.html&t=Gruvbox配色主题补完计划"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2026
+    Aidens-fox
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/resource/">资源</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'Aidens-fox/aidens-fox.github.io';
+      var utterances_issue_term = 'pathname';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'gruvbox-dark';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+</body>
+</html>

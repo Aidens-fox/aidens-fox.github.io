@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://aidens-fox.codeberg.page/posts/9daba997.html</loc>
+    <loc>https://aidens-fox.codeberg.page/posts/ef1fd73e.html</loc>
     
     <lastmod>2026-08-05</lastmod>
     
@@ -218,13 +218,6 @@
 
   
   <url>
-    <loc>https://aidens-fox.codeberg.page/tags/%E7%8E%A9%E6%9C%BA/</loc>
-    <lastmod>2026-08-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://aidens-fox.codeberg.page/tags/%E8%B5%84%E6%BA%90/</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -233,6 +226,13 @@
   
   <url>
     <loc>https://aidens-fox.codeberg.page/tags/linux/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://aidens-fox.codeberg.page/tags/%E7%8E%A9%E6%9C%BA/</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -261,6 +261,13 @@
   
   <url>
     <loc>https://aidens-fox.codeberg.page/tags/%E5%85%B6%E4%BB%96/</loc>
+    <lastmod>2026-08-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://aidens-fox.codeberg.page/tags/windows/</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

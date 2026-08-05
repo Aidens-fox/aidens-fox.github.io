@@ -10,7 +10,24 @@
   <rights>All rights reserved 2026, Aidens-fox</rights>
   <subtitle>linux折腾记录</subtitle>
   <title>Aidens的博客</title>
-  <updated>2026-08-01T06:59:35.461Z</updated>
+  <updated>2026-08-05T14:01:53.194Z</updated>
+  <entry>
+    <author>
+      <name>Aidens-fox</name>
+    </author>
+    <category term="其他" scheme="https://aidens-fox.codeberg.page/tags/%E5%85%B6%E4%BB%96/"/>
+    <content>
+      <![CDATA[<p>测试作用，没有意义</p>]]>
+    </content>
+    <id>https://aidens-fox.codeberg.page/posts/9daba997.html</id>
+    <link href="https://aidens-fox.codeberg.page/posts/9daba997.html"/>
+    <published>2026-08-05T14:01:22.000Z</published>
+    <summary>
+      <![CDATA[<p>测试作用，没有意义</p>]]>
+    </summary>
+    <title>测试</title>
+    <updated>2026-08-05T14:01:53.194Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Aidens-fox</name>
@@ -26,7 +43,7 @@
       <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>前几天我查看了一下我被录取的<del>学校</del>职校，数字媒体应用专业，成绩不够也没办法只能上职校了，数字媒体应用这东西我查了一下，大]]>
     </summary>
     <title>关于博客内容的变更</title>
-    <updated>2026-08-01T06:59:35.461Z</updated>
+    <updated>2026-08-01T07:00:14.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -44,7 +61,7 @@
       <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>2021年6月1日google开始正式停止提供免费无限存储空间,从此每个谷歌账号就只有15GB 免费存储空间(谷歌相册，谷歌邮件和谷歌云端硬]]>
     </summary>
     <title>使用NexAlloy模块白嫖谷歌相册原始画质无限存储</title>
-    <updated>2026-07-28T10:04:59.060Z</updated>
+    <updated>2026-07-28T10:04:59.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -64,7 +81,7 @@
       <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>拥有一个自己的博客网站听起来是一个很酷的事，你可以在博客里分享一些东西，它也许可以帮助到一些人，也可以让自己在互联网留下足迹，也许你会认为要]]>
     </summary>
     <title>使用hexo和codeberg pages从零开始搭建个人博客</title>
-    <updated>2026-07-27T00:28:27.584Z</updated>
+    <updated>2026-07-27T00:28:27.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -82,7 +99,7 @@
       <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Gruvbox是一个柔和复古的暖色调主题，对比度也很高，长时间盯着也不会刺眼难受，这也是我最喜欢的配色主题，所以我的整个linux基本都是g]]>
     </summary>
     <title>Gruvbox配色主题补完计划</title>
-    <updated>2026-07-21T02:48:25.512Z</updated>
+    <updated>2026-07-21T02:48:25.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -101,7 +118,7 @@
       <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>steam,一个PC游戏分发平台，也是最大的PC游戏分发平台，里面除了游戏还有一个创意工坊，允许玩家制作和发布游戏mod(模组)来提升游戏趣]]>
     </summary>
     <title>使用SteamCMD来下载创意工坊的mod</title>
-    <updated>2026-07-14T14:02:51.646Z</updated>
+    <updated>2026-07-14T14:02:51.000Z</updated>
   </entry>
   <entry>
     <author>

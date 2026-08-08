@@ -8,7 +8,7 @@
       <link href="/posts/c5bdab42.html"/>
       <url>/posts/c5bdab42.html</url>
       
-        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>用习惯linux换到windows还是挺不习惯的，但是因为需要使用pr和ps那些专业软件，所以我只能换到windows了，不过刚装好windows还是挺不习惯的，系统太臃肿，还有一个和360一样恶心的安全中心，把我u盘的10几个破解软件全部删除了，所以本篇博文我从零开始优化windows使用体验</p><h3 id="清除烦人的安全中心"><a href="#清除烦人的安全中心" class="headerlink" title="清除烦人的安全中心"></a>清除烦人的安全中心</h3><p>这个安全中心真的不能留下，留下保不齐哪天重要文件被删除了，这个安全中心如果只是手动关闭，那么过一会又会出现自己打开，所以常规的手段肯定是不行的，所以直接使用github的一个项目:<br><a href="https://github.com/ionuttbara/windows-defender-remover">https://github.com/ionuttbara/windows-defender-remover</a></p><p>这个工具可以让你的安全中心消失，你只需要在项目发布页面下载软件，使用管理员权限运行，选择你需要的模式执行，完成后重新启动就没有安全中心了</p><h3 id="删除Edge浏览器"><a href="#删除Edge浏览器" class="headerlink" title="删除Edge浏览器"></a>删除Edge浏览器</h3><p>我本人是不太喜欢edge浏览器的，而且它还会在后台消耗性能,那个进程叫什么游戏助手的，然后打开首页全是广告，不知道的还以为是360浏览器，虽然可以设置关闭，但是我凭什么要多此一举来设置，所以我更倾向于使用firefox，而edge浏览器就可以使用github的一个项目:<br><a href="https://github.com/ShadowWhisperer/Remove-MS-Edge">https://github.com/ShadowWhisperer/Remove-MS-Edge</a></p><p>下载完成后也是管理员权限运行就可以了</p><h3 id="屏蔽-360-系、百度系、腾讯系等等垃圾软件"><a href="#屏蔽-360-系、百度系、腾讯系等等垃圾软件" class="headerlink" title="屏蔽 360 系、百度系、腾讯系等等垃圾软件"></a>屏蔽 360 系、百度系、腾讯系等等垃圾软件</h3><p>为了防止电脑有360这些流氓软件所以使用这个项目来防止:<br><a href="https://github.com/the1812/Malware-Patch">https://github.com/the1812/Malware-Patch</a></p><p>通过 Windows 策略和规则限制部分流氓软件、推广软件的安装和运行，防止这些软件威胁设备和数据安全</p><h3 id="彻底卸载软件"><a href="#彻底卸载软件" class="headerlink" title="彻底卸载软件"></a>彻底卸载软件</h3><p>使用默认方式卸载软件，可能后留下残留，尤其是国内软件，所以使用一款强力的软件就十分重要了，而geek十分适合，他会在卸载完成后扫描有没有残留，下面是他的软件官网<br><a href="https://geekuninstaller.com/">https://geekuninstaller.com/</a></p><h3 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h3><p>最后我还是想说的是如果不是非必要尽量不用安装以盈利性质为目的闭源国内软件，你不能确认他会不会污染你的电脑，软件尽量选择开源软件</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>用习惯linux换到windows还是挺不习惯的，但是因为需要使用pr和ps那些专业软件，所以我只能换到windows了，不过刚装好windows还是挺不习惯的，系统太臃肿，还有一个和360一样恶心的安全中心，把我u盘的10几个破解软件全部删除了，所以本篇博文我从零开始优化windows使用体验</p><h3 id="激活"><a href="#激活" class="headerlink" title="激活"></a>激活</h3><p>如果你安装的系统不是家庭版，而且你也没有激活密钥，那么系统就会显示你未激活，就只能设置一些基本的东西，使用我们就需要先把系统激活一下，激活的话可以使用github的一个项目:<br><a href="https://github.com/zbezj/HEU_KMS_Activator">https://github.com/zbezj/HEU_KMS_Activator</a></p><h3 id="清除烦人的安全中心"><a href="#清除烦人的安全中心" class="headerlink" title="清除烦人的安全中心"></a>清除烦人的安全中心</h3><p>这个安全中心真的不能留下，留下保不齐哪天重要文件被删除了，这个安全中心如果只是手动关闭，那么过一会又会出现自己打开，所以常规的手段肯定是不行的，所以直接使用github的一个项目:<br><a href="https://github.com/ionuttbara/windows-defender-remover">https://github.com/ionuttbara/windows-defender-remover</a></p><p>这个工具可以让你的安全中心消失，你只需要在项目发布页面下载软件，使用管理员权限运行，选择你需要的模式执行，完成后重新启动就没有安全中心了</p><h3 id="删除Edge浏览器"><a href="#删除Edge浏览器" class="headerlink" title="删除Edge浏览器"></a>删除Edge浏览器</h3><p>我本人是不太喜欢edge浏览器的，而且它还会在后台消耗性能,那个进程叫什么游戏助手的，然后打开首页全是广告，不知道的还以为是360浏览器，虽然可以设置关闭，但是我凭什么要多此一举来设置，所以我更倾向于使用firefox，而edge浏览器就可以使用github的一个项目:<br><a href="https://github.com/ShadowWhisperer/Remove-MS-Edge">https://github.com/ShadowWhisperer/Remove-MS-Edge</a></p><p>下载完成后也是管理员权限运行就可以了</p><h3 id="屏蔽-360-系、百度系、腾讯系等等垃圾软件"><a href="#屏蔽-360-系、百度系、腾讯系等等垃圾软件" class="headerlink" title="屏蔽 360 系、百度系、腾讯系等等垃圾软件"></a>屏蔽 360 系、百度系、腾讯系等等垃圾软件</h3><p>为了防止电脑有360这些流氓软件所以使用这个项目来防止:<br><a href="https://github.com/the1812/Malware-Patch">https://github.com/the1812/Malware-Patch</a></p><p>通过 Windows 策略和规则限制部分流氓软件、推广软件的安装和运行，防止这些软件威胁设备和数据安全</p><h3 id="彻底卸载软件"><a href="#彻底卸载软件" class="headerlink" title="彻底卸载软件"></a>彻底卸载软件</h3><p>使用默认方式卸载软件，可能后留下残留，尤其是国内软件，所以使用一款强力的软件就十分重要了，而geek十分适合，他会在卸载完成后扫描有没有残留，下面是他的软件官网<br><a href="https://geekuninstaller.com/">https://geekuninstaller.com/</a></p><h3 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h3><p>最后我还是想说的是如果不是非必要尽量不用安装以盈利性质为目的闭源国内软件，你不能确认他会不会污染你的电脑，软件尽量选择开源软件</p>]]></content>
       
       
       
@@ -96,9 +96,9 @@
       
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> 资源 </tag>
+            
+            <tag> linux </tag>
             
             <tag> 软件 </tag>
             
@@ -121,9 +121,9 @@
       
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> 资源 </tag>
+            
+            <tag> linux </tag>
             
         </tags>
       
@@ -142,9 +142,9 @@
       
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> 资源 </tag>
+            
+            <tag> linux </tag>
             
             <tag> 软件 </tag>
             
@@ -245,11 +245,11 @@
       
         <tags>
             
-            <tag> dwm </tag>
-            
             <tag> linux </tag>
             
             <tag> 软件 </tag>
+            
+            <tag> dwm </tag>
             
         </tags>
       
@@ -308,9 +308,9 @@
       
         <tags>
             
-            <tag> dwm </tag>
-            
             <tag> linux </tag>
+            
+            <tag> dwm </tag>
             
         </tags>
       
@@ -329,9 +329,9 @@
       
         <tags>
             
-            <tag> dwm </tag>
-            
             <tag> linux </tag>
+            
+            <tag> dwm </tag>
             
         </tags>
       

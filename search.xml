@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>windows极简图片查看器推荐-qView</title>
+      <link href="/posts/86ad28c0.html"/>
+      <url>/posts/86ad28c0.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在windows中有一个默认的图片查看器-照片，他基本可以满足大部分需求，但是他太臃肿了，使用相册打开图片，除了图片本体上下还有一大堆东西，十分丑陋不堪</p><p><img src="/img/ccc.png"></p><p>这些东西很多人可能都不用，却在占用空间，这些按钮太多了，我理想的图片查看器应该是想之前使用linux的imv一样，做好图片查看器的本职工作，少就是多，所以我找到了类似imv的图片查看器-qView</p><h3 id="qView是什么"><a href="#qView是什么" class="headerlink" title="qView是什么"></a>qView是什么</h3><p>qView是一个基于 Qt5 的github的开源项目，以极简主义和易用性为核心，所以打开图片只有图片和一个标题栏，没有其他的干扰，安装包也十分轻，只有24mb，安装完成后也只有90多mb，十分轻量，而且基本所有操作都有快捷键，效率十分高效，如果不想要记快捷键也可以直接右键图形化选择需要的，系统占用也十分低，可以说是十分完美了<br><img src="/img/ccbb.png"></p><p>下面是项目的网站和项目地址:<br>项目网站:<br><a href="https://interversehq.com/qview/">https://interversehq.com/qview/</a><br>项目地址：<br><a href="https://github.com/jurplel/qView">https://github.com/jurplel/qView</a><br>发布页面:<br><a href="https://github.com/jurplel/qView/releases">https://github.com/jurplel/qView/releases</a></p><p>windows选择发布页面的qView-7.1-win64.exe,安装时尽量不要安装到c盘(如果你只有c盘自动忽略我刚才的建议(-:)</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 软件 </tag>
+            
+            <tag> windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>谈谈我为什么不喜欢圆角设计</title>
       <link href="/posts/2bcea9dc.html"/>
       <url>/posts/2bcea9dc.html</url>

@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://aidens-fox.codeberg.page/resource/index.html</loc>
+    
+    <lastmod>2026-08-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://aidens-fox.codeberg.page/posts/e42cd2d2.html</loc>
     
     <lastmod>2026-08-17</lastmod>
@@ -39,15 +48,6 @@
   
   <url>
     <loc>https://aidens-fox.codeberg.page/about/index.html</loc>
-    
-    <lastmod>2026-08-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://aidens-fox.codeberg.page/resource/index.html</loc>
     
     <lastmod>2026-08-12</lastmod>
     
@@ -254,7 +254,7 @@
 
   
   <url>
-    <loc>https://aidens-fox.codeberg.page/tags/%E8%B5%84%E6%BA%90/</loc>
+    <loc>https://aidens-fox.codeberg.page/tags/dwm/</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -268,14 +268,14 @@
   </url>
   
   <url>
-    <loc>https://aidens-fox.codeberg.page/tags/%E7%8E%A9%E6%9C%BA/</loc>
+    <loc>https://aidens-fox.codeberg.page/tags/%E8%B5%84%E6%BA%90/</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://aidens-fox.codeberg.page/tags/dwm/</loc>
+    <loc>https://aidens-fox.codeberg.page/tags/%E7%8E%A9%E6%9C%BA/</loc>
     <lastmod>2026-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

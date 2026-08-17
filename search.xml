@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>解决3dsmax出现卡死问题</title>
+      <link href="/posts/e42cd2d2.html"/>
+      <url>/posts/e42cd2d2.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>这几天我下载了3dsmax，因为我选择的是数字媒体应用专业，但是参考职高的教学水平和机房硬件，我认为还是先自学好了，反正职高教的估计早就落后了，很多大学都这样子了，何况是职高，所以我在这几天尝试使用3dsmax的时候发现了一个很奇怪的问题，就是有时候软件会莫名其妙的卡死(假死)，具体表现为打开任务管理器该软件进程cpu占用为0,除了该软件其他软件包括系统都可以正常使用，所以问题就出在软件本身了</p><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>解决方法只需要在状态栏的输入法图标右键点击设置，然后就会打开设置中的微软拼音输入法，在该页面打开常规，划到最后一个叫兼容性的，把使用旧版本的微软拼音输入法打开就可以了<br><img src="/img/cxx.png"></p><p>设置完成后就不会有卡死的出现了，不过最好还是要有保存的习惯，不然做一半忽然断电或者其他因素，如果没有保存，可能就会让刚才白干了，保存的快捷键是ctrl+s和大部分专业软件的快捷键是一样的</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>windows极简图片查看器推荐-qView</title>
       <link href="/posts/86ad28c0.html"/>
       <url>/posts/86ad28c0.html</url>

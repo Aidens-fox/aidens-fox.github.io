@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="前言油猴脚本(篡改猴)是一个浏览器的扩展插件，用户可以在里面使用别人编写的js脚本，来优化一些网站的体验，详细说明查看维基百科 安装安装油猴十分简单，你只需要在对应的扩展商店下载安装就好了，下面是对应浏览器的安装页面: 谷歌浏览器:https:&#x2F;&#x2F;chromewebstore.google.com&#x2F;detail&#x2F;tampermonkey&#x2F;dhdgffkkebhmkfjojejmpbldmpobfk">
+<meta property="og:type" content="article">
+<meta property="og:title" content="油猴脚本的使用和脚本推荐">
+<meta property="og:url" content="https://aidens-fox.codeberg.page/posts/cccf1d27.html">
+<meta property="og:site_name" content="Aidens的博客">
+<meta property="og:description" content="前言油猴脚本(篡改猴)是一个浏览器的扩展插件，用户可以在里面使用别人编写的js脚本，来优化一些网站的体验，详细说明查看维基百科 安装安装油猴十分简单，你只需要在对应的扩展商店下载安装就好了，下面是对应浏览器的安装页面: 谷歌浏览器:https:&#x2F;&#x2F;chromewebstore.google.com&#x2F;detail&#x2F;tampermonkey&#x2F;dhdgffkkebhmkfjojejmpbldmpobfk">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-08-25T11:54:49.000Z">
+<meta property="article:modified_time" content="2026-08-25T13:20:33.695Z">
+<meta property="article:author" content="Aidens-fox">
+<meta property="article:tag" content="资源">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/logo.png">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/logo.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+        
+      
+    
+    <!-- title -->
+    <title>油猴脚本的使用和脚本推荐</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="Aidens的博客" type="application/atom+xml">
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/resource/">资源</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/posts/908a4d94.html"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://aidens-fox.codeberg.page/posts/cccf1d27.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://aidens-fox.codeberg.page/posts/cccf1d27.html&text=油猴脚本的使用和脚本推荐"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://aidens-fox.codeberg.page/posts/cccf1d27.html&title=油猴脚本的使用和脚本推荐"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://aidens-fox.codeberg.page/posts/cccf1d27.html&is_video=false&description=油猴脚本的使用和脚本推荐"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=油猴脚本的使用和脚本推荐&body=Check out this article: https://aidens-fox.codeberg.page/posts/cccf1d27.html"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://aidens-fox.codeberg.page/posts/cccf1d27.html&title=油猴脚本的使用和脚本推荐"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://aidens-fox.codeberg.page/posts/cccf1d27.html&title=油猴脚本的使用和脚本推荐"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://aidens-fox.codeberg.page/posts/cccf1d27.html&title=油猴脚本的使用和脚本推荐"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://aidens-fox.codeberg.page/posts/cccf1d27.html&title=油猴脚本的使用和脚本推荐"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://aidens-fox.codeberg.page/posts/cccf1d27.html&name=油猴脚本的使用和脚本推荐&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://aidens-fox.codeberg.page/posts/cccf1d27.html&t=油猴脚本的使用和脚本推荐"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E6%8E%A8%E8%8D%90"><span class="toc-number">4.</span> <span class="toc-text">脚本推荐</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        油猴脚本的使用和脚本推荐
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Aidens-fox</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2026-08-25T11:54:49.000Z" class="dt-published" itemprop="datePublished">2026-08-25</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/%E8%B5%84%E6%BA%90/" rel="tag">资源</a>
+    </div>
+
+
+    </div>
+
+<div class="index-copyright" style="margin-top: 50px; padding: 15px 0 0; border-top: 1px dashed var(--color-meta, #666); font-size: 0.8rem; opacity: 0.7; line-height: 1.6;">
+
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>油猴脚本(篡改猴)是一个浏览器的扩展插件，用户可以在里面使用别人编写的js脚本，来优化一些网站的体验，详细说明查看<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-cn/%E7%AF%A1%E6%94%B9%E7%8C%B4">维基百科</a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装油猴十分简单，你只需要在对应的扩展商店下载安装就好了，下面是对应浏览器的安装页面:</p>
+<p>谷歌浏览器:<br><a target="_blank" rel="noopener" href="https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo</a></p>
+<p>火狐:<br><a target="_blank" rel="noopener" href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/">https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/</a></p>
+<p>微软边缘(edge):<br><a target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/iikmkjmpaadaobahmlepeloendndfphd">https://microsoftedge.microsoft.com/addons/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/iikmkjmpaadaobahmlepeloendndfphd</a></p>
+<p>其他浏览器安装查看官方网站说明:<br><a target="_blank" rel="noopener" href="https://www.tampermonkey.net/index.php?browser=chrome&locale=zh">https://www.tampermonkey.net/index.php?browser=chrome&amp;locale=zh</a></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>在使用之前我们还需要进行一些配置，打开浏览器的扩展管理，在里面找到油猴的详细信息，在里面打开允许用户脚本，具体操作按实际情况为准，为了方便使用再把插件固定在工具栏上面，然后就可以安装脚本使用了，如果那个脚本已经被下架，可以打开油猴的管理面板，在上方的加号点击，在里面复制粘贴js脚本再保存就可以了</p>
+<h3 id="脚本推荐"><a href="#脚本推荐" class="headerlink" title="脚本推荐"></a>脚本推荐</h3><p>下面推荐的脚本基本都在:<br><a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts">https://greasyfork.org/zh-CN/scripts</a></p>
+<p>这是网站有很多脚本可以安装使用，不过在安装之前要仔细审查脚本有没有恶意代码，下面是推荐的脚本:</p>
+<p>1.知乎美化<br><a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts/412212">https://greasyfork.org/zh-CN/scripts/412212</a></p>
+<p>给知乎宽屏显示、暗黑模式（4种）、暗黑模式跟随浏览器、屏蔽首页活动广告、隐藏文章开头大图、调整图片最大高度、向下翻时自动隐藏顶栏</p>
+<p>2.知乎增强<br><a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts/419081-zhihu-enhancement">https://greasyfork.org/zh-CN/scripts/419081-zhihu-enhancement</a></p>
+<p>移除登录弹窗、屏蔽指定类别（视频、盐选、文章、想法、关注[赞同&#x2F;关注了XX]等）、屏蔽低赞&#x2F;低评、屏蔽用户、屏蔽关键词、默认收起回答、快捷收起回答&#x2F;评论（左键两侧）、快捷回到顶部（右键两侧）、区分问题文章、移除高亮链接、净化搜索热门、净化标题消息、展开问题描述、显示问题作者、默认高清原图（无水印）、置顶显示时间、完整问题时间、直达问题按钮、默认站外直链…</p>
+<p>3.Github 增强 - 高速下载<br><a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts/412245-github-enhancement-high-speed-download">https://greasyfork.org/zh-CN/scripts/412245-github-enhancement-high-speed-download</a></p>
+<p>高速下载 Git Clone&#x2F;SSH、Release、Raw、Code(ZIP) 等文件 (公益加速)、项目列表单文件快捷下载 ,在克隆页面自动在前面添加git clone</p>
+<p>4.CSDNGreener<br><a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts/378351-csdngreener-csdn%E5%B9%BF%E5%91%8A%E5%AE%8C%E5%85%A8%E8%BF%87%E6%BB%A4-%E5%85%8D%E7%99%BB%E5%BD%95-%E4%B8%AA%E6%80%A7%E5%8C%96%E6%8E%92%E7%89%88-%E6%9C%80%E5%BC%BA%E8%80%81%E7%89%8C%E8%84%9A%E6%9C%AC-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0">下载链接(点击此处访问)</a></p>
+<p>CSDN广告完全过滤,免登录,个性化排版,复制无需登录</p>
+<p>5.蓝奏云网盘增强<br><a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts/419224-%E8%93%9D%E5%A5%8F%E4%BA%91%E7%BD%91%E7%9B%98%E5%A2%9E%E5%BC%BA">https://greasyfork.org/zh-CN/scripts/419224-%E8%93%9D%E5%A5%8F%E4%BA%91%E7%BD%91%E7%9B%98%E5%A2%9E%E5%BC%BA</a></p>
+<p>文件排序、刷新不回根目录、快捷返回上一级（右键网页空白处）、后退返回上一级、右键文件显示菜单、点击直接下载文件、点击空白进入目录、自动显示更多文件、一键复制所有分享链接、自定义分享链接域名、自动打开&#x2F;复制分享链接、带密码的分享链接自动输密码、拖入文件自动显示上传框、输入密码后回车确认、优化编辑框初始大小</p>
+<p>6.Picviewer CE+<br><a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts/24204-picviewer-ce">https://greasyfork.org/zh-CN/scripts/24204-picviewer-ce</a></p>
+<p>看图工具，支持图片翻转、旋转、缩放、弹出大图、批量保存,具体教程查看官方文档:<br><a target="_blank" rel="noopener" href="https://pv.hoothin.com/zh-TW/guide/first-run">https://pv.hoothin.com/zh-TW/guide/first-run</a></p>
+<p>以上是本人常用的脚本，其他脚本可以参考github的一些脚本推荐:<br><a target="_blank" rel="noopener" href="https://github.com/hoothin/UserScripts">https://github.com/hoothin/UserScripts</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/XIU2/UserScript">https://github.com/XIU2/UserScript</a></p>
+
+  </div>
+
+  <!-- 版权声明 -->
+<div class="index-copyright" style="margin-top: 50px; padding: 15px 0 0; border-top: 1px dashed var(--color-meta, #666); font-size: 1.0rem; opacity: 0.7; line-height: 1.6;">
+    <span style="display:block;"><strong>作者：</strong>Aidens-fox</span>
+    <span style="display:block;"><strong>链接：</strong><a href="https://aidens-fox.codeberg.page/posts/cccf1d27.html" style="word-break: break-all;">https://aidens-fox.codeberg.page/posts/cccf1d27.html</a></span>
+    <span style="display:block;"><strong>声明：</strong>本站文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh-hans" target="_blank" rel="noopener" style="text-decoration: underline;">CC BY-NC-ND 4.0</a> 许可协议。转载请注明出处。</span>
+  </div>
+</article>
+
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/resource/">资源</a></li>
+        
+          <li><a href="/atom.xml">RSS</a></li>
+        
+          <li><a href="/search/">搜索</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E6%8E%A8%E8%8D%90"><span class="toc-number">4.</span> <span class="toc-text">脚本推荐</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://aidens-fox.codeberg.page/posts/cccf1d27.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://aidens-fox.codeberg.page/posts/cccf1d27.html&text=油猴脚本的使用和脚本推荐"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://aidens-fox.codeberg.page/posts/cccf1d27.html&title=油猴脚本的使用和脚本推荐"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://aidens-fox.codeberg.page/posts/cccf1d27.html&is_video=false&description=油猴脚本的使用和脚本推荐"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=油猴脚本的使用和脚本推荐&body=Check out this article: https://aidens-fox.codeberg.page/posts/cccf1d27.html"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://aidens-fox.codeberg.page/posts/cccf1d27.html&title=油猴脚本的使用和脚本推荐"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://aidens-fox.codeberg.page/posts/cccf1d27.html&title=油猴脚本的使用和脚本推荐"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://aidens-fox.codeberg.page/posts/cccf1d27.html&title=油猴脚本的使用和脚本推荐"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://aidens-fox.codeberg.page/posts/cccf1d27.html&title=油猴脚本的使用和脚本推荐"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://aidens-fox.codeberg.page/posts/cccf1d27.html&name=油猴脚本的使用和脚本推荐&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://aidens-fox.codeberg.page/posts/cccf1d27.html&t=油猴脚本的使用和脚本推荐"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2026
+    Aidens-fox
+  </div>
+
+
+<span id="runtime"></span>
+
+<script>
+let start = new Date("2025/10/23");
+let now = new Date();
+let days = Math.floor((now-start)/86400000);
+document.getElementById("runtime").innerHTML =
+"本站共计运行 "+days+" 天";
+</script>
+
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/resource/">资源</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'Aidens-fox/aidens-fox.github.io';
+      var utterances_issue_term = 'pathname';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'gruvbox-dark';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+</body>
+</html>

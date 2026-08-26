@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="前言当你使用git克隆下dwm源代码后进行简单配置修改然后编译安装，在.xinitrc添加exec dwm后启动dwm,你可能会发现这dwm也太干净了，输入确实可以使用，但是可能有一些地方不太喜欢，所以我们可以使用补丁来增强或改善dwm的功能体验,本篇博文将会推荐7个dwm补丁来改善你的dwm体验，你也可以看看我的dwm配置: https:&#x2F;&#x2F;codeberg.org&#x2F;Aidens-fox&#x2F;dwm">
+    <meta name="description" content="前言 当你使用git克隆下dwm源代码后进行简单配置修改然后编译安装，在.xinitrc添加exec dwm后启动dwm,你可能会发现这dwm也太干净了，输入确实可以使用，但是可能有一些地方不太喜欢，所以我们可以使用补丁来增强或改善dwm的功能体验,本篇博文将会推荐7个dwm补丁来改善你的dwm体验，你也可以看看我的dwm配置: https:&#x2F;&#x2F;codeberg.org&#x2F;Aidens-fox&#x2F;dw">
 <meta property="og:type" content="article">
 <meta property="og:title" content="dwm补丁推荐">
 <meta property="og:url" content="https://aidens-fox.codeberg.page/posts/3b989ea6.html">
 <meta property="og:site_name" content="Aidens的博客">
-<meta property="og:description" content="前言当你使用git克隆下dwm源代码后进行简单配置修改然后编译安装，在.xinitrc添加exec dwm后启动dwm,你可能会发现这dwm也太干净了，输入确实可以使用，但是可能有一些地方不太喜欢，所以我们可以使用补丁来增强或改善dwm的功能体验,本篇博文将会推荐7个dwm补丁来改善你的dwm体验，你也可以看看我的dwm配置: https:&#x2F;&#x2F;codeberg.org&#x2F;Aidens-fox&#x2F;dwm">
+<meta property="og:description" content="前言 当你使用git克隆下dwm源代码后进行简单配置修改然后编译安装，在.xinitrc添加exec dwm后启动dwm,你可能会发现这dwm也太干净了，输入确实可以使用，但是可能有一些地方不太喜欢，所以我们可以使用补丁来增强或改善dwm的功能体验,本篇博文将会推荐7个dwm补丁来改善你的dwm体验，你也可以看看我的dwm配置: https:&#x2F;&#x2F;codeberg.org&#x2F;Aidens-fox&#x2F;dw">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-06-27T08:31:42.000Z">
 <meta property="article:modified_time" content="2026-07-04T01:17:56.000Z">
@@ -171,24 +171,32 @@
   
 
   <div class="content e-content" itemprop="articleBody">
-    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>当你使用git克隆下dwm源代码后进行简单配置修改然后编译安装，在.xinitrc添加exec dwm后启动dwm,你可能会发现这dwm也太干净了，输入确实可以使用，但是可能有一些地方不太喜欢，所以我们可以使用补丁来增强或改善dwm的功能体验,本篇博文将会推荐7个dwm补丁来改善你的dwm体验，你也可以看看我的dwm配置:</p>
+    <h3 id="前言">前言</h3>
+<p>当你使用git克隆下dwm源代码后进行简单配置修改然后编译安装，在.xinitrc添加exec dwm后启动dwm,你可能会发现这dwm也太干净了，输入确实可以使用，但是可能有一些地方不太喜欢，所以我们可以使用补丁来增强或改善dwm的功能体验,本篇博文将会推荐7个dwm补丁来改善你的dwm体验，你也可以看看我的dwm配置:</p>
 <p><a target="_blank" rel="noopener" href="https://codeberg.org/Aidens-fox/dwm">https://codeberg.org/Aidens-fox/dwm</a></p>
-<h3 id="补丁介绍"><a href="#补丁介绍" class="headerlink" title="补丁介绍"></a>补丁介绍</h3><h4 id="1-pertag"><a href="#1-pertag" class="headerlink" title="1.pertag"></a>1.<a target="_blank" rel="noopener" href="https://dwm.suckless.org/patches/pertag/">pertag</a></h4><p>当你打开2个以上的tag时，如果你在其中一个tag使用mod+j等来调整布局，那么在切换到下一个tag时你会发现这个tag的布局和上一个的tag一样，这样的话，如果下一个tag打开浏览器然后一个终端，本来是默认相同宽度的，但因为上一个tag调整了布局，让这个tag失去了刚才的布局，这就有点一些体验了，而pertag可以让tag相互独立，而不是同步更改，由此来提升使用体验</p>
-<h4 id="2-restartsig"><a href="#2-restartsig" class="headerlink" title="2.restartsig"></a><a href="https://aidens-fox.codeberg.page/posts/3b989ea6.html#2-restartsig" title="2.restartsig"></a>2.<a target="_blank" rel="noopener" href="https://dwm.suckless.org/patches/restartsig/">restartsig</a></h4><p>当你修改完配置编译完成之后，你需要退出重新进入，如果只是偶然修改一些还好，但是如果是需要多次修改就有的麻烦了，退出进入要花时间，而且之前打开的窗口也没用了，也要重新打开，这就和麻烦了，而restartsig可以让你在不退出进入的情况下刷新配置，不过在编译安装之前需要指定快捷键不然可能会报错，像我就是绑定mod+ctrl+q</p>
+<h3 id="补丁介绍">补丁介绍</h3>
+<h4 id="1-pertag">1.<a target="_blank" rel="noopener" href="https://dwm.suckless.org/patches/pertag/">pertag</a></h4>
+<p>当你打开2个以上的tag时，如果你在其中一个tag使用mod+j等来调整布局，那么在切换到下一个tag时你会发现这个tag的布局和上一个的tag一样，这样的话，如果下一个tag打开浏览器然后一个终端，本来是默认相同宽度的，但因为上一个tag调整了布局，让这个tag失去了刚才的布局，这就有点一些体验了，而pertag可以让tag相互独立，而不是同步更改，由此来提升使用体验</p>
+<h4 id="2-restartsig"><a href="https://aidens-fox.codeberg.page/posts/3b989ea6.html#2-restartsig" title="2.restartsig"></a>2.<a target="_blank" rel="noopener" href="https://dwm.suckless.org/patches/restartsig/">restartsig</a></h4>
+<p>当你修改完配置编译完成之后，你需要退出重新进入，如果只是偶然修改一些还好，但是如果是需要多次修改就有的麻烦了，退出进入要花时间，而且之前打开的窗口也没用了，也要重新打开，这就和麻烦了，而restartsig可以让你在不退出进入的情况下刷新配置，不过在编译安装之前需要指定快捷键不然可能会报错，像我就是绑定mod+ctrl+q</p>
 <p><code>{ MODKEY|ControlMask, XK_q, quit, {1} },</code></p>
-<h4 id="3-attachaside"><a href="#3-attachaside" class="headerlink" title="3.attachaside"></a><a href="https://aidens-fox.codeberg.page/posts/3b989ea6.html#3-attachaside" title="3.attachaside"></a>3.<a target="_blank" rel="noopener" href="https://dwm.suckless.org/patches/attachaside/">attachaside</a></h4><p>我们在打开新窗口时，它会自动抢占“主窗口（Master）”的位置，而原来的主窗口会被挤到右侧的“堆栈区（Stack），如果我们是使用浏览器，然后在打开终端后又打开几个窗口，主窗口早就不在浏览器了，这就很影响使用了，而attachaside可以让新窗口自动到堆栈区，保持当前主窗口不变,如果需要改变主窗口只需要mod+enter就可以切换了</p>
+<h4 id="3-attachaside"><a href="https://aidens-fox.codeberg.page/posts/3b989ea6.html#3-attachaside" title="3.attachaside"></a>3.<a target="_blank" rel="noopener" href="https://dwm.suckless.org/patches/attachaside/">attachaside</a></h4>
+<p>我们在打开新窗口时，它会自动抢占“主窗口（Master）”的位置，而原来的主窗口会被挤到右侧的“堆栈区（Stack），如果我们是使用浏览器，然后在打开终端后又打开几个窗口，主窗口早就不在浏览器了，这就很影响使用了，而attachaside可以让新窗口自动到堆栈区，保持当前主窗口不变,如果需要改变主窗口只需要mod+enter就可以切换了</p>
 <p>默认:新窗口（N）抢占左侧，原窗口（P）被挤到右侧</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">+-----------------+-------+</span><br><span class="line">|                 |       |</span><br><span class="line">|                 |   P   |</span><br><span class="line">|        N        +-------+</span><br><span class="line">|                 |       |</span><br><span class="line">|                 |       |</span><br><span class="line">+-----------------+-------+</span><br></pre></td></tr></table></figure>
-
 <p>使用补丁:主窗口（P）不动，新窗口（N）出现在右侧堆栈区的顶部</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">+-----------------+-------+</span><br><span class="line">|                 |   N   |</span><br><span class="line">|                 |       |</span><br><span class="line">|        P        +-------+</span><br><span class="line">|                 |       |</span><br><span class="line">|                 |       |</span><br><span class="line">+-----------------+-------+</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="4-actualfullscreen"><a href="#4-actualfullscreen" class="headerlink" title="4.actualfullscreen"></a>4.<a target="_blank" rel="noopener" href="https://dwm.suckless.org/patches/actualfullscreen/">actualfullscreen</a></h4><p>dwm 默认的全屏模式（例如某些浏览器触发的全屏）有时会保留状态栏，或者只是简单地平铺充满。actualfullscreen 可以让当前窗口会真正遮盖住状态栏，并填满整个显示器，而不改变原有的窗口平铺布局，但是在编译之前还是有先设置一些快捷键，不然可能报错</p>
+<h4 id="4-actualfullscreen">4.<a target="_blank" rel="noopener" href="https://dwm.suckless.org/patches/actualfullscreen/">actualfullscreen</a></h4>
+<p>dwm 默认的全屏模式（例如某些浏览器触发的全屏）有时会保留状态栏，或者只是简单地平铺充满。actualfullscreen 可以让当前窗口会真正遮盖住状态栏，并填满整个显示器，而不改变原有的窗口平铺布局，但是在编译之前还是有先设置一些快捷键，不然可能报错</p>
 <p><code>{ MODKEY|ShiftMask, XK_f, togglefullscr, {0} },</code></p>
-<h4 id="5-alwayscenter"><a href="#5-alwayscenter" class="headerlink" title="5.alwayscenter"></a>5.<a target="_blank" rel="noopener" href="https://dwm.suckless.org/patches/alwayscenter/">alwayscenter</a></h4><p>在默认的 dwm 中，当你打开一个设置为“浮动”的窗口（比如确认弹窗、或者简单的文件选择框）时，它们通常会出现在屏幕的左上角,十分的反直觉，需要移动鼠标到左上角才可以操作，十分不便，而alwayscenter可以让所有新创建的浮动窗口自动显示在屏幕正中央</p>
-<h4 id="6-resizecorners"><a href="#6-resizecorners" class="headerlink" title="6.resizecorners"></a>6.<a target="_blank" rel="noopener" href="https://dwm.suckless.org/patches/resizecorners/">resizecorners</a></h4><p>在默认的 dwm 中，调整浮动窗口大小只能通过点击窗口的右下角来拖拽。这在现代大屏幕或者多窗口操作时显得非常笨拙,resizecorners 补丁打破了这个限制，让你从四个角都能进行缩放</p>
-<h4 id="7-systray"><a href="#7-systray" class="headerlink" title="7.systray"></a>7.<a target="_blank" rel="noopener" href="https://dwm.suckless.org/patches/systray/">systray</a></h4><p>在默认的dwm是没有托盘应用这个东西的，在使用过程就会带来一些麻烦，而这个补丁就可以解决这个问题</p>
-<h4 id="8-scratchpad"><a href="#8-scratchpad" class="headerlink" title="8.scratchpad"></a>8.<a target="_blank" rel="noopener" href="https://dwm.suckless.org/patches/scratchpad/">scratchpad</a></h4><p>这个补丁可生成或恢复一个浮动终端窗口，在需要一些临时命令时十分有用</p>
+<h4 id="5-alwayscenter">5.<a target="_blank" rel="noopener" href="https://dwm.suckless.org/patches/alwayscenter/">alwayscenter</a></h4>
+<p>在默认的 dwm 中，当你打开一个设置为“浮动”的窗口（比如确认弹窗、或者简单的文件选择框）时，它们通常会出现在屏幕的左上角,十分的反直觉，需要移动鼠标到左上角才可以操作，十分不便，而alwayscenter可以让所有新创建的浮动窗口自动显示在屏幕正中央</p>
+<h4 id="6-resizecorners">6.<a target="_blank" rel="noopener" href="https://dwm.suckless.org/patches/resizecorners/">resizecorners</a></h4>
+<p>在默认的 dwm 中，调整浮动窗口大小只能通过点击窗口的右下角来拖拽。这在现代大屏幕或者多窗口操作时显得非常笨拙,resizecorners 补丁打破了这个限制，让你从四个角都能进行缩放</p>
+<h4 id="7-systray">7.<a target="_blank" rel="noopener" href="https://dwm.suckless.org/patches/systray/">systray</a></h4>
+<p>在默认的dwm是没有托盘应用这个东西的，在使用过程就会带来一些麻烦，而这个补丁就可以解决这个问题</p>
+<h4 id="8-scratchpad">8.<a target="_blank" rel="noopener" href="https://dwm.suckless.org/patches/scratchpad/">scratchpad</a></h4>
+<p>这个补丁可生成或恢复一个浮动终端窗口，在需要一些临时命令时十分有用</p>
 
   </div>
 

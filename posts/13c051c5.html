@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="前言 在之前我介绍了linux字幕识别方案 ，而在windows上选择会更多一点，最早我是使用剪映生成字幕，不过很多国内公司开发的一些剪辑软件都是有字幕识别功能的，不过很多都是导出需要vip，而且在字幕识别的过程中也会把音频上传到云端，导致需要连接网络才可以使用这个功能，这对于一些在没有网络条件的情况下就很不方便，而且这些都是不安全的闭源软件，我是不太信任国内以盈利性为目的的商业闭源软件，这些软件">
+    <meta name="description" content="前言在之前我介绍了linux字幕识别方案 ，而在windows上选择会更多一点，最早我是使用剪映生成字幕，不过很多国内公司开发的一些剪辑软件都是有字幕识别功能的，不过很多都是导出需要vip，而且在字幕识别的过程中也会把音频上传到云端，导致需要连接网络才可以使用这个功能，这对于一些在没有网络条件的情况下就很不方便，而且这些都是不安全的闭源软件，我是不太信任国内以盈利性为目的的商业闭源软件，这些软件安">
 <meta property="og:type" content="article">
 <meta property="og:title" content="windows字幕识别方案:buzz">
 <meta property="og:url" content="https://aidens-fox.codeberg.page/posts/13c051c5.html">
 <meta property="og:site_name" content="Aidens的博客">
-<meta property="og:description" content="前言 在之前我介绍了linux字幕识别方案 ，而在windows上选择会更多一点，最早我是使用剪映生成字幕，不过很多国内公司开发的一些剪辑软件都是有字幕识别功能的，不过很多都是导出需要vip，而且在字幕识别的过程中也会把音频上传到云端，导致需要连接网络才可以使用这个功能，这对于一些在没有网络条件的情况下就很不方便，而且这些都是不安全的闭源软件，我是不太信任国内以盈利性为目的的商业闭源软件，这些软件">
+<meta property="og:description" content="前言在之前我介绍了linux字幕识别方案 ，而在windows上选择会更多一点，最早我是使用剪映生成字幕，不过很多国内公司开发的一些剪辑软件都是有字幕识别功能的，不过很多都是导出需要vip，而且在字幕识别的过程中也会把音频上传到云端，导致需要连接网络才可以使用这个功能，这对于一些在没有网络条件的情况下就很不方便，而且这些都是不安全的闭源软件，我是不太信任国内以盈利性为目的的商业闭源软件，这些软件安">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-08-18T23:53:35.000Z">
 <meta property="article:modified_time" content="2026-08-19T03:14:32.486Z">
@@ -171,24 +171,13 @@
   
 
   <div class="content e-content" itemprop="articleBody">
-    <h3 id="前言">前言</h3>
-<p>在之前我介绍了<a href="%5Blinux%E5%AD%97%E5%B9%95%E8%AF%86%E5%88%AB%E6%96%B9%E6%A1%88-whisper%5D(https://aidens-fox.github.io/posts/537ab706.html)">linux字幕识别方案</a> ，而在windows上选择会更多一点，最早我是使用剪映生成字幕，不过很多国内公司开发的一些剪辑软件都是有字幕识别功能的，不过很多都是导出需要vip，而且在字幕识别的过程中也会把音频上传到云端，导致需要连接网络才可以使用这个功能，这对于一些在没有网络条件的情况下就很不方便，而且这些都是不安全的闭源软件，我是不太信任国内以盈利性为目的的商业闭源软件，这些软件安装在我的电脑上我认为我的电脑一定会被&quot;污染&quot;，数据安全和硬件安全也会受到威胁(个人观点，不认可自动忽略),所以相当于使用处处需要vip的国内剪辑软件，我更偏向于使用国外的pr和ae,这是不可否认的，所以我就需要一个可以免费字幕识别可以导出的软件，最好是开源的软件，所以我在github上找到了一个项目-buzz</p>
-<h3 id="buzz是什么">buzz是什么</h3>
-<p>Buzz 可以在你的个人电脑上离线转录和翻译音频。由 OpenAI 的 Whisper 提供技术支持</p>
-<h3 id="下载安装">下载安装</h3>
-<p>项目链接:<br>
-<a target="_blank" rel="noopener" href="https://github.com/chidiwilliams/buzz">https://github.com/chidiwilliams/buzz</a><br>
-官方网站:<br>
-<a target="_blank" rel="noopener" href="https://chidiwilliams.github.io/buzz/docs">https://chidiwilliams.github.io/buzz/docs</a><br>
-发布页面:<br>
-<a target="_blank" rel="noopener" href="https://github.com/chidiwilliams/buzz/releases">https://github.com/chidiwilliams/buzz/releases</a></p>
+    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在之前我介绍了<a href="%5Blinux%E5%AD%97%E5%B9%95%E8%AF%86%E5%88%AB%E6%96%B9%E6%A1%88-whisper%5D(https://aidens-fox.github.io/posts/537ab706.html)">linux字幕识别方案</a> ，而在windows上选择会更多一点，最早我是使用剪映生成字幕，不过很多国内公司开发的一些剪辑软件都是有字幕识别功能的，不过很多都是导出需要vip，而且在字幕识别的过程中也会把音频上传到云端，导致需要连接网络才可以使用这个功能，这对于一些在没有网络条件的情况下就很不方便，而且这些都是不安全的闭源软件，我是不太信任国内以盈利性为目的的商业闭源软件，这些软件安装在我的电脑上我认为我的电脑一定会被”污染”，数据安全和硬件安全也会受到威胁(个人观点，不认可自动忽略),所以相当于使用处处需要vip的国内剪辑软件，我更偏向于使用国外的pr和ae,这是不可否认的，所以我就需要一个可以免费字幕识别可以导出的软件，最好是开源的软件，所以我在github上找到了一个项目-buzz</p>
+<h3 id="buzz是什么"><a href="#buzz是什么" class="headerlink" title="buzz是什么"></a>buzz是什么</h3><p>Buzz 可以在你的个人电脑上离线转录和翻译音频。由 OpenAI 的 Whisper 提供技术支持</p>
+<h3 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h3><p>项目链接:<br><a target="_blank" rel="noopener" href="https://github.com/chidiwilliams/buzz">https://github.com/chidiwilliams/buzz</a><br>官方网站:<br><a target="_blank" rel="noopener" href="https://chidiwilliams.github.io/buzz/docs">https://chidiwilliams.github.io/buzz/docs</a><br>发布页面:<br><a target="_blank" rel="noopener" href="https://github.com/chidiwilliams/buzz/releases">https://github.com/chidiwilliams/buzz/releases</a></p>
 <p>我们打开发布页面，选择最新版本下载Buzz-版本号-windows.exe和Buzz-版本号-windows-1.bin还有Buzz-版本号-windows-2.bin(后两个安装过程中需要)，下载完成后按照安装程序的引导安装，记得不要把软件安在系统盘上面</p>
-<h3 id="配置">配置</h3>
-<p>打开软件，我们在使用之前需要下载模型(下载过程需要霍格沃兹网络环境没有的自行解决)，打开左上方的帮助，选择偏好设置，选择模型选项你会看见很多模型，需要根据自身电脑硬件来选择这里推荐最低选择small，准确度可接受，不过还是需要人工修改一些(主要是普通话要说的标准点(-:)，选择需要的模型点击右下方的下载，等待下载完成后即可使用</p>
-<h3 id="使用">使用</h3>
-<p>点击主界面的加号，选择需要的素材，然后选择模型和语言还有文件格式，模型选择适合电脑性能的，语言选择中文，文件格式选择SRT，然后点击开始执行，不过你可能会发现字幕文件全是繁体中文，如果你是繁体中文爱好者你可以忽略，如果你很在意就在开始执行之前的界面选择高级，在初始提示添加翻译成中国大陆简体中文就可以了</p>
-<h3 id="图片演示">图片演示</h3>
-<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="img/csss.png" alt=""></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>打开软件，我们在使用之前需要下载模型(下载过程需要霍格沃兹网络环境没有的自行解决)，打开左上方的帮助，选择偏好设置，选择模型选项你会看见很多模型，需要根据自身电脑硬件来选择这里推荐最低选择small，准确度可接受，不过还是需要人工修改一些(主要是普通话要说的标准点(-:)，选择需要的模型点击右下方的下载，等待下载完成后即可使用</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>点击主界面的加号，选择需要的素材，然后选择模型和语言还有文件格式，模型选择适合电脑性能的，语言选择中文，文件格式选择SRT，然后点击开始执行，不过你可能会发现字幕文件全是繁体中文，如果你是繁体中文爱好者你可以忽略，如果你很在意就在开始执行之前的界面选择高级，在初始提示添加翻译成中国大陆简体中文就可以了</p>
+<h3 id="图片演示"><a href="#图片演示" class="headerlink" title="图片演示"></a>图片演示</h3><p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="/img/csss.png"></p>
 
   </div>
 

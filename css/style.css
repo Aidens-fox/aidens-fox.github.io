@@ -434,11 +434,6 @@ body td {
   padding: 0 8px;
   border-bottom: none;
 }
-@font-face {
-  font-style: normal;
-  font-family: "Meslo LG";
-  src: local("Meslo LG S"), url("../lib/meslo-LG/MesloLGS-Regular.ttf") format("truetype");
-}
 *,
 *:before,
 *:after {
@@ -482,7 +477,7 @@ body {
   color: #ebdbb2;
   font-weight: 400;
   font-size: 22px;
-  font-family: "Menlo", "Meslo LG", monospace;
+  font-family: "Sarasa SC", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.7;
   text-rendering: geometricPrecision;
   -moz-osx-font-smoothing: grayscale;
@@ -1410,7 +1405,7 @@ article .content .caption {
   font-display: swap;
   font-weight: 400;
   font-size: 17.6px;
-  font-family: "Menlo", "Meslo LG", monospace;
+  font-family: "Sarasa SC", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.7;
   text-rendering: geometricPrecision;
   text-align: center;

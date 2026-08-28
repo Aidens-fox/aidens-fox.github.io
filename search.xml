@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>使用面具模块让google pixel3支持电信卡</title>
+      <link href="/posts/f87200d0.html"/>
+      <url>/posts/f87200d0.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>我有两台设备，一台是红米Note 13 pro,另一台就是google pixel3了，之前我一直想把那台红米给root了，但是因为一些原因导致这台手机无法root了(其实早一点买就不会解不了bl),导致我无法在上面体验真正的安卓系统，我只能在pixel3那台root了，我想过把这台手机作为主力机，但是pixel3无法使用电信卡，在户外环境就十分麻烦了，不过在最近我在github发现了一个面具模块，完美解决了这个问题，可以正常的打电话和流量上网</p><h3 id="下载模块"><a href="#下载模块" class="headerlink" title="下载模块"></a>下载模块</h3><p>再下载模块之前你需要确保你的手机有root权限和面具来安装模块，然后访问项目地址<br><a href="https://github.com/edwin-wang/chinese_sim_supporter/tree/v1.0">https://github.com/edwin-wang/chinese_sim_supporter/tree/v1.0</a><br>发布页面<br><a href="https://github.com/edwin-wang/chinese_sim_supporter/releases">https://github.com/edwin-wang/chinese_sim_supporter/releases</a></p><p>我们打开发布页面下载chinese_sim_supporter-v1.0.zip</p><h3 id="安装和使用"><a href="#安装和使用" class="headerlink" title="安装和使用"></a>安装和使用</h3><p>打开面具,把下载好的模块安装后重启，重启完成后插入电信卡就可以使用电信卡打电话和流量上网了，这事就成了，我也可以把pixel3作为主力机了</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 玩机 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>油猴脚本的使用和脚本推荐</title>
       <link href="/posts/cccf1d27.html"/>
       <url>/posts/cccf1d27.html</url>
@@ -210,9 +229,9 @@
       
         <tags>
             
-            <tag> 资源 </tag>
-            
             <tag> linux </tag>
+            
+            <tag> 资源 </tag>
             
             <tag> 软件 </tag>
             
@@ -235,9 +254,9 @@
       
         <tags>
             
-            <tag> 资源 </tag>
-            
             <tag> linux </tag>
+            
+            <tag> 资源 </tag>
             
         </tags>
       
@@ -256,9 +275,9 @@
       
         <tags>
             
-            <tag> 资源 </tag>
-            
             <tag> linux </tag>
+            
+            <tag> 资源 </tag>
             
             <tag> 软件 </tag>
             
@@ -359,9 +378,9 @@
       
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> dwm </tag>
+            
+            <tag> linux </tag>
             
             <tag> 软件 </tag>
             
@@ -422,9 +441,9 @@
       
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> dwm </tag>
+            
+            <tag> linux </tag>
             
         </tags>
       
@@ -443,9 +462,9 @@
       
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> dwm </tag>
+            
+            <tag> linux </tag>
             
         </tags>
       

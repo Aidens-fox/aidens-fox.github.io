@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang=zh>
 <head>
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="linux和windows折腾记录,软件资源分享">
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>search | Aidens的博客</title>
+  <meta name="description" content="linux和windows折腾记录,软件资源分享">
 <meta property="og:type" content="website">
 <meta property="og:title" content="search">
 <meta property="og:url" content="https://aidens-fox.codeberg.page/search/index.html">
@@ -18,249 +30,417 @@
 <meta property="article:author" content="Aidens-fox">
 <meta property="article:tag" content="Aidens">
 <meta name="twitter:card" content="summary">
-    
-    
-      
-        
-          <link rel="shortcut icon" href="/images/logo.png">
-        
-      
-      
-        
-          <link rel="icon" type="image/png" href="/images/logo.png" sizes="192x192">
-        
-      
-      
-        
-          <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
-        
-      
-    
-    <!-- title -->
-    <title>search</title>
-    <!-- async scripts -->
-    <!-- Google Analytics -->
-
-
-    <!-- Umami Analytics -->
-
-
-    <!-- styles -->
-    
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://aidens-fox.codeberg.page/search/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="Aidens的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
 <link rel="stylesheet" href="/css/style.css">
 
-    <!-- persian styles -->
-    
-    <!-- rss -->
-    
-    
-	<!-- mathjax -->
-	
-<meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="Aidens的博客" type="application/atom+xml">
-</head>
+  
+  
+  
+  
+<meta name="generator" content="Hexo 8.1.2"></head>
 
-<body class="max-width mx-auto px3 ltr">
-    
-    <div class="content index py4 ">
-        
-          <header id="header">
-  <a class="u-url u-uid" href="/">
-  
-    
-      <img id="logo" alt class="u-logo" src="/images/logo.png" />
-    
-  
-    <div id="title">
-      <h1 class="p-name">Aidens的博客</h1>
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/aidens-fox" target="_blank">
+          <img class="img-circle img-rotate" src="/images/logo.png" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">Aidens-fox</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md"></h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
     </div>
-  </a>
-  <div id="nav">
-    <ul>
-      <li class="icon">
-        <a href="#" aria-label="目录"><i class="fa-solid fa-bars fa-2x"></i></a>
-      </li>
-      <!--
-     --><li><a href="/">首页</a></li><!--
-   --><!--
-     --><li><a href="/about/">关于</a></li><!--
-   --><!--
-     --><li><a href="/archives/">归档</a></li><!--
-   --><!--
-     --><li><a href="/tags/">标签</a></li><!--
-   --><!--
-     --><li><a href="/resource/">资源</a></li><!--
-   --><!--
-     --><li><a href="/atom.xml">RSS</a></li><!--
-   --><!--
-     --><li><a href="/search/">搜索</a></li><!--
-   -->
-    </ul>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav menu-highlight">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-资源">
+          <a href="/resource/">
+            
+            <span class="menu-title">资源</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-rss">
+          <a href="/atom.xml">
+            
+            <span class="menu-title">RSS</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+    </nav>
   </div>
 </header>
 
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p> 欢迎阅读我的博客！你可以在 <a href="https://github.com" target="_blank">[GitHub]</a> 和 <a href="https://codeberg.org" target="_blank">[Codeberg]</a> 浏览我的项目， 或者在 <a href="https://bilibili.com" target="_blank">[Bilibili]</a> 观看我的视频。 或者访问 <a href="https://mastodon.social" target="_blank">[Mastodon]</a> 查看帖子, 或者 <a href="atom.xml" target="_blank">[RSS] 订阅</a> 我的最新内容。 </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/dwm/" rel="tag">dwm</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows/" rel="tag">windows</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%B6%E4%BB%96/" rel="tag">其他</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%8E%A9%E6%9C%BA/" rel="tag">玩机</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B5%84%E6%BA%90/" rel="tag">资源</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6/" rel="tag">软件</a><span class="tag-list-count">13</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/dwm/" style="font-size: 13.17px;">dwm</a> <a href="/tags/github/" style="font-size: 13px;">github</a> <a href="/tags/hexo/" style="font-size: 13px;">hexo</a> <a href="/tags/linux/" style="font-size: 13.83px;">linux</a> <a href="/tags/windows/" style="font-size: 13.33px;">windows</a> <a href="/tags/%E5%85%B6%E4%BB%96/" style="font-size: 13.17px;">其他</a> <a href="/tags/%E7%8E%A9%E6%9C%BA/" style="font-size: 13.5px;">玩机</a> <a href="/tags/%E8%B5%84%E6%BA%90/" style="font-size: 13.67px;">资源</a> <a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 14px;">软件</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/08/">八月 2026</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/07/">七月 2026</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/06/">六月 2026</a><span class="archive-list-count">9</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
         
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/posts/f87200d0.html" class="title">使用面具模块让google pixel3支持电信卡</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2026-08-28T11:35:15.000Z" itemprop="datePublished">2026-08-28</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/posts/cccf1d27.html" class="title">油猴脚本的使用和脚本推荐</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2026-08-25T11:54:49.000Z" itemprop="datePublished">2026-08-25</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/posts/908a4d94.html" class="title">手机安装配置fcitx5输入法和雾凇拼音</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2026-08-24T03:58:37.000Z" itemprop="datePublished">2026-08-24</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/posts/13c051c5.html" class="title">windows字幕识别方案:buzz</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2026-08-18T23:53:35.000Z" itemprop="datePublished">2026-08-19</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/posts/e42cd2d2.html" class="title">解决3dsmax出现卡死问题</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2026-08-16T15:13:53.000Z" itemprop="datePublished">2026-08-16</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
   
 
-  <div class="content" itemprop="articleBody">
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="page-" class="article article-type-page" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
       
-        <section id="search">
-  <form>
-    <input type="text" class="search-input" id="search-input" placeholder="搜索...">
-  </form>
-  <div id="search-result"></div>
-  <p class="search-no-result">抱歉，没有符合您搜索条件的结果。请换其它关键词再试。</p>
-</section>
+        
+  
+    <h1 class="article-title" itemprop="name">
+      search
+    </h1>
+  
 
       
-  </div>
-</article>
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/search/index.html" class="article-date">
+	  <time datetime="2026-08-05T13:30:16.189Z" itemprop="datePublished">2026-08-05</time>
+	</a>
+</span>
+        
+        
 
         
-        <footer id="footer">
-  <div class="footer-left">
-    Copyright &copy;
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/search/index.html#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 0(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
     
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://aidens-fox.codeberg.page/search/index.html" title="search" target="_blank" rel="external">https://aidens-fox.codeberg.page/search/index.html</a>
+    </li>
     
-    2026
-    Aidens-fox
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/aidens-fox" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/logo.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/aidens-fox" target="_blank"><span class="text-dark">Aidens-fox</span><small class="ml-1x"></small></a></h3>
+        <div>linux和windows折腾记录,软件资源分享</div>
+      </div>
+    </figure>
   </div>
+</div>
 
-
-<span id="runtime"></span>
-
-<script>
-let start = new Date("2025/10/23");
-let now = new Date();
-let days = Math.floor((now-start)/86400000);
-document.getElementById("runtime").innerHTML =
-"本站共计运行 "+days+" 天";
-</script>
-
-  <div class="footer-right">
-    <nav>
-      <ul>
-        <!--
-       --><li><a href="/">首页</a></li><!--
-     --><!--
-       --><li><a href="/about/">关于</a></li><!--
-     --><!--
-       --><li><a href="/archives/">归档</a></li><!--
-     --><!--
-       --><li><a href="/tags/">标签</a></li><!--
-     --><!--
-       --><li><a href="/resource/">资源</a></li><!--
-     --><!--
-       --><li><a href="/atom.xml">RSS</a></li><!--
-     --><!--
-       --><li><a href="/search/">搜索</a></li><!--
-     -->
-      </ul>
-    </nav>
-  </div>
-</footer>
 
     </div>
-    <!-- styles -->
+  </article>
+  
+    
+  <section id="comments">
+  	
+  </section>
 
-
-
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
-
-
-    <!-- jquery -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
-
-
-
-
-<!-- clipboard -->
-
-
-<script src="/js/main.js"></script>
-
-<!-- search -->
 
   
-<script src="/js/search.js"></script>
+</div>
 
-  <script type="text/javascript">
-  $(function() {
-
-    var $inputArea = $("input#search-input");
-    var $resultArea = document.querySelector("div#search-result");
-
-    $inputArea.focus(function() {
-      var search_path = "search.xml";
-      if (search_path.length == 0) {
-        search_path = "search.xml";
-      }
-      var path = "/" + search_path;
-      searchFunc(path, 'search-input', 'search-result');
-    });
-
-    $inputArea.keydown(function(e) {
-      if (e.which == 13) {
-        e.preventDefault();
-      }
-    });
-
-    var observer = new MutationObserver(function(mutationsList, observer) {
-      if (mutationsList.length == 1) {
-        if (mutationsList[0].addedNodes.length) {
-          $(".search-no-result").hide();
-        } else if (mutationsList[0].removedNodes.length) {
-          $(".search-no-result").show(200);
-        }
-      }
-    });
-
-    observer.observe($resultArea, { childList: true });
-
-  });
-  </script>
-
-<!-- Baidu Analytics -->
-
-<!-- Cloudflare Analytics -->
-
-<!-- Disqus Comments -->
-
-<!-- utterances Comments -->
-
-    <script type="text/javascript">
-      var utterances_repo = 'Aidens-fox/aidens-fox.github.io';
-      var utterances_issue_term = 'pathname';
-      var utterances_label = 'Comment';
-      var utterances_theme = 'gruvbox-dark';
-
-      (function(){
-          var script = document.createElement('script');
-
-          script.src = 'https://utteranc.es/client.js';
-          script.setAttribute('repo', utterances_repo);
-          script.setAttribute('issue-term', 'pathname');
-          script.setAttribute('label', utterances_label);
-          script.setAttribute('theme', utterances_theme);
-          script.setAttribute('crossorigin', 'anonymous');
-          script.async = true;
-          (document.getElementById('utterances_thread')).appendChild(script);
-      }());
-  </script>
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin" data-mobile-sites="weibo,qq,qzone,wechat"></div>
+    
+  </div>
+  </div>
+</nav>
+  
 
 
-        <style>
-            [bg-lazy] {
-                background-image: none !important;
-                background-color: #eee !important;
-            }
-        </style>
-        <script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                preloadRatio: 1,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z\d\-\.\+]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(t.test(e.href)||r.test(e.href))&&(e.href=a.dataset.original)})});</script><script>(r=>{r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,o=r.imageLazyLoadSetting.preloadRatio||1,d=i();function i(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=i());for(var e,n=0;n<d.length;n++)0<=(e=(e=d[n]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*o||document.documentElement.clientHeight*o)&&(()=>{var t,e,a,o,i=d[n];e=function(){d=d.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,o=t.getAttribute("data-original"),a.onload=function(){t.src=o,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=o},t.src!==o&&(a.src=o)))})()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)})(this);</script></body>
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+    <div class="copyright">
+    	
+        &copy; 2026 Aidens-fox
+        
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+</body>
 </html>

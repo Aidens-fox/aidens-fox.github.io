@@ -26,7 +26,7 @@
 <meta property="og:description" content="前言在前几天我把我的主力机从红米Note13Pro换成google Piexl3，因为我实在受不了国内的魔改安卓，塞了一大堆乐色，搞的系统卡的要命，ui全是抄袭苹果的，难看的挖孔屏和丑陋的外壳，还没办法root换第三方系统，在这种手机上使用每一秒都是折磨，所以我换到了google Pixel3了，它可以root，可以刷第三方系统，美的像一个艺术品，经过这几天的使用，我认为google pixel3">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-09-01T01:53:59.000Z">
-<meta property="article:modified_time" content="2026-09-01T03:19:53.161Z">
+<meta property="article:modified_time" content="2026-09-01T12:07:39.509Z">
 <meta property="article:author" content="Aidens-fox">
 <meta property="article:tag" content="玩机">
 <meta name="twitter:card" content="summary">
@@ -318,7 +318,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/1df398c4.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 849(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.1k(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 3(分)</span>
@@ -333,6 +333,9 @@
 <h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>参考安迪-比尔定律，我们可以使用旧版本的软件和较为旧的系统，尽量选择当时发布的时候的软件版本，系统尽量不要更新太高，尽量和出厂的系统底层安卓版本不要差太多，这样子可以解决大部分卡顿的问题</p>
 <h3 id="具体方法-系统"><a href="#具体方法-系统" class="headerlink" title="具体方法-系统"></a>具体方法-系统</h3><p>首先我的这台系统使用的是第三方的<a target="_blank" rel="noopener" href="https://get.pixelexperience.org/">pixelexperience</a>,安卓版本是13，刷入教程和之前的博文<a target="_blank" rel="noopener" href="https://aidens-fox.github.io/posts/623e5c8b.html">Plxei3刷机Lineageos</a> 差不多，真是系统不同而已，然后解锁了root权限，使用<a target="_blank" rel="noopener" href="https://github.com/yc9559/uperf">yc调度</a>来提高续航时间，因为默认的电池续航确实有一点少了，然后就是一些隐藏环境的模块了，参考b站视频:<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1yfoZB7EUE/?spm_id_from=333.1387.homepage.video_card.click&vd_source=df8b0e10736531b80015676e74f67bc7">https://www.bilibili.com/video/BV1yfoZB7EUE/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=df8b0e10736531b80015676e74f67bc7</a></p>
 <p>然后因为我使用的是电信卡，但是google pixel3默认是不支持电信卡的，所以我使用<a target="_blank" rel="noopener" href="https://github.com/edwin-wang/chinese_sim_supporter/tree/v1.0">Chinese SIM Supporter</a> 来支持使用电信卡，具体教程参考之前的博文<a target="_blank" rel="noopener" href="https://aidens-fox.github.io/posts/f87200d0.html">使用面具模块让google pixel3支持电信卡</a> </p>
+<blockquote>
+<p>不过这里提醒一下，一定不要使用不知名的群聊下载不知名作者修改版本的模块，尤其是qq群类似隐藏环境或者sh脚本(尤其是代码混淆的)或者是什么it版的，等一下手机被下毒了，隐私数据暴露了，之前就有一个伪装成zygisk.apk的病毒，模块下载认准github开放源代码的模块和官方群聊下载，切勿下载来源不明的模块！切勿下载来源不明的模块！切勿下载来源不明的模块！重要的事情说三遍!尤其那些爱开挂的，中病毒的最多就是开挂的，天天使用群聊的不知名作者的第三方修改版模块和脚本，偷腥的猫总有一天会吃到有病的鱼!</p>
+</blockquote>
 <h3 id="具体方法-软件"><a href="#具体方法-软件" class="headerlink" title="具体方法-软件"></a>具体方法-软件</h3><p>大部分软件版本都是参考晨钟酱Official的b站视频:<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1r94y1T7Xa/?spm_id_from=333.337.search-card.all.click&vd_source=df8b0e10736531b80015676e74f67bc7">https://www.bilibili.com/video/BV1r94y1T7Xa/?spm_id_from=333.337.search-card.all.click&amp;vd_source=df8b0e10736531b80015676e74f67bc7</a></p>
 <p>微信在国内你是不可能不用的，但是微信不让你在很低的版本登录，不过可以使用<a target="_blank" rel="noopener" href="https://github.com/Xposed-Modules-Repo/com.coderstory.toolkit">核心破解模块</a>来旧版本登录，来支持降级安装不删除本地数据,微信版本我使用的是google Play版的8.0.33版本 ，Play版比普通版支持FCM推送和更少的权限索要，并且是没有朋友圈广告的，不只是微信Play版这样，其他软件的Play版大部分都是比普通版好的，所以安装软件尽量选择Play版的</p>
 <p>然后是输入法的选择，我使用fcitx5输入法和雾凇拼音方案，具体教程参考:<br><a href="https://aidens-fox.codeberg.page/posts/908a4d94.html">https://aidens-fox.codeberg.page/posts/908a4d94.html</a></p>

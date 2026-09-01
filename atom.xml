@@ -10,7 +10,24 @@
   <rights>All rights reserved 2026, Aidens-fox</rights>
   <subtitle>linux和windows折腾记录,软件资源分享</subtitle>
   <title>Aidens的博客</title>
-  <updated>2026-08-28T12:25:39.596Z</updated>
+  <updated>2026-09-01T03:19:53.161Z</updated>
+  <entry>
+    <author>
+      <name>Aidens-fox</name>
+    </author>
+    <category term="玩机" scheme="https://aidens-fox.codeberg.page/tags/%E7%8E%A9%E6%9C%BA/"/>
+    <content>
+      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在前几天我把我的主力机从红米Note13Pro换成google Piexl3，因为我实在受不了国内的魔改安卓，塞了一大堆乐色，搞的系统卡的要命，ui全是抄袭苹果的，难看的挖孔屏和丑陋的外壳，还没办法root换第三方系统，在这种手机上使用每一秒都是折磨，所以我换到了google Pixel3了，它可以root，可以刷第三方系统，美的像一个艺术品，经过这几天的使用，我认为google pixel3确实可以作为主力机</p><h3 id="手机卡顿的原因"><a href="#手机卡顿的原因" class="headerlink" title="手机卡顿的原因"></a>手机卡顿的原因</h3><p>对于手机卡顿的原因可以参考<a href="https://zh.wikipedia.org/wiki/%E5%AE%89%E8%BF%AA-%E6%AF%94%E7%88%BE%E5%AE%9A%E5%BE%8B">安迪-比尔定律</a> ：软件总将耗尽新硬件所提高的任何计算能力。现在的老旧手机之所以卡顿，就是因为软件开发者和手机厂商系统开发都是参考最新手机的硬件来开发的，尤其是国内商业公司的更是常见，因此也有人称为”计划性报废”，故意负优化来让用户换新手机</p><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>参考安迪-比尔定律，我们可以使用旧版本的软件和较为旧的系统，尽量选择当时发布的时候的软件版本，系统尽量不要更新太高，尽量和出厂的系统底层安卓版本不要差太多，这样子可以解决大部分卡顿的问题</p><h3 id="具体方法-系统"><a href="#具体方法-系统" class="headerlink" title="具体方法-系统"></a>具体方法-系统</h3><p>首先我的这台系统使用的是第三方的<a href="https://get.pixelexperience.org/">pixelexperience</a>,安卓版本是13，刷入教程和之前的博文<a href="https://aidens-fox.github.io/posts/623e5c8b.html">Plxei3刷机Lineageos</a> 差不多，真是系统不同而已，然后解锁了root权限，使用<a href="https://github.com/yc9559/uperf">yc调度</a>来提高续航时间，因为默认的电池续航确实有一点少了，然后就是一些隐藏环境的模块了，参考b站视频:<br><a href="https://www.bilibili.com/video/BV1yfoZB7EUE/?spm_id_from=333.1387.homepage.video_card.click&vd_source=df8b0e10736531b80015676e74f67bc7">https://www.bilibili.com/video/BV1yfoZB7EUE/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=df8b0e10736531b80015676e74f67bc7</a></p><p>然后因为我使用的是电信卡，但是google pixel3默认是不支持电信卡的，所以我使用<a href="https://github.com/edwin-wang/chinese_sim_supporter/tree/v1.0">Chinese SIM Supporter</a> 来支持使用电信卡，具体教程参考之前的博文<a href="https://aidens-fox.github.io/posts/f87200d0.html">使用面具模块让google pixel3支持电信卡</a> </p><h3 id="具体方法-软件"><a href="#具体方法-软件" class="headerlink" title="具体方法-软件"></a>具体方法-软件</h3><p>大部分软件版本都是参考晨钟酱Official的b站视频:<br><a href="https://www.bilibili.com/video/BV1r94y1T7Xa/?spm_id_from=333.337.search-card.all.click&vd_source=df8b0e10736531b80015676e74f67bc7">https://www.bilibili.com/video/BV1r94y1T7Xa/?spm_id_from=333.337.search-card.all.click&amp;vd_source=df8b0e10736531b80015676e74f67bc7</a></p><p>微信在国内你是不可能不用的，但是微信不让你在很低的版本登录，不过可以使用<a href="https://github.com/Xposed-Modules-Repo/com.coderstory.toolkit">核心破解模块</a>来旧版本登录，来支持降级安装不删除本地数据,微信版本我使用的是google Play版的8.0.33版本 ，Play版比普通版支持FCM推送和更少的权限索要，并且是没有朋友圈广告的，不只是微信Play版这样，其他软件的Play版大部分都是比普通版好的，所以安装软件尽量选择Play版的</p><p>然后是输入法的选择，我使用fcitx5输入法和雾凇拼音方案，具体教程参考:<br><a href="https://aidens-fox.codeberg.page/posts/908a4d94.html">https://aidens-fox.codeberg.page/posts/908a4d94.html</a></p><p>b站我选择第三方客户端PiliPlus,项目链接：<br><a href="https://github.com/bggRGjQaUbCoE/PiliPlus">https://github.com/bggRGjQaUbCoE/PiliPlus</a></p><p>其他比如拼多多都是在<a href="https://jamcz.com/">晨钟网络科技</a> 的<a href="https://cz-jam.lanzoub.com/b0bxmm1vg">养老软件合集</a> 找到的(密码:关注投币)，这里也十分感谢承重墙大佬的分享</p>]]>
+    </content>
+    <id>https://aidens-fox.codeberg.page/posts/1df398c4.html</id>
+    <link href="https://aidens-fox.codeberg.page/posts/1df398c4.html"/>
+    <published>2026-09-01T01:53:59.000Z</published>
+    <summary>
+      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在前几天我把我的主力机从红米Note13Pro换成google Piexl3，因为我实在受不了国内的魔改安卓，塞了一大堆乐色，搞的系统卡的要]]>
+    </summary>
+    <title>2026年使用googlePixel3作为主力机的现状</title>
+    <updated>2026-09-01T03:19:53.161Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Aidens-fox</name>
@@ -348,23 +365,5 @@
     </summary>
     <title>短小精悍的终端-st</title>
     <updated>2026-06-30T15:12:41.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Aidens-fox</name>
-    </author>
-    <category term="资源" scheme="https://aidens-fox.codeberg.page/tags/%E8%B5%84%E6%BA%90/"/>
-    <category term="软件" scheme="https://aidens-fox.codeberg.page/tags/%E8%BD%AF%E4%BB%B6/"/>
-    <content>
-      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>yt-dlp是一个视频下载器，可以下载很多网站的视频，比如youtube,BiliBili等等，详细可下载网站请查看<a href="https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md">仓库说明</a>，不过直接用<code>yt-dlp &#39;URL&#39;</code>大概率是下载不了的,会提示需要登录验证,因为youtube近年来不断加强反爬机制，运气好换一个干净一点ip就可以下载，但是很多情况下还是要登录验证，但是下载器怎么登录？所以就需要导入cookies,不过在此之前我们还需要下载一个东西-Deno</p><blockquote><p><strong>声明</strong>:本文仅作技术研究与个人体验分享,不构成使用建议。相关操作可能违反软件许可协议或平台规则,此工具请勿用于侵犯版权内容</p></blockquote><h3 id="在yt-dlp文件夹里添加Deno"><a href="#在yt-dlp文件夹里添加Deno" class="headerlink" title="在yt-dlp文件夹里添加Deno"></a>在yt-dlp文件夹里添加Deno</h3><p>Deno是一个JavaScript Runtime ,因为youtube近年来不断加强反爬机制,所以单单导入cookies还是无法下载的，所以需要添加Deno，项目链接:<br><a href="https://github.com/denoland/deno/releases">https://github.com/denoland/deno/releases</a></p><p>在发布页面选择最新版，下载deno-x86_64-pc-windows-msvc.zip，在把它解压到yt-dlp的文件里</p><h3 id="cookies是什么"><a href="#cookies是什么" class="headerlink" title="cookies是什么?"></a>cookies是什么?</h3><p>cookies是你在浏览网站时的时候由网站服务器存在你的计算机文件，用来记录一些偏好设定和跟踪什么的，而这其中就包含一些登录信息，而这些正好可以解决yt-dlp下载youtube视频要求登录验证问题，我们只需要把将cookie传递给yt-dlp就可以下载了</p><blockquote><p>cookies.txt 属于敏感文件,请勿公开展示或泄露</p></blockquote><h3 id="怎么将cookie传递给yt-dlp"><a href="#怎么将cookie传递给yt-dlp" class="headerlink" title="怎么将cookie传递给yt-dlp"></a>怎么将cookie传递给yt-dlp</h3><p>传入方法有两个，第一个就是直接从浏览器提取cookie，只需要输入:<br><code>yt-dlp --cookies-from-browser chrome &#39;URL&#39;</code><br><code>chrome</code>部分根据自己使用的浏览器名称修改</p><p>第二个就是手动传递cookie，因为第一个方法对于我来说不太适用，所以使用手动导入就解决了我的问题，不过在下载之前我们需要在浏览器扩展商店下载一个插件来下载网站的cookie，也就是# Get cookies.txt LOCALLY<br>下载链接</p><p>chrome: <a href="https://chrome.google.com/webstore/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc">https://chrome.google.com/webstore/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc</a></p><p>firefox: <a href="https://addons.mozilla.org/zh-CN/firefox/addon/get-cookies-txt-locally/">https://addons.mozilla.org/zh-CN/firefox/addon/get-cookies-txt-locally/</a></p><p>项目地址: <a href="https://github.com/kairi003/Get-cookies.txt-LOCALLY">https://github.com/kairi003/Get-cookies.txt-LOCALLY</a></p><p>安装好插件后在你要下载的视频网页打开插件，选择”Export AII Cookies”下载到本地<br><img src="https://raw.githubusercontent.com/kairi003/Get-cookies.txt-LOCALLY/master/ss.png"></p><p>然后执行命令:<br><code>yt-dlp --cookies /path/to/cookies/file.txt &#39;URL&#39;</code></p><p>如果下载音频视频分离请检查是否存在ffmpeg这个环境变量</p><p>这样就可以把视频下载到本地了，其他问题请参考官方文档:<br><a href="https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp">https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp</a></p>]]>
-    </content>
-    <id>https://aidens-fox.codeberg.page/posts/425e5bf4.html</id>
-    <link href="https://aidens-fox.codeberg.page/posts/425e5bf4.html"/>
-    <published>2026-06-29T03:41:05.000Z</published>
-    <summary>
-      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>yt-dlp是一个视频下载器，可以下载很多网站的视频，比如youtube,BiliBili等等，详细可下载网站请查看<a href="htt]]>
-    </summary>
-    <title>解决yt-dlp下载youtube视频要求登录验证</title>
-    <updated>2026-08-12T10:52:01.560Z</updated>
   </entry>
 </feed>

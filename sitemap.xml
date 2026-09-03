@@ -2,6 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://aidens-fox.codeberg.page/posts/82f2ef74.html</loc>
+    
+    <lastmod>2026-09-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aidens-fox.codeberg.page/posts/cccf1d27.html</loc>
+    
+    <lastmod>2026-09-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aidens-fox.codeberg.page/posts/93b3677b.html</loc>
+    
+    <lastmod>2026-09-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aidens-fox.codeberg.page/posts/78765d62.html</loc>
+    
+    <lastmod>2026-09-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aidens-fox.codeberg.page/posts/e42cd2d2.html</loc>
+    
+    <lastmod>2026-09-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aidens-fox.codeberg.page/posts/3c94c8ba.html</loc>
+    
+    <lastmod>2026-09-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://aidens-fox.codeberg.page/posts/c5bdab42.html</loc>
+    
+    <lastmod>2026-09-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://aidens-fox.codeberg.page/posts/1df398c4.html</loc>
     
     <lastmod>2026-09-02</lastmod>
@@ -38,36 +101,9 @@
   </url>
   
   <url>
-    <loc>https://aidens-fox.codeberg.page/posts/cccf1d27.html</loc>
-    
-    <lastmod>2026-08-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://aidens-fox.codeberg.page/posts/908a4d94.html</loc>
     
     <lastmod>2026-08-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://aidens-fox.codeberg.page/posts/82f2ef74.html</loc>
-    
-    <lastmod>2026-08-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://aidens-fox.codeberg.page/posts/c5bdab42.html</loc>
-    
-    <lastmod>2026-08-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -101,15 +137,6 @@
   </url>
   
   <url>
-    <loc>https://aidens-fox.codeberg.page/posts/e42cd2d2.html</loc>
-    
-    <lastmod>2026-08-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://aidens-fox.codeberg.page/posts/86ad28c0.html</loc>
     
     <lastmod>2026-08-16</lastmod>
@@ -137,27 +164,9 @@
   </url>
   
   <url>
-    <loc>https://aidens-fox.codeberg.page/posts/78765d62.html</loc>
-    
-    <lastmod>2026-08-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://aidens-fox.codeberg.page/posts/ef1fd73e.html</loc>
     
     <lastmod>2026-08-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://aidens-fox.codeberg.page/posts/3c94c8ba.html</loc>
-    
-    <lastmod>2026-08-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -201,15 +210,6 @@
   
   <url>
     <loc>https://aidens-fox.codeberg.page/posts/3b989ea6.html</loc>
-    
-    <lastmod>2026-07-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://aidens-fox.codeberg.page/posts/93b3677b.html</loc>
     
     <lastmod>2026-07-04</lastmod>
     
@@ -292,7 +292,7 @@
 
   <url>
     <loc>https://aidens-fox.codeberg.page/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -300,63 +300,63 @@
   
   <url>
     <loc>https://aidens-fox.codeberg.page/tags/%E7%8E%A9%E6%9C%BA/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aidens-fox.codeberg.page/tags/%E8%B5%84%E6%BA%90/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aidens-fox.codeberg.page/tags/linux/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aidens-fox.codeberg.page/tags/dwm/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aidens-fox.codeberg.page/tags/%E8%BD%AF%E4%BB%B6/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aidens-fox.codeberg.page/tags/windows/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aidens-fox.codeberg.page/tags/hexo/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aidens-fox.codeberg.page/tags/%E5%85%B6%E4%BB%96/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://aidens-fox.codeberg.page/tags/github/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

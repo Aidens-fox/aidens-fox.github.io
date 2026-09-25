@@ -10,7 +10,25 @@
   <rights>All rights reserved 2026, Aidens-fox</rights>
   <subtitle>linux和windows折腾记录,软件资源分享</subtitle>
   <title>Aidens的博客</title>
-  <updated>2026-09-13T09:12:13.973Z</updated>
+  <updated>2026-09-25T03:43:55.764Z</updated>
+  <entry>
+    <author>
+      <name>Aidens-fox</name>
+    </author>
+    <category term="linux" scheme="https://aidens-fox.codeberg.page/tags/linux/"/>
+    <category term="其他" scheme="https://aidens-fox.codeberg.page/tags/%E5%85%B6%E4%BB%96/"/>
+    <content>
+      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在前几天我我把我的这台台式电脑重装系统为Archlinux,虽然我的专业(数字媒体)不允许我使用如此简洁纯粹的操作系统，因为我要使用那些臃肿的商业软件，这是不可避免的，所以与其说换回Archlinux,更不如说是故地重游，看看我之前配置的东西，等到下学期我大概就要再换回windows了，我对此是感到遗憾，本篇博文主要谈谈安装系统出现的一些小插曲什么的</p><h3 id="进入livecd开机自检-POST-时报错"><a href="#进入livecd开机自检-POST-时报错" class="headerlink" title="进入livecd开机自检(POST)时报错?"></a>进入livecd开机自检(POST)时报错?</h3><p>在烧录好启动盘并在bios关闭安全启动并且把烧录好的u盘设置为第一启动项后，我本以为一切会和我之前在ThinkPadS2那台一样直接进入livecd环境，但是很显然并没有，在POST(开机自检)阶段他出现了报错，提示什么i2c错误，上网查询了一下，感觉和我的那个rtx5060显卡有一些关联，可惜的是我的cpu不包含核显，不然可以直接把视频线插在主板上面来进入livecd,不过要解决这个问题的话先按住ctrl+alt+delete来退出livecd,然后在第二次进入之前的systemd-boot界面选择第一个后不要按回车键先按e键，这样在启动选项下面就会出现一行可编辑的命令，在后面空格后输入<code>nomodeset</code> 后按ctrl+x或F10启动，这样就可以让内核使用基本的显示模式启动，进入后不出所料成功进入livecd环境</p><h3 id="usb无线网卡无法识别"><a href="#usb无线网卡无法识别" class="headerlink" title="usb无线网卡无法识别"></a>usb无线网卡无法识别</h3><p>在进入livecd后，很可惜的是我的usb无线网卡没有相关驱动，甚至把它识别成了u盘，里面只有针对windows驱动，我只能使用手机开启usb网络共享来安装了，之后看看芯片型号再安装驱动看看</p><h3 id="安装基本系统和一键安装脚本"><a href="#安装基本系统和一键安装脚本" class="headerlink" title="安装基本系统和一键安装脚本"></a>安装基本系统和一键安装脚本</h3><p>安装我使用archinstall来快速安装，这样基本系统系统安装完成了，而那些dwm窗口管理器和其他配置，我在我的项目仓库有一键安装脚本，不过只针对基本系统，所以我git克隆下我的项目后给我的脚本赋权后执行，很快就配置还dwm这些东西了，重启进入后一切都是老样子，我好像又回到了4个多月之前，故地重游了一样</p><h3 id="关于那个usb无线网卡"><a href="#关于那个usb无线网卡" class="headerlink" title="关于那个usb无线网卡"></a>关于那个usb无线网卡</h3><p>那个网卡的芯片是aic8800,我在github挑了一个热门的相关项目安装，但是邪门的是，安装完成它确实没有被识别成u盘了，但是就是无法使用，日志说什么超时，前前后后换了好几个项目，就是无法使用，索性再买一个支持linux的usb无线网卡了</p>]]>
+    </content>
+    <id>https://aidens-fox.codeberg.page/posts/2992df7c.html</id>
+    <link href="https://aidens-fox.codeberg.page/posts/2992df7c.html"/>
+    <published>2026-09-24T16:24:54.000Z</published>
+    <summary>
+      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在前几天我我把我的这台台式电脑重装系统为Archlinux,虽然我的专业(数字媒体)不允许我使用如此简洁纯粹的操作系统，因为我要使用那些臃肿]]>
+    </summary>
+    <title>记新电脑从Windows换系统到ArchLinux</title>
+    <updated>2026-09-25T03:43:55.764Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Aidens-fox</name>
@@ -346,22 +364,5 @@
     </summary>
     <title>用lsp模块实现微信手机双登</title>
     <updated>2026-09-03T07:29:47.066Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Aidens-fox</name>
-    </author>
-    <category term="资源" scheme="https://aidens-fox.codeberg.page/tags/%E8%B5%84%E6%BA%90/"/>
-    <content>
-      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>提到linux玩游戏，你可能会想到用steam的Proton来下载游玩游戏，这也是主流的官方的方法，但是steam很多优秀的游戏都是要钱的，虽然这些开发者的付出的确值得拥有这些钱，但是对于一个口袋比脸都干净的人来说就是心有力而力不足了，所以只能下载破解游戏，也就是学习版和盗版，不过大部分盗版游戏平台都是只有windows端的，一些游戏是有原生linux版的，但是下载网站没有只能用wine来套个兼容层来运行，这样性能就下降了，对于一些配置低电脑就不友好了，所以我这篇博文就分享linux破解游戏的下载网站，随便分享一些游戏推荐</p><blockquote><p><strong>声明</strong>:本文仅作技术研究与个人体验分享,不构成使用建议。相关操作可能违反软件许可协议或平台规则,请读者自行判断风险并承担后果,建议有条件的话优先购买正版&#x2F;支持官方渠道。</p></blockquote><h3 id="下载网站-rutracker"><a href="#下载网站-rutracker" class="headerlink" title="下载网站-rutracker"></a>下载网站-rutracker</h3><p>Rutracker.org（原Torrents.ru）是俄罗斯最大的BT服务器，也是全球知名的盗版资源下载网站，里面的盗版资源十分丰富，其中就包含linux破解游戏,不过这些资源很多都是出自另一个游戏平台-GOG.com,其中里面就有很多对Linux支持游戏，而且还可以直接下载到本地，没有Steam那种恶心的验证文件,游戏运行时不会联网读取验证，也不会在后台检查你的账户，就这一点就吊打使用游戏平台，不用像steam一样要把那个臃肿的客户端挂在后台才可以进入游戏，所以如果有条件可以在GOG平台来购买下载游戏，让我们把DRM-Free（无数字版权管理）延续下去，好了扯远了回归正题，下面是linux破解游戏相关主题链接:<br><a href="https://rutracker.org/forum/viewforum.php?f=1992">https://rutracker.org/forum/viewforum.php?f=1992</a></p><p>然后因为这个网站是bt下载网站，所以需要使用bt下载器来下载，比如# qbittorrent，配置和使用参考之前的博文:<br><a href="https://aidens-fox.codeberg.page/posts/82f2ef74.html">https://aidens-fox.codeberg.page/posts/82f2ef74.html</a></p><h3 id="安装游戏"><a href="#安装游戏" class="headerlink" title="安装游戏"></a>安装游戏</h3><p>因为大部分游戏都是gog平台的，安装方法基本一样，把下载好后的文件解压，在那个目录下会有一个sh脚本，具体名称看下载是的简介什么，然后给那个脚本提权<br><code>sudo chmod +x 脚本.sh</code></p><p>然后<code>./脚本.sh</code><br>就会弹出一个安装界面(图形化)，只需要选择好安装的地方就好了，安装完成cd到那个目录下，给一个叫start.sh的脚本提权<br><code>sudo chmod +x start.sh</code></p><p>然后<code>./start.sh</code><br>就可以游玩游戏了</p><h3 id="推荐游戏"><a href="#推荐游戏" class="headerlink" title="推荐游戏"></a>推荐游戏</h3><p>Project Zomboid(僵尸毁灭工程)<br>一个2.5d的僵尸末日模拟游戏，游戏十分硬核，你要四处搜寻食物、搜刮物资、建造防御工事，并竭尽全力地生存下去，僵尸无处不在，如果你被你的角色压力很大，可以在外面按Q使用解毒剂(-:<br>下载链接:<br><a href="https://rutracker.org/forum/viewtopic.php?t=5231547">https://rutracker.org/forum/viewtopic.php?t=5231547</a></p><h3 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h3><p>最后还是有说一句，如果可以一定要支持那些游戏作者，盗版游戏给了俺们体验的机会，这里引用马库斯·佩尔松(Minecraft创始人)说的”去玩盗版吧。如果以后你手头宽裕了，并且依然喜欢它，再买也不迟”</p>]]>
-    </content>
-    <id>https://aidens-fox.codeberg.page/posts/29742e47.html</id>
-    <link href="https://aidens-fox.codeberg.page/posts/29742e47.html"/>
-    <published>2026-07-01T09:55:05.000Z</published>
-    <summary>
-      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>提到linux玩游戏，你可能会想到用steam的Proton来下载游玩游戏，这也是主流的官方的方法，但是steam很多优秀的游戏都是要钱的，]]>
-    </summary>
-    <title>linux下载破解游戏(原生非wine兼容层)</title>
-    <updated>2026-08-22T01:00:34.777Z</updated>
   </entry>
 </feed>

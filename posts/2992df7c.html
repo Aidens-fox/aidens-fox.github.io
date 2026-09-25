@@ -21,28 +21,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"aidens-fox.codeberg.page","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.29.0","exturl":false,"sidebar":{"position":"right","width_expanded":400,"width_dual_column":350,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"language":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="linux和windows折腾记录,软件资源分享">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="https://aidens-fox.codeberg.page/tags/index.html">
+    <meta name="description" content="前言在前几天我我把我的这台台式电脑重装系统为Archlinux,虽然我的专业(数字媒体)不允许我使用如此简洁纯粹的操作系统，因为我要使用那些臃肿的商业软件，这是不可避免的，所以与其说换回Archlinux,更不如说是故地重游，看看我之前配置的东西，等到下学期我大概就要再换回windows了，我对此是感到遗憾，本篇博文主要谈谈安装系统出现的一些小插曲什么的 进入livecd开机自检(POST)时报错">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记新电脑从Windows换系统到ArchLinux">
+<meta property="og:url" content="https://aidens-fox.codeberg.page/posts/2992df7c.html">
 <meta property="og:site_name" content="Aidens的博客">
-<meta property="og:description" content="linux和windows折腾记录,软件资源分享">
+<meta property="og:description" content="前言在前几天我我把我的这台台式电脑重装系统为Archlinux,虽然我的专业(数字媒体)不允许我使用如此简洁纯粹的操作系统，因为我要使用那些臃肿的商业软件，这是不可避免的，所以与其说换回Archlinux,更不如说是故地重游，看看我之前配置的东西，等到下学期我大概就要再换回windows了，我对此是感到遗憾，本篇博文主要谈谈安装系统出现的一些小插曲什么的 进入livecd开机自检(POST)时报错">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-09-24T08:38:27.737Z">
-<meta property="article:modified_time" content="2026-06-27T08:50:16.000Z">
+<meta property="article:published_time" content="2026-09-24T16:24:54.000Z">
+<meta property="article:modified_time" content="2026-09-25T03:43:55.764Z">
 <meta property="article:author" content="Aidens-fox">
-<meta property="article:tag" content="Aidens">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="其他">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://aidens-fox.codeberg.page/tags/">
+<link rel="canonical" href="https://aidens-fox.codeberg.page/posts/2992df7c.html">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":true,"permalink":"https://aidens-fox.codeberg.page/tags/index.html","path":"tags/index.html","title":"tags"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://aidens-fox.codeberg.page/posts/2992df7c.html","path":"posts/2992df7c.html","title":"记新电脑从Windows换系统到ArchLinux"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>tags | Aidens的博客
-</title>
+<title>记新电脑从Windows换系统到ArchLinux | Aidens的博客</title>
   
 
 
@@ -146,7 +146,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -159,6 +159,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E5%85%A5livecd%E5%BC%80%E6%9C%BA%E8%87%AA%E6%A3%80-POST-%E6%97%B6%E6%8A%A5%E9%94%99"><span class="nav-number">2.</span> <span class="nav-text">进入livecd开机自检(POST)时报错?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#usb%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%AB"><span class="nav-number">3.</span> <span class="nav-text">usb无线网卡无法识别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%9F%BA%E6%9C%AC%E7%B3%BB%E7%BB%9F%E5%92%8C%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC"><span class="nav-number">4.</span> <span class="nav-text">安装基本系统和一键安装脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E9%82%A3%E4%B8%AAusb%E6%97%A0%E7%BA%BF%E7%BD%91%E5%8D%A1"><span class="nav-number">5.</span> <span class="nav-text">关于那个usb无线网卡</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -225,42 +226,164 @@
 
     </div>
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
 
 
-    
-    
-    
-    <div class="post-block" lang="zh-CN"><header class="post-header">
+  
 
-<h1 class="post-title" itemprop="name headline">tags
-</h1>
 
-<div class="post-meta-container">
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://aidens-fox.codeberg.page/posts/2992df7c.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Aidens-fox">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aidens的博客">
+      <meta itemprop="description" content="linux和windows折腾记录,软件资源分享">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="记新电脑从Windows换系统到ArchLinux | Aidens的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          记新电脑从Windows换系统到ArchLinux
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-09-25 00:24:54 / 修改时间：11:43:55" itemprop="dateCreated datePublished" datetime="2026-09-25T00:24:54+08:00">2026-09-25</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-lines"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>749</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      
-      <div class="post-body"><div class="tag-cloud">
-  <div class="tag-cloud-title">
-    目前共计 9 个标签
-  </div>
-  <div class="tag-cloud-tags">
-    <a href="/tags/dwm/" style="font-size: 15px;" class="tag-cloud-2">dwm</a> <a href="/tags/github/" style="font-size: 12px;" class="tag-cloud-0">github</a> <a href="/tags/hexo/" style="font-size: 12px;" class="tag-cloud-0">hexo</a> <a href="/tags/linux/" style="font-size: 27px;" class="tag-cloud-8">linux</a> <a href="/tags/windows/" style="font-size: 18px;" class="tag-cloud-3">windows</a> <a href="/tags/%E5%85%B6%E4%BB%96/" style="font-size: 18px;" class="tag-cloud-3">其他</a> <a href="/tags/%E7%8E%A9%E6%9C%BA/" style="font-size: 24px;" class="tag-cloud-7">玩机</a> <a href="/tags/%E8%B5%84%E6%BA%90/" style="font-size: 21px;" class="tag-cloud-5">资源</a> <a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 30px;" class="tag-cloud-10">软件</a>
-  </div>
-</div>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在前几天我我把我的这台台式电脑重装系统为Archlinux,虽然我的专业(数字媒体)不允许我使用如此简洁纯粹的操作系统，因为我要使用那些臃肿的商业软件，这是不可避免的，所以与其说换回Archlinux,更不如说是故地重游，看看我之前配置的东西，等到下学期我大概就要再换回windows了，我对此是感到遗憾，本篇博文主要谈谈安装系统出现的一些小插曲什么的</p>
+<h3 id="进入livecd开机自检-POST-时报错"><a href="#进入livecd开机自检-POST-时报错" class="headerlink" title="进入livecd开机自检(POST)时报错?"></a>进入livecd开机自检(POST)时报错?</h3><p>在烧录好启动盘并在bios关闭安全启动并且把烧录好的u盘设置为第一启动项后，我本以为一切会和我之前在ThinkPadS2那台一样直接进入livecd环境，但是很显然并没有，在POST(开机自检)阶段他出现了报错，提示什么i2c错误，上网查询了一下，感觉和我的那个rtx5060显卡有一些关联，可惜的是我的cpu不包含核显，不然可以直接把视频线插在主板上面来进入livecd,不过要解决这个问题的话先按住ctrl+alt+delete来退出livecd,然后在第二次进入之前的systemd-boot界面选择第一个后不要按回车键先按e键，这样在启动选项下面就会出现一行可编辑的命令，在后面空格后输入<code>nomodeset</code> 后按ctrl+x或F10启动，这样就可以让内核使用基本的显示模式启动，进入后不出所料成功进入livecd环境</p>
+<h3 id="usb无线网卡无法识别"><a href="#usb无线网卡无法识别" class="headerlink" title="usb无线网卡无法识别"></a>usb无线网卡无法识别</h3><p>在进入livecd后，很可惜的是我的usb无线网卡没有相关驱动，甚至把它识别成了u盘，里面只有针对windows驱动，我只能使用手机开启usb网络共享来安装了，之后看看芯片型号再安装驱动看看</p>
+<h3 id="安装基本系统和一键安装脚本"><a href="#安装基本系统和一键安装脚本" class="headerlink" title="安装基本系统和一键安装脚本"></a>安装基本系统和一键安装脚本</h3><p>安装我使用archinstall来快速安装，这样基本系统系统安装完成了，而那些dwm窗口管理器和其他配置，我在我的项目仓库有一键安装脚本，不过只针对基本系统，所以我git克隆下我的项目后给我的脚本赋权后执行，很快就配置还dwm这些东西了，重启进入后一切都是老样子，我好像又回到了4个多月之前，故地重游了一样</p>
+<h3 id="关于那个usb无线网卡"><a href="#关于那个usb无线网卡" class="headerlink" title="关于那个usb无线网卡"></a>关于那个usb无线网卡</h3><p>那个网卡的芯片是aic8800,我在github挑了一个热门的相关项目安装，但是邪门的是，安装完成它确实没有被识别成u盘了，但是就是无法使用，日志说什么超时，前前后后换了好几个项目，就是无法使用，索性再买一个支持linux的usb无线网卡了</p>
 
-      </div>
-      
-      
-      
     </div>
 
     
     
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Aidens-fox
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://aidens-fox.codeberg.page/posts/2992df7c.html" title="记新电脑从Windows换系统到ArchLinux">https://aidens-fox.codeberg.page/posts/2992df7c.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://mastodon.social/@aidens_fox">
+            <span class="icon">
+              <i class=""></i>
+            </span>
+
+            <span class="label">mastodon</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="https://space.bilibili.com/3706983595117100?spm_id_from=333.788.0.0">
+            <span class="icon">
+              <i class=""></i>
+            </span>
+
+            <span class="label">bilibili</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class=""></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/%E5%85%B6%E4%BB%96/" rel="tag"># 其他</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/2d1a4ac8.html" rel="prev" title="选择类原生系统的理由">
+                  <i class="fa fa-angle-left"></i> 选择类原生系统的理由
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
     <div class="comments utterances-container"></div>

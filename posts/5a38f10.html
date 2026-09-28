@@ -29,7 +29,7 @@
 <meta property="og:description" content="前言从07-25到现在的09-28，鸽了怎么长时间后，那个博主终于想起了自己在使用hexo和codeberg pages从零开始搭建个人博客说的要在之后找一个时间出一个github pages的部署方法，也就是这篇博文，使用这篇博文是使用hexo和github pages从零开始搭建个人博客,主题使用next也就是这个博客目前使用的，不过本篇的博文重点是github-pages部署，关于next的">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-09-28T11:08:58.000Z">
-<meta property="article:modified_time" content="2026-09-28T12:17:33.747Z">
+<meta property="article:modified_time" content="2026-09-28T12:27:41.579Z">
 <meta property="article:author" content="Aidens-fox">
 <meta property="article:tag" content="github">
 <meta property="article:tag" content="hexo">
@@ -268,7 +268,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2026-09-28 19:08:58 / 修改时间：20:17:33" itemprop="dateCreated datePublished" datetime="2026-09-28T19:08:58+08:00">2026-09-28</time>
+      <time title="创建时间：2026-09-28 19:08:58 / 修改时间：20:27:41" itemprop="dateCreated datePublished" datetime="2026-09-28T19:08:58+08:00">2026-09-28</time>
     </span>
 
   
@@ -311,9 +311,9 @@
 
 <p>这样就配置的差不多的，其他的个性化配置我之后在另一篇博文详细讲一下</p>
 <h3 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h3><p>那么既然要使用github pages服务那么肯定需要一个github账号，如果没有就访问官方网站，github是一个代码托管平台，注册账号我就不细说了，只需要准备一个可以正常使用的邮箱(最好是gmail,尽量不要使用qq邮箱，有概率接送不到验证码)，然后注意一下自己的用户名,因为博客网址包含用户名称</p>
-<h3 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h3><p>git在使用之前需要添加用户名和邮箱才可以使用,输入以下命令<br>&#96;git config –global user.name “你的用户名”</p>
-<p>&#96;git config –global user.email “你的邮箱”</p>
-<h3 id="创建一个仓库"><a href="#创建一个仓库" class="headerlink" title="创建一个仓库"></a>创建一个仓库</h3><p>在<a target="_blank" rel="noopener" href="https://github.com/dashboard%E4%B8%8B%E7%82%B9%E5%87%BB%E5%B7%A6%E8%BE%B9%E7%9A%84%E7%BB%BF%E8%89%B2%22new%22%E7%9A%84%E6%8C%89%E9%92%AE%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%AD%98%E6%94%BE%E5%8D%9A%E5%AE%A2%E6%96%87%E4%BB%B6%E7%9A%84%E4%BB%93%E5%BA%93%EF%BC%8C%E4%BB%93%E5%BA%93%E5%90%8D%E7%A7%B0%E5%A1%AB%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D.github.io%EF%BC%8C%E7%84%B6%E5%90%8E%E5%88%9B%E5%BB%BA">https://github.com/dashboard下点击左边的绿色&quot;new&quot;的按钮创建一个存放博客文件的仓库，仓库名称填入用户名.github.io，然后创建</a></p>
+<h3 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h3><p>git在使用之前需要添加用户名和邮箱才可以使用,输入以下命令<br><code>git config --global user.name &quot;你的用户名&quot;</code></p>
+<p><code>git config --global user.email &quot;你的邮箱&quot;</code></p>
+<h3 id="创建一个仓库"><a href="#创建一个仓库" class="headerlink" title="创建一个仓库"></a>创建一个仓库</h3><p>在 <a target="_blank" rel="noopener" href="https://github.com/dashboard">https://github.com/dashboard</a> 下点击左边的绿色”new”的按钮创建一个存放博客文件的仓库，仓库名称填入用户名.github.io，然后创建</p>
 <h3 id="创建一个访问令牌"><a href="#创建一个访问令牌" class="headerlink" title="创建一个访问令牌"></a>创建一个访问令牌</h3><p>打开右上角的头像点击设置(settings)进入设置页面后往下划，找到开发者设置(Developer Settings),进入后点击个人访问令牌(Personal Access Token),选择Token(Classic)(中文翻译叫什么代币(经典))，在里面选择生成访问令牌，跳出的两个选择选择Token(Classic)(这不是脱裤子放屁嘛),名称(note)随便写一个，到期时间(Expiration)经验直接现在无过期，令牌权限(Select scopes)全部启用，然后点击下面绿色的生成令牌后会出现一串英文，赶紧复制到安全的地方，因为它只会出现这么一次</p>
 <h3 id="安装hexo-deployer-git插件"><a href="#安装hexo-deployer-git插件" class="headerlink" title="安装hexo-deployer-git插件"></a>安装hexo-deployer-git插件</h3><p>hexo-deployer-git用来把生成好的网页文件自动推送到远程仓库,不用再手动git到仓库,在博客根目录使用npm安装插件<br><code>npm install hexo-deployer-git --save</code></p>
 <p>打开根目录下的 <code>_config.yml</code> 文件在找到 deploy 配置项，修改为你的仓库信息</p>

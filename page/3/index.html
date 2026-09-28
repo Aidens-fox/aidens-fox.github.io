@@ -168,7 +168,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">31</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -223,6 +223,115 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://aidens-fox.codeberg.page/posts/93b3677b.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Aidens-fox">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aidens的博客">
+      <meta itemprop="description" content="linux和windows折腾记录,软件资源分享">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Aidens的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/93b3677b.html" class="post-title-link" itemprop="url">用lsp模块实现微信手机双登</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-07-03 18:51:25" itemprop="dateCreated datePublished" datetime="2026-07-03T18:51:25+08:00">2026-07-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-09-03 15:29:47" itemprop="dateModified" datetime="2026-09-03T15:29:47+08:00">2026-09-03</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-lines"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>730</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>微信，一个在国内十分重要的聊天软件，可以说在国内没有微信是寸步难行了，而微信有一个缺点就是不能在两个设备长期登录，对于一些有备用机的人就很不友好，因为备用机竟然连微信信息都看不了，在一些场景下就很不方便了,不过如果你的备用机是root过的，那么事情就好办了，只需要利用一个lsp模块就可以实现微信手机双登，不过在博文开始之前我还是有必要说明一下:</p>
+<p><strong>本博文仅提供教程，在实际操作之前请仔细考虑，如果账号被封请自负!</strong></p>
+<p><strong>在实际操作之前一定要仔细考虑清楚，否则后果自负!</strong></p>
+<p><strong>重要的话讲三遍,在实际操作之前一定要仔细考虑清楚，否则后果自负!</strong></p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>LSPosed框架(注:原版的lsp已经停止更新，最高安卓支持版本为安卓14,如果高于安卓14则需要下载第三方版本)<br>原版<br><a target="_blank" rel="noopener" href="https://github.com/LSPosed/LSPosed">https://github.com/LSPosed/LSPosed</a><br>JingMatrix版(现改名叫Vector不叫LSPosed)<br><a target="_blank" rel="noopener" href="https://github.com/JingMatrix/Vector">https://github.com/JingMatrix/Vector</a></p>
+<p>除了上面两个版本，还有一个it版(闭源版)的LSPosed框架,不过我是不太建议使用这个版本的</p>
+<p>shamkio(防检测)<br><a target="_blank" rel="noopener" href="https://github.com/LSPosed/LSPosed.github.io/releases">https://github.com/LSPosed/LSPosed.github.io/releases</a></p>
+<p>隐藏应用列表(防微信监测)<br><a target="_blank" rel="noopener" href="https://github.com/Dr-TSNG/Hide-My-Applist">https://github.com/Dr-TSNG/Hide-My-Applist</a></p>
+<p>WeChatTablet(微信双开模块，支持8.0.40以上)<br><a target="_blank" rel="noopener" href="https://github.com/Xposed-Modules-Repo/top.hookvip.wxtablet">https://github.com/Xposed-Modules-Repo/top.hookvip.wxtablet</a></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ol>
+<li><p>面具设置<br>打开面具主页的设置，点击配置排除列表，选择微信让它被排除</p>
+</li>
+<li><p>LSPosed配置<br>打开面具，在模块页面安装LSPosed和shamkio再在主页点击设置开启zygisk然后重启</p>
+</li>
+<li><p>隐藏应用列表配置<br>模块和应用的安装好后，打开LSPosed框架，在模块页中点击隐藏应用列表，点击启用模块，勾选系统框架(必须)然后是微信，勾选完成后重启让模块生效，重启后打开隐藏应用列表，选择模版管理，点击创建黑名单(白名单是勾选允许访问的应用，黑名单是勾选不让访问的应用，推荐使用黑名单)，编辑那些应用不可见，也就是一些像面具，lsp,模块应用的东西，勾选完成编辑应用于那些应用，选择微信后给模板设置一个名字保存，在到主界面看看模块有没有激活就可以了</p>
+</li>
+<li><p>WeChatTablet配置<br>打开LSPosed的模块页面，点击WeChatTablet，点击启用模块，勾选微信(大于8.0.40)，在把微信强行停止重进，不出意外的话你的微信在登录页面和要一个手机和平板同时登录的选择，点击这个选项即可双登微信了</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1202,116 +1311,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://aidens-fox.codeberg.page/posts/82f2ef74.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Aidens-fox">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aidens的博客">
-      <meta itemprop="description" content="linux和windows折腾记录,软件资源分享">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Aidens的博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/82f2ef74.html" class="post-title-link" itemprop="url">qbittorrent配置和使用</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-06-27 10:56:29" itemprop="dateCreated datePublished" datetime="2026-06-27T10:56:29+08:00">2026-06-27</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-09-03 15:32:48" itemprop="dateModified" datetime="2026-09-03T15:32:48+08:00">2026-09-03</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-lines"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/QBittorrent">qbittorrent</a>是一个BT种子下载器(<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/BitTorrent_(%E5%8D%8F%E8%AE%AE)">BitTorrent</a>客户端)，用于下载文件，常用于大型文件如：游戏或一些电子书等，因为qbittorrent是借助P2P的去中心化，所以用户越多，下载速度就越快，所以选择下载时尽量选择比较火爆的种子，这可以大大提高下载速度</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>如果你是使用linux那么就只需要使用包管理器安装就可以了，因为qbittorrent这个软件基本所以发行版仓库都有的，这里以arch为例<br><code>sudo pacman -S qbittorrent</code></p>
-<p>windows的话就只能到软件官网或github发布页面下对应的安装包(exe结尾)了<br>原版：<br><a target="_blank" rel="noopener" href="https://github.com/qbittorrent/qBittorrent/releases">https://github.com/qbittorrent/qBittorrent/releases</a><br>增强版：<br><a target="_blank" rel="noopener" href="https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/">https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/</a></p>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="添加tracker"><a href="#添加tracker" class="headerlink" title="添加tracker"></a>添加tracker</h4><p>tracker(BT服务器)是帮助BitTorrent协议在节点与节点之间做连接的服务器,来提供更多的节点由此提高下载速度<br>公共tracker服务器:<br><a target="_blank" rel="noopener" href="https://trackerslist.com/#/zh?id=qbittorrent-enhanced-edition-%E5%A2%9E%E5%BC%BA%E7%89%88">https://trackerslist.com/#/zh?id=qbittorrent-enhanced-edition-%E5%A2%9E%E5%BC%BA%E7%89%88</a></p>
-<p>你可以按需求选择需要的列表:<br>精选列表：（74个）<br><a target="_blank" rel="noopener" href="https://cf.trackerslist.com/best.txt">https://cf.trackerslist.com/best.txt</a><br>完整列表： (155个)<br><a target="_blank" rel="noopener" href="https://cf.trackerslist.com/all.txt">https://cf.trackerslist.com/all.txt</a><br>HTTP(S)列表： (79个)<br><a target="_blank" rel="noopener" href="https://cf.trackerslist.com/http.txt">https://cf.trackerslist.com/http.txt</a><br>无 HTTP 列表： (75 个)<br><a target="_blank" rel="noopener" href="https://cf.trackerslist.com/nohttp.txt">https://cf.trackerslist.com/nohttp.txt</a></p>
-<p>复制好链接后，需要打开打开上方的工具，然后选择设置，选择BitTorrent后下划到自动附加URL的tracker到新下载后点击开启后把链接粘贴到网址那一列，最后点击应用和确定，这里引用trackerslist.com的图片<br><img src="https://bitbucket.org/xiu2/trackerslistcollection/raw/master/img/zh-15.png"></p>
-<h3 id="其他设置"><a href="#其他设置" class="headerlink" title="其他设置"></a>其他设置</h3><p>还是打开设置，选择高级，在高级里把上传策略改成反吸血，打开总是向同级的所以tracker汇报和总是向所以等级的tracker汇报，完成后选择应用在重启就可以了</p>
-<h3 id="路由器设置"><a href="#路由器设置" class="headerlink" title="路由器设置"></a>路由器设置</h3><p>打开路由器后台，不知道后台就看一下路由器底部的详细信息，就会看到默认密码和用户名称还有后台地址，有的需要连接那个路由器的网络才可以登录后台，登录后台后启用UPnP，这个设置一般在高级设置和应用功能里，具体位置按照实际情况</p>
-<h3 id="查看hosts文件"><a href="#查看hosts文件" class="headerlink" title="查看hosts文件"></a>查看hosts文件</h3><p>这个虽然是概率很小，但是有一些时候确实是这个原因才让下载速度慢，有一些软件可能会在你的hosts文件添加一些网址，来阻止你访问一些它们不想要让你访问的网站，这些网站可能有一些是下载种子时需要的，所以还是要检查一下有没有，修改hosts文件可以用dism++的hosts修改的功能，这个软件的项目链接如下:<br><a target="_blank" rel="noopener" href="https://github.com/Chuyu-Team/Dism-Multi-language">https://github.com/Chuyu-Team/Dism-Multi-language</a><br>发布页面:<br><a target="_blank" rel="noopener" href="https://github.com/Chuyu-Team/Dism-Multi-language/releases">https://github.com/Chuyu-Team/Dism-Multi-language/releases</a></p>
-<p>在发布页面选择最新版本下载，下载完成使用解压软件解压，解压完成打开软件后选择工具箱，里面选择hosts编辑器，打开查看有没有可疑的网址，默认的是没有网址的，修改完成ctrl+s保存就可以了(在修改文件时一定要三思而行，最好备份文件的内容)</p>
-<h3 id="修改端口数字"><a href="#修改端口数字" class="headerlink" title="修改端口数字"></a>修改端口数字</h3><p>可能你在设置完上面的选项还是下载慢，可以尝试修改端口数字，打开设置，选择连接中监听端口这一个，在里面点击随机，然后点击应用在重启一下应用就可以了</p>
-<h4 id="可选-添加主题"><a href="#可选-添加主题" class="headerlink" title="(可选)添加主题"></a>(可选)添加主题</h4><p>常规暗色主题：<br><a target="_blank" rel="noopener" href="https://github.com/jagannatharjun/qbt-theme">https://github.com/jagannatharjun/qbt-theme</a><br>gruvbox主题：<br><a target="_blank" rel="noopener" href="https://github.com/MahdiMirzadeh/qbittorrent">https://github.com/MahdiMirzadeh/qbittorrent</a></p>
-<p>首先我们下载主题后解压，在行为中选择自定义主题，并输入主题连接，点击应用，然后重启应用就可以生效</p>
-<h3 id="BT下载网站推荐"><a href="#BT下载网站推荐" class="headerlink" title="BT下载网站推荐"></a>BT下载网站推荐</h3><ul>
-<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%B5%B7%E7%9B%9C%E7%81%A3">海盗湾</a>:<br><a target="_blank" rel="noopener" href="https://thepiratebay.org/index.html">https://thepiratebay.org/index.html</a> </li>
-<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Rutracker.org">Rutracker</a>:<br><a target="_blank" rel="noopener" href="https://rutracker.org/">https://rutracker.org/</a></li>
-</ul>
-<p>在选择种子下载时尽量选择热门的种子，死种肯定是下载巨慢的，尽量不要下载多个种子，不然可能会造成网络卡顿</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>
@@ -1334,14 +1335,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">27k</span>
+    <span title="站点总字数">29k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:39</span>
+    <span title="站点阅读时长">1:44</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动

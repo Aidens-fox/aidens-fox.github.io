@@ -24,7 +24,7 @@
     <meta name="description" content="linux和windows折腾记录,软件资源分享">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Aidens的博客">
-<meta property="og:url" content="https://aidens-fox.codeberg.page/archives/2026/06/index.html">
+<meta property="og:url" content="https://aidens-fox.codeberg.page/page/4/index.html">
 <meta property="og:site_name" content="Aidens的博客">
 <meta property="og:description" content="linux和windows折腾记录,软件资源分享">
 <meta property="og:locale" content="zh_CN">
@@ -33,13 +33,13 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://aidens-fox.codeberg.page/archives/2026/06/">
+<link rel="canonical" href="https://aidens-fox.codeberg.page/page/4/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/2026/06/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"page/4/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | Aidens的博客</title>
+<title>Aidens的博客</title>
   
 
 
@@ -222,210 +222,119 @@
 
     </div>
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner index posts-expand">
+
+    
 
 
+<div class="post-block">
   
   
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://aidens-fox.codeberg.page/posts/82f2ef74.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Aidens-fox">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aidens的博客">
+      <meta itemprop="description" content="linux和windows折腾记录,软件资源分享">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Aidens的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/82f2ef74.html" class="post-title-link" itemprop="url">qbittorrent配置和使用</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-06-27 10:56:29" itemprop="dateCreated datePublished" datetime="2026-06-27T10:56:29+08:00">2026-06-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-09-03 15:32:48" itemprop="dateModified" datetime="2026-09-03T15:32:48+08:00">2026-09-03</time>
+    </span>
+
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        
-        <span class="collection-header">还行! 目前共计 31 篇日志。 继续努力。</span>
-      </div>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-lines"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/QBittorrent">qbittorrent</a>是一个BT种子下载器(<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/BitTorrent_(%E5%8D%8F%E8%AE%AE)">BitTorrent</a>客户端)，用于下载文件，常用于大型文件如：游戏或一些电子书等，因为qbittorrent是借助P2P的去中心化，所以用户越多，下载速度就越快，所以选择下载时尽量选择比较火爆的种子，这可以大大提高下载速度</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>如果你是使用linux那么就只需要使用包管理器安装就可以了，因为qbittorrent这个软件基本所以发行版仓库都有的，这里以arch为例<br><code>sudo pacman -S qbittorrent</code></p>
+<p>windows的话就只能到软件官网或github发布页面下对应的安装包(exe结尾)了<br>原版：<br><a target="_blank" rel="noopener" href="https://github.com/qbittorrent/qBittorrent/releases">https://github.com/qbittorrent/qBittorrent/releases</a><br>增强版：<br><a target="_blank" rel="noopener" href="https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/">https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/</a></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="添加tracker"><a href="#添加tracker" class="headerlink" title="添加tracker"></a>添加tracker</h4><p>tracker(BT服务器)是帮助BitTorrent协议在节点与节点之间做连接的服务器,来提供更多的节点由此提高下载速度<br>公共tracker服务器:<br><a target="_blank" rel="noopener" href="https://trackerslist.com/#/zh?id=qbittorrent-enhanced-edition-%E5%A2%9E%E5%BC%BA%E7%89%88">https://trackerslist.com/#/zh?id=qbittorrent-enhanced-edition-%E5%A2%9E%E5%BC%BA%E7%89%88</a></p>
+<p>你可以按需求选择需要的列表:<br>精选列表：（74个）<br><a target="_blank" rel="noopener" href="https://cf.trackerslist.com/best.txt">https://cf.trackerslist.com/best.txt</a><br>完整列表： (155个)<br><a target="_blank" rel="noopener" href="https://cf.trackerslist.com/all.txt">https://cf.trackerslist.com/all.txt</a><br>HTTP(S)列表： (79个)<br><a target="_blank" rel="noopener" href="https://cf.trackerslist.com/http.txt">https://cf.trackerslist.com/http.txt</a><br>无 HTTP 列表： (75 个)<br><a target="_blank" rel="noopener" href="https://cf.trackerslist.com/nohttp.txt">https://cf.trackerslist.com/nohttp.txt</a></p>
+<p>复制好链接后，需要打开打开上方的工具，然后选择设置，选择BitTorrent后下划到自动附加URL的tracker到新下载后点击开启后把链接粘贴到网址那一列，最后点击应用和确定，这里引用trackerslist.com的图片<br><img src="https://bitbucket.org/xiu2/trackerslistcollection/raw/master/img/zh-15.png"></p>
+<h3 id="其他设置"><a href="#其他设置" class="headerlink" title="其他设置"></a>其他设置</h3><p>还是打开设置，选择高级，在高级里把上传策略改成反吸血，打开总是向同级的所以tracker汇报和总是向所以等级的tracker汇报，完成后选择应用在重启就可以了</p>
+<h3 id="路由器设置"><a href="#路由器设置" class="headerlink" title="路由器设置"></a>路由器设置</h3><p>打开路由器后台，不知道后台就看一下路由器底部的详细信息，就会看到默认密码和用户名称还有后台地址，有的需要连接那个路由器的网络才可以登录后台，登录后台后启用UPnP，这个设置一般在高级设置和应用功能里，具体位置按照实际情况</p>
+<h3 id="查看hosts文件"><a href="#查看hosts文件" class="headerlink" title="查看hosts文件"></a>查看hosts文件</h3><p>这个虽然是概率很小，但是有一些时候确实是这个原因才让下载速度慢，有一些软件可能会在你的hosts文件添加一些网址，来阻止你访问一些它们不想要让你访问的网站，这些网站可能有一些是下载种子时需要的，所以还是要检查一下有没有，修改hosts文件可以用dism++的hosts修改的功能，这个软件的项目链接如下:<br><a target="_blank" rel="noopener" href="https://github.com/Chuyu-Team/Dism-Multi-language">https://github.com/Chuyu-Team/Dism-Multi-language</a><br>发布页面:<br><a target="_blank" rel="noopener" href="https://github.com/Chuyu-Team/Dism-Multi-language/releases">https://github.com/Chuyu-Team/Dism-Multi-language/releases</a></p>
+<p>在发布页面选择最新版本下载，下载完成使用解压软件解压，解压完成打开软件后选择工具箱，里面选择hosts编辑器，打开查看有没有可疑的网址，默认的是没有网址的，修改完成ctrl+s保存就可以了(在修改文件时一定要三思而行，最好备份文件的内容)</p>
+<h3 id="修改端口数字"><a href="#修改端口数字" class="headerlink" title="修改端口数字"></a>修改端口数字</h3><p>可能你在设置完上面的选项还是下载慢，可以尝试修改端口数字，打开设置，选择连接中监听端口这一个，在里面点击随机，然后点击应用在重启一下应用就可以了</p>
+<h4 id="可选-添加主题"><a href="#可选-添加主题" class="headerlink" title="(可选)添加主题"></a>(可选)添加主题</h4><p>常规暗色主题：<br><a target="_blank" rel="noopener" href="https://github.com/jagannatharjun/qbt-theme">https://github.com/jagannatharjun/qbt-theme</a><br>gruvbox主题：<br><a target="_blank" rel="noopener" href="https://github.com/MahdiMirzadeh/qbittorrent">https://github.com/MahdiMirzadeh/qbittorrent</a></p>
+<p>首先我们下载主题后解压，在行为中选择自定义主题，并输入主题连接，点击应用，然后重启应用就可以生效</p>
+<h3 id="BT下载网站推荐"><a href="#BT下载网站推荐" class="headerlink" title="BT下载网站推荐"></a>BT下载网站推荐</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%B5%B7%E7%9B%9C%E7%81%A3">海盗湾</a>:<br><a target="_blank" rel="noopener" href="https://thepiratebay.org/index.html">https://thepiratebay.org/index.html</a> </li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Rutracker.org">Rutracker</a>:<br><a target="_blank" rel="noopener" href="https://rutracker.org/">https://rutracker.org/</a></li>
+</ul>
+<p>在选择种子下载时尽量选择热门的种子，死种肯定是下载巨慢的，尽量不要下载多个种子，不然可能会造成网络卡顿</p>
 
       
-    <div class="collection-year">
-      <span class="collection-header">2026<span class="collection-year-count">31</span></span>
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2026-06-30T21:48:46+08:00"
-              content="2026-06-30">
-          06-30
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/ff43cd43.html" itemprop="url">
-            <span itemprop="name">短小精悍的终端-st</span>
-          </a>
-      </div>
-
+    <footer class="post-footer">
+        <div class="post-eof"></div>
       
-    </header>
+    </footer>
   </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2026-06-29T11:41:05+08:00"
-              content="2026-06-29">
-          06-29
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/425e5bf4.html" itemprop="url">
-            <span itemprop="name">解决yt-dlp下载youtube视频要求登录验证</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2026-06-27T21:50:48+08:00"
-              content="2026-06-27">
-          06-27
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/3f2347ff.html" itemprop="url">
-            <span itemprop="name">解决github 2FA认证问题</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2026-06-27T16:31:42+08:00"
-              content="2026-06-27">
-          06-27
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/3b989ea6.html" itemprop="url">
-            <span itemprop="name">dwm补丁推荐</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2026-06-27T14:44:31+08:00"
-              content="2026-06-27">
-          06-27
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/ff86fd1c.html" itemprop="url">
-            <span itemprop="name">从零开始dwm安装配置</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2026-06-27T14:40:32+08:00"
-              content="2026-06-27">
-          06-27
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/537ab706.html" itemprop="url">
-            <span itemprop="name">linux字幕识别方案-whisper</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2026-06-27T14:35:09+08:00"
-              content="2026-06-27">
-          06-27
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/ba19c6ee.html" itemprop="url">
-            <span itemprop="name">Plxei3刷机Lineageos(linux)</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2026-06-27T12:26:00+08:00"
-              content="2026-06-27">
-          06-27
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/623e5c8b.html" itemprop="url">
-            <span itemprop="name">Plxei3刷机Lineageos(windows)</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2026-06-27T10:56:29+08:00"
-              content="2026-06-27">
-          06-27
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/82f2ef74.html" itemprop="url">
-            <span itemprop="name">qbittorrent配置和使用</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
+</div>
 
 
-    </div>
-  </div>
-  
-  
-  
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+  </nav>
 
 </div>
   </main>

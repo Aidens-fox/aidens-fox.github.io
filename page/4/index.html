@@ -169,13 +169,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -224,6 +224,120 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://aidens-fox.codeberg.page/posts/623e5c8b.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Aidens-fox">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aidens的博客">
+      <meta itemprop="description" content="linux和windows折腾记录,软件资源分享">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Aidens的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/623e5c8b.html" class="post-title-link" itemprop="url">Plxei3刷机Lineageos(windows)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-06-27 12:26:00" itemprop="dateCreated datePublished" datetime="2026-06-27T12:26:00+08:00">2026-06-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-09-05 22:12:50" itemprop="dateModified" datetime="2026-09-05T22:12:50+08:00">2026-09-05</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-lines"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>812</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>Lineageos<br><a target="_blank" rel="noopener" href="https://download.lineageos.org/devices/blueline/builds">https://download.lineageos.org/devices/blueline/builds</a></p>
+<p>ADB<br><a target="_blank" rel="noopener" href="https://developer.android.google.cn/tools/releases/platform-tools?hl=zh-cn">https://developer.android.google.cn/tools/releases/platform-tools?hl=zh-cn</a></p>
+<p>谷歌框架<br><a target="_blank" rel="noopener" href="https://wiki.lineageos.org/gapps/">https://wiki.lineageos.org/gapps/</a></p>
+<p>面具<br><a target="_blank" rel="noopener" href="https://github.com/topjohnwu/Magisk">https://github.com/topjohnwu/Magisk</a></p>
+<p>Google USB 驱动程序<br><a target="_blank" rel="noopener" href="https://developer.android.com/studio/run/win-usb?hl=zh-cn">https://developer.android.com/studio/run/win-usb?hl=zh-cn</a></p>
+<p>下载好后，把ADB添加到环境变量中，安装好Google USB 驱动程序</p>
+<h3 id="手机设置"><a href="#手机设置" class="headerlink" title="手机设置"></a>手机设置</h3><p>打开手机的关于手机，连续点击版本号，打开开发者模式的USB调试，打开把你的手机用数据线连接到电脑，手机弹出提示是否允许电脑调试点<strong>永远允许</strong>（注：如果手机有重要数据一定要备份！否则后果自负！）</p>
+<h3 id="开始刷机"><a href="#开始刷机" class="headerlink" title="开始刷机"></a>开始刷机</h3><p>手机使用数据线连接电脑(请务必检查数据线是否完好，然后要有数据传输功能，只有充电功能的无法刷机)<br>打开cmd(在当前文件夹使用shift加左键选择打开命令行窗口或win+r输入cmd回车打开)<br>1 查看设备是否被识别<br>&#96;adb devices</p>
+<p>2 进入fastboot<br>&#96;adb reboot bootloader</p>
+<p>3 解锁（不然后面没法刷机）<br><code>fastboot flashing unlock 然后回到手机使用音量键选择洋文&quot;unlock the bootloader&quot;后再按电源键确认就可以了，手机会自动重启，重启后继续使用</code>adb reboot bootloader&#96;命令让手机处于fastboot模式下</p>
+<p>4 刷入boot文件（后面要进入救援模式需要）<br><code>fastboot flash boot boot.img</code><br>刷入完成后回到手机使用音量加减进入恢复模式（recovery mode）后使用电源键确认，在恢复模式下选择第三个factory reset格式化data，完成后返回主页选择第二个apply update，选择用adb刷入</p>
+<p>5 刷入刷机包<br><code>adb sideload xxx.zip</code><br>(注：如果卡在47%是正常的，一般卡个4,5分钟，在刷机过程中请不要拔数据线！)</p>
+<p>6 (可选)刷入Gapps(谷歌框架)<br>在刷入完刷机包后不要重启，继续返回主页选择第二个apply update，选择用adb刷入<br>&#96;adb sideload 谷歌框架.zip</p>
+<p>然后重启到系统<br>进行一系初始化设置(注：如果你安装了谷歌，请不要联网)</p>
+<h3 id="解决网络无法连接"><a href="#解决网络无法连接" class="headerlink" title="解决网络无法连接"></a>解决网络无法连接</h3><p>完成后，如果你网络无法连接是因为自Android 5.0起，谷歌引入了Captive Portal机制， 用于检测WiFi网络认证是否正常。 该机制默认检测访问的是谷歌服务器，需要科学才能正常访问谷歌服务器<br>所以我们继续连接电脑使用ADB<br>使用ADB 工具，无需要root权限</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">adb shell settings delete global captive_portal_https_url  </span><br><span class="line">  </span><br><span class="line">adb shell settings delete global captive_portal_http_url</span><br></pre></td></tr></table></figure>
+
+<p>修改一下服务器的地址：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">adb shell settings put global captive_portal_http_url http://captive.v2ex.co/generate_204  </span><br><span class="line">  </span><br><span class="line">adb shell settings put global captive_portal_https_url http://captive.v2ex.co/generate_204</span><br></pre></td></tr></table></figure>
+
+<p>然后切换一下飞行模式5秒， 激活一下就好</p>
+<h3 id="安装面具"><a href="#安装面具" class="headerlink" title="安装面具"></a>安装面具</h3><p>把boot.img复制到手机使用面具修补再传回电脑<br>再次使用ADB<br>进入fastboot<br><code>adb reboot bootloader</code> </p>
+<p>刷入修补文件<br><code>fastboot flash boot magisk.img</code></p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>高版本尤其是动态分区版本早就不能用twrp了<br>所以刷写完系统后请不要装twrp<br>其他问题(软件推荐，电信卡兼容)查看博文:<br>软件推荐:<br><a target="_blank" rel="noopener" href="https://aidens-fox.github.io/posts/1df398c4.html">https://aidens-fox.github.io/posts/1df398c4.html</a><br>电信卡兼容:<br><a target="_blank" rel="noopener" href="https://aidens-fox.github.io/posts/f87200d0.html">https://aidens-fox.github.io/posts/f87200d0.html</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -357,14 +471,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">29k</span>
+    <span title="站点总字数">30k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:45</span>
+    <span title="站点阅读时长">1:48</span>
   </span>
 </div>
 <div class="busuanzi-count">

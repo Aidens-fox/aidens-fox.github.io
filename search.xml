@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>python学习笔记1:hello,world</title>
+      <link href="/posts/41d8bfac.html"/>
+      <url>/posts/41d8bfac.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在前几天我忽然发现我似乎还不会一个编程语言，而这对于一个折腾linux的人来说是不应该的，所以我打算学习一下python,顺便写几篇python学习笔记，<del>正好不知道要写什么</del> 而本篇博文就是这个系列的第一篇了，本文基于Python编程从入门到实践(第3版)这本书还有<a href="https://liaoxuefeng.com/books/python/introduction/index.html">廖雪峰的官方网站的python教程</a> 来学习，那么废话不多说就开始正文吧</p><h3 id="Python是什么"><a href="#Python是什么" class="headerlink" title="Python是什么"></a>Python是什么</h3><p>Python 是一种动态的解释型语言，和Shell脚本语言这种很相似，由Guido van Rossum(吉多·范罗苏姆)在1989年圣诞节期间，为了打发无聊的圣诞节而编写的一个编程语言</p><p>相较于c语言的语法这种学习起来会较为简单，尤其是母语是英语的人更是如此，但是语法简单不代表学习简单容易，在网络上很多什么卖课的以此为由忽悠文科生的，事实上要是深入学习还是很难的，这又不是英语，死记硬背就可以了，更不要提那些卖课的资源质量了，python本身就是开源自由的，网上优质的文档也很多，所以没必要只盯着那些臭卖课的，其他参考<a href="https://zh.wikipedia.org/wiki/Python">维基百科</a> </p><h3 id="安装python环境"><a href="#安装python环境" class="headerlink" title="安装python环境"></a>安装python环境</h3><p>得益于我使用的linux系统自带python环境所以我并不需要这一个步骤，而windwos就需要到<a href="https://www.python.org/">官方网站</a> 下载对应的安装包进行安装了，所以说linux适合写代码没错的，只是很多专业软件不支持，例如cad，草图大师这些的，不然真的就是完美无瑕了</p><h3 id="敲出你的第一行代码"><a href="#敲出你的第一行代码" class="headerlink" title="敲出你的第一行代码"></a>敲出你的第一行代码</h3><p>使用你的文本编辑器新建一个.py的文件，新手可以使用<del>微软大战代码</del> <a href="https://code.visualstudio.com/">vscode</a> 在里面安装python的插件，自动补全和一键运行无疑是方便的，不过过于依赖代码自动补全我认为不利于我的学习，所以我使用nvim作为我的文本编辑器来编写代码，那么在新建的文件下写入:<br><code>print (&quot;hello,world!&quot;)</code></p><p>print也就是打印的意思，整行代码的意思就是打印括号里的内容到终端，括号里的内容也就是”hello,world!”了，也就是打印字符串到终端的意思了<br>然后wq保存，这时候在终端输入<br><code>python 你新建的文件.py</code></p><p>就会输出<code>hello,world!</code> 了，恭喜你，你的代码成功执行了</p><h3 id="给你的代码添加一个变量"><a href="#给你的代码添加一个变量" class="headerlink" title="给你的代码添加一个变量"></a>给你的代码添加一个变量</h3><p>变量可以理解为你把一个东西增加了一个叫法，比如你把马铃薯叫作土豆(土豆不是花生吗?(闽南话))，让你需要和别人表达的时候直接说土豆就行了(不过对于台湾人可能就会引起不必要的误会了(-:)</p><p>那放在python就是<code>a = b</code> 了，&#x3D;也很好的说明了a等于b，那我们在之前新建的文件里在print那行上面添加<br><code>a = &quot;hello,world!&quot;</code></p><p>然后把print部分改成<br><code>print (&quot;a&quot;)</code></p><p>保存后在终端输入 <code>python 你新建的文件.py</code> 运行<br>你会发现怎么只有一个a?我不是在上面把a&#x3D;hello,world了吗，为什么是a不是hello,world</p><p>这是因为python把a识别为字符串了，因为括号里是”a”,而在python里，在文本两边加入””(也可以是’’，个人习惯使用””),python就会识别为字符串，而想要让a这个变量不被识别为字符串，你需要把括号里的””删除，只保留a,也就是<br><code>print (a)</code></p><p>这样修改好保存后再<code>python 你新建的文件.py</code> ,输出的结果就是hello,world!了</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>使用hexo和github pages从零开始搭建个人博客</title>
       <link href="/posts/5a38f10.html"/>
       <url>/posts/5a38f10.html</url>

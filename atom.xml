@@ -10,7 +10,25 @@
   <rights>All rights reserved 2026, Aidens-fox</rights>
   <subtitle>linux和windows折腾记录,软件资源分享</subtitle>
   <title>Aidens的博客</title>
-  <updated>2026-10-04T01:52:26.138Z</updated>
+  <updated>2026-10-09T12:13:16.501Z</updated>
+  <entry>
+    <author>
+      <name>Aidens-fox</name>
+    </author>
+    <category term="linux" scheme="https://aidens-fox.codeberg.page/tags/linux/"/>
+    <category term="dwm" scheme="https://aidens-fox.codeberg.page/tags/dwm/"/>
+    <content>
+      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在dwm里，如果你要显示系统托盘，主流的方法是在dwm打一个systray补丁来在状态栏显示系统托盘，但是这个方案我认为不是很好，所以我这几天在github找到了一个更加完美的方案:tray-tui</p><h3 id="为什么我不想用systray补丁"><a href="#为什么我不想用systray补丁" class="headerlink" title="为什么我不想用systray补丁"></a>为什么我不想用systray补丁</h3><p>首先我的状态栏的配色和主题还有字体都是统一协调的，但是打上systray补丁后事情就不一样了，那些系统托盘的后台应用是奇形怪状不统一的，有的是圆形，有的是带圆角的正方形，有的就完全是一个字母或不可描述的图标，这些东西加在状态栏里让状态栏变得丑陋无比，这是我不能接受的，而且这个补丁还不能随时的隐藏，使用系统托盘又不是每时每刻需要的，在不需要使用的时候看状态栏就显得杂乱无比，注意力全被这几个不统一的图标分散</p><h3 id="苦海中的救世主"><a href="#苦海中的救世主" class="headerlink" title="苦海中的救世主"></a>苦海中的救世主</h3><p>而我这几天在github找到了一个更加完美的方案,也就是tray-tui，这个项目很好的解决了我的痛点，而安装也十分简单，尤其是arch用户，只需要<br><code>yay -S tray-tui</code></p><p>就可以安装完成了，要使用只需要在终端输入<code>tray-tui</code> 就会出现一个tui的系统托盘界面，支持鼠标操作，不过这可能需要终端支持，不需要使用的时候只需要按q退出就可以了，十分的灵活，要使用就打开终端，不使用就关闭终端，十分无感，这样我dwm的状态栏就不会用那些奇形怪状不统一的图标了，下面是这个项目的链接:<br><a href="https://github.com/Levizor/tray-tui">https://github.com/Levizor/tray-tui</a></p><h3 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h3><p>前面说了它的优点，但是它也是有不足的，在相关视频发布后评论区有人评论”请问下xwechat的tray是如何被包含的,xwechat使用的是XEmbed协议但是我看tray-tui支持的貌似只有SNI,是有什么转接层在吗”</p><p>我经过测试发现微信在没有打开tray-tui打开登录后再打开tray-tui是没有相关选项的，除非在打开登录微信之前开启tray-tui才很显示相关选项，等于说需要在如果要让微信显示在tray-tui需要在打开微信之前先让tray-tui在后台挂着，而qbittorrent也出现了相关问题，如果这个项目可以做成类似mpd这种有一个后端挂着，前端使用tui可能会更好,本人也不是什么专业人员，只是一个学生，所以这仅仅是个人的看法，如果有错误请在评论区指正</p>]]>
+    </content>
+    <id>https://aidens-fox.codeberg.page/posts/7e27a659.html</id>
+    <link href="https://aidens-fox.codeberg.page/posts/7e27a659.html"/>
+    <published>2026-10-09T11:18:25.000Z</published>
+    <summary>
+      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在dwm里，如果你要显示系统托盘，主流的方法是在dwm打一个systray补丁来在状态栏显示系统托盘，但是这个方案我认为不是很好，所以我这几]]>
+    </summary>
+    <title>给dwm添加一个灵活的系统托盘:tray-tui</title>
+    <updated>2026-10-09T12:13:16.501Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Aidens-fox</name>
@@ -345,24 +363,5 @@
     </summary>
     <title>Gruvbox配色主题补完计划</title>
     <updated>2026-09-30T23:38:08.059Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Aidens-fox</name>
-    </author>
-    <category term="资源" scheme="https://aidens-fox.codeberg.page/tags/%E8%B5%84%E6%BA%90/"/>
-    <category term="linux" scheme="https://aidens-fox.codeberg.page/tags/linux/"/>
-    <category term="软件" scheme="https://aidens-fox.codeberg.page/tags/%E8%BD%AF%E4%BB%B6/"/>
-    <content>
-      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>steam,一个PC游戏分发平台，也是最大的PC游戏分发平台，里面除了游戏还有一个创意工坊，允许玩家制作和发布游戏mod(模组)来提升游戏趣味性，很多游戏的mod都在steam的创意工坊里，但这是建立在有steam客户端和steam下载游戏的条件下，如果你没有steam客户端或者你的游戏不是steam下载的破解版，那么常规的方式就无法下载创意工坊的东西了,因为不管是网页端还是客户端打开创意工坊都是没有下载的按钮，只有订阅的按钮，没有办法下载到本地，这样就没有办法给破解的游戏下载mod来增加游戏趣味性了，本篇博文我将教你如何使用SteamCMD来下载创意工坊的mod</p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>SteamCMD是Steam 客户端的命令行版本,它的主要用途是通过命令行界面 安装和更新Steam上提供的各种资源，SteamCMD在三大发行版都是有对应的软件包的，这里已arch为例，在aur仓库可以找到安装包(需要使用yay或paru来安装)，其他安装查看<a href="https://developer.valvesoftware.com/wiki/SteamCMD#_Linux">官方文档</a><br><code>yay -S steamcmd</code></p><p>windows推荐使用WorkshopDL，图形化界面，多种下载方式<br><a href="https://github.com/imwaitingnow/WorkshopDL">https://github.com/imwaitingnow/WorkshopDL</a></p><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>安装完成在命令行输入<code>steamcmd</code>进入,SteamCMD支持匿名登录,不需要注册账号就可以下载大部分东西，使用以下命令来匿名登录:<br><code>login anonymous</code></p><p>steamcmd默认的下载目录是在家目录的.steam文件下，我们可以使用以下命令来更改下载目录(目录必须是绝对路径):<br><code>force_install_dir 路径</code></p><h3 id="下载mod-使用"><a href="#下载mod-使用" class="headerlink" title="下载mod&amp;使用"></a>下载mod&amp;使用</h3><p>我们在浏览器打开steam创意工坊的网页:<br><a href="https://steamcommunity.com/workshop/">https://steamcommunity.com/workshop/</a></p><p>在里面的搜索栏搜索你需要的游戏，这里已僵尸毁灭工程的真实车辆中控和仪表盘mod为例，打开mod的详情页面，复制当前网址，然后打开 <a href="https://steamworkshopdownloader.io/">https://steamworkshopdownloader.io/</a> 把刚才的网址粘贴到网站上，网站会自动解析，然后会问你”你知道SteamCMD是什么吗？你登录过SteamCMD吗？”,选择yes,这样就会显示下载命令<br><code>workshop_download_item 108600 3635591071</code></p><p>命令格式为<code>workshop_download_item 游戏ID 模组ID </code> 复制它然后在之前的打开steamcmd的终端输入，等待下载完成就可以了，然后就可以把mod导入到游戏里了，像僵尸毁灭工程linux版本会在家目录新建一个Zomboid文件夹，里面的mods文件夹就是mod存放的地方，不过你需要把下载好的mod解压才可以，不然游戏无法识别，添加后就可以打开游戏，在开始界面点击模组来启用它们了，随便说一下我的僵尸毁灭工程是在rutracker上下载的，相关下载页面:<br><a href="https://rutracker.org/forum/viewtopic.php?t=5231547">https://rutracker.org/forum/viewtopic.php?t=5231547</a></p><p>下载需要bt下载器，可以查看我之前的博文:qbittorrent配置和使用<br><a href="https://aidens-fox.codeberg.page/posts/82f2ef74.html">https://aidens-fox.codeberg.page/posts/82f2ef74.html</a></p>]]>
-    </content>
-    <id>https://aidens-fox.codeberg.page/posts/5808e95.html</id>
-    <link href="https://aidens-fox.codeberg.page/posts/5808e95.html"/>
-    <published>2026-07-12T01:57:04.000Z</published>
-    <summary>
-      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>steam,一个PC游戏分发平台，也是最大的PC游戏分发平台，里面除了游戏还有一个创意工坊，允许玩家制作和发布游戏mod(模组)来提升游戏趣]]>
-    </summary>
-    <title>使用SteamCMD来下载创意工坊的mod</title>
-    <updated>2026-08-22T00:59:39.000Z</updated>
   </entry>
 </feed>

@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>给dwm添加一个灵活的系统托盘:tray-tui</title>
+      <link href="/posts/7e27a659.html"/>
+      <url>/posts/7e27a659.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在dwm里，如果你要显示系统托盘，主流的方法是在dwm打一个systray补丁来在状态栏显示系统托盘，但是这个方案我认为不是很好，所以我这几天在github找到了一个更加完美的方案:tray-tui</p><h3 id="为什么我不想用systray补丁"><a href="#为什么我不想用systray补丁" class="headerlink" title="为什么我不想用systray补丁"></a>为什么我不想用systray补丁</h3><p>首先我的状态栏的配色和主题还有字体都是统一协调的，但是打上systray补丁后事情就不一样了，那些系统托盘的后台应用是奇形怪状不统一的，有的是圆形，有的是带圆角的正方形，有的就完全是一个字母或不可描述的图标，这些东西加在状态栏里让状态栏变得丑陋无比，这是我不能接受的，而且这个补丁还不能随时的隐藏，使用系统托盘又不是每时每刻需要的，在不需要使用的时候看状态栏就显得杂乱无比，注意力全被这几个不统一的图标分散</p><h3 id="苦海中的救世主"><a href="#苦海中的救世主" class="headerlink" title="苦海中的救世主"></a>苦海中的救世主</h3><p>而我这几天在github找到了一个更加完美的方案,也就是tray-tui，这个项目很好的解决了我的痛点，而安装也十分简单，尤其是arch用户，只需要<br><code>yay -S tray-tui</code></p><p>就可以安装完成了，要使用只需要在终端输入<code>tray-tui</code> 就会出现一个tui的系统托盘界面，支持鼠标操作，不过这可能需要终端支持，不需要使用的时候只需要按q退出就可以了，十分的灵活，要使用就打开终端，不使用就关闭终端，十分无感，这样我dwm的状态栏就不会用那些奇形怪状不统一的图标了，下面是这个项目的链接:<br><a href="https://github.com/Levizor/tray-tui">https://github.com/Levizor/tray-tui</a></p><h3 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h3><p>前面说了它的优点，但是它也是有不足的，在相关视频发布后评论区有人评论”请问下xwechat的tray是如何被包含的,xwechat使用的是XEmbed协议但是我看tray-tui支持的貌似只有SNI,是有什么转接层在吗”</p><p>我经过测试发现微信在没有打开tray-tui打开登录后再打开tray-tui是没有相关选项的，除非在打开登录微信之前开启tray-tui才很显示相关选项，等于说需要在如果要让微信显示在tray-tui需要在打开微信之前先让tray-tui在后台挂着，而qbittorrent也出现了相关问题，如果这个项目可以做成类似mpd这种有一个后端挂着，前端使用tui可能会更好,本人也不是什么专业人员，只是一个学生，所以这仅仅是个人的看法，如果有错误请在评论区指正</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> dwm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>next博客主题个性化配置</title>
       <link href="/posts/885fb84e.html"/>
       <url>/posts/885fb84e.html</url>

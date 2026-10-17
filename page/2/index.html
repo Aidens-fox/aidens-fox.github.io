@@ -169,7 +169,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -233,6 +233,99 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://aidens-fox.codeberg.page/posts/908a4d94.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Aidens-fox">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aidens的博客">
+      <meta itemprop="description" content="linux和windows折腾记录,软件资源分享">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Aidens的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/908a4d94.html" class="post-title-link" itemprop="url">手机安装配置fcitx5输入法和雾凇拼音</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-08-24 11:58:37 / 修改时间：13:03:36" itemprop="dateCreated datePublished" datetime="2026-08-24T11:58:37+08:00">2026-08-24</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-lines"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>857</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在手机上，输入法是我们经常使用的东西，所以一个好用的输入法就非常重要了，像比较主流的输入法有：搜狗输入法，讯飞输入法，百度输入法等，这些输入法在应用市场评分都还可以，但是我是不太可能使用这些输入法的，因为我对隐私还有大小是有要求的，而上面说的输入法普遍有数据收集问题，对数据安全十分不利，而且在早期也有报道过一些数据安全问题细节参考以下链接:<br><a target="_blank" rel="noopener" href="https://www.huorong.cn/document/tech/vir_report/1845">搜狗输入法云控下发模块，“暗中”篡改浏览器配置</a><br><a target="_blank" rel="noopener" href="https://www.infzm.com/contents/200787">输入法会“背叛”我们吗？ | 南方周末</a></p>
+<p>其他的一些链接因为不可抵抗因素失效…<br>这些输入法的大小也较大，很多功能也根本不需要，所以我放弃了使用这些输入法的想法，而是使用了一个开源方案-<a target="_blank" rel="noopener" href="https://web.archive.org/web/20260501225156/https://github.com/fcitx5-android/fcitx5-android">fcitx5</a>,来尊重我的隐私</p>
+<h3 id="下载和安装"><a href="#下载和安装" class="headerlink" title="下载和安装"></a>下载和安装</h3><p>我们访问项目链接:<br><a target="_blank" rel="noopener" href="https://github.com/fcitx5-android/fcitx5-android">https://github.com/fcitx5-android/fcitx5-android</a><br>发布页面:<br><a target="_blank" rel="noopener" href="https://github.com/fcitx5-android/fcitx5-android/releases">https://github.com/fcitx5-android/fcitx5-android/releases</a></p>
+<p>打开发布页面选择最新版本，那里有一个表格，表格上面写着Download(下载),在表格的app一栏选择适合你手机的版本，大部分都是arm64-v8a的，如果无法安装就尝试安装armeabi-v7a版本，除了安装fcitx5还需要安装一个插件，也是在表格那么的，在表格plugin.rime那一行选择适合你手机的版本，版本选择和刚才下载fcitx5一样，下载完成后就是安装软件，因为大部分人都是使用国内的安卓手机，所以在安装一些非应用商店的软件就会提示要锁屏密码或账号密码，这个时候可以尝试把网络断开开启飞行模式再安装，就不用再输入那些密码了，有一些系统可能无法使用此方法来绕过，以实际情况来判断</p>
+<h3 id="雾凇拼音下载"><a href="#雾凇拼音下载" class="headerlink" title="雾凇拼音下载"></a>雾凇拼音下载</h3><p>访问项目地址:<br><a target="_blank" rel="noopener" href="https://github.com/iDvel/rime-ice">https://github.com/iDvel/rime-ice</a><br>发布页面:<br><a target="_blank" rel="noopener" href="https://github.com/iDvel/rime-ice/releases">https://github.com/iDvel/rime-ice/releases</a></p>
+<p>在发布页面选择最新版本的full.zip，然后把压缩包解压，系统自带的文件管理器实在太垃圾了，相比之下我更推荐使用mt管理器来解压和接下来的操作,下面是软件的官网下载页面:<br><a target="_blank" rel="noopener" href="https://mt2.cn/download/">https://mt2.cn/download/</a></p>
+<h3 id="配置雾凇拼音"><a href="#配置雾凇拼音" class="headerlink" title="配置雾凇拼音"></a>配置雾凇拼音</h3><p>我们打开小企鹅输入法，在插件里看一下rime插件有没有加载，然后回到主页打开输入法，在里面查看有没有中州韵，没有在右下角的加号添加，然后回到mt管理器，把解压完成后把所有文件移动到Android\data\org.fcitx.fcitx5.android\files\data\rime里</p>
+<p>移动完成后，随便打开一个可以唤出输入法的软件，点击候选词栏的更多按钮（三个点），点击重载配置，过程会持续一段时间，请耐心等待，完成后你应该可以看到空格键变成”中州韵(雾)”了</p>
+<h3 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h3><p>每个人都有选择的权力，这是上天赋予我们的权力，保护隐私不是间谍特工的专属，是所有人的，每个人的隐私都是值得保护的</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1092,53 +1185,53 @@
 <p>完成后就会在当前目录创建一个blog的文件夹，里面就是我们的博客本体,我们cd到该目录<br><code>cd blog</code></p>
 <p>进入该目录后使用npm来补全依赖什么的<br><code>npm install</code></p>
 <h3 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h3><p>打开_config.yml文件修改配置</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Aidens的博客  #网站标题</span><br><span class="line">subtitle: &#x27;&#x27;  #网站副标题</span><br><span class="line">description: &#x27;linux折腾记录&#x27;  #网站描述</span><br><span class="line">keywords: Aidens  #网站的关键词</span><br><span class="line">author: Aidens-fox  #名字</span><br><span class="line">language: zh-CN #网站使用的语言</span><br><span class="line">timezone: &#x27;Asia/Shanghai&#x27; #网站时区</span><br></pre></td></tr></table></figure>
+<figure class="highlight ldif"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attribute">title</span>: Aidens的博客  <span class="comment">#网站标题</span></span><br><span class="line"><span class="attribute">subtitle</span>: &#x27;&#x27;  <span class="comment">#网站副标题</span></span><br><span class="line"><span class="attribute">description</span>: &#x27;linux折腾记录&#x27;  <span class="comment">#网站描述</span></span><br><span class="line"><span class="attribute">keywords</span>: Aidens  <span class="comment">#网站的关键词</span></span><br><span class="line"><span class="attribute">author</span>: Aidens-fox  <span class="comment">#名字</span></span><br><span class="line"><span class="attribute">language</span>: zh-CN <span class="comment">#网站使用的语言</span></span><br><span class="line"><span class="attribute">timezone</span>: &#x27;Asia/Shanghai&#x27; <span class="comment">#网站时区</span></span><br></pre></td></tr></table></figure>
 
 <p>其他细节参考官方文档：<br><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">https://hexo.io/zh-cn/docs/configuration</a></p>
 <h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>hexo默认的主题，虽然算不上难看但是我不喜欢，因为它没有暗色然后样式我也不太喜欢所以我的博客使用了<a target="_blank" rel="noopener" href="https://github.com/probberechts/hexo-theme-cactus">cactus主题</a>，一个极简的响应式主题，我们使用git工具把主题克隆到我们博客themes<br>文件夹里面<br><code>git clone https://github.com/probberechts/hexo-theme-cactus.git themes/cactus</code></p>
 <p>然后在_config.yml文件修改主题(不是主题的_config.yml，是博客根目录的_config.yml)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># theme: landscape</span><br><span class="line">theme: cactus</span><br></pre></td></tr></table></figure>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># theme: landscape</span></span><br><span class="line"><span class="symbol">theme:</span> cactus</span><br></pre></td></tr></table></figure>
 
 <p>然后创建一些比如说关于,标签的页面<br><code>hexo new page about</code></p>
 <p>文件在blog&#x2F;source&#x2F;about文件夹里，打开里面的index.md修改为</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: about</span><br><span class="line">type: &quot;about&quot;</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">正文</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">about</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;about&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="string">正文</span></span><br></pre></td></tr></table></figure>
 
 <p>标签那些东西也是一样的操作</p>
 <h3 id="修改主题字体大小"><a href="#修改主题字体大小" class="headerlink" title="修改主题字体大小"></a>修改主题字体大小</h3><h4 id="正文字体大小设置"><a href="#正文字体大小设置" class="headerlink" title="正文字体大小设置"></a>正文字体大小设置</h4><p>cactus主题默认的字体比较小，在阅读博文的时候就会比较费劲,打开<code>blog/themes/cactus/source/css/_variables.styl </code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// Fonts 修改$font-size部分</span><br><span class="line">$font-family-body = &quot;Menlo&quot;, &quot;Meslo LG&quot;, monospace</span><br><span class="line">$font-family-mono = &quot;Menlo&quot;, &quot;Meslo LG&quot;, monospace</span><br><span class="line">$font-size = 22px</span><br><span class="line">$line-height = 1.725</span><br><span class="line">$page-width = 0rem + (hexo-config(&quot;page_width&quot;) || 39)</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Fonts 修改$font-size部分</span></span><br><span class="line"><span class="variable">$font</span>-family-<span class="selector-tag">body</span> = <span class="string">&quot;Menlo&quot;</span>, <span class="string">&quot;Meslo LG&quot;</span>, monospace</span><br><span class="line"><span class="variable">$font</span>-family-mono = <span class="string">&quot;Menlo&quot;</span>, <span class="string">&quot;Meslo LG&quot;</span>, monospace</span><br><span class="line"><span class="variable">$font</span>-size = <span class="number">22px</span></span><br><span class="line"><span class="variable">$line</span>-<span class="attribute">height</span> = <span class="number">1.725</span></span><br><span class="line"><span class="variable">$page</span>-<span class="attribute">width</span> = <span class="number">0rem</span> + (<span class="built_in">hexo-config</span>(<span class="string">&quot;page_width&quot;</span>) || <span class="number">39</span>)</span><br></pre></td></tr></table></figure>
 
 <h4 id="小标题字体大小设置"><a href="#小标题字体大小设置" class="headerlink" title="小标题字体大小设置"></a>小标题字体大小设置</h4><p>但是修改完成后你好发现虽然正文字体变大了但是小标题那些还是原来的大小，就会让正文比小标题还大，这样就让小标题失去它的作用了，我们需要修改&#96;blog&#x2F;themes&#x2F;cactus&#x2F;source&#x2F;css&#x2F;_extend.styl<br>h1,h2,h3这些是从大到小的标题大小</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">$base-style</span><br><span class="line">  h1, .h1</span><br><span class="line">    display: block</span><br><span class="line">    margin-top: 3rem</span><br><span class="line">    margin-bottom: 1rem</span><br><span class="line">    color: $color-accent-1</span><br><span class="line">    letter-spacing: .01em</span><br><span class="line">    font-weight: 700</span><br><span class="line">    font-style: normal</span><br><span class="line">    font-size: 1.5em</span><br><span class="line"></span><br><span class="line">    antialias()</span><br><span class="line"></span><br><span class="line">  h2, .h2</span><br><span class="line">    position: relative</span><br><span class="line">    display: block</span><br><span class="line">    margin-top: 2rem</span><br><span class="line">    margin-bottom: .5rem</span><br><span class="line">    color: $color-accent-2</span><br><span class="line">    text-transform: none</span><br><span class="line">    letter-spacing: normal</span><br><span class="line">    font-weight: bold</span><br><span class="line">    font-size: 26px</span><br><span class="line"></span><br><span class="line">  h3</span><br><span class="line">    color: $color-accent-2</span><br><span class="line">    text-decoration: underline</span><br><span class="line">    font-weight: bold</span><br><span class="line">    font-size: 25px</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">$base-<span class="built_in">style</span></span><br><span class="line">  h1, .h1</span><br><span class="line">    <span class="built_in">display</span>: <span class="built_in">block</span></span><br><span class="line">    margin-top: 3<span class="built_in">rem</span></span><br><span class="line">    margin-bottom: 1<span class="built_in">rem</span></span><br><span class="line">    <span class="built_in">color</span>: $<span class="built_in">color</span>-accent-<span class="number">1</span></span><br><span class="line">    letter-spacing: .<span class="number">01em</span></span><br><span class="line">    <span class="built_in">font</span>-weight: <span class="number">700</span></span><br><span class="line">    <span class="built_in">font</span>-<span class="built_in">style</span>: normal</span><br><span class="line">    <span class="built_in">font</span>-size: <span class="number">1.</span>5em</span><br><span class="line"></span><br><span class="line">    antialias()</span><br><span class="line"></span><br><span class="line">  h2, .h2</span><br><span class="line">    <span class="built_in">position</span>: relative</span><br><span class="line">    <span class="built_in">display</span>: <span class="built_in">block</span></span><br><span class="line">    margin-top: 2<span class="built_in">rem</span></span><br><span class="line">    margin-bottom: .5<span class="built_in">rem</span></span><br><span class="line">    <span class="built_in">color</span>: $<span class="built_in">color</span>-accent-<span class="number">2</span></span><br><span class="line">    text-<span class="built_in">transform</span>: none</span><br><span class="line">    letter-spacing: normal</span><br><span class="line">    <span class="built_in">font</span>-weight: bold</span><br><span class="line">    <span class="built_in">font</span>-size: 26px</span><br><span class="line"></span><br><span class="line">  h3</span><br><span class="line">    <span class="built_in">color</span>: $<span class="built_in">color</span>-accent-<span class="number">2</span></span><br><span class="line">    text-decoration: underline</span><br><span class="line">    <span class="built_in">font</span>-weight: bold</span><br><span class="line">    <span class="built_in">font</span>-size: 25px</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h4 id="TOC字体大小设置"><a href="#TOC字体大小设置" class="headerlink" title="TOC字体大小设置"></a>TOC字体大小设置</h4><p>toc就是文章目录，但是还是老问题，toc字体太小了，所以打开<code>blog/themes/cactus/source/css/_partial/post/actions_desktop.styl</code><br>修改#toc部分和上面的h1,h2,h3一样</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">#toc</span><br><span class="line">   float: right</span><br><span class="line">   clear: both</span><br><span class="line">   overflow: auto</span><br><span class="line">   margin-top: 1rem</span><br><span class="line">   padding-right: 2rem</span><br><span class="line">   max-width: 20em</span><br><span class="line">   max-height: calc(95vh - 7rem)</span><br><span class="line">   text-align: right</span><br><span class="line"></span><br><span class="line">   a:hover</span><br><span class="line">     color: $color-link</span><br><span class="line"></span><br><span class="line">   .toc-level-1 &gt; .toc-link</span><br><span class="line">     display: none</span><br><span class="line"></span><br><span class="line">   .toc-level-2</span><br><span class="line">     color: $color-text</span><br><span class="line">     font-size: 22px</span><br><span class="line"></span><br><span class="line">     &amp;:before</span><br><span class="line">       color: $color-accent-1</span><br><span class="line">       content: &quot;#&quot;</span><br><span class="line"></span><br><span class="line">   .toc-level-3</span><br><span class="line">     color: $color-meta</span><br><span class="line">     font-size: 20px</span><br><span class="line"></span><br><span class="line">   .toc-level-4</span><br><span class="line">     color: darken($color-meta, 20%)</span><br><span class="line">     font-size: 18px</span><br><span class="line"></span><br><span class="line">   .toc-level-5</span><br><span class="line">     display: none</span><br><span class="line"></span><br><span class="line">   .toc-level-6</span><br><span class="line">     display: none</span><br><span class="line"></span><br><span class="line">   .toc-number</span><br><span class="line">     display: none</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#toc</span></span><br><span class="line">   <span class="attribute">float</span>: right</span><br><span class="line">   <span class="attribute">clear</span>: both</span><br><span class="line">   <span class="attribute">overflow</span>: auto</span><br><span class="line">   <span class="attribute">margin-top</span>: <span class="number">1rem</span></span><br><span class="line">   <span class="attribute">padding-right</span>: <span class="number">2rem</span></span><br><span class="line">   <span class="attribute">max-width</span>: <span class="number">20em</span></span><br><span class="line">   <span class="attribute">max-height</span>: <span class="built_in">calc</span>(<span class="number">95vh</span> - <span class="number">7rem</span>)</span><br><span class="line">   <span class="attribute">text-align</span>: right</span><br><span class="line"></span><br><span class="line">   <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span></span><br><span class="line">     <span class="attribute">color</span>: <span class="variable">$color</span>-link</span><br><span class="line"></span><br><span class="line">   <span class="selector-class">.toc-level-1</span> &gt; <span class="selector-class">.toc-link</span></span><br><span class="line">     <span class="attribute">display</span>: none</span><br><span class="line"></span><br><span class="line">   <span class="selector-class">.toc-level-2</span></span><br><span class="line">     <span class="attribute">color</span>: <span class="variable">$color</span>-text</span><br><span class="line">     <span class="attribute">font-size</span>: <span class="number">22px</span></span><br><span class="line"></span><br><span class="line">     <span class="selector-pseudo">&amp;:before</span></span><br><span class="line">       <span class="attribute">color</span>: <span class="variable">$color</span>-accent-<span class="number">1</span></span><br><span class="line">       <span class="attribute">content</span>: <span class="string">&quot;#&quot;</span></span><br><span class="line"></span><br><span class="line">   <span class="selector-class">.toc-level-3</span></span><br><span class="line">     <span class="attribute">color</span>: <span class="variable">$color</span>-meta</span><br><span class="line">     <span class="attribute">font-size</span>: <span class="number">20px</span></span><br><span class="line"></span><br><span class="line">   <span class="selector-class">.toc-level-4</span></span><br><span class="line">     <span class="attribute">color</span>: <span class="built_in">darken</span>(<span class="variable">$color</span>-meta, <span class="number">20%</span>)</span><br><span class="line">     <span class="attribute">font-size</span>: <span class="number">18px</span></span><br><span class="line"></span><br><span class="line">   <span class="selector-class">.toc-level-5</span></span><br><span class="line">     <span class="attribute">display</span>: none</span><br><span class="line"></span><br><span class="line">   <span class="selector-class">.toc-level-6</span></span><br><span class="line">     <span class="attribute">display</span>: none</span><br><span class="line"></span><br><span class="line">   <span class="selector-class">.toc-number</span></span><br><span class="line">     <span class="attribute">display</span>: none</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h3 id="其他设置"><a href="#其他设置" class="headerlink" title="其他设置"></a>其他设置</h3><h4 id="设置gruvbox主题配色"><a href="#设置gruvbox主题配色" class="headerlink" title="设置gruvbox主题配色"></a>设置gruvbox主题配色</h4><p>默认的cactus主题有三个主题，不过没有我最喜欢的gruvbox的主题，所以我们打开<code>/blog/themes/cactus/source/css/_colors/dark.styl</code> 修改里面的配色</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$color-background = #282828        // Gruvbox 经典深色背景</span><br><span class="line">$color-footer-mobile-1 = lighten($color-background, 2%)</span><br><span class="line">$color-footer-mobile-2 = lighten($color-background, 10%)</span><br><span class="line">$color-background-code = #3c3836   // 代码块背景色 (bg1)</span><br><span class="line">$color-border = #504945            // 边框色 (bg2)</span><br><span class="line">$color-scrollbar = #7c6f64         // 滚动条 (bg4)</span><br><span class="line">$color-meta = #928374              // 日期、标签等元数据 (灰色)</span><br><span class="line">$color-meta-code = #928374</span><br><span class="line">$color-link = #ebdbb2              // 普通链接颜色（复刻截图中的文章标题颜色）</span><br><span class="line">$color-text = #ebdbb2              // 正文文本颜色 (米黄色 fg)</span><br><span class="line">$color-accent-3 = #a89984          // 次要强调色 (fg4)</span><br><span class="line">$color-accent-2 = #ebdbb2          // 悬停等状态色</span><br><span class="line">$color-accent-1 = #fe8019          // 核心强调色：导航栏、分类大标题 (Gruvbox 橙色)</span><br><span class="line">$color-quote = #b8bb26             // 引用块 (Gruvbox 绿色)</span><br><span class="line">$highlight = hexo-config(&quot;highlight&quot;) || &quot;gruvbox-dark&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$color<span class="params">-background</span> = #282828        <span class="comment">// Gruvbox 经典深色背景</span></span><br><span class="line">$color<span class="params">-footer</span><span class="params">-mobile</span><span class="number">-1</span> = lighten($color<span class="params">-background</span>, <span class="number">2</span>%)</span><br><span class="line">$color<span class="params">-footer</span><span class="params">-mobile</span><span class="number">-2</span> = lighten($color<span class="params">-background</span>, <span class="number">10</span>%)</span><br><span class="line">$color<span class="params">-background</span><span class="params">-code</span> = #3c3836   <span class="comment">// 代码块背景色 (bg1)</span></span><br><span class="line">$color<span class="params">-border</span> = #504945            <span class="comment">// 边框色 (bg2)</span></span><br><span class="line">$color<span class="params">-scrollbar</span> = #7c6f64         <span class="comment">// 滚动条 (bg4)</span></span><br><span class="line">$color<span class="params">-meta</span> = #928374              <span class="comment">// 日期、标签等元数据 (灰色)</span></span><br><span class="line">$color<span class="params">-meta</span><span class="params">-code</span> = #928374</span><br><span class="line">$color<span class="params">-link</span> = #ebdbb2              <span class="comment">// 普通链接颜色（复刻截图中的文章标题颜色）</span></span><br><span class="line">$color<span class="params">-text</span> = #ebdbb2              <span class="comment">// 正文文本颜色 (米黄色 fg)</span></span><br><span class="line">$color<span class="params">-accent</span><span class="number">-3</span> = #a89984          <span class="comment">// 次要强调色 (fg4)</span></span><br><span class="line">$color<span class="params">-accent</span><span class="number">-2</span> = #ebdbb2          <span class="comment">// 悬停等状态色</span></span><br><span class="line">$color<span class="params">-accent</span><span class="number">-1</span> = #fe8019          <span class="comment">// 核心强调色：导航栏、分类大标题 (Gruvbox 橙色)</span></span><br><span class="line">$color<span class="params">-quote</span> = #b8bb26             <span class="comment">// 引用块 (Gruvbox 绿色)</span></span><br><span class="line">$highlight = hexo<span class="params">-config</span>(<span class="string">&quot;highlight&quot;</span>) || <span class="string">&quot;gruvbox-dark&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>在<code>blog/themes/cactus/_config.yml</code> 确保colorscheme是dark</p>
 <h4 id="设置logo和图标图片"><a href="#设置logo和图标图片" class="headerlink" title="设置logo和图标图片"></a>设置logo和图标图片</h4><p>默认的图片是一个可爱的仙人掌，所以我们要修改logo图片,在blog&#x2F;themes&#x2F;cactus&#x2F;source&#x2F;images放入自己的logo的图片,然后在<code>blog/themes/cactus/_config.yml</code> 修改为自己的图片</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">logo:</span><br><span class="line">  enabled: true</span><br><span class="line">  width: 100</span><br><span class="line">  height: 100</span><br><span class="line">  url: /images/logo.png</span><br><span class="line">  gravatar: false</span><br><span class="line">  grayout: false</span><br><span class="line">  </span><br><span class="line">  .....</span><br><span class="line">  </span><br><span class="line">favicon:</span><br><span class="line">  desktop:</span><br><span class="line">    url: /images/logo.png</span><br><span class="line">    gravatar: false</span><br><span class="line">  android:</span><br><span class="line">    url: /images/logo.png</span><br><span class="line">    gravatar: false</span><br><span class="line">  apple:</span><br><span class="line">    url: /images/logo.png</span><br><span class="line">    gravatar: false</span><br></pre></td></tr></table></figure>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="params">logo:</span></span><br><span class="line">  <span class="params">enabled:</span> <span class="literal">true</span></span><br><span class="line">  <span class="params">width:</span> <span class="number">100</span></span><br><span class="line">  <span class="params">height:</span> <span class="number">100</span></span><br><span class="line">  <span class="params">url:</span> <span class="symbol">/images/logo.png</span></span><br><span class="line">  <span class="params">gravatar:</span> <span class="literal">false</span></span><br><span class="line">  <span class="params">grayout:</span> <span class="literal">false</span></span><br><span class="line">  </span><br><span class="line">  .....</span><br><span class="line">  </span><br><span class="line"><span class="params">favicon:</span></span><br><span class="line">  <span class="params">desktop:</span></span><br><span class="line">    <span class="params">url:</span> <span class="symbol">/images/logo.png</span></span><br><span class="line">    <span class="params">gravatar:</span> <span class="literal">false</span></span><br><span class="line">  <span class="params">android:</span></span><br><span class="line">    <span class="params">url:</span> <span class="symbol">/images/logo.png</span></span><br><span class="line">    <span class="params">gravatar:</span> <span class="literal">false</span></span><br><span class="line">  <span class="params">apple:</span></span><br><span class="line">    <span class="params">url:</span> <span class="symbol">/images/logo.png</span></span><br><span class="line">    <span class="params">gravatar:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="设置导航栏"><a href="#设置导航栏" class="headerlink" title="设置导航栏"></a>设置导航栏</h4><p>在<code>blog/themes/cactus/_config.yml</code>修改nav部分 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">nav:</span><br><span class="line">  home: /</span><br><span class="line">  about: /about/</span><br><span class="line">  articles: /archives/</span><br><span class="line">  标签: /tags/</span><br><span class="line">  资源: /resource/</span><br><span class="line">  RSS: /atom.xml</span><br><span class="line">  搜索: /search/</span><br></pre></td></tr></table></figure>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="params">nav:</span></span><br><span class="line">  <span class="params">home:</span> <span class="symbol">/</span></span><br><span class="line">  <span class="params">about:</span> <span class="operator">/</span>about<span class="symbol">/</span></span><br><span class="line">  <span class="params">articles:</span> <span class="operator">/</span>archives<span class="symbol">/</span></span><br><span class="line">  标签: <span class="operator">/</span>tags<span class="symbol">/</span></span><br><span class="line">  资源: <span class="operator">/</span>resource<span class="symbol">/</span></span><br><span class="line">  <span class="params">RSS:</span> <span class="symbol">/atom.xml</span></span><br><span class="line">  搜索: <span class="operator">/</span>search<span class="operator">/</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="设置社交链接"><a href="#设置社交链接" class="headerlink" title="设置社交链接"></a>设置社交链接</h4><p>在<code>blog/themes/cactus/_config.yml</code>修改social_links部分</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">social_links:</span><br><span class="line">  -</span><br><span class="line">    icon: github</span><br><span class="line">    link: https://github.com/Aidens-fox?tab=repositories</span><br><span class="line"> </span><br><span class="line">  -</span><br><span class="line">    icon: git</span><br><span class="line">    label: codeberg</span><br><span class="line">    link: https://codeberg.org/Aidens-fox</span><br><span class="line"></span><br><span class="line">  -</span><br><span class="line">    icon: mastodon</span><br><span class="line">    label: mastodon.social</span><br><span class="line">    link: https://mastodon.social/@aidens_fox</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">social_links:</span><br><span class="line">  -</span><br><span class="line">    <span class="attribute">icon</span>: github</span><br><span class="line">    <span class="attribute">link</span>: <span class="attribute">https</span>:<span class="comment">//github.com/Aidens-fox?tab=repositories</span></span><br><span class="line"> </span><br><span class="line">  -</span><br><span class="line">    <span class="attribute">icon</span>: git</span><br><span class="line">    <span class="attribute">label</span>: codeberg</span><br><span class="line">    <span class="attribute">link</span>: <span class="attribute">https</span>:<span class="comment">//codeberg.org/Aidens-fox</span></span><br><span class="line"></span><br><span class="line">  -</span><br><span class="line">    <span class="attribute">icon</span>: mastodon</span><br><span class="line">    <span class="attribute">label</span>: mastodon.social</span><br><span class="line">    <span class="attribute">link</span>: <span class="attribute">https</span>:<span class="comment">//mastodon.social/@aidens_fox</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h4 id="设置主页的文章显示数量"><a href="#设置主页的文章显示数量" class="headerlink" title="设置主页的文章显示数量"></a>设置主页的文章显示数量</h4><p>默认只显示最新的5篇文章，在<code>blog/themes/cactus/_config.yml</code>修改posts_overview部分</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">posts_overview:</span><br><span class="line">  show_all_posts: true</span><br><span class="line">  post_count: 10</span><br><span class="line">  sort_updated: false</span><br></pre></td></tr></table></figure>
+<figure class="highlight nix"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="params">posts_overview:</span></span><br><span class="line">  <span class="params">show_all_posts:</span> <span class="literal">true</span></span><br><span class="line">  <span class="params">post_count:</span> <span class="number">10</span></span><br><span class="line">  <span class="params">sort_updated:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 
 <p>你也可以顺便在主页显示标签云<br><code>tags_overview: true</code> </p>
 <h4 id="设置页面宽度"><a href="#设置页面宽度" class="headerlink" title="设置页面宽度"></a>设置页面宽度</h4><p>默认的宽度太窄了，我们修改page_width部分<br><code>page_width: 80</code></p>
 <p>顺便更正真正的建站时间</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">copyright:</span><br><span class="line">  start_year: 2026</span><br><span class="line">  end_year:</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">copyright:</span></span><br><span class="line">  <span class="attr">start_year:</span> <span class="number">2026</span></span><br><span class="line">  <span class="attr">end_year:</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="本地查看一下效果"><a href="#本地查看一下效果" class="headerlink" title="本地查看一下效果"></a>本地查看一下效果</h4><p>修改好这些后就可以在本地查看一下效果怎么样了，在博客根目录<br>下执行命令<br><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code></p>
 <p>然后在浏览器输入<a target="_blank" rel="noopener" href="http://localhost:4000/%E5%B0%B1%E5%8F%AF%E4%BB%A5%E6%9C%AC%E5%9C%B0%E6%9F%A5%E7%9C%8B%E4%BA%86">http://localhost:4000/就可以本地查看了</a></p>
 <h3 id="上传到仓库"><a href="#上传到仓库" class="headerlink" title="上传到仓库"></a>上传到仓库</h3><h4 id="安装hexo-deployer-git插件"><a href="#安装hexo-deployer-git插件" class="headerlink" title="安装hexo-deployer-git插件"></a>安装hexo-deployer-git插件</h4><p>hexo-deployer-git用来把生成好的网页文件自动推送到远程仓库,不用再手动git到仓库,在博客根目录使用npm安装插件<br><code>npm install hexo-deployer-git --save</code></p>
 <p>打开根目录下的 <code>_config.yml</code> 文件在找到 <code>deploy</code> 配置项，修改为你的仓库信息</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repo: https://codeberg.org/Aidens-fox/pages.git</span><br><span class="line">    branch: main</span><br></pre></td></tr></table></figure>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">deploy:</span></span><br><span class="line"><span class="symbol">    type:</span> git</span><br><span class="line"><span class="symbol">    repo:</span> https:<span class="comment">//codeberg.org/Aidens-fox/pages.git</span></span><br><span class="line"><span class="symbol">    branch:</span> main</span><br></pre></td></tr></table></figure>
 
 <h4 id="配置git"><a href="#配置git" class="headerlink" title="配置git"></a>配置git</h4><p>git在使用之前需要添加用户名和邮箱才可以使用,输入以下命令<br><code>git config --global user.name &quot;你的用户名&quot;</code></p>
 <p><code>git config --global user.email &quot;你的邮箱&quot;</code></p>
@@ -1147,156 +1240,6 @@
 <h4 id="上传代码到仓库"><a href="#上传代码到仓库" class="headerlink" title="上传代码到仓库"></a>上传代码到仓库</h4><p>输入以下命令<br><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></p>
 <p>运行后会要求你输入用户名和密码，密码就是访问令牌</p>
 <h4 id="启用codeberg-pages服务"><a href="#启用codeberg-pages服务" class="headerlink" title="启用codeberg pages服务"></a>启用codeberg pages服务</h4><p>打开仓库页面，点击右边扳手图标的设置，选择Web钩子，点击添加Web钩子，选择Forgejo，打开后目标URL填入<br><code>https://用户名.codeberg.page</code><br>最后点击更新web钩子,等待几分钟就可以得到你的个人博客了</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://aidens-fox.codeberg.page/posts/3d425d4d.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Aidens-fox">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Aidens的博客">
-      <meta itemprop="description" content="linux和windows折腾记录,软件资源分享">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | Aidens的博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/3d425d4d.html" class="post-title-link" itemprop="url">Gruvbox配色主题补完计划</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-07-16 23:32:27" itemprop="dateCreated datePublished" datetime="2026-07-16T23:32:27+08:00">2026-07-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-10-01 07:38:08" itemprop="dateModified" datetime="2026-10-01T07:38:08+08:00">2026-10-01</time>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-lines"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.3k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>8 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Gruvbox是一个柔和复古的暖色调主题，对比度也很高，长时间盯着也不会刺眼难受，这也是我最喜欢的配色主题，所以我的整个linux基本都是gruvbox的配色主题，包括终端st,窗口管理器dwm和其他软件，所以本篇博文我会分享我linux的gruvbox的配色主题文件，你也可以看看gruvbox的色调(暗):<br><img src="/img/ss.png"></p>
-<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><p>如果你要自定义图标或主题，那么使用一个gtk编辑器来自由切换主题就十分方便，我们可以使用<a target="_blank" rel="noopener" href="https://github.com/nwg-piotr/nwg-look">nwg-look</a>来管理我们的图标和主题了,这个软件可以使用包管理来安装使用，我已arch为例:<br><code>sudo pacman -S nwg-look</code></p>
-<p>随便提一句nwg-look是<a target="_blank" rel="noopener" href="https://nwg-piotr.github.io/nwg-shell/">nwg-shell</a>的一部分，<a target="_blank" rel="noopener" href="https://github.com/swaywm/sway">nwg-shell 项目旨在为sway</a> Wayland 合成器创建一个基于 GTK3 的统一用户界面。为了给用户提供尽可能多的选择,安装好nwg-look后就可以开始下载主题文件那些来</p>
-<h3 id="gtk主题"><a href="#gtk主题" class="headerlink" title="gtk主题"></a>gtk主题</h3><p><a target="_blank" rel="noopener" href="https://wiki.archlinuxcn.org/wiki/GTK">gtk</a>是一个gui框架，很多应用都是使用gtk框架，所以所以gtk主题就可以让许多软件变成gruvbox配色，我们可以在<a target="_blank" rel="noopener" href="https://www.opendesktop.org/p/1681313/">opendesktop</a>里下载压缩包或者如果你使用的是arch就可以使用aur仓库里的包来安装了:<br><code>yay -S gruvbox-gtk-theme-git</code></p>
-<p> 如果你是手动下载那你需要在家目录下手动创建一个.themes的文件夹<br> <code>mkdir .themes</code></p>
-<p>然后在把下载好的压缩包解压放入到里面，如果要所有用户生效移动至全局目录&#x2F;usr&#x2F;share&#x2F;themes下然后打开nwg-look就可以看到添加的主题了，相比之下我更推荐使用aur的方案</p>
-<h3 id="qt主题"><a href="#qt主题" class="headerlink" title="qt主题"></a>qt主题</h3><p>大部分的软件界面都是使用qt和gtk框架，导致使用gtk的是我们配置好的gtk主题，而使用qt的就是”眼前一亮”了，十分影响体验，所以我们也需要找一个和gtk主题差不多的qt主题来让我们使用起来不那么割裂，这一部分参考<a target="_blank" rel="noopener" href="https://blog.starryreverie.cc/posts/unify-look-of-linux-gui-frameworks/">统一 Linux GUI 框架主题和外观</a> </p>
-<p>首先我们要先下载管理和控制qt样式的软件，也就是qt6ct还有Kvantum，使用你的包管理器安装:<br><code>sudo pacman -S qt6ct  kvantum </code></p>
-<p>打开qt6ct后你会发现上面有一个警告，提示你没有让qt程序从qt6ct读取配置,我们需要设置环境变量，使用你的文本编辑器打开&#x2F;etc&#x2F;environment,在里面添加:<br><code>QT_QPA_PLATFORMTHEME=qt6ct</code></p>
-<p>然后重启一下就可以了，在qt6ct你可以设置字体和图标等，关于主题就需要用到另一个软件Kvantum了，你可以在Kvantum里安装一些主题，包括gruvbox主题，我们先下载主题，访问下面的仓库:<br><a target="_blank" rel="noopener" href="https://github.com/sachnr/gruvbox-kvantum-themes">https://github.com/sachnr/gruvbox-kvantum-themes</a></p>
-<p>在发布页面下载压缩包后解压，或者直接git克隆下来后，打开Kvantum，现在安装&#x2F;更新主题那一栏目，点击选择一个Kvantum的主题目录，现在你解压完成的文件夹，点击安装此主题就可以了，然后点击变更&#x2F;删除主题那一栏目，在选择一个主题的列表现在你刚安装好的就可以了，然后点击应用此主题后退出，接着再打开qt6ct，在外观那里的风格选择Kvantum后点击下面的应用和确认，这样你打开qt应用就是gruvbox主题了</p>
-<h3 id="图标主题"><a href="#图标主题" class="headerlink" title="图标主题"></a>图标主题</h3><p>在默认的软件图标是软件的默认图标，可能会和gruvbox主题格格不入,所以可以借助图标主题来增加美观性，如果你是arch你可以使用aur仓库的包:<br><code>yay -S gruvbox-plus-icon-theme-git</code></p>
-<p>也可以在项目<a target="_blank" rel="noopener" href="https://github.com/SylEleuth/gruvbox-plus-icon-pack/releases">发布页面</a>下载.zip压缩包后解压放在家目录的.icons文件夹,如果要所有用户生效移动至全局目录&#x2F;usr&#x2F;share&#x2F;icons下然后打开nwg-look就可以看到添加的主题了，相比之下我更推荐使用aur的方案</p>
-<h3 id="鼠标主题"><a href="#鼠标主题" class="headerlink" title="鼠标主题"></a>鼠标主题</h3><p>默认的鼠标主题可能会和gruvbox主题格格不入,所以可以借助鼠标主题来增加美观性,这里使用Moga Neon鼠标主题,在<a target="_blank" rel="noopener" href="https://www.gnome-look.org/p/2302110">下载网站</a>下载文件名有sandy的zip压缩包解压到家目录的.icons文件夹,如果要所有用户生效移动至全局目录&#x2F;usr&#x2F;share&#x2F;icons下然后打开nwg-look就可以看到添加的主题了,不过在nwg-look下选择应用是没有办法应用的，我们还需要其他配置,这里已dwm(x11)为例,在家目录新建.Xresources文件,在文件添加</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Xcursor.theme: Moga-Neon-Sandy</span><br><span class="line">Xcursor.size:  24</span><br></pre></td></tr></table></figure>
-
-<p>上面分别是鼠标主题名称和鼠标大小,然后我们还要在.xinitrc加载,在.xinitrc添加:<br><code>xrdb -merge ~/.Xresources</code></p>
-<p>其他细节查看: <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/Cursor_themes">https://wiki.archlinux.org/title/Cursor_themes</a></p>
-<h3 id="dwm状态栏配色"><a href="#dwm状态栏配色" class="headerlink" title="dwm状态栏配色"></a>dwm状态栏配色</h3><p>打开config.h配置文件:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/* 状态栏配色(Gruvbox) */</span><br><span class="line">static const char col_gray1[]       = &quot;###32302f&quot;; /* 背景色 */</span><br><span class="line">static const char col_gray2[]       = &quot;###1d2021&quot;; /* 非激活窗口 */</span><br><span class="line">static const char col_gray3[]       = &quot;###ebdbb2&quot;; /* 文字颜色 */</span><br><span class="line">static const char col_gray4[]       = &quot;###ebdbb2&quot;; /* 激活窗口边框/文字 */</span><br><span class="line">static const char col_cyan[]        = &quot;###5b623e&quot;; /* 主题色 */</span><br><span class="line">static const char *colors[][3]      = &#123;</span><br><span class="line">	/*               fg         bg         border   */</span><br><span class="line">	[SchemeNorm] = &#123; col_gray3, col_gray1, col_gray2 &#125;,</span><br><span class="line">	[SchemeSel]  = &#123; col_gray4, col_cyan,  col_cyan  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>不过相对于修改config.h文件，我还是推荐修改config.def.h在删除config.h文件:<br><code>rm -rf config.h</code></p>
-<p>因为如果不删除config.h文件，编译安装后就还是之前的配置，所以需要删除后在编译安装:<br><code>sudo make clean install</code></p>
-<h3 id="Fcitx5主题"><a href="#Fcitx5主题" class="headerlink" title="Fcitx5主题"></a>Fcitx5主题</h3><p>默认的fcitx5主题是白色的，十分刺眼，所以使用主题就可以来增加美观性,主题使用fcitx5-gruvbox-dark-theme，如果你是arch可以使用aur的包:<br><code>yay -S fcitx5-gruvbox-dark-theme-git</code></p>
-<p>或者也可以手动安装,首先使用git克隆仓库:<br><code>git clone https://github.com/zpyg/fcitx5-gruvbox-dark-theme ~/.local/share/fcitx5/themes/gruvbox-dark --depth=1</code></p>
-<ol start="2">
-<li>设置主题颜色（可选，默认为aqua）</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.local/share/fcitx5/themes/gruvbox-dark</span><br><span class="line">ln -sf ./theme-&#x27;颜色&#x27;.conf theme.conf</span><br></pre></td></tr></table></figure>
-
-<p>(注:如果说aur安装的不需要这一部)</p>
-<p>然后在.config&#x2F;fcitx5&#x2F;conf&#x2F;classicui.conf文件下设置主题:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">### 垂直候选列表</span><br><span class="line">Vertical Candidate List=False</span><br><span class="line"></span><br><span class="line">### 按屏幕 DPI 使用</span><br><span class="line">PerScreenDPI=True</span><br><span class="line"></span><br><span class="line">### Font (设置成你喜欢的字体)</span><br><span class="line">Font=&quot;思源黑体 CN Medium 13&quot;</span><br><span class="line"></span><br><span class="line">### 主题</span><br><span class="line">Theme=gruvbox-dark-green</span><br></pre></td></tr></table></figure>
-
-<p>然后在重新启动就可以了</p>
-<h3 id="st-终端模拟器"><a href="#st-终端模拟器" class="headerlink" title="st(终端模拟器)"></a>st(终端模拟器)</h3><p>打开config.h配置文件:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">/* Terminal colors (16 first used in escape sequence) */</span><br><span class="line">static const char *colorname[] = &#123;</span><br><span class="line">	/* 8 normal colors */</span><br><span class="line">	&quot;###282828&quot;, /* black   */</span><br><span class="line">	&quot;###cc241d&quot;, /* red     */</span><br><span class="line">	&quot;###98971a&quot;, /* green   */</span><br><span class="line">	&quot;###d79921&quot;, /* yellow  */</span><br><span class="line">	&quot;###458588&quot;, /* blue    */</span><br><span class="line">	&quot;###b16286&quot;, /* magenta */</span><br><span class="line">	&quot;###689d6a&quot;, /* cyan    */</span><br><span class="line">	&quot;###a89984&quot;, /* white   */</span><br><span class="line"></span><br><span class="line">	/* 8 bright colors */</span><br><span class="line">	&quot;###928374&quot;, /* black   */</span><br><span class="line">	&quot;###fb4934&quot;, /* red     */</span><br><span class="line">	&quot;###b8bb26&quot;, /* green   */</span><br><span class="line">	&quot;###fabd2f&quot;, /* yellow  */</span><br><span class="line">	&quot;###83a598&quot;, /* blue    */</span><br><span class="line">	&quot;###d3869b&quot;, /* magenta */</span><br><span class="line">	&quot;###8ec07c&quot;, /* cyan    */</span><br><span class="line">	&quot;###ebdbb2&quot;, /* white   */</span><br><span class="line"></span><br><span class="line">	[255] = 0,</span><br><span class="line"></span><br><span class="line">	/* more colors can be added after 255 to use with DefaultXX */</span><br><span class="line">	&quot;###add8e6&quot;, /* 256: cursor */</span><br><span class="line">	&quot;###555555&quot;, /* 257: rev cursor*/</span><br><span class="line">	&quot;###282828&quot;, /* 258: background */</span><br><span class="line">	&quot;###ebdbb2&quot;, /* 259: foreground */</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*</span><br><span class="line"> * Default colors (colorname index)</span><br><span class="line"> * foreground, background, cursor, reverse cursor</span><br><span class="line"> */</span><br><span class="line">unsigned int defaultfg = 259;</span><br><span class="line">unsigned int defaultbg = 258;</span><br><span class="line">unsigned int defaultcs = 256;</span><br><span class="line">static unsigned int defaultrcs = 257;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>不过相对于修改config.h文件，我还是推荐修改config.def.h在删除config.h文件:<br><code>rm -rf config.h</code></p>
-<p>因为如果不删除config.h文件，编译安装后就还是之前的配置，所以需要删除后在编译安装:<br><code>sudo make clean install</code></p>
-<h3 id="Zathura"><a href="#Zathura" class="headerlink" title="Zathura"></a>Zathura</h3><p>打开.config&#x2F;zathura&#x2F;zathurarc写入以下内容，gruvbox配色配置使用 <a target="_blank" rel="noopener" href="https://github.com/eastack/zathura-gruvbox">https://github.com/eastack/zathura-gruvbox</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">set notification-error-bg       &quot;rgba(40,40,40,1)&quot;     # bg</span><br><span class="line">set notification-error-fg       &quot;rgba(251,73,52,1)&quot;    # bright:red</span><br><span class="line">set notification-warning-bg     &quot;rgba(40,40,40,1)&quot;     # bg</span><br><span class="line">set notification-warning-fg     &quot;rgba(250,189,47,1)&quot;   # bright:yellow</span><br><span class="line">set notification-bg             &quot;rgba(40,40,40,1)&quot;     # bg</span><br><span class="line">set notification-fg             &quot;rgba(184,187,38,1)&quot;   # bright:green</span><br><span class="line"></span><br><span class="line">set completion-bg               &quot;rgba(80,73,69,1)&quot;     # bg2</span><br><span class="line">set completion-fg               &quot;rgba(235,219,178,1)&quot;  # fg</span><br><span class="line">set completion-group-bg         &quot;rgba(60,56,54,1)&quot;     # bg1</span><br><span class="line">set completion-group-fg         &quot;rgba(146,131,116,1)&quot;  # gray</span><br><span class="line">set completion-highlight-bg     &quot;rgba(131,165,152,1)&quot;  # bright:blue</span><br><span class="line">set completion-highlight-fg     &quot;rgba(80,73,69,1)&quot;     # bg2</span><br><span class="line"></span><br><span class="line"># Define the color in index mode</span><br><span class="line">set index-bg                    &quot;rgba(80,73,69,1)&quot;     # bg2</span><br><span class="line">set index-fg                    &quot;rgba(235,219,178,1)&quot;  # fg</span><br><span class="line">set index-active-bg             &quot;rgba(131,165,152,1)&quot;  # bright:blue</span><br><span class="line">set index-active-fg             &quot;rgba(80,73,69,1)&quot;     # bg2</span><br><span class="line"></span><br><span class="line">set inputbar-bg                 &quot;rgba(40,40,40,1)&quot;     # bg</span><br><span class="line">set inputbar-fg                 &quot;rgba(235,219,178,1)&quot;  # fg</span><br><span class="line"></span><br><span class="line">set statusbar-bg                &quot;rgba(80,73,69,1)&quot;     # bg2</span><br><span class="line">set statusbar-fg                &quot;rgba(235,219,178,1)&quot;  # fg</span><br><span class="line"></span><br><span class="line">set highlight-color             &quot;rgba(250,189,47,0.5)&quot; # bright:yellow</span><br><span class="line">set highlight-active-color      &quot;rgba(254,128,25,0.5)&quot; # bright:orange</span><br><span class="line"></span><br><span class="line">set default-bg                  &quot;rgba(40,40,40,1)&quot;     # bg</span><br><span class="line">set default-fg                  &quot;rgba(235,219,178,1)&quot;  # fg</span><br><span class="line">set render-loading              true</span><br><span class="line">set render-loading-bg           &quot;rgba(40,40,40,1)&quot;     # bg</span><br><span class="line">set render-loading-fg           &quot;rgba(235,219,178,1)&quot;  # fg</span><br><span class="line"></span><br><span class="line"># Recolor book content&#x27;s color</span><br><span class="line">set recolor-lightcolor          &quot;rgba(40,40,40,1)&quot;     # bg</span><br><span class="line">set recolor-darkcolor           &quot;rgba(235,219,178,1)&quot;  # fg</span><br><span class="line">set recolor                     &quot;true&quot;</span><br><span class="line">set recolor-keephue             &quot;true&quot;                 # keep original color</span><br></pre></td></tr></table></figure>
-<h3 id="Telegram"><a href="#Telegram" class="headerlink" title="Telegram"></a>Telegram</h3><p>gruvbox 风格的 Telegram 主题<br>使用方法很简单，只需打开：<br><a target="_blank" rel="noopener" href="https://t.me/addtheme/gruvboxTelegram">https://t.me/addtheme/gruvboxTelegram</a></p>
-<p>跳转到应用后点击应用就可以了</p>
-<h3 id="qbittorrent"><a href="#qbittorrent" class="headerlink" title="qbittorrent"></a>qbittorrent</h3><p>在默认的qbittorrent 是只有白色的，在晚上就十分刺眼，我们可以使用配色文件来效果<br>仓库地址：<br><a target="_blank" rel="noopener" href="https://github.com/MahdiMirzadeh/qbittorrent">https://github.com/MahdiMirzadeh/qbittorrent</a></p>
-<ol>
-<li>在 qBittorrent 中：<ul>
-<li>转到“工具”→“选项”→“行为”→“界面”</li>
-<li>在“界面主题”下，点击“…”并选择下载的<code>.qbtheme</code>文件</li>
-<li>点击确定并重启 qBittorrent</li>
-</ul>
-</li>
-</ol>
-<h3 id="nvim"><a href="#nvim" class="headerlink" title="nvim"></a>nvim</h3><p>仓库地址：<br><a target="_blank" rel="noopener" href="https://github.com/ellisonleao/gruvbox.nvim">https://github.com/ellisonleao/gruvbox.nvim</a></p>
-<p>如果你的nvim插件管理器是packer<br><code>use { &quot;ellisonleao/gruvbox.nvim&quot; }</code></p>
-<p>如果是lazy<br><code>{ &quot;ellisonleao/gruvbox.nvim&quot; },</code></p>
-<p>然后在init.lua添加:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">--外观</span><br><span class="line">opt.termguicolors = true</span><br><span class="line">vim.o.background = &quot;dark&quot; -- or &quot;light&quot; for light mode</span><br><span class="line">vim.cmd([[colorscheme gruvbox]])</span><br></pre></td></tr></table></figure>
-
-<h3 id="浏览网页"><a href="#浏览网页" class="headerlink" title="浏览网页"></a>浏览网页</h3><p>在浏览器流量网页的时候总是会有几个网站没有暗色模式，让你忽然”眼前一亮”，尤其是国内的网页，很多都是只有亮色模式，这里就可以使用一个浏览器插件:Dark Reader<br><a target="_blank" rel="noopener" href="https://darkreader.org/">https://darkreader.org/</a></p>
 
       
     </div>
@@ -1339,14 +1282,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">32k</span>
+    <span title="站点总字数">34k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:57</span>
+    <span title="站点阅读时长">2:02</span>
   </span>
 </div>
 <div class="busuanzi-count">

@@ -172,7 +172,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -328,10 +328,10 @@
 <p>6 (可选)刷入Gapps(谷歌框架)<br>在刷入完刷机包后不要重启，继续返回主页选择第二个apply update，选择用adb刷入<br>&#96;adb sideload 谷歌框架.zip</p>
 <p>然后重启到系统<br>进行一系初始化设置(注：如果你安装了谷歌，请不要联网)</p>
 <h3 id="解决网络无法连接"><a href="#解决网络无法连接" class="headerlink" title="解决网络无法连接"></a>解决网络无法连接</h3><p>完成后，如果你网络无法连接是因为自Android 5.0起，谷歌引入了Captive Portal机制， 用于检测WiFi网络认证是否正常。 该机制默认检测访问的是谷歌服务器，需要科学才能正常访问谷歌服务器<br>所以我们继续连接电脑使用ADB<br>使用ADB 工具，无需要root权限</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">adb shell settings delete global captive_portal_https_url  </span><br><span class="line">  </span><br><span class="line">adb shell settings delete global captive_portal_http_url</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">adb <span class="built_in">shell</span> settings <span class="built_in">delete</span> <span class="built_in">global</span> captive_portal_https_url  </span><br><span class="line">  </span><br><span class="line">adb <span class="built_in">shell</span> settings <span class="built_in">delete</span> <span class="built_in">global</span> captive_portal_http_url</span><br></pre></td></tr></table></figure>
 
 <p>修改一下服务器的地址：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">adb shell settings put global captive_portal_http_url http://captive.v2ex.co/generate_204  </span><br><span class="line">  </span><br><span class="line">adb shell settings put global captive_portal_https_url http://captive.v2ex.co/generate_204</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">adb <span class="built_in">shell</span> settings <span class="built_in">put</span> <span class="built_in">global</span> captive_portal_http_url <span class="keyword">http</span>://captive.v2ex.co/generate_204  </span><br><span class="line">  </span><br><span class="line">adb <span class="built_in">shell</span> settings <span class="built_in">put</span> <span class="built_in">global</span> captive_portal_https_url <span class="keyword">http</span>://captive.v2ex.co/generate_204</span><br></pre></td></tr></table></figure>
 
 <p>然后切换一下飞行模式5秒， 激活一下就好</p>
 <h3 id="安装面具"><a href="#安装面具" class="headerlink" title="安装面具"></a>安装面具</h3><p>把boot.img复制到手机使用面具修补再传回电脑<br>再次使用ADB<br>进入fastboot<br><code>adb reboot bootloader</code> </p>
@@ -448,14 +448,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">32k</span>
+    <span title="站点总字数">34k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:57</span>
+    <span title="站点阅读时长">2:02</span>
   </span>
 </div>
 <div class="busuanzi-count">

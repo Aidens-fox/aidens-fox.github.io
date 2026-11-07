@@ -10,7 +10,23 @@
   <rights>All rights reserved 2026, Aidens-fox</rights>
   <subtitle>linux和windows折腾记录,软件资源分享</subtitle>
   <title>Aidens的博客</title>
-  <updated>2026-10-26T11:41:13.190Z</updated>
+  <updated>2026-11-07T05:12:49.547Z</updated>
+  <entry>
+    <author>
+      <name>Aidens-fox</name>
+    </author>
+    <content>
+      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>小米MIX2是一个2017年发布的手机，在如今可以说是一个”老古董”了，而安卓17是2026年发布的系统，你可能想不到的是这个2017的手机竟然可以运行安卓17</p><p>相关视频教程:<br><a href="https://www.bilibili.com/video/BV13Y4q68Ez4/?spm_id_from=333.1387.homepage.video_card.click&vd_source=df8b0e10736531b80015676e74f67bc7">https://www.bilibili.com/video/BV13Y4q68Ez4/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=df8b0e10736531b80015676e74f67bc7</a></p><h3 id="解锁bl"><a href="#解锁bl" class="headerlink" title="解锁bl"></a>解锁bl</h3><p>想要刷机换系统来脱离苦海，你需要面对的第一关就是解锁bl，不过值得庆幸的是小米MIX2在2026年还可以使用官方解锁工具来解锁，所以我已官方解锁方式为例：</p><ul><li>我们打开手机的设置的我的设备里的全部参数</li><li>连续点击mui版本，直到显示已经处于开发者选项</li><li>回到设置主页面下滑找到更多设置，在里面找到开发者选项<br>进入里面打开OEM解锁</li><li>还要usb调试相关的东西: usb调试，usb安装,usb调试(安全设置) </li><li>然后找到设备解锁状态，插上手机卡，登录小米账号，关闭无线网络使用手机卡流量来进行绑定设备</li><li>绑定成功后在开发者选项找到默认usb配置在里面选择传输文件</li></ul><p>然后回到电脑上，下载小米官方解锁工具:<br><a href="https://www.miui.com/unlock/index.html">https://www.miui.com/unlock/index.html</a></p><p>下载完成后解压到确保路径没有中文，然后打开里面的miflash_unlock.exe</p><p>登录你的小米账号，这里要注意不要使用登录选项下面的快捷登录，使用手机号或者密码登录</p><p>成功后，把里的手机关机，在按住电源键和音量减进入fastboot后使用数据线连接电脑</p><p>回到解锁工具你会发现没有识别到设备，这是因为缺少驱动程序，安装驱动程序只需要点击解锁工具右上角的齿轮在里面点击驱动检测或驱动安装，安装完成后重新插拔数据线，这个时候就可以解锁了(注：解锁会清除数据，如果手机有重要资料请备份后再解锁)</p><h3 id="刷入系统"><a href="#刷入系统" class="headerlink" title="刷入系统"></a>刷入系统</h3><p>在刷入系统之前我们还需要一个东西adb，我们到官网下载适用于windows的SDK…<br><a href="https://developer.android.google.cn/tools/releases/platform-tools?hl=zh-cn">https://developer.android.google.cn/tools/releases/platform-tools?hl=zh-cn</a></p><p>下载完成把它解压到一个你清楚的地方，确保路径没有中文或特殊符号，再打开设置，系统，关于，高级系统设置，环境变量</p><p>在环境变量的用户变量那里点编辑，然后选择浏览，然后选择放adb的文件夹后点确认，再依次点击确认，确认</p><p>添加好环境变量后我们需要测试它真的添加了吗，按win+r，输入cmd然后回车，在cmd里输入adb，如果输出一大堆东西说明设置好了</p><p>然后我们下载刷机需要的系统<br>刷机包(lineageos24):<br><a href="https://down.warbler.cc/XiaoMi-Mix-2/LineageOS/24.0-4.19">https://down.warbler.cc/XiaoMi-Mix-2/LineageOS/24.0-4.19</a></p><p>这个非官方包，是酷安西柚味的冰红茶大佬制作的包，我们要下载刷机包和Recovery文件夹的recovery，因为使用第三方rec如橙狐在刷入时会报错，所以需要使用这个recovery</p><p>把手机关机后按电源键和音量减进入fastboot再使用数据线连接到电脑上，打开你的cmd在里面输入:</p><p><code>fastboot flash recovery recovery.img</code></p><p>刷入recovery后回到手机长按电源键关机，再按电源键和音量加键进入recovery</p><p>进入recovery后你会看到一大堆洋文，现在第三个”Factory re…”这个选项，这个是清除数据的，在里面把那三个选项全部选择清除后回到主菜单</p><p>选择第二个的”App update”选择里面的第一个adb的选项，然后回到电脑</p><p>在刚才的cmd继续输入</p><p>&#96;adb sideload 刷机包.zip</p><p>耐心等待它完成，它在47%会卡住不动，这是正常现象，请不要拔除数据线这种作死行为(-:</p><p>刷入完成后看一下cmd显示的Total xfer后面是不是1.00x</p><p>然后直接回到手机点击第一个”reboot…”等待进入引导界面</p><p>这样这事就成了</p>]]>
+    </content>
+    <id>https://aidens-fox.codeberg.page/posts/e236beec.html</id>
+    <link href="https://aidens-fox.codeberg.page/posts/e236beec.html"/>
+    <published>2026-11-05T12:31:11.000Z</published>
+    <summary>
+      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>小米MIX2是一个2017年发布的手机，在如今可以说是一个”老古董”了，而安卓17是2026年发布的系统，你可能想不到的是这个2017的手机]]>
+    </summary>
+    <title>手教你给小米mix2刷入安卓17</title>
+    <updated>2026-11-07T05:12:49.547Z</updated>
+  </entry>
   <entry>
     <author>
       <name>Aidens-fox</name>
@@ -26,7 +42,7 @@
       <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>不知不觉这博客也快写了一年了，这时间过的是真快啊，从当初那个初三生到现在，好似如梦般过去了，我也从那个鬼地方毕业了，那个痛苦的地方让我不会有]]>
     </summary>
     <title>博客写了快一年的感想</title>
-    <updated>2026-10-26T11:41:13.190Z</updated>
+    <updated>2026-10-26T11:41:13.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -44,7 +60,7 @@
       <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在dwm里，如果你要显示系统托盘，主流的方法是在dwm打一个systray补丁来在状态栏显示系统托盘，但是这个方案我认为不是很好，所以我这几]]>
     </summary>
     <title>给dwm添加一个灵活的系统托盘:tray-tui</title>
-    <updated>2026-10-10T07:57:42.712Z</updated>
+    <updated>2026-10-10T07:57:42.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -61,7 +77,7 @@
       <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>继续之前的<a href="https://aidens-fox.codeberg.page/posts/5a38f10.html">博文<]]>
     </summary>
     <title>next博客主题个性化配置</title>
-    <updated>2026-10-04T01:52:26.138Z</updated>
+    <updated>2026-10-04T01:52:26.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -80,7 +96,7 @@
       <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>从07-25到现在的09-28，鸽了怎么长时间后，那个博主终于想起了自己在<a href="https://aidens-fox.githu]]>
     </summary>
     <title>使用hexo和github pages从零开始搭建个人博客</title>
-    <updated>2026-09-28T12:27:41.579Z</updated>
+    <updated>2026-09-28T12:27:41.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -98,7 +114,7 @@
       <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在前几天我我把我的这台台式电脑重装系统为Archlinux,虽然我的专业(数字媒体)不允许我使用如此简洁纯粹的操作系统，因为我要使用那些臃肿]]>
     </summary>
     <title>记新电脑从Windows换系统到ArchLinux</title>
-    <updated>2026-09-26T11:49:56.490Z</updated>
+    <updated>2026-09-26T11:49:56.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -327,7 +343,7 @@
       <![CDATA[<h1 id="注-此博文的codeberg-pages托管服务部分不适用了-按照此博文的方法会：Bad-Request-Error-400-因为新用户-组织不得使用旧页面服务器，也就是这个博文的方法"><a href="#注-此博文的codeberg-pages托管服务部分不适]]>
     </summary>
     <title>使用hexo和codeberg pages从零开始搭建个人博客</title>
-    <updated>2026-09-28T10:55:28.676Z</updated>
+    <updated>2026-09-28T10:55:28.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -345,25 +361,6 @@
       <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Gruvbox是一个柔和复古的暖色调主题，对比度也很高，长时间盯着也不会刺眼难受，这也是我最喜欢的配色主题，所以我的整个linux基本都是g]]>
     </summary>
     <title>Gruvbox配色主题补完计划</title>
-    <updated>2026-09-30T23:38:08.059Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>Aidens-fox</name>
-    </author>
-    <category term="资源" scheme="https://aidens-fox.codeberg.page/tags/%E8%B5%84%E6%BA%90/"/>
-    <category term="linux" scheme="https://aidens-fox.codeberg.page/tags/linux/"/>
-    <category term="软件" scheme="https://aidens-fox.codeberg.page/tags/%E8%BD%AF%E4%BB%B6/"/>
-    <content>
-      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>steam,一个PC游戏分发平台，也是最大的PC游戏分发平台，里面除了游戏还有一个创意工坊，允许玩家制作和发布游戏mod(模组)来提升游戏趣味性，很多游戏的mod都在steam的创意工坊里，但这是建立在有steam客户端和steam下载游戏的条件下，如果你没有steam客户端或者你的游戏不是steam下载的破解版，那么常规的方式就无法下载创意工坊的东西了,因为不管是网页端还是客户端打开创意工坊都是没有下载的按钮，只有订阅的按钮，没有办法下载到本地，这样就没有办法给破解的游戏下载mod来增加游戏趣味性了，本篇博文我将教你如何使用SteamCMD来下载创意工坊的mod</p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>SteamCMD是Steam 客户端的命令行版本,它的主要用途是通过命令行界面 安装和更新Steam上提供的各种资源，SteamCMD在三大发行版都是有对应的软件包的，这里已arch为例，在aur仓库可以找到安装包(需要使用yay或paru来安装)，其他安装查看<a href="https://developer.valvesoftware.com/wiki/SteamCMD#_Linux">官方文档</a><br><code>yay -S steamcmd</code></p><p>windows推荐使用WorkshopDL，图形化界面，多种下载方式<br><a href="https://github.com/imwaitingnow/WorkshopDL">https://github.com/imwaitingnow/WorkshopDL</a></p><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>安装完成在命令行输入<code>steamcmd</code>进入,SteamCMD支持匿名登录,不需要注册账号就可以下载大部分东西，使用以下命令来匿名登录:<br><code>login anonymous</code></p><p>steamcmd默认的下载目录是在家目录的.steam文件下，我们可以使用以下命令来更改下载目录(目录必须是绝对路径):<br><code>force_install_dir 路径</code></p><h3 id="下载mod-使用"><a href="#下载mod-使用" class="headerlink" title="下载mod&amp;使用"></a>下载mod&amp;使用</h3><p>我们在浏览器打开steam创意工坊的网页:<br><a href="https://steamcommunity.com/workshop/">https://steamcommunity.com/workshop/</a></p><p>在里面的搜索栏搜索你需要的游戏，这里已僵尸毁灭工程的真实车辆中控和仪表盘mod为例，打开mod的详情页面，复制当前网址，然后打开 <a href="https://steamworkshopdownloader.io/">https://steamworkshopdownloader.io/</a> 把刚才的网址粘贴到网站上，网站会自动解析，然后会问你”你知道SteamCMD是什么吗？你登录过SteamCMD吗？”,选择yes,这样就会显示下载命令<br><code>workshop_download_item 108600 3635591071</code></p><p>命令格式为<code>workshop_download_item 游戏ID 模组ID </code> 复制它然后在之前的打开steamcmd的终端输入，等待下载完成就可以了，然后就可以把mod导入到游戏里了，像僵尸毁灭工程linux版本会在家目录新建一个Zomboid文件夹，里面的mods文件夹就是mod存放的地方，不过你需要把下载好的mod解压才可以，不然游戏无法识别，添加后就可以打开游戏，在开始界面点击模组来启用它们了，随便说一下我的僵尸毁灭工程是在rutracker上下载的，相关下载页面:<br><a href="https://rutracker.org/forum/viewtopic.php?t=5231547">https://rutracker.org/forum/viewtopic.php?t=5231547</a></p><p>下载需要bt下载器，可以查看我之前的博文:qbittorrent配置和使用<br><a href="https://aidens-fox.codeberg.page/posts/82f2ef74.html">https://aidens-fox.codeberg.page/posts/82f2ef74.html</a></p>]]>
-    </content>
-    <id>https://aidens-fox.codeberg.page/posts/5808e95.html</id>
-    <link href="https://aidens-fox.codeberg.page/posts/5808e95.html"/>
-    <published>2026-07-12T01:57:04.000Z</published>
-    <summary>
-      <![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>steam,一个PC游戏分发平台，也是最大的PC游戏分发平台，里面除了游戏还有一个创意工坊，允许玩家制作和发布游戏mod(模组)来提升游戏趣]]>
-    </summary>
-    <title>使用SteamCMD来下载创意工坊的mod</title>
-    <updated>2026-08-22T00:59:39.000Z</updated>
+    <updated>2026-09-30T23:38:08.000Z</updated>
   </entry>
 </feed>

@@ -169,7 +169,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -233,6 +233,98 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://aidens-fox.codeberg.page/posts/537ab706.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Aidens-fox">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aidens的博客">
+      <meta itemprop="description" content="linux和windows折腾记录,软件资源分享">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Aidens的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/537ab706.html" class="post-title-link" itemprop="url">linux字幕识别方案-whisper</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-06-27 14:40:32 / 修改时间：15:10:23" itemprop="dateCreated datePublished" datetime="2026-06-27T14:40:32+08:00">2026-06-27</time>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-lines"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>323</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>字幕可以增加视频的可读性，也可以给一些特殊人群一些照顾，在windows上有卡卡字幕助手，而在linux上也有一个软件，也就是whisper</p>
+<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><p>whisper没有图形化界面，所以可以减少不必要的性能开销，而且whisper可以自由选择语言模型，可以说对老旧设备十分友好</p>
+<h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>在archlinux上我们可以使用aur仓库里的软件包来安装<br><code>yay -S whisper.cpp-git</code>  </p>
+<p>除了下载软件本体还需要下载语言模型<br><a target="_blank" rel="noopener" href="https://huggingface.co/ggerganov/whisper.cpp/tree/main">https://huggingface.co/ggerganov/whisper.cpp/tree/main</a></p>
+<p>在下载模型的时候选择适合的模型，经过本人测试small模型准确率相对较高，而且时间也可以接受，本人使用笔记本，性能教差，所以只能使用较低级的模型，如果追求高质量，请下载更高级的模型</p>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>我们需要先使用ffmpeg提取视频音频<br><code>ffmpeg -i xxx.mp4 xxx.mp3</code>  </p>
+<p>如何使用whisper制作字幕文件<br><code>whisper.cpp -m ggml-tiny-q5_1.bin -f ss.mp3 -l zh -osrt</code> </p>
+<p>完成后会在当前目录创建.srt文件，我们可以先使用emacs,nvim等编辑器窗口有没有文字错误<br>在检查完成后就可以导入到kdenlive里使用</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -602,14 +694,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">32k</span>
+    <span title="站点总字数">33k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1:55</span>
+    <span title="站点阅读时长">1:59</span>
   </span>
 </div>
 <div class="busuanzi-count">

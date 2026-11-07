@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>手教你给小米mix2刷入安卓17</title>
+      <link href="/posts/e236beec.html"/>
+      <url>/posts/e236beec.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>小米MIX2是一个2017年发布的手机，在如今可以说是一个”老古董”了，而安卓17是2026年发布的系统，你可能想不到的是这个2017的手机竟然可以运行安卓17</p><p>相关视频教程:<br><a href="https://www.bilibili.com/video/BV13Y4q68Ez4/?spm_id_from=333.1387.homepage.video_card.click&vd_source=df8b0e10736531b80015676e74f67bc7">https://www.bilibili.com/video/BV13Y4q68Ez4/?spm_id_from=333.1387.homepage.video_card.click&amp;vd_source=df8b0e10736531b80015676e74f67bc7</a></p><h3 id="解锁bl"><a href="#解锁bl" class="headerlink" title="解锁bl"></a>解锁bl</h3><p>想要刷机换系统来脱离苦海，你需要面对的第一关就是解锁bl，不过值得庆幸的是小米MIX2在2026年还可以使用官方解锁工具来解锁，所以我已官方解锁方式为例：</p><ul><li>我们打开手机的设置的我的设备里的全部参数</li><li>连续点击mui版本，直到显示已经处于开发者选项</li><li>回到设置主页面下滑找到更多设置，在里面找到开发者选项<br>进入里面打开OEM解锁</li><li>还要usb调试相关的东西: usb调试，usb安装,usb调试(安全设置) </li><li>然后找到设备解锁状态，插上手机卡，登录小米账号，关闭无线网络使用手机卡流量来进行绑定设备</li><li>绑定成功后在开发者选项找到默认usb配置在里面选择传输文件</li></ul><p>然后回到电脑上，下载小米官方解锁工具:<br><a href="https://www.miui.com/unlock/index.html">https://www.miui.com/unlock/index.html</a></p><p>下载完成后解压到确保路径没有中文，然后打开里面的miflash_unlock.exe</p><p>登录你的小米账号，这里要注意不要使用登录选项下面的快捷登录，使用手机号或者密码登录</p><p>成功后，把里的手机关机，在按住电源键和音量减进入fastboot后使用数据线连接电脑</p><p>回到解锁工具你会发现没有识别到设备，这是因为缺少驱动程序，安装驱动程序只需要点击解锁工具右上角的齿轮在里面点击驱动检测或驱动安装，安装完成后重新插拔数据线，这个时候就可以解锁了(注：解锁会清除数据，如果手机有重要资料请备份后再解锁)</p><h3 id="刷入系统"><a href="#刷入系统" class="headerlink" title="刷入系统"></a>刷入系统</h3><p>在刷入系统之前我们还需要一个东西adb，我们到官网下载适用于windows的SDK…<br><a href="https://developer.android.google.cn/tools/releases/platform-tools?hl=zh-cn">https://developer.android.google.cn/tools/releases/platform-tools?hl=zh-cn</a></p><p>下载完成把它解压到一个你清楚的地方，确保路径没有中文或特殊符号，再打开设置，系统，关于，高级系统设置，环境变量</p><p>在环境变量的用户变量那里点编辑，然后选择浏览，然后选择放adb的文件夹后点确认，再依次点击确认，确认</p><p>添加好环境变量后我们需要测试它真的添加了吗，按win+r，输入cmd然后回车，在cmd里输入adb，如果输出一大堆东西说明设置好了</p><p>然后我们下载刷机需要的系统<br>刷机包(lineageos24):<br><a href="https://down.warbler.cc/XiaoMi-Mix-2/LineageOS/24.0-4.19">https://down.warbler.cc/XiaoMi-Mix-2/LineageOS/24.0-4.19</a></p><p>这个非官方包，是酷安西柚味的冰红茶大佬制作的包，我们要下载刷机包和Recovery文件夹的recovery，因为使用第三方rec如橙狐在刷入时会报错，所以需要使用这个recovery</p><p>把手机关机后按电源键和音量减进入fastboot再使用数据线连接到电脑上，打开你的cmd在里面输入:</p><p><code>fastboot flash recovery recovery.img</code></p><p>刷入recovery后回到手机长按电源键关机，再按电源键和音量加键进入recovery</p><p>进入recovery后你会看到一大堆洋文，现在第三个”Factory re…”这个选项，这个是清除数据的，在里面把那三个选项全部选择清除后回到主菜单</p><p>选择第二个的”App update”选择里面的第一个adb的选项，然后回到电脑</p><p>在刚才的cmd继续输入</p><p>&#96;adb sideload 刷机包.zip</p><p>耐心等待它完成，它在47%会卡住不动，这是正常现象，请不要拔除数据线这种作死行为(-:</p><p>刷入完成后看一下cmd显示的Total xfer后面是不是1.00x</p><p>然后直接回到手机点击第一个”reboot…”等待进入引导界面</p><p>这样这事就成了</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>博客写了快一年的感想</title>
       <link href="/posts/fc8aa587.html"/>
       <url>/posts/fc8aa587.html</url>

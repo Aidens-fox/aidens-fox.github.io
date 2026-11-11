@@ -1371,35 +1371,6 @@ pre code {
 .use-motion .menu-item {
   visibility: hidden;
 }
-.book-mark-link {
-  border-bottom: 0;
-  position: fixed;
-  top: -10px;
-  transition: top 0.3s;
-  left: 30px;
-}
-@media (max-width: 991px) {
-  .book-mark-link {
-    left: 20px;
-  }
-}
-@media (max-width: 991px) {
-  .book-mark-link {
-    display: none;
-  }
-}
-.book-mark-link::before {
-  color: #222;
-  font-size: 32px;
-  line-height: 1;
-  content: '\f02e';
-  font-family: 'Font Awesome 7 Free';
-  font-weight: 900;
-}
-.book-mark-link:hover,
-.book-mark-link-fixed {
-  top: -2px;
-}
 .github-corner :hover .octo-arm {
   animation: octocat-wave 560ms ease-in-out;
 }
@@ -1476,7 +1447,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ff66d1;
+    background: #8effff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
